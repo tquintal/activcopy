@@ -138,7 +138,7 @@ Red Orange: #FF4500
   width: 1000px;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
 }
 
 .services-container {
