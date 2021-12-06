@@ -1,19 +1,9 @@
 import React from 'react'
-import { Header } from '../components/Header'
-import Footer from '../components/Footer'
 
-function Services() {
+export default function Services(props) {
     return (
-        <>
-            <Header />
-
-            <div className='services-container'>
-                <h2>... SERVIÇOS</h2>
-            </div>
-
-            <Footer />
-        </>
+        <div className='services-container'>
+            <h2>... SERVIÇOS</h2>
+        </div>
     )
 }
-
-export default Services

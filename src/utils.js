@@ -1,6 +1,8 @@
 export function scrollTop() {
-    window.scrollTo(0, 0)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
 }
+
+export const backToTop = () => window.scrollTo(0, 0)
 
 // ENABLE/DISABLE SCROLL
 // https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily

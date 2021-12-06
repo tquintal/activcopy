@@ -1,30 +1,17 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { AiOutlineMenu, AiOutlineCloseSquare } from 'react-icons/ai'
-import { scrollTop, enableScroll, disableScroll } from '../utils'
-
-const defaultState = () => {
-    scrollTop()
-    enableScroll()
-}
+import { NavLink } from 'react-router-dom'
+import { AiOutlineMenu, AiFillCloseSquare } from 'react-icons/ai'
+import { scrollTop, backToTop, enableScroll, disableScroll } from '../utils'
 
 function DesktopHeader() {
     return (
         <div className='desktop-header'>
             <div className='header-container'>
-                <Link to='/' onClick={() => { defaultState() }}>
-                    <h1 className='title'>activcopy</h1>
-                </Link>
+                <h1 className='title' onClick={() => { scrollTop(); enableScroll() }}>activcopy</h1>
                 <div className='header-actions'>
-                    <Link to='/' onClick={() => { scrollTop() }}>
-                        <p>início</p>
-                    </Link>
-                    <Link to='/services' onClick={() => { scrollTop() }}>
-                        <p>serviços</p>
-                    </Link>
-                    <Link to='/contact' onClick={() => { scrollTop() }}>
-                        <p>contactos</p>
-                    </Link>
+                    <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll() }} to='/'>início</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll() }} to='/services'>serviços</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll() }} to='/contact' >contactos</NavLink>
                     <div className='lang-div'>
                         <p>PT</p>
                         <p>EN</p>
@@ -35,7 +22,7 @@ function DesktopHeader() {
     )
 }
 
-function MobileHeader() {
+export function MobileHeader() {
 
     const [mobileMenu, setMobileMenu] = useState(false)
     const showMobileMenu = () => setMobileMenu(!mobileMenu)
@@ -43,23 +30,18 @@ function MobileHeader() {
     return (
         <>
             <div className='mobile-header'>
-                <Link to='/' onClick={() => { defaultState() }}>
-                    <h1 className='title'>activcopy</h1>
-                </Link>
+                <h1 className='title' onClick={() => { scrollTop(); enableScroll() }}>activcopy</h1>
                 <AiOutlineMenu size='1.8em' onClick={() => { showMobileMenu(); disableScroll() }} />
             </div>
-
             <div className={mobileMenu ? 'mobile-menu enabled' : 'mobile-menu'}>
-                <AiOutlineCloseSquare size='1.8em' onClick={() => { showMobileMenu(); enableScroll() }} className='mobile-menu-close-btn' />
-                <Link to='/' onClick={() => { defaultState() }}>
-                    <p>início</p>
-                </Link>
-                <Link to='/services' onClick={() => { defaultState() }}>
-                    <p>serviços</p>
-                </Link>
-                <Link to='/contact' onClick={() => { defaultState() }}>
-                    <p>contactos</p>
-                </Link>
+                <AiFillCloseSquare size='2.2em' onClick={() => { showMobileMenu(); enableScroll() }} className='mobile-menu-close-btn' />
+                <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/'>início</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/services'>serviços</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/contact'>contactos</NavLink>
+                <div className='lang-div-mobile'>
+                    <p>PT</p>
+                    <p>EN</p>
+                </div>
             </div>
         </>
     )

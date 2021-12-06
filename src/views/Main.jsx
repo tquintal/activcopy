@@ -1,12 +1,8 @@
 import React from 'react'
-import { Header } from '../components/Header'
-import Footer from '../components/Footer'
 
-function Inicio() {
+export default function Inicio() {
     return (
         <main>
-            <Header />
-
             <div className='media' />
             <div className='description'>
                 <div className='description-container'>
@@ -16,10 +12,6 @@ function Inicio() {
                     </div>
                 </div>
             </div>
-
-            <Footer />
         </main>
     )
 }
-
-export default Inicio
