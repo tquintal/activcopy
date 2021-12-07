@@ -1,5 +1,12 @@
+import $ from 'jquery'
+
 export function scrollTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    $('html, body').animate(
+        {
+            scrollTop: $('title').offset().top
+        },
+        500
+    )
 }
 
 export const backToTop = () => window.scrollTo(0, 0)
