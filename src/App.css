@@ -232,10 +232,6 @@ Red Orange: #FF4500
   gap: 15px;
 }
 
-.services-cards-container h2 {
-  color: #ffffff;
-}
-
 .service-card {
   background-color: #1b1b1b;
   height: 180px;
@@ -243,6 +239,11 @@ Red Orange: #FF4500
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 rgb(0 0 0 / 30%);
+}
+
+.services-cards-container h2 {
+  color: #ffffff;
 }
 
 .contact-container,
