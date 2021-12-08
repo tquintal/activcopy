@@ -4,7 +4,7 @@ import ReactTooltip from 'react-tooltip'
 
 export default function Footer() {
     return (
-        <footer>
+        <footer className='footer'>
             <div className='footer-container'>
                 <p>ACTIVCOPY © 2021 - Todos os direitos reservados</p>
                 <div className='social-container'>

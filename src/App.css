@@ -326,7 +326,7 @@ textarea {
   }
 }
 
-footer {
+.footer {
   height: 65px;
   background-color: #eaeff2;
   display: flex;
@@ -334,7 +334,7 @@ footer {
   box-shadow: 0 1px #eaeff2 inset;
 }
 
-footer p {
+.footer p {
   color: #ff4500;
   font-size: 12px;
   font-weight: 300;
@@ -428,7 +428,7 @@ footer p {
     flex-direction: column;
   }
 
-  footer {
+  .footer {
     height: 100px;
   }
 
