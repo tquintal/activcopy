@@ -8,16 +8,21 @@ import Main from './views/Main'
 import Services from './views/Services'
 import Contact from './views/Contact'
 
+import { AnimatePresence } from 'framer-motion'
+
 export default function App() {
+
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='*' element={<Error />} />
-      </Routes>
+      <AnimatePresence>
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </AnimatePresence>
       <ScrollToTop />
       <Footer />
     </BrowserRouter>

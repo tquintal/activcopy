@@ -1,8 +1,15 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function Contact() {
     return (
-        <div className='contact'>
+        <motion.div
+            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className='contact'
+        >
             <div className='contact-container'>
 
                 <div className='contacts-container'>
@@ -48,6 +55,6 @@ export default function Contact() {
                     <button>Enviar</button>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

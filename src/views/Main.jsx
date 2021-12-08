@@ -1,8 +1,14 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
-export default function Inicio() {
+export default function Inicio(props) {
     return (
-        <main>
+        <motion.div
+            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <div className='media' />
             <div className='description'>
                 <div className='description-container'>
@@ -12,6 +18,6 @@ export default function Inicio() {
                     </div>
                 </div>
             </div>
-        </main>
+        </motion.div>
     )
 }
