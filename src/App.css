@@ -148,11 +148,6 @@ Red Orange: #FF4500
   gap: 15px;
 }
 
-.lang-div {
-  display: flex;
-  gap: 5px;
-}
-
 .desktop-header a,
 .mobile-header a,
 .mobile-menu a {
@@ -169,6 +164,12 @@ Red Orange: #FF4500
 
 .header-actions-active {
   color: #00e0d4 !important;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 @media (hover: hover) {

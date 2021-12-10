@@ -1,12 +1,16 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { AiFillFacebook, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
 import ReactTooltip from 'react-tooltip'
 
 export default function Footer() {
+
+    const { t } = useTranslation()
+
     return (
         <div className='footer'>
             <div className='footer-container'>
-                <p>ACTIVCOPY © 2021 - Todos os direitos reservados</p>
+                <p>ACTIVCOPY © 2021 - {t('Footer.Rights')}</p>
                 <div className='social-container'>
                     <ReactTooltip />
                     <a href='https://www.facebook.com/activcopy/' target='_blank' rel='noopener noreferrer' data-tip='Facebook'>

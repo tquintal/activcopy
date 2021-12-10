@@ -1,7 +1,11 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
 export default function Services(props) {
+
+    const { t } = useTranslation()
+
     return (
         <motion.div
             transition={{ duration: 0.4 }}
@@ -11,7 +15,7 @@ export default function Services(props) {
             className='services'
         >
             <div className='services-container'>
-                <h1>Serviços</h1>
+                <h1>{t('Services.Title')}</h1>
                 <div className='services-cards-container'>
                     <div className='service-card'>
                         <h2>1</h2>

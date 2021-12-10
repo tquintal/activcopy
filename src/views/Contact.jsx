@@ -1,7 +1,11 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
 export default function Contact() {
+
+    const { t } = useTranslation()
+
     return (
         <motion.div
             transition={{ duration: 0.4 }}
@@ -14,19 +18,19 @@ export default function Contact() {
 
                 <div className='contacts-container'>
                     <div>
-                        <h1>Contactos</h1>
+                        <h1>{t('Contact.Title')}</h1>
                         <p><span>E-mail:</span> geral@activcopy.pt</p>
-                        <p><span>Orçamentos:</span> activcopy.orcamentos@gmail.com</p>
-                        <p><span>Telefone:</span> 234 383 210</p>
+                        <p><span>{t('Contact.Budgets')}</span> activcopy.orcamentos@gmail.com</p>
+                        <p><span>{t('Contact.Phone')}</span> 234 383 210</p>
                     </div>
                     <div>
-                        <h1>Horário</h1>
-                        <p><span>Semana:</span> 8H30 - 20H00</p>
-                        <p><span>Sábado:</span> 9H00 - 19H00</p>
-                        <p><span>Domingo:</span> 9H00 - 19H00</p>
+                        <h1>{t('Schedule.Title')}</h1>
+                        <p><span>{t('Schedule.Weekdays')}</span> 8H30 - 20H00</p>
+                        <p><span>{t('Schedule.Saturday')}</span> 9H00 - 19H00</p>
+                        <p><span>{t('Schedule.Sunday')}</span> 9H00 - 19H00</p>
                     </div>
                     <div>
-                        <h1>Morada</h1>
+                        <h1>{t('Address.Title')}</h1>
                         <p>Rua Dr. Mário Sacramento</p>
                         <p>Nº49, 3810-106 Aveiro</p>
                     </div>
@@ -37,22 +41,22 @@ export default function Contact() {
                 </div>
 
                 <div className='contact-form-container'>
-                    <h1>Fale connosco!</h1>
+                    <h1>{t('Form.Title')}</h1>
                     <div className='contact-form-first-block'>
                         <div>
-                            <input placeholder='Nome *'></input>
+                            <input placeholder={t('Form.Name')}></input>
                             <input placeholder='E-mail *'></input>
                         </div>
                         <div>
-                            <input placeholder='Número telemóvel'></input>
-                            <input placeholder='Assunto *'></input>
+                            <input placeholder={t('Form.Contact')}></input>
+                            <input placeholder={t('Form.Subject')}></input>
                         </div>
                     </div>
                     <div>
-                        <textarea placeholder='Escreva aqui a sua mensagem *' className='message-textarea'></textarea>
+                        <textarea placeholder={t('Form.TextArea')} className='message-textarea'></textarea>
                     </div>
-                    <p>Campos obrigatórios *</p>
-                    <button>Enviar</button>
+                    <p>{t('Form.Info')}</p>
+                    <button>{t('Form.Button')}</button>
                 </div>
             </div>
         </motion.div>
