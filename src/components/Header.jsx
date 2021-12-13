@@ -6,6 +6,7 @@ import cookies from 'js-cookie'
 import { scrollTop, backToTop, enableScroll, disableScroll } from '../utils'
 import { AiOutlineMenu, AiFillCloseSquare } from 'react-icons/ai'
 import { GrLanguage } from 'react-icons/gr'
+import { motion } from 'framer-motion'
 
 function DesktopHeader() {
 
@@ -18,7 +19,12 @@ function DesktopHeader() {
     }, [currentLanguageCode])
 
     return (
-        <div className='desktop-header'>
+        <motion.div
+            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className='desktop-header'>
             <div className='header-container'>
                 <h1 className='title' onClick={() => { scrollTop(); enableScroll() }}>activcopy</h1>
                 <div className='header-actions'>
@@ -27,12 +33,12 @@ function DesktopHeader() {
                     <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll() }} to='/contact' >{t('Navigation.Contact')}</NavLink>
 
                     <GrLanguage size='1.2em' />
-                    <button className='lang-btn' onClick={() => i18next.changeLanguage('pt')} disabled={currentLanguageCode === 'pt'}>Portuguese</button>
+                    <button className='lang-btn' onClick={() => i18next.changeLanguage('pt')} disabled={currentLanguageCode === 'pt'}>Português</button>
                     <button className='lang-btn' onClick={() => i18next.changeLanguage('en')} disabled={currentLanguageCode === 'en'}>English</button>
 
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

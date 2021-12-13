@@ -3,9 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
 export default function Contact() {
-
     const { t } = useTranslation()
-
     return (
         <motion.div
             transition={{ duration: 0.4 }}

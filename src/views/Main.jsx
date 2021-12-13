@@ -2,10 +2,8 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
-export default function Inicio(props) {
-
+export default function Main(props) {
     const { t } = useTranslation()
-
     return (
         <motion.div
             transition={{ duration: 0.4 }}
