@@ -16,7 +16,7 @@ i18n
     supportedLngs: ['pt', 'en'],
     debug: false,
     detection: {
-      order: ['cookie', 'htmlTag'],
+      order: ['cookie'],
       caches: ['cookie'],
     },
     backend: {
