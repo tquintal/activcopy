@@ -207,11 +207,11 @@ Red Orange: #FF4500
   color: #ffffff;
 }
 
-@media (hover: hover) {
+/* @media (hover: hover) {
   .service-card:hover {
     transform: scale(1.01);
   }
-}
+} */
 
 .services-cards-container h2 {
   color: #ffffff;
