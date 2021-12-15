@@ -8,32 +8,6 @@ Red Orange: #FF4500
 
 */
 
-.scoll-to-top-container {
-  display: flex;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  margin: 35px;
-  cursor: pointer;
-  border: solid;
-  border-width: 1px;
-  background-color: #ffffff;
-  color: #ff4500;
-  transition: transform 0.2s ease-in-out;
-  transform: scale(0);
-}
-
-.scoll-to-top-container.visible {
-  transform: scale(1);
-}
-
-@media (hover: hover) {
-  .scoll-to-top-container:hover {
-    transform: scale(1.1);
-  }
-}
-
 .mobile-header {
   position: fixed;
   display: flex;
@@ -370,10 +344,6 @@ textarea {
 }
 
 @media only screen and (max-width: 1100px) {
-  .scoll-to-top-container {
-    margin: 20px;
-  }
-
   .header-container {
     display: none;
   }
