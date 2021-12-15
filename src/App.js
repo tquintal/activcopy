@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Header } from './components/Header'
 import { AnimatePresence } from 'framer-motion'
-import { ScrollToTop } from './components/ScrollToTop'
 import Footer from './components/Footer'
 import Error from './views/Error'
 import Main from './views/Main'
@@ -11,7 +10,7 @@ import Contact from './views/Contact'
 
 export default function App() {
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     setTimeout(() => {
@@ -34,7 +33,6 @@ export default function App() {
               <Route path='*' element={<Error />} />
             </Routes>
           </AnimatePresence>
-          <ScrollToTop />
           <Footer />
         </>
       )}
