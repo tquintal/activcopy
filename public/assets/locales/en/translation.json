@@ -13,7 +13,11 @@
   },
 
   "Services": {
-    "Title": "Services"
+    "Title": "Services",
+    "Service1": "Impressão Digital (EN)",
+    "Service2": "Grandes Formatos (EN)",
+    "Service3": "Sublimação (EN)",
+    "Service4": "Encadernações (EN)"
   },
 
   "Contact": {

@@ -182,14 +182,35 @@ Red Orange: #FF4500
   gap: 15px;
 }
 
+.service-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 .service-card {
   background-color: #1b1b1b;
-  height: 180px;
-  width: 235px;
+  height: 640px;
+  width: 490px;
+  transition: 150ms;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 rgb(0 0 0 / 30%);
+  /* box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 rgb(0 0 0 / 30%); */
+}
+
+.service-card h3 {
+  color: #ffffff;
+}
+
+@media (hover: hover) {
+  .service-card:hover {
+    transform: scale(1.01);
+  }
 }
 
 .services-cards-container h2 {
@@ -362,7 +383,12 @@ textarea {
     margin: 10%;
   }
 
+  .service-card-container {
+    width: 100%;
+  }
+
   .service-card {
+    height: 500px;
     width: 100%;
   }
 

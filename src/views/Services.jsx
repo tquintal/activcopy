@@ -15,56 +15,29 @@ export default function Services(props) {
             <div className='services-container'>
                 <h1>{t('Services.Title')}</h1>
                 <div className='services-cards-container'>
-                    <div className='service-card'>
-                        <h2>1</h2>
+                    <div className='service-card-container'>
+                        <div className='service-card'>
+                            <h3>*Icon/Image*</h3>
+                        </div>
+                        <p>{t('Services.Service1')}</p>
                     </div>
-                    <div className='service-card'>
-                        <h2>2</h2>
+                    <div className='service-card-container'>
+                        <div className='service-card'>
+                            <h3>*Icon/Image*</h3>
+                        </div>
+                        <p>{t('Services.Service2')}</p>
                     </div>
-                    <div className='service-card'>
-                        <h2>3</h2>
+                    <div className='service-card-container'>
+                        <div className='service-card'>
+                            <h3>*Icon/Image*</h3>
+                        </div>
+                        <p>{t('Services.Service3')}</p>
                     </div>
-                    <div className='service-card'>
-                        <h2>4</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>5</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>6</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>7</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>8</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>9</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>10</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>11</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>12</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>13</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>14</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>15</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>16</h2>
-                    </div>
-                    <div className='service-card'>
-                        <h2>17</h2>
+                    <div className='service-card-container'>
+                        <div className='service-card'>
+                            <h3>*Icon/Image*</h3>
+                        </div>
+                        <p>{t('Services.Service4')}</p>
                     </div>
                 </div>
             </div>
