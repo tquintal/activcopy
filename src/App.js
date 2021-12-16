@@ -21,7 +21,7 @@ export default function App() {
       setLoading(false)
       document.querySelector('.loading').remove()
       document.getElementById('root').style.display = 'unset'
-    }, 1150)
+    }, 2000)
   }, [])
 
   return (

@@ -253,11 +253,13 @@ Red Orange: #FF4500
 
 .maps {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1b1b1b;
+  background-color: #eaeff2;
   color: #ffffff;
   height: 300px;
+}
+
+.maps iframe {
+  width: 100%;
 }
 
 .contacts-container span {
