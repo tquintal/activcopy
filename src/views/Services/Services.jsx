@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { backToTop } from '../../utils'
 
 export default function Services() {
     const { t } = useTranslation()
@@ -16,7 +17,7 @@ export default function Services() {
             <div className='services-container'>
                 <h1>{t('Services.Title')}</h1>
                 <div className='services-cards-container'>
-                    <NavLink to='/digital-printing'>
+                    <NavLink onClick={() => backToTop()} to='/digital-printing'>
                         <div className='service-card-container'>
                             <div className='service-card'>
                                 <h3>*Icon/Image*</h3>
@@ -24,7 +25,7 @@ export default function Services() {
                             <p>{t('Services.Service1')}</p>
                         </div>
                     </NavLink>
-                    <NavLink to='/big-format'>
+                    <NavLink onClick={() => backToTop()} to='/big-format'>
                         <div className='service-card-container'>
                             <div className='service-card'>
                                 <h3>*Icon/Image*</h3>
@@ -32,7 +33,7 @@ export default function Services() {
                             <p>{t('Services.Service2')}</p>
                         </div>
                     </NavLink>
-                    <NavLink to='/sublimation'>
+                    <NavLink onClick={() => backToTop()} to='/sublimation'>
                         <div className='service-card-container'>
                             <div className='service-card'>
                                 <h3>*Icon/Image*</h3>
@@ -40,7 +41,7 @@ export default function Services() {
                             <p>{t('Services.Service3')}</p>
                         </div>
                     </NavLink>
-                    <NavLink to='/bookbinding'>
+                    <NavLink onClick={() => backToTop()} to='/bookbinding'>
                         <div className='service-card-container'>
                             <div className='service-card'>
                                 <h3>*Icon/Image*</h3>

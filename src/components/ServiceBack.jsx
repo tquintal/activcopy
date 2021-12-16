@@ -1,12 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { BiArrowBack } from 'react-icons/bi'
+import { backToTop } from '../utils'
 
 export default function ServiceBack() {
+    const { t } = useTranslation()
     return (
-        <NavLink to='/services' className='service-back'>
+        <NavLink onClick={() => backToTop()} to='/services' className='service-back'>
             <BiArrowBack />
-            <p>Voltar</p>
+            <p>{t('Service.Back')}</p>
         </NavLink>
     )
 }

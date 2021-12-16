@@ -20,6 +20,10 @@
     "Service4": "Encadernações"
   },
 
+  "Service": {
+    "Back": "Voltar"
+  },
+
   "Contact": {
     "Title": "Contactos",
     "Budgets": "Orçamentos:",
