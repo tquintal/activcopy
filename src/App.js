@@ -37,7 +37,7 @@ export default function App() {
               <Route path='/services/big-format' element={<BigFormat />} />
               <Route path='/services/sublimation' element={<Sublimation />} />
               <Route path='/services/bookbinding' element={<Bookbinding />} />
-              <Route path='/services/contact' element={<Contact />} />
+              <Route path='/contact' element={<Contact />} />
               <Route path='*' element={<Error />} />
             </Routes>
           </AnimatePresence>
