@@ -35,7 +35,7 @@ export default function Contact() {
                 </div>
 
                 <div className='maps'>
-                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Activcopy&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" />
+                    <iframe title='gmaps' src="https://maps.google.com/maps?q=Activcopy&t=&z=15&ie=UTF8&iwloc=&output=embed" frameBorder='0' scrolling="no" marginHeight='0' marginWidth='0' />
                 </div>
 
                 <div className='contact-form-container'>
