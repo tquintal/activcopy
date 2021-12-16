@@ -17,11 +17,11 @@ export default function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-      document.querySelector('.loading').remove()
-      document.getElementById('root').style.display = 'unset'
-    }, 2000)
+    // setTimeout(() => {
+    setLoading(false)
+    document.querySelector('.loading').remove()
+    document.getElementById('root').style.display = 'unset'
+    // }, 2000)
   }, [])
 
   return (
@@ -33,11 +33,11 @@ export default function App() {
             <Routes>
               <Route path='/' element={<Main />} />
               <Route path='/services' element={<Services />} />
-              <Route path='/digital-printing' element={<DigitalPrinting />} />
-              <Route path='/big-format' element={<BigFormat />} />
-              <Route path='/sublimation' element={<Sublimation />} />
-              <Route path='/bookbinding' element={<Bookbinding />} />
-              <Route path='/contact' element={<Contact />} />
+              <Route path='/services/digital-printing' element={<DigitalPrinting />} />
+              <Route path='/services/big-format' element={<BigFormat />} />
+              <Route path='/services/sublimation' element={<Sublimation />} />
+              <Route path='/services/bookbinding' element={<Bookbinding />} />
+              <Route path='/services/contact' element={<Contact />} />
               <Route path='*' element={<Error />} />
             </Routes>
           </AnimatePresence>
