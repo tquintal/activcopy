@@ -5,7 +5,11 @@ import { AnimatePresence } from 'framer-motion'
 import Footer from './components/Footer'
 import Error from './views/Error'
 import Main from './views/Main'
-import Services from './views/Services'
+import Services from './views/Services/Services'
+import DigitalPrinting from './views/Services/DigitalPrinting'
+import BigFormat from './views/Services/BigFormat'
+import Sublimation from './views/Services/Sublimation'
+import Bookbinding from './views/Services/Bookbinding'
 import Contact from './views/Contact'
 
 export default function App() {
@@ -29,6 +33,10 @@ export default function App() {
             <Routes>
               <Route path='/' element={<Main />} />
               <Route path='/services' element={<Services />} />
+              <Route path='/digital-printing' element={<DigitalPrinting />} />
+              <Route path='/big-format' element={<BigFormat />} />
+              <Route path='/sublimation' element={<Sublimation />} />
+              <Route path='/bookbinding' element={<Bookbinding />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='*' element={<Error />} />
             </Routes>

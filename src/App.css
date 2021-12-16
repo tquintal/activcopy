@@ -146,7 +146,8 @@ Red Orange: #FF4500
 
 .description,
 .contact,
-.services {
+.services,
+.service {
   display: flex;
   justify-content: center;
   padding-top: 50px;
@@ -154,12 +155,14 @@ Red Orange: #FF4500
 }
 
 .contact,
-.services {
+.services,
+.service {
   padding-top: 65px;
 }
 
 .description-container,
-.contact-container {
+.contact-container,
+.service-container {
   width: 1000px;
   display: flex;
   flex-direction: column;
@@ -182,6 +185,10 @@ Red Orange: #FF4500
   gap: 15px;
 }
 
+.services-cards-container a {
+  all: unset;
+}
+
 .service-card-container {
   display: flex;
   flex-direction: column;
@@ -194,7 +201,7 @@ Red Orange: #FF4500
 
 .service-card {
   background-color: #1b1b1b;
-  height: 640px;
+  height: 600px;
   width: 490px;
   transition: 150ms;
   display: flex;
@@ -207,19 +214,35 @@ Red Orange: #FF4500
   color: #ffffff;
 }
 
-/* @media (hover: hover) {
-  .service-card:hover {
-    transform: scale(1.01);
-  }
-} */
-
 .services-cards-container h2 {
   color: #ffffff;
 }
 
 .contact-container,
-.services-container {
+.services-container,
+.service-container {
   padding-top: 50px;
+}
+
+.service-container {
+  gap: 5px;
+}
+
+.service-back {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  grid-gap: 15px;
+  gap: 15px;
+  width: fit-content;
+  transition: 200ms;
+}
+
+@media (hover: hover) {
+  .service-back:hover {
+    color: #00e0d4;
+  }
 }
 
 .contacts-container {
@@ -371,19 +394,25 @@ textarea {
 
   .description,
   .contact,
-  .services {
+  .services,
+  .service {
     padding-top: 0;
     padding-bottom: 0;
   }
 
   .description-container,
   .contact-container,
-  .services-container {
+  .services-container,
+  .service-container {
     gap: 25px;
     margin: 10%;
   }
 
   .service-card-container {
+    width: 100%;
+  }
+
+  .services-cards-container a {
     width: 100%;
   }
 
