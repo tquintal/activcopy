@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Header } from './components/Header'
 import { AnimatePresence } from 'framer-motion'
-import CookieConsent from './components/CookieConsent'
+import { useTranslation } from 'react-i18next'
 import Footer from './components/Footer'
 import Error from './views/Error'
 import Main from './views/Main'
@@ -13,16 +13,37 @@ import Sublimation from './views/Services/Sublimation'
 import Bookbinding from './views/Services/Bookbinding'
 import Contact from './views/Contact'
 
-export default function App() {
+const CookieConsent = () => {
+  const { t } = useTranslation()
 
+  const setConsentStatus = () => {
+    if (!localStorage.getItem('CookieConsent')) {
+      localStorage.setItem('CookieConsent', true)
+      document.querySelector('.cookie-container').remove()
+      // window.location.reload()
+    } else {
+      return
+    }
+  }
+
+  return (
+    <div className='cookie-container'>
+      <p>{t('CookieConsentText')}</p>
+      <div className='cookie-btns-container'>
+        <button className='cookie-preferences-btn'>{t('CookieBtn1')}</button>
+        <button className='cookie-accept-btn' onClick={setConsentStatus}>{t('CookieBtn2')}</button>
+      </div>
+    </div>
+  )
+}
+
+export default function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // setTimeout(() => {
     setLoading(false)
     document.querySelector('.loading').remove()
     document.getElementById('root').style.display = 'unset'
-    // }, 2000)
   }, [])
 
   return (
@@ -30,7 +51,7 @@ export default function App() {
       {!loading && (
         <>
           <Header />
-          <CookieConsent />
+          {!localStorage.getItem('CookieConsent') && (<CookieConsent />)}
           <AnimatePresence>
             <Routes>
               <Route path='/' element={<Main />} />
