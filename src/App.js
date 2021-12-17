@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Header } from './components/Header'
 import { AnimatePresence } from 'framer-motion'
+import CookieConsent from './components/CookieConsent'
 import Footer from './components/Footer'
 import Error from './views/Error'
 import Main from './views/Main'
@@ -29,6 +30,7 @@ export default function App() {
       {!loading && (
         <>
           <Header />
+          <CookieConsent />
           <AnimatePresence>
             <Routes>
               <Route path='/' element={<Main />} />

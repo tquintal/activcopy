@@ -2,6 +2,10 @@
   "Error": "Error 404 :/",
   "ErrorBtn": "Take me back",
 
+  "CookieConsentText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "CookieBtn1": "Preferences",
+  "CookieBtn2": "Accept",
+
   "SelectLangTitle": "Language:",
 
   "Navigation": {

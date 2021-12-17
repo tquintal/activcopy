@@ -8,6 +8,49 @@ Red Orange: #FF4500
 
 */
 
+.cookie-container {
+  position: fixed;
+  bottom: 0;
+  height: 135px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  box-shadow: 0 1px #eaeff2 inset;
+}
+
+.cookie-container p {
+  font-size: 14px;
+}
+
+.cookie-btns-container {
+  display: flex;
+  gap: 15px;
+}
+
+.cookie-btns-container button {
+  border: none;
+  outline: inherit;
+  height: fit-content;
+  padding: 15px;
+  font-size: 14px;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.cookie-preferences-btn {
+  background-color: #eaeff2;
+  color: #1b1b1b;
+}
+
+.cookie-accept-btn {
+  background-color: #ff4500;
+  color: #ffffff;
+}
+
 .mobile-header {
   position: fixed;
   display: flex;
@@ -390,6 +433,33 @@ textarea {
 }
 
 @media only screen and (max-width: 1100px) {
+  .cookie-container {
+    flex-direction: column;
+    padding: 0px;
+    gap: 5px;
+    justify-content: center;
+  }
+
+  .cookie-container p {
+    padding: 15px;
+    padding-bottom: 5px;
+  }
+
+  .cookie-container p,
+  .cookie-btns-container button {
+    font-size: 12px;
+  }
+
+  .cookie-btns-container button {
+    padding: 10px;
+  }
+
+  .cookie-btns-container {
+    align-self: flex-end;
+    padding: 15px;
+    padding-top: 0px;
+  }
+
   .header-container {
     display: none;
   }
