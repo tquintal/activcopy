@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { backToTop } from '../../utils'
+import '../../style/Services.css'
 
 export default function Services() {
     const { t } = useTranslation()
