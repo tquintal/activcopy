@@ -1,0 +1,23 @@
+.slider-container {
+  max-width: 100%;
+}
+
+.slider-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.slider-image img {
+  height: 75%;
+}
+
+@media only screen and (max-width: 1100px) {
+  .digital-printing-container {
+    flex-direction: column;
+  }
+  .digital-printing-container img {
+    width: 100%;
+  }
+}
