@@ -16,6 +16,21 @@
   height: 150px;
 }
 
+.slider-container {
+  max-width: 100%;
+}
+
+.service-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.service-image img {
+  height: 75%;
+}
+
 @media only screen and (max-width: 1100px) {
   .digital-printing-container {
     flex-direction: column;

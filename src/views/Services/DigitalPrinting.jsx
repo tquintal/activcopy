@@ -1,17 +1,20 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import 'react-slideshow-image/dist/styles.css'
+import { Slide } from 'react-slideshow-image'
 import ServiceBack from '../../components/ServiceBack'
+
 import image1 from './assets/img1.jpg'
 import image2 from './assets/img2.jpg'
 import image3 from './assets/img3.jpg'
 import image4 from './assets/img4.jpg'
 import image5 from './assets/img5.jpg'
 import image6 from './assets/img6.jpg'
-// import image7 from './assets/img7.jpg'
-// import image8 from './assets/img8.jpg'
-// import image9 from './assets/img9.jpg'
-// import image10 from './assets/img10.jpg'
+import image7 from './assets/img7.jpg'
+import image8 from './assets/img8.jpg'
+import image9 from './assets/img9.jpg'
+import image10 from './assets/img10.jpg'
 
 const images = [
     {
@@ -38,7 +41,40 @@ const images = [
         'img': image6,
         'desc': 'Image 6'
     },
+    {
+        'img': image7,
+        'desc': 'Image 7'
+    },
+    {
+        'img': image8,
+        desc: 'Image 8'
+    },
+    {
+        'img': image9,
+        desc: 'Image 9'
+    },
+    {
+        'img': image10,
+        desc: 'Image 10'
+    }
 ]
+
+const style = {
+    textAlign: 'center',
+    height: '150px'
+}
+
+const properties = {
+    cssClass: 'slider-container',
+    transitionDuration: 250,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    infinite: true,
+    indicators: true,
+    autoplay: false
+}
+
+
 
 export default function DigitalPrinting() {
     const { t } = useTranslation()
@@ -53,11 +89,9 @@ export default function DigitalPrinting() {
                 <div className='service-container'>
                     <ServiceBack />
                     <h1>{t('Services.Service1')}</h1>
-                    <div className='digital-printing-container'>
-                        {
-                            images.map((each, index) => <div><img key={index} src={each.img} alt={each.desc} /><p>{each.desc}</p></div>)
-                        }
-                    </div>
+                    <Slide {...properties}>
+                        {images.map((each) => <div key={each.img} style={style} className='service-image'><img src={each.img} alt={each.desc} /><p>{each.desc}</p></div>)}
+                    </Slide>
                     <p>{t('Description.Content')}</p>
                 </div>
             </div>

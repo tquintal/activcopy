@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import Footer from './components/Footer'
 import Error from './views/Error'
 import Main from './views/Main'
-import Services from './views/services/Services.jsx'
+import Services from './views/services/Services'
 import DigitalPrinting from './views/services/DigitalPrinting'
 import BigFormat from './views/services/BigFormat'
 import Sublimation from './views/services/Sublimation'
@@ -19,8 +19,8 @@ const CookieConsent = () => {
   const setConsentStatus = () => {
     if (!localStorage.getItem('CookieConsent')) {
       localStorage.setItem('CookieConsent', true)
-      document.querySelector('.cookie-container').remove()
-      // window.location.reload()
+      // document.querySelector('.cookie-container').remove() ... bad practice
+      window.location.reload()
     } else {
       return
     }

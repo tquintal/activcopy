@@ -245,8 +245,8 @@ Red Orange: #FF4500
 
 .service-card {
   background-color: #1b1b1b;
-  height: 600px;
-  width: 490px;
+  height: 420px;
+  width: 320px;
   transition: 150ms;
   display: flex;
   align-items: center;
@@ -270,7 +270,7 @@ Red Orange: #FF4500
 
 .service-container {
   gap: 5px;
-  min-height: 82vh;
+  min-height: 100vh;
 }
 
 .service-back {
@@ -480,6 +480,10 @@ textarea {
   .service-container {
     gap: 25px;
     margin: 10%;
+  }
+
+  .service-container {
+    max-width: 85%;
   }
 
   .service-card-container {
