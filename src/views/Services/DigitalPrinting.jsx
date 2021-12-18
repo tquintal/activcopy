@@ -117,16 +117,14 @@ export class DigitalPrinting extends React.Component {
     }
 
     render() {
-
-        // const { width } = this.state
-
-        // if (width <= 1100) {
-        //     properties.slidesToShow = 3
-        //     properties.slidesToScroll = 3
-        // } else {
-        //     properties.slidesToShow = 5
-        //     properties.slidesToScroll = 5
-        // }
+        const { width } = this.state
+        if (width <= 1100) {
+            properties.slidesToShow = 3
+            properties.slidesToScroll = 3
+        } else {
+            properties.slidesToShow = 5
+            properties.slidesToScroll = 5
+        }
         return (
             <Content />
         )
