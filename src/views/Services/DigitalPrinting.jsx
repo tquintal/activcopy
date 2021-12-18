@@ -67,16 +67,12 @@ const style = {
 const properties = {
     cssClass: 'slider-container',
     transitionDuration: 250,
-    slidesToShow: 5,
-    slidesToScroll: 5,
     infinite: true,
     indicators: true,
     autoplay: false
 }
 
-
-
-export default function DigitalPrinting() {
+const Content = () => {
     const { t } = useTranslation()
     return (
         <motion.div
@@ -90,11 +86,51 @@ export default function DigitalPrinting() {
                     <ServiceBack />
                     <h1>{t('Services.Service1')}</h1>
                     <Slide {...properties}>
-                        {images.map((each) => <div key={each.img} style={style} className='service-image'><img src={each.img} alt={each.desc} /><p>{each.desc}</p></div>)}
+                        {images.map((each) => <div key={each.img} style={style} className='slider-image'><img src={each.img} alt={each.desc} /><p>{each.desc}</p></div>)}
                     </Slide>
                     <p>{t('Description.Content')}</p>
                 </div>
             </div>
         </motion.div>
     )
+}
+
+export class DigitalPrinting extends React.Component {
+
+    constructor() {
+        super()
+        this.state = {
+            width: window.innerWidth
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange)
+    }
+
+    handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth })
+    }
+
+    render() {
+
+        const { width } = this.state
+
+        if (width <= 1100) {
+            properties.slidesToShow = 3
+            properties.slidesToScroll = 3
+        } else {
+            properties.slidesToShow = 5
+            properties.slidesToScroll = 5
+        }
+        return (
+            <Content />
+        )
+
+    }
+
 }

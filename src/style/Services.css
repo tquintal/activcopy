@@ -1,33 +1,15 @@
-.digital-printing-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.digital-printing-container div {
-  display: flex;
-  height: 200px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.digital-printing-container img {
-  width: 150px;
-  height: 150px;
-}
-
 .slider-container {
   max-width: 100%;
 }
 
-.service-image {
+.slider-image {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 5px;
 }
 
-.service-image img {
+.slider-image img {
   height: 75%;
 }
 

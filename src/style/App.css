@@ -78,7 +78,7 @@ Red Orange: #FF4500
   top: 0%;
   right: -100%;
   position: fixed;
-  z-index: 2;
+  z-index: 12;
   transition: 350ms;
 }
 

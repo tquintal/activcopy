@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next'
 import Footer from './components/Footer'
 import Error from './views/Error'
 import Main from './views/Main'
-import Services from './views/services/Services'
-import DigitalPrinting from './views/services/DigitalPrinting'
+import Services from './views/Services'
+import { DigitalPrinting } from './views/services/DigitalPrinting'
 import BigFormat from './views/services/BigFormat'
 import Sublimation from './views/services/Sublimation'
 import Bookbinding from './views/services/Bookbinding'
@@ -42,8 +42,8 @@ export default function App() {
 
   useEffect(() => {
     setLoading(false)
-    document.querySelector('.loading').remove()
-    document.getElementById('root').style.display = 'unset'
+    document.getElementById("root").style.display = "unset"
+    document.querySelector(".loading").remove()
   }, [])
 
   return (
