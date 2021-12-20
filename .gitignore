@@ -23,3 +23,4 @@ yarn-error.log*
 # custom
 misc.jsx
 MyGitScript.sh
+MyGitScriptCommitOnly.sh
