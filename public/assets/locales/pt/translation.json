@@ -4,7 +4,7 @@
 
   "CookieConsentText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   "CookieBtn1": "Essenciais apenas",
-  "CookieBtn2": "Aceitar todos",
+  "CookieBtn2": "Aceitar",
   "CookieContactAlert": "Aceite todos os 'cookies' para visualizar o mapa",
 
   "SelectLangTitle": "Idioma:",
@@ -34,34 +34,34 @@
 
   "DigitalPrinting": {
     "Img1Title": "Título 1",
-    "Img1Desc": "Descrição 1",
+    "Img1Desc": "Descrição 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
 
     "Img2Title": "Título 2",
-    "Img2Desc": "Descrição 2 ",
+    "Img2Desc": "Descrição 2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt. ",
 
     "Img3Title": "Título 3",
-    "Img3Desc": "Descrição 3",
+    "Img3Desc": "Descrição 3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
 
     "Img4Title": "Título 4",
-    "Img4Desc": "Descrição 4 ",
+    "Img4Desc": "Descrição 4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
 
     "Img5Title": "Título 5",
-    "Img5Desc": "Descrição 5 ",
+    "Img5Desc": "Descrição 5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
 
     "Img6Title": "Título 6",
-    "Img6Desc": "Descrição 6 ",
+    "Img6Desc": "Descrição 6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
 
     "Img7Title": "Título 7",
-    "Img7Desc": "Descrição 7 ",
+    "Img7Desc": "Descrição 7 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
 
     "Img8Title": "Título 8",
-    "Img8Desc": "Descrição 8 ",
+    "Img8Desc": "Descrição 8 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
 
     "Img9Title": "Título 9",
-    "Img9Desc": "Descrição 9 ",
+    "Img9Desc": "Descrição 9 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
 
     "Img10Title": "Título 10",
-    "Img10Desc": "Descrição 10 "
+    "Img10Desc": "Descrição 10 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt."
   },
 
   "Contact": {

@@ -6,7 +6,7 @@ export default function Contact() {
 
     const { t } = useTranslation()
 
-    const doesThis = () => {
+    const removeCookieConsent = () => {
         localStorage.removeItem('CookieConsent')
         window.location.reload()
     }
@@ -16,7 +16,7 @@ export default function Contact() {
     const GMaps = () => {
         if (!cookieConsent || cookieConsent !== 'accepted') {
             return (
-                <p onClick={doesThis}>{t('CookieContactAlert')}</p>
+                <p onClick={removeCookieConsent}>{t('CookieContactAlert')}</p>
             )
         } else {
             return (

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { GrPrevious, GrNext } from 'react-icons/gr'
@@ -22,8 +22,8 @@ const style = {
     height: '150px'
 }
 
-const prevArrow = <GrPrevious size='2em' className='arrow prev-arrow'></GrPrevious>
-const nextArrow = <GrNext size='2em' className='arrow next-arrow'></GrNext>
+const prevArrow = <GrPrevious size='1.6em' className='arrow prev-arrow'></GrPrevious>
+const nextArrow = <GrNext size='1.6em' className='arrow next-arrow'></GrNext>
 
 const properties = {
     cssClass: 'slider-container',
@@ -93,8 +93,12 @@ function Content() {
         }
     ]
 
-    const doesThis = () => {
-        console.log('Test')
+    const [title, setTitle] = useState(images[0].title)
+    const [description, setDescription] = useState(images[0].description)
+
+    const ClickedService = (value) => {
+        setTitle(value.title)
+        setDescription(value.description)
     }
 
     return (
@@ -110,15 +114,14 @@ function Content() {
                     <h1>{t('Services.Service1')}</h1>
                     <Slide {...properties}>
                         {images.map((each) =>
-                            <div key={each.img} style={style} className='slider-image' onClick={doesThis}>
+                            <div key={each.img} style={style} className='slider-image' onClick={ClickedService.bind(this, each)}>
                                 <img src={each.img} alt={each.title} />
                                 <p>{each.title}</p>
                             </div>
                         )}
                     </Slide>
-                    {images.map((each) =>
-                        <p key={each.img}>{each.description}</p>
-                    )}
+                    <h1>{title}</h1>
+                    <p>{description}</p>
                 </div>
             </div>
         </motion.div>
@@ -155,10 +158,10 @@ export class DigitalPrinting extends React.Component {
             properties.slidesToShow = 5
             properties.slidesToScroll = 5
         }
+
         return (
             <Content />
         )
-
     }
 
 }

@@ -47,8 +47,8 @@ export default function App() {
 
   useEffect(() => {
     setLoading(false)
-    document.getElementById("root").style.display = "unset"
-    document.querySelector(".loading").remove()
+    document.getElementById('root').style.display = 'unset'
+    document.querySelector('.loading').remove()
   }, [])
 
   return (
