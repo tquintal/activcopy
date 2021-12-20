@@ -17,49 +17,6 @@ import image8 from './assets/img8.jpg'
 import image9 from './assets/img9.jpg'
 import image10 from './assets/img10.jpg'
 
-const images = [
-    {
-        'img': image1,
-        'desc': 'Image 1'
-    },
-    {
-        'img': image2,
-        'desc': 'Image 2'
-    },
-    {
-        'img': image3,
-        'desc': 'Image 3'
-    },
-    {
-        'img': image4,
-        'desc': 'Image 4'
-    },
-    {
-        'img': image5,
-        'desc': 'Image 5'
-    },
-    {
-        'img': image6,
-        'desc': 'Image 6'
-    },
-    {
-        'img': image7,
-        'desc': 'Image 7'
-    },
-    {
-        'img': image8,
-        desc: 'Image 8'
-    },
-    {
-        'img': image9,
-        desc: 'Image 9'
-    },
-    {
-        'img': image10,
-        desc: 'Image 10'
-    }
-]
-
 const style = {
     textAlign: 'center',
     height: '150px'
@@ -80,7 +37,66 @@ const properties = {
 }
 
 function Content() {
+
     const { t } = useTranslation()
+
+    const images = [
+        {
+            'img': image1,
+            'title': t('DigitalPrinting.Img1Title'),
+            'description': t('DigitalPrinting.Img1Desc')
+        },
+        {
+            'img': image2,
+            'title': t('DigitalPrinting.Img2Title'),
+            'description': t('DigitalPrinting.Img2Desc')
+        },
+        {
+            'img': image3,
+            'title': t('DigitalPrinting.Img3Title'),
+            'description': t('DigitalPrinting.Img3Desc')
+        },
+        {
+            'img': image4,
+            'title': t('DigitalPrinting.Img4Title'),
+            'description': t('DigitalPrinting.Img4Desc')
+        },
+        {
+            'img': image5,
+            'title': t('DigitalPrinting.Img5Title'),
+            'description': t('DigitalPrinting.Img5Desc')
+        },
+        {
+            'img': image6,
+            'title': t('DigitalPrinting.Img6Title'),
+            'description': t('DigitalPrinting.Img6Desc')
+        },
+        {
+            'img': image7,
+            'title': t('DigitalPrinting.Img7Title'),
+            'description': t('DigitalPrinting.Img7Desc')
+        },
+        {
+            'img': image8,
+            'title': t('DigitalPrinting.Img8Title'),
+            'description': t('DigitalPrinting.Img8Desc')
+        },
+        {
+            'img': image9,
+            'title': t('DigitalPrinting.Img9Title'),
+            'description': t('DigitalPrinting.Img9Desc')
+        },
+        {
+            'img': image10,
+            'title': t('DigitalPrinting.Img10Title'),
+            'description': t('DigitalPrinting.Img10Desc')
+        }
+    ]
+
+    const doesThis = () => {
+        console.log('Test')
+    }
+
     return (
         <motion.div
             transition={{ duration: 0.4 }}
@@ -93,9 +109,16 @@ function Content() {
                     <ServiceBack />
                     <h1>{t('Services.Service1')}</h1>
                     <Slide {...properties}>
-                        {images.map((each) => <div key={each.desc} style={style} className='slider-image'><img src={each.img} alt={each.desc} /><p>{each.desc}</p></div>)}
+                        {images.map((each) =>
+                            <div key={each.img} style={style} className='slider-image' onClick={doesThis}>
+                                <img src={each.img} alt={each.title} />
+                                <p>{each.title}</p>
+                            </div>
+                        )}
                     </Slide>
-                    <p>{t('Description.Content')}</p>
+                    {images.map((each) =>
+                        <p key={each.img}>{each.description}</p>
+                    )}
                 </div>
             </div>
         </motion.div>

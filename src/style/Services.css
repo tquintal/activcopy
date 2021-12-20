@@ -19,9 +19,11 @@
 }
 
 .arrow {
-  cursor: pointer;
-  background-color: #ffffff;
   padding: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: solid;
+  border-width: thin;
 }
 
 .prev-arrow {

@@ -16,9 +16,14 @@ import Contact from './views/Contact'
 const CookieConsent = () => {
   const { t } = useTranslation()
 
-  const setConsentStatus = () => {
+  const setConsentStatusRequired = () => {
+    localStorage.setItem('CookieConsent', 'required')
+    window.location.reload()
+  }
+
+  const setConsentStatusAccepted = () => {
     if (!localStorage.getItem('CookieConsent')) {
-      localStorage.setItem('CookieConsent', true)
+      localStorage.setItem('CookieConsent', 'accepted')
       // document.querySelector('.cookie-container').remove() ... bad practice
       window.location.reload()
     } else {
@@ -30,8 +35,8 @@ const CookieConsent = () => {
     <div className='cookie-container'>
       <p>{t('CookieConsentText')}</p>
       <div className='cookie-btns-container'>
-        <button className='cookie-preferences-btn'>{t('CookieBtn1')}</button>
-        <button className='cookie-accept-btn' onClick={setConsentStatus}>{t('CookieBtn2')}</button>
+        <button className='cookie-preferences-btn' onClick={setConsentStatusRequired}>{t('CookieBtn1')}</button>
+        <button className='cookie-accept-btn' onClick={setConsentStatusAccepted}>{t('CookieBtn2')}</button>
       </div>
     </div>
   )
@@ -51,7 +56,7 @@ export default function App() {
       {!loading && (
         <>
           <Header />
-          {!localStorage.getItem('CookieConsent') && (<CookieConsent />)}
+          {!localStorage.getItem('CookieConsent') && <CookieConsent />}
           <AnimatePresence>
             <Routes>
               <Route path='/' element={<Main />} />

@@ -3,8 +3,9 @@
   "ErrorBtn": "Take me back",
 
   "CookieConsentText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  "CookieBtn1": "Preferences",
-  "CookieBtn2": "Accept",
+  "CookieBtn1": "Required only",
+  "CookieBtn2": "Allow all",
+  "CookieContactAlert": "Accept all the cookies to view the map",
 
   "SelectLangTitle": "Language:",
 
@@ -25,6 +26,38 @@
     "Service2": "Big Format",
     "Service3": "Sublimation",
     "Service4": "Bookbinding"
+  },
+
+  "DigitalPrinting": {
+    "Img1Title": "Title 1",
+    "Img1Desc": "Description 1",
+
+    "Img2Title": "Title 2",
+    "Img2Desc": "Description 2 ",
+
+    "Img3Title": "Title 3",
+    "Img3Desc": "Description 3",
+
+    "Img4Title": "Title 4",
+    "Img4Desc": "Description 4 ",
+
+    "Img5Title": "Title 5",
+    "Img5Desc": "Description 5 ",
+
+    "Img6Title": "Title 6",
+    "Img6Desc": "Description 6 ",
+
+    "Img7Title": "Title 7",
+    "Img7Desc": "Description 7 ",
+
+    "Img8Title": "Title 8",
+    "Img8Desc": "Description 8 ",
+
+    "Img9Title": "Title 9",
+    "Img9Desc": "Description 9 ",
+
+    "Img10Title": "Title 10",
+    "Img10Desc": "Description 10 "
   },
 
   "Service": {

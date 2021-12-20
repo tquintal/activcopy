@@ -26,7 +26,7 @@ export default function Services() {
                             <p>{t('Services.Service1')}</p>
                         </div>
                     </NavLink>
-                    <NavLink onClick={() => backToTop()} to='/services/big-format'>
+                    {/* <NavLink onClick={() => backToTop()} to='/services/big-format'>
                         <div className='service-card-container'>
                             <div className='service-card'>
                                 <h3>*Icon/Image*</h3>
@@ -49,7 +49,7 @@ export default function Services() {
                             </div>
                             <p>{t('Services.Service4')}</p>
                         </div>
-                    </NavLink>
+                    </NavLink> */}
                 </div>
             </div>
         </motion.div>
