@@ -7,10 +7,31 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 5px;
+  cursor: pointer;
 }
 
 .slider-image img {
   height: 75%;
+}
+
+.react-slideshow-container + ul.indicators {
+  margin-top: 10px !important;
+}
+
+.arrow {
+  cursor: pointer;
+  background-color: #ffffff;
+  padding: 5px;
+}
+
+.prev-arrow {
+  margin-top: -32px;
+  margin-right: -37px;
+}
+
+.next-arrow {
+  margin-top: -32px;
+  margin-left: -37px;
 }
 
 @media only screen and (max-width: 1100px) {

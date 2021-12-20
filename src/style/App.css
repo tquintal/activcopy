@@ -20,7 +20,7 @@ Red Orange: #FF4500
   justify-content: space-between;
   gap: 15px;
   box-shadow: 0 1px #eaeff2 inset;
-  z-index: 3;
+  z-index: 5;
 }
 
 .cookie-container p {
@@ -64,6 +64,7 @@ Red Orange: #FF4500
   box-shadow: 0 -1px #eaeff2 inset;
   top: 0;
   background-color: #ffffff;
+  z-index: 10;
 }
 
 .mobile-menu {

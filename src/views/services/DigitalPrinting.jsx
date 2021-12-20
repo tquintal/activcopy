@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { GrPrevious, GrNext } from 'react-icons/gr'
 import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image'
 import ServiceBack from '../../components/ServiceBack'
@@ -64,12 +65,18 @@ const style = {
     height: '150px'
 }
 
+const prevArrow = <GrPrevious size='2em' className='arrow prev-arrow'></GrPrevious>
+const nextArrow = <GrNext size='2em' className='arrow next-arrow'></GrNext>
+
 const properties = {
     cssClass: 'slider-container',
     transitionDuration: 250,
     infinite: true,
     indicators: true,
-    autoplay: false
+    autoplay: false,
+    canSwipe: true,
+    prevArrow: prevArrow,
+    nextArrow: nextArrow
 }
 
 function Content() {
