@@ -8,10 +8,15 @@
   justify-content: space-between;
   padding: 5px;
   cursor: pointer;
+  transition: 200ms;
 }
 
 .slider-image img {
   height: 75%;
+}
+
+.slider-image:hover {
+  color: #929292;
 }
 
 .react-slideshow-container + ul.indicators {

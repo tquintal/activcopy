@@ -29,7 +29,7 @@ const properties = {
     cssClass: 'slider-container',
     transitionDuration: 250,
     infinite: true,
-    indicators: true,
+    indicators: false,
     autoplay: false,
     canSwipe: true,
     prevArrow: prevArrow,
