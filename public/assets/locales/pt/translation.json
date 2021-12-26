@@ -35,35 +35,26 @@
   },
 
   "DigitalPrinting": {
-    "Img1Title": "Título 1",
-    "Img1Desc": "Descrição 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
+    "FirstDPTitle": "Pequenos formatos",
+    "FirstDPDesc": "Tamanhos: A6, A5, A3, SRA3\nImpressão: Preto e a Cores / Frente e verso\nGramagem: 80 a 350G\nTipo de papel: Diversos, papel reciclado e papel vegan",
 
-    "Img2Title": "Título 2",
-    "Img2Desc": "Descrição 2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt. ",
+    "SecondDPTitle": "Impressão em branco",
+    "SecondDPDesc": "Tamanho: A4\nImpressão: Branco / Frente, frente e verso\nGramagem: 80 a 350G\nTipo de papel: Diversos, papel reciclado e papel vegan",
 
-    "Img3Title": "Título 3",
-    "Img3Desc": "Descrição 3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
+    "ThirdDPTitle": "Impressão de teses",
+    "ThirdDPDesc": "Tamanho: A4\nImpressão: Preto e a Cores / Frente e verso\nGramagem: 80 a 120G\nTipo de papel: Diversos, papel reciclado e papel vegan",
 
-    "Img4Title": "Título 4",
-    "Img4Desc": "Descrição 4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
+    "FourthDPTitle": "Cartões de visita",
+    "FourthDPDesc": "Tamanho: Quadrado e Retangular\nImpressão: Preto e a Cores / Frente, frente e verso\nTipo de papel: CLA 315G, Couché 350G, Diversos\nAcabamento: Laminação",
 
-    "Img5Title": "Título 5",
-    "Img5Desc": "Descrição 5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
+    "FifthDPTitle": "Revistas e Catálogos",
+    "FifthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto e a Cores / Frente, frente e verso\nGramagem: 80 a 350G\nTipos de papel: Diversos, papel reciclado e papel vegan\nAcabamentos: Dobras, encadernação e agrafos",
 
-    "Img6Title": "Título 6",
-    "Img6Desc": "Descrição 6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
+    "SixthDPTitle": "Flyers e Folhetos",
+    "SixthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto e a Cores / Frente, frente e verso\nGramagem: 80 a 350G\nTipos de papel: Diversos, papel reciclado e papel vegan\nAcabamentos: Dobras e corte",
 
-    "Img7Title": "Título 7",
-    "Img7Desc": "Descrição 7 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
-
-    "Img8Title": "Título 8",
-    "Img8Desc": "Descrição 8 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
-
-    "Img9Title": "Título 9",
-    "Img9Desc": "Descrição 9 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt.",
-
-    "Img10Title": "Título 10",
-    "Img10Desc": "Descrição 10 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt."
+    "SeventhDPTitle": "Envelopes",
+    "SeventhDPDesc": "Material: ..."
   },
 
   "Contact": {

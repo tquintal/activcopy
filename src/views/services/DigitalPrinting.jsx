@@ -28,7 +28,7 @@ const nextArrow = <GrNext size='1.6em' className='arrow next-arrow'></GrNext>
 const properties = {
     cssClass: 'slider-container',
     transitionDuration: 250,
-    infinite: true,
+    // infinite: true,
     indicators: false,
     autoplay: false,
     canSwipe: true,
@@ -43,63 +43,48 @@ function Content() {
     const images = [
         {
             'img': image1,
-            'title': t('DigitalPrinting.Img1Title'),
-            'description': t('DigitalPrinting.Img1Desc')
+            'title': t('DigitalPrinting.FirstDPTitle'),
+            'description': t('DigitalPrinting.FirstDPDesc')
         },
         {
             'img': image2,
-            'title': t('DigitalPrinting.Img2Title'),
-            'description': t('DigitalPrinting.Img2Desc')
+            'title': t('DigitalPrinting.SecondDPTitle'),
+            'description': t('DigitalPrinting.SecondDPDesc')
         },
         {
             'img': image3,
-            'title': t('DigitalPrinting.Img3Title'),
-            'description': t('DigitalPrinting.Img3Desc')
+            'title': t('DigitalPrinting.ThirdDPTitle'),
+            'description': t('DigitalPrinting.ThirdDPDesc')
         },
         {
             'img': image4,
-            'title': t('DigitalPrinting.Img4Title'),
-            'description': t('DigitalPrinting.Img4Desc')
+            'title': t('DigitalPrinting.FourthDPTitle'),
+            'description': t('DigitalPrinting.FourthDPDesc')
         },
         {
             'img': image5,
-            'title': t('DigitalPrinting.Img5Title'),
-            'description': t('DigitalPrinting.Img5Desc')
+            'title': t('DigitalPrinting.FifthDPTitle'),
+            'description': t('DigitalPrinting.FifthDPDesc')
         },
         {
             'img': image6,
-            'title': t('DigitalPrinting.Img6Title'),
-            'description': t('DigitalPrinting.Img6Desc')
+            'title': t('DigitalPrinting.SixthDPTitle'),
+            'description': t('DigitalPrinting.SixthDPDesc')
         },
         {
             'img': image7,
-            'title': t('DigitalPrinting.Img7Title'),
-            'description': t('DigitalPrinting.Img7Desc')
-        },
-        {
-            'img': image8,
-            'title': t('DigitalPrinting.Img8Title'),
-            'description': t('DigitalPrinting.Img8Desc')
-        },
-        {
-            'img': image9,
-            'title': t('DigitalPrinting.Img9Title'),
-            'description': t('DigitalPrinting.Img9Desc')
-        },
-        {
-            'img': image10,
-            'title': t('DigitalPrinting.Img10Title'),
-            'description': t('DigitalPrinting.Img10Desc')
+            'title': t('DigitalPrinting.SeventhDPTitle'),
+            'description': t('DigitalPrinting.SeventhDPDesc')
         }
     ]
 
     const [title, setTitle] = useState(images[0].title)
-    const [description, setDescription] = useState(images[0].description)
+    const [description, setdescription] = useState(images[0].description)
 
     const ClickedService = (value) => {
-        console.table(value)
+        // console.table(value)
         setTitle(value.title)
-        setDescription(value.description)
+        setdescription(value.description)
     }
 
     return (
@@ -122,7 +107,7 @@ function Content() {
                         )}
                     </Slide>
                     <h1>{title}</h1>
-                    <p>{description}</p>
+                    <p className='service-description'>{description}</p>
                 </div>
             </div>
         </motion.div>

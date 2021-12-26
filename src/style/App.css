@@ -339,6 +339,10 @@ Red Orange: #FF4500
   }
 }
 
+.service-description {
+  white-space: pre-line;
+}
+
 .contacts-container {
   display: flex;
   justify-content: space-between;
