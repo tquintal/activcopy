@@ -13,9 +13,9 @@ import image4 from './assets/img4.jpg'
 import image5 from './assets/img5.jpg'
 import image6 from './assets/img6.jpg'
 import image7 from './assets/img7.jpg'
-import image8 from './assets/img8.jpg'
-import image9 from './assets/img9.jpg'
-import image10 from './assets/img10.jpg'
+// import image8 from './assets/img8.jpg'
+// import image9 from './assets/img9.jpg'
+// import image10 from './assets/img10.jpg'
 
 const style = {
     textAlign: 'center',
