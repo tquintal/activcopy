@@ -34,9 +34,19 @@ function DesktopHeader() {
                     <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll() }} to='/services'>{t('Navigation.Services')}</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll() }} to='/contact' >{t('Navigation.Contact')}</NavLink>
 
-                    <GrLanguage size='1.2em' />
-                    <button className='lang-btn' onClick={() => i18next.changeLanguage('pt')} disabled={currentLanguageCode === 'pt'}>Português</button>
-                    <button className='lang-btn' onClick={() => i18next.changeLanguage('en')} disabled={currentLanguageCode === 'en'}>English</button>
+                    <div className='dropdown'>
+                        <button className='dropbtn'>{t('SelectLangTitle')}<GrLanguage size='1.5em' /></button>
+                        <div className='dropdown-content'>
+                            <div className='desktop-lang-option' onClick={() => i18next.changeLanguage('pt')}>
+                                <img src={PT} alt='PT' />
+                                <button className='lang-btn-desktop' disabled={currentLanguageCode === 'pt'}>Português</button>
+                            </div>
+                            <div className='desktop-lang-option' onClick={() => i18next.changeLanguage('en')} >
+                                <img src={GB} alt='EN' />
+                                <button className='lang-btn-desktop' disabled={currentLanguageCode === 'en'}>English</button>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
