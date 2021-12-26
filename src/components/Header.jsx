@@ -5,6 +5,8 @@ import i18next from 'i18next'
 import cookies from 'js-cookie'
 import { scrollTop, backToTop, enableScroll, disableScroll } from '../utils'
 import { AiOutlineMenu, AiFillCloseSquare } from 'react-icons/ai'
+import PT from '../assets/pt.png'
+import GB from '../assets/gb.png'
 import { GrLanguage } from 'react-icons/gr'
 import { motion } from 'framer-motion'
 
@@ -67,8 +69,17 @@ export function MobileHeader() {
                 <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/services'>{t('Navigation.Services')}</NavLink>
                 <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/contact'>{t('Navigation.Contact')}</NavLink>
                 <div className='lang-div-mobile'>
-                    <p onClick={() => i18next.changeLanguage('pt')}>PT</p>
-                    <p onClick={() => i18next.changeLanguage('en')}>EN</p>
+                    <p>{t('ChangeLanguage')}</p>
+                    <div className='lang-options'>
+                        <div className='lang-btn' onClick={() => i18next.changeLanguage('pt')}>
+                            <img src={PT} alt='PT' />
+                            <p>PT</p>
+                        </div>
+                        <div className='lang-btn' onClick={() => i18next.changeLanguage('en')}>
+                            <img src={GB} alt='GB' />
+                            <p>EN</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
