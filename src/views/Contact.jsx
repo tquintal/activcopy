@@ -59,24 +59,25 @@ export default function Contact() {
                     <GMaps />
                 </div>
 
-                <div className='contact-form-container'>
+                <form action='https://formsubmit.co/tomas.quintal@gmail.com' method='POST' className='contact-form-container'>
                     <h1>{t('Form.Title')}</h1>
                     <div className='contact-form-first-block'>
                         <div>
-                            <input placeholder={t('Form.Name')}></input>
-                            <input placeholder='E-mail *'></input>
+                            <input type='text' name='Nome' placeholder={t('Form.Name')} required></input>
+                            <input type='email' name='E-Mail' placeholder='E-mail *' required></input>
                         </div>
                         <div>
-                            <input placeholder={t('Form.Contact')}></input>
-                            <input placeholder={t('Form.Subject')}></input>
+                            <input type='text' name='Contacto' placeholder={t('Form.Contact')}></input>
+                            <input type='text' name='Assunto' placeholder={t('Form.Subject')} required></input>
                         </div>
                     </div>
                     <div>
-                        <textarea placeholder={t('Form.TextArea')} className='message-textarea'></textarea>
+                        <textarea name='Mensagem' placeholder={t('Form.TextArea')} className='message-textarea' required />
                     </div>
                     <p>{t('Form.Info')}</p>
-                    <button>{t('Form.Button')}</button>
-                </div>
+                    <button type='submit'>{t('Form.Button')}</button>
+                    <input type='hidden' name='_next' value='https://activcopy.vercel.app/thank-you' />
+                </form>
             </div>
         </motion.div>
     )

@@ -392,6 +392,7 @@ textarea {
   padding: 10px;
   outline: inherit;
   border: none;
+  border-radius: 0px;
   flex-grow: 1;
 }
 
@@ -482,7 +483,8 @@ textarea {
   color: #1b1b1b;
 }
 
-.error-view button {
+.error-view button,
+.thank-you-view button {
   padding: 12px;
   background-color: #1b1b1b;
   color: #f5f5f5;
@@ -497,9 +499,22 @@ textarea {
 }
 
 @media (hover: hover) {
-  .error-view button:hover {
+  .error-view button:hover,
+  .thank-you-view button:hover {
     background-color: #ff4500;
   }
+}
+
+.thank-you-view {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: white;
+  color: #1b1b1b;
 }
 
 @media only screen and (max-width: 1100px) {

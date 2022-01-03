@@ -12,6 +12,7 @@ import BigFormat from './views/services/BigFormat'
 import Sublimation from './views/services/Sublimation'
 import Bookbinding from './views/services/Bookbinding'
 import Contact from './views/Contact'
+import ThankYou from './views/ThankYou'
 
 const CookieConsent = () => {
   const { t } = useTranslation()
@@ -66,6 +67,7 @@ export default function App() {
               <Route path='/services/sublimation' element={<Sublimation />} />
               <Route path='/services/bookbinding' element={<Bookbinding />} />
               <Route path='/contact' element={<Contact />} />
+              <Route path='/thank-you' element={<ThankYou />} />
               <Route path='*' element={<Error />} />
             </Routes>
           </AnimatePresence>
