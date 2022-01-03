@@ -13,9 +13,9 @@ import image4 from './assets/img4.jpg'
 import image5 from './assets/img5.jpg'
 import image6 from './assets/img6.jpg'
 import image7 from './assets/img7.jpg'
-// import image8 from './assets/img8.jpg'
-// import image9 from './assets/img9.jpg'
-// import image10 from './assets/img10.jpg'
+import image8 from './assets/img8.jpg'
+import image9 from './assets/img9.jpg'
+import image10 from './assets/img10.jpg'
 
 const style = {
     textAlign: 'center',
@@ -75,6 +75,21 @@ function Content() {
             'img': image7,
             'title': t('DigitalPrinting.SeventhDPTitle'),
             'description': t('DigitalPrinting.SeventhDPDesc')
+        },
+        {
+            'img': image8,
+            'title': t('DigitalPrinting.EighthDPTitle'),
+            'description': t('DigitalPrinting.EighthDPDesc')
+        },
+        {
+            'img': image9,
+            'title': t('DigitalPrinting.NinthDPTitle'),
+            'description': t('DigitalPrinting.NinthDPDesc')
+        },
+        {
+            'img': image10,
+            'title': t('DigitalPrinting.TenthDPTitle'),
+            'description': t('DigitalPrinting.TenthDPDesc')
         }
     ]
 
@@ -141,8 +156,8 @@ export class DigitalPrinting extends React.Component {
             properties.slidesToShow = 3
             properties.slidesToScroll = 3
         } else {
-            properties.slidesToShow = 5
-            properties.slidesToScroll = 5
+            properties.slidesToShow = 6
+            properties.slidesToScroll = 6
         }
 
         return (

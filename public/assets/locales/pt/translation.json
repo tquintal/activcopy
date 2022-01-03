@@ -39,25 +39,34 @@
 
   "DigitalPrinting": {
     "FirstDPTitle": "Pequenos formatos",
-    "FirstDPDesc": "Tamanhos: A6, A5, A3, SRA3\nImpressão: Preto e a Cores / Frente e verso\nGramagem: 80 a 350G\nTipo de papel: Diversos, papel reciclado e papel vegan",
+    "FirstDPDesc": "Tamanhos: A6, A5, A3, SRA3\nImpressão: Preto e a cores / Frente e verso\nGramagem: 80 a 350G\nTipo de papel: Diversos, papel reciclado e papel vegan",
 
     "SecondDPTitle": "Impressão em branco",
     "SecondDPDesc": "Tamanho: A4\nImpressão: Branco / Frente, frente e verso\nGramagem: 80 a 350G\nTipo de papel: Diversos, papel reciclado e papel vegan",
 
     "ThirdDPTitle": "Impressão de teses",
-    "ThirdDPDesc": "Tamanho: A4\nImpressão: Preto e a Cores / Frente e verso\nGramagem: 80 a 120G\nTipo de papel: Diversos, papel reciclado e papel vegan",
+    "ThirdDPDesc": "Tamanho: A4\nImpressão: Preto e a cores / Frente e verso\nGramagem: 80 a 120G\nTipo de papel: Diversos, papel reciclado e papel vegan",
 
     "FourthDPTitle": "Cartões de visita",
-    "FourthDPDesc": "Tamanho: Quadrado e Retangular\nImpressão: Preto e a Cores / Frente, frente e verso\nTipo de papel: CLA 315G, Couché 350G, Diversos\nAcabamento: Laminação",
+    "FourthDPDesc": "Tamanho: Quadrado e Retangular\nImpressão: Preto e a cores / Frente, frente e verso\nTipo de papel: CLA 315G, Couché 350G, Diversos\nAcabamento: Laminação",
 
     "FifthDPTitle": "Revistas e Catálogos",
-    "FifthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto e a Cores / Frente, frente e verso\nGramagem: 80 a 350G\nTipos de papel: Diversos, papel reciclado e papel vegan\nAcabamentos: Dobras, encadernação e agrafos",
+    "FifthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto e a cores / Frente, frente e verso\nGramagem: 80 a 350G\nTipos de papel: Diversos, papel reciclado e papel vegan\nAcabamentos: Dobras, encadernação e agrafos",
 
     "SixthDPTitle": "Flyers e Folhetos",
-    "SixthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto e a Cores / Frente, frente e verso\nGramagem: 80 a 350G\nTipos de papel: Diversos, papel reciclado e papel vegan\nAcabamentos: Dobras e corte",
+    "SixthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto e a cores / Frente, frente e verso\nGramagem: 80 a 350G\nTipos de papel: Diversos, papel reciclado e papel vegan\nAcabamentos: Dobras e corte",
 
     "SeventhDPTitle": "Envelopes",
-    "SeventhDPDesc": "Material: ..."
+    "SeventhDPDesc": "Material: DL 007 Digital com ou sem janela\nTamanho: 11cm x 22cm\nGramagem: 90g\nCor: Branco\nImpressão: Preto e a cores / Frente, frente e verso",
+
+    "EighthDPTitle": "Etiquetas e autocolantes",
+    "EighthDPDesc": "Tamanho: Personalizado\nImpressão: Preto e a cores / Apenas frente\nTipos de papel: Vinil branco / transparente",
+
+    "NinthDPTitle": "Plastificação",
+    "NinthDPDesc": "Tamanho: A6, A5, A4, A3",
+
+    "TenthDPTitle": "Laminação",
+    "TenthDPDesc": "Tamanho: Personalizado (largura máxima 30cm)\nAcabamento: Brilho / Mate"
   },
 
   "Contact": {
