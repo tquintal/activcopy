@@ -137,6 +137,7 @@ Red Orange: #FF4500
   background-color: #ffffff;
   color: #101010;
   box-shadow: 0 -1px #eaeff2 inset;
+  z-index: 12;
 }
 
 .header-container {
@@ -367,6 +368,7 @@ Red Orange: #FF4500
   color: #999999;
   cursor: pointer;
   transition: 200ms;
+  text-align: center;
 }
 
 @media (hover: hover) {
@@ -427,6 +429,7 @@ textarea {
   background-color: #ff4500;
   color: #ffffff;
   font-size: 14px;
+  font-weight: 500;
   transition: 200ms;
 }
 
@@ -444,10 +447,12 @@ textarea {
   box-shadow: 0 1px #eaeff2 inset;
 }
 
-.footer p {
+.footer-rights {
+  text-decoration: none;
   color: #ff4500;
   font-size: 12px;
   font-weight: 300;
+  cursor: text;
 }
 
 .footer-container {
@@ -465,8 +470,6 @@ textarea {
 }
 
 .social-icon {
-  size: 5em;
-  height: 32px;
   cursor: pointer;
   color: #ff4500;
 }
@@ -481,6 +484,7 @@ textarea {
   gap: 15px;
   background-color: white;
   color: #1b1b1b;
+  z-index: 15;
 }
 
 .error-view button,
@@ -623,6 +627,9 @@ textarea {
     flex-direction: column-reverse;
     justify-content: center;
     width: 100vh;
-    gap: 10px;
+  }
+
+  .social-container {
+    margin-bottom: 5px;
   }
 }

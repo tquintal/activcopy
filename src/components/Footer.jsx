@@ -10,7 +10,8 @@ export default function Footer() {
     return (
         <div className='footer'>
             <div className='footer-container'>
-                <p>ACTIVCOPY © 2021 - {t('Footer.Rights')}</p>
+                <a className='footer-rights' href='https://github.com/tquintal/' target='_blank' rel='noopener noreferrer'>ACTIVCOPY © 2021 - {t('Footer.Rights')}</a>
+                {/* <p>ACTIVCOPY © 2021 - {t('Footer.Rights')}</p> */}
                 <div className='social-container'>
                     <ReactTooltip />
                     <a href='https://www.facebook.com/activcopy/' target='_blank' rel='noopener noreferrer' data-tip='Facebook'>

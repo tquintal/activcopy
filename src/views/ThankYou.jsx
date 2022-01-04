@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { BiArrowBack } from 'react-icons/bi'
-import { backToTop } from '../utils'
 
 export default function ThankYou() {
     const { t } = useTranslation()
@@ -10,7 +9,7 @@ export default function ThankYou() {
         <div className='thank-you-view'>
             <div className='thank-you-view-content'>
                 <h1>{t('ThankYou')}</h1>
-                <NavLink onClick={() => backToTop()} to='/contact' className='thank-you-back'><BiArrowBack /><p>{t('Service.Back')}</p></NavLink>
+                <NavLink to='/contact' className='thank-you-back'><BiArrowBack /><p>{t('Service.Back')}</p></NavLink>
             </div>
         </div>
     )
