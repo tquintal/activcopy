@@ -124,6 +124,18 @@
     "SeventhSMDesc": "Tamanho: 20cm x 20cm; 15cm x 15cm\nImpressão: Preto / Cores"
   },
 
+  "Bookbinding": {
+    "FirstBBTitle": "Argolas metálicas",
+    "FirstBBDesc": "Argolas: 8mm até 50mm\nTamanho: A6, A5, A4, A3",
+    "FirstBBTShirtColorTitle": "Cores de capas polipropileno:",
+
+    "SecondBBTitle": "Térmicas",
+    "SecondBBDesc": "Espessura da encadernação: 1,5mm, 3mm, 6mm, 9mm, 12mm, 30mm\nTamanho: A4\nCor: Branco",
+
+    "ThirdBBTitle": "Encadernações cola quente",
+    "ThirdBBDesc": "Tamanho: Até A3\nCapa: Com / sem impressão.\nFrente / frente e verso\nLombada: Com / sem impressão\nTipo de papel: CLA 315g, couché 350g \nAcabamento: Laminação"
+  },
+
   "Contact": {
     "Title": "Contactos",
     "Budgets": "Orçamentos:",
