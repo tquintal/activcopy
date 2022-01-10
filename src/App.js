@@ -11,6 +11,7 @@ import { DigitalPrinting } from './views/services/DigitalPrinting'
 import { BigFormat } from './views/services/BigFormat'
 import { Sublimation } from './views/services/Sublimation'
 import Bookbinding from './views/services/Bookbinding'
+import Scanning from './views/services/Scanning'
 import Contact from './views/Contact'
 import ThankYou from './views/ThankYou'
 
@@ -66,6 +67,7 @@ export default function App() {
               <Route path='/services/big-format' element={<BigFormat />} />
               <Route path='/services/sublimation' element={<Sublimation />} />
               <Route path='/services/bookbinding' element={<Bookbinding />} />
+              <Route path='/services/scanning' element={<Scanning />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='/thank-you' element={<ThankYou />} />
               <Route path='*' element={<Error />} />

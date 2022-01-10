@@ -30,7 +30,8 @@
     "Service1": "Digital Printing",
     "Service2": "Big Format",
     "Service3": "Sublimation",
-    "Service4": "Bookbinding"
+    "Service4": "Bookbinding",
+    "Service5": "Small and big format scanning"
   },
 
   "Service": {

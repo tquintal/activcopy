@@ -318,6 +318,13 @@ Red Orange: #FF4500
   padding-top: 50px;
 }
 
+.services-bottom-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
 .service-container {
   gap: 5px;
   min-height: 100vh;

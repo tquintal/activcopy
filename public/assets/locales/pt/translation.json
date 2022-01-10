@@ -30,7 +30,8 @@
     "Service1": "Impressão Digital",
     "Service2": "Grandes Formatos",
     "Service3": "Sublimação",
-    "Service4": "Encadernações"
+    "Service4": "Encadernações",
+    "Service5": "Digitalização"
   },
 
   "Service": {
@@ -134,6 +135,11 @@
 
     "ThirdBBTitle": "Cola quente",
     "ThirdBBDesc": "Tamanho: Até A3\nCapa: Com / sem impressão.\nFrente / frente e verso\nLombada: Com / sem impressão\nTipo de papel: CLA 315g, couché 350g \nAcabamento: Laminação"
+  },
+
+  "Scanning": {
+    "SCTitle": "Digitalização de pequenos e grandes formatos",
+    "SCDesc": "Digitalização: Preto / Cores\nFormato digitalização: JPG, PDF, TIFF"
   },
 
   "Contact": {

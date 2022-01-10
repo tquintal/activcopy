@@ -42,14 +42,24 @@ export default function Services() {
                             <p>{t('Services.Service3')}</p>
                         </div>
                     </NavLink>
-                    <NavLink onClick={() => backToTop()} to='/services/bookbinding'>
-                        <div className='service-card-container'>
-                            <div className='service-card'>
-                                <h3>*Icon/Image*</h3>
+                    <div className='services-bottom-container'>
+                        <NavLink onClick={() => backToTop()} to='/services/bookbinding'>
+                            <div className='service-card-container'>
+                                <div className='service-card'>
+                                    <h3>*Icon/Image*</h3>
+                                </div>
+                                <p>{t('Services.Service4')}</p>
                             </div>
-                            <p>{t('Services.Service4')}</p>
-                        </div>
-                    </NavLink>
+                        </NavLink>
+                        <NavLink onClick={() => backToTop()} to='/services/scanning'>
+                            <div className='service-card-container'>
+                                <div className='service-card'>
+                                    <h3>*Icon/Image*</h3>
+                                </div>
+                                <p>{t('Services.Service5')}</p>
+                            </div>
+                        </NavLink>
+                    </div>
                 </div>
             </div>
         </motion.div>
