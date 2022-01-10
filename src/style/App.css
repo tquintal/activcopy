@@ -590,7 +590,7 @@ textarea {
   .contact-container,
   .services-container,
   .service-container {
-    gap: 25px;
+    gap: 5px;
     margin: 10%;
   }
 
