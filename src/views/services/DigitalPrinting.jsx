@@ -17,11 +17,6 @@ import image8 from './assets/img8.jpg'
 import image9 from './assets/img9.jpg'
 import image10 from './assets/img10.jpg'
 
-const style = {
-    textAlign: 'center',
-    height: '150px'
-}
-
 const prevArrow = <GrPrevious size='1.6em' className='arrow prev-arrow'></GrPrevious>
 const nextArrow = <GrNext size='1.6em' className='arrow next-arrow'></GrNext>
 
@@ -112,17 +107,19 @@ function Content() {
             <div className='service'>
                 <div className='service-container'>
                     <ServiceBack />
-                    <h1>{t('Services.Service1')}</h1>
+                    <h1 className='service-title'>{t('Services.Service1')}</h1>
                     <Slide {...properties}>
                         {images.map((each) =>
-                            <div key={each.img} style={style} className='slider-image' onClick={ClickedService.bind(this, each)}>
+                            <div key={each.img} className='slider-image slide' onClick={ClickedService.bind(this, each)}>
                                 <img src={each.img} alt={each.title} />
                                 <p>{each.title}</p>
                             </div>
                         )}
                     </Slide>
-                    <h1>{title}</h1>
-                    <p className='service-description'>{description}</p>
+                    <div>
+                        <h1 className='service-title'>{title}</h1>
+                        <p className='service-description'>{description}</p>
+                    </div>
                 </div>
             </div>
         </motion.div>
@@ -151,6 +148,7 @@ export class DigitalPrinting extends React.Component {
     }
 
     render() {
+
         const { width } = this.state
         if (width <= 1100) {
             properties.slidesToShow = 3

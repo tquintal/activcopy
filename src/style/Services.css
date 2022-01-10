@@ -45,7 +45,40 @@
   .digital-printing-container {
     flex-direction: column;
   }
+
   .digital-printing-container img {
     width: 100%;
   }
+
+  .service-title {
+    font-size: 26px;
+  }
+}
+
+.slide {
+  text-align: center;
+  height: 150px;
+}
+
+.tshirt-title {
+  font-weight: 500;
+}
+
+.tshirt-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.colors-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  grid-gap: 5px;
+  flex-wrap: wrap;
+}
+
+.tshirt-color {
+  height: 20px;
+  width: 20px;
 }

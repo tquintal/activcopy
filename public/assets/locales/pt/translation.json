@@ -69,6 +69,61 @@
     "TenthDPDesc": "Tamanho: Personalizado (largura máxima 30cm)\nAcabamento: Brilho / Mate"
   },
 
+  "BigFormat": {
+    "FirstBFTitle": "Vinil",
+    "FirstBFDesc": "Material: Branco/Brilho, Branco/Mate, Transparente/Brilho, Transparente/Mate\nMicroperfurado\nTamanho: Personalizado (largura máxima 1,60m)",
+
+    "SecondBFTitle": "Lona",
+    "SecondBFDesc": "Material: Coated 440g branco mate\nTamanho: Personalizado (largura máxima 1,60m)",
+
+    "ThirdBFTitle": "Telas",
+    "ThirdBFDesc": "Material: Canvas\nTamanho: Personalizado (largura máxima 1,37m)",
+
+    "FourthBFTitle": "Roll-Up",
+    "FourthBFDesc": "Impressão: Branco Mate com costa cinza 420g\nTamanho: 80cm x 2000cm",
+
+    "FifthBFTitle": "Tecidos",
+    "FifthBFDesc": "Material: Polyester Basic 120g\nTamanho: Personalizado (largura máxima 1,60m)",
+
+    "SixthBFTitle": "Papel Parede",
+    "SixthBFDesc": "Materiais: Wallcover; Spray e up (cola adesiva no verso)\nTamanho: Personalizado (largura máxima 1,35m)",
+
+    "SeventhBFTitle": "Cartazes",
+    "SeventhBFDesc": "Impressão: Preto / Cores\nTamanho: Personalizado\nTipo de papel: Mate 180g; fotográfico; coated 200g",
+
+    "EighthBFTitle": "Projetos Arquitetura",
+    "EighthBFDesc": "Impressão: Preto / cores\nTamanho: personalizado (largura máxima 0,90 cm)\nFormato ficheiro: PDF, DWG, DWF e CAD\nTipo de papel: 80g, 100g, 120g, vegetal e poliéster\nAcabamento: corte e dobra"
+  },
+
+  "Sublimation": {
+    "FirstSMTitle": "T-shirts",
+    "FirstSMDesc": "Impressão: Preto/Cores",
+    "FirstSMTShirtColorTitle": "Cores:",
+    "FirstSMTShirt": "T-shirt de adulto\nTamanho: XS / S / M / L / XL / 2XL / 3XL / 5XL",
+    "SecondSMTShirt": "T-shirt orgânicas\nTamanho: S / M / L / XL / 2XL",
+    "ThirdSMTShirt": "T-shirt criança\nTamanho: 1-2, 3-4, 5-6, 7-8, 9-11, 12-14",
+    "FourthSMTShirt": "Impressão em recorte",
+    "FithSMTShirt": "Estão disponíveis estampagens em qualquer outro tipo de tecido.",
+
+    "SecondSMTitle": "Canecas",
+    "SecondSMDesc": "Impressão: Preto / Cores\nTamanho: 90mm x 210mm",
+
+    "ThirdSMTitle": "Carimbos",
+    "ThirdSMDesc": "Material: BROTHER Auto tintados\nTamanho: 10mm x 60mm ; 18mm x 50mm\nCores: Preto",
+
+    "FourthSMTitle": "Puzzles",
+    "FourthSMDesc": "Tamanho: 27cm x 18cm, 18cm x 13cm\nFormato: Quadrado, retangular e coração\nImpressão: Preto/Cores",
+
+    "FifthSMTitle": "Pins",
+    "FifthSMDesc": "Tamanho: 40mm x 40mm\nImpressão: Preto / Cores",
+
+    "SixthSMTitle": "Tapetes de rato",
+    "SixthSMDesc": "Tamanho: 19,4cm x 23,6cm\nImpressão: Preto / Cores",
+
+    "SeventhSMTitle": "Pedras",
+    "SeventhSMDesc": "Tamanho: 20cm x 20cm; 15cm x 15cm\nImpressão: Preto / Cores"
+  },
+
   "Contact": {
     "Title": "Contactos",
     "Budgets": "Orçamentos:",
