@@ -5,7 +5,8 @@
   "ThankYou": "Obrigado! :)",
   "ThankYouBtn": "Voltar",
 
-  "CookieConsentText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "CookieConsentText": "Ao continuar a navegar neste website, aceita a nossa utilização de cookies.",
+  "CookieConsentLearnMore": "Saber mais",
   "CookieBtn1": "Essenciais apenas",
   "CookieBtn2": "Aceitar",
   "CookieContactAlert": "Aceite todos os 'cookies' para visualizar o mapa",

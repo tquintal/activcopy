@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Header } from './components/Header'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import Footer from './components/Footer'
 import Error from './views/Error'
+import { Header } from './components/Header'
+import Footer from './components/Footer'
 import Main from './views/Main'
+import CookieConsentLM from './views/CookieConsentLM'
 import Services from './views/Services'
 import { DigitalPrinting } from './views/services/DigitalPrinting'
 import { BigFormat } from './views/services/BigFormat'
@@ -28,14 +29,12 @@ const CookieConsent = () => {
       localStorage.setItem('CookieConsent', 'accepted')
       // document.querySelector('.cookie-container').remove() ... bad practice
       window.location.reload()
-    } else {
-      return
     }
   }
 
   return (
     <div className='cookie-container'>
-      <p>{t('CookieConsentText')}</p>
+      <p>{t('CookieConsentText')} <Link to='/cookie-consent' className='cookies-learn-more'>{t('CookieConsentLearnMore')}</Link></p>
       <div className='cookie-btns-container'>
         <button className='cookie-preferences-btn' onClick={setConsentStatusRequired}>{t('CookieBtn1')}</button>
         <button className='cookie-accept-btn' onClick={setConsentStatusAccepted}>{t('CookieBtn2')}</button>
@@ -70,6 +69,7 @@ export default function App() {
               <Route path='/services/scanning' element={<Scanning />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='/thank-you' element={<ThankYou />} />
+              <Route path='/cookie-consent' element={<CookieConsentLM />} />
               <Route path='*' element={<Error />} />
             </Routes>
           </AnimatePresence>
