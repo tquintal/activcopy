@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import cookies from 'js-cookie'
@@ -28,7 +28,7 @@ function DesktopHeader() {
             exit={{ opacity: 0 }}
             className='desktop-header'>
             <div className='header-container'>
-                <h1 className='title' onClick={() => { scrollTop(); enableScroll() }}>activcopy</h1>
+                <Link to='/'><h1 className='title' onClick={() => { scrollTop(); enableScroll() }}>activcopy</h1></Link>
                 <div className='header-actions'>
                     <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll() }} to='/'>{t('Navigation.Home')}</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll() }} to='/services'>{t('Navigation.Services')}</NavLink>
@@ -70,7 +70,7 @@ export function MobileHeader() {
     return (
         <>
             <div className='mobile-header'>
-                <h1 className='title' onClick={() => { scrollTop(); enableScroll() }}>activcopy</h1>
+                <Link to='/'><h1 className='title' onClick={() => { scrollTop(); enableScroll() }}>activcopy</h1></Link>
                 <AiOutlineMenu size='1.8em' onClick={() => { showMobileMenu(); disableScroll() }} />
             </div>
             <div className={mobileMenu ? 'mobile-menu enabled' : 'mobile-menu'}>

@@ -21,7 +21,7 @@ const nextArrow = <GrNext size='1.6em' className='arrow next-arrow'></GrNext>
 const properties = {
     cssClass: 'slider-container',
     transitionDuration: 250,
-    // infinite: true,
+    infinite: false,
     indicators: false,
     autoplay: false,
     canSwipe: true,

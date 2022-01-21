@@ -338,7 +338,7 @@ Red Orange: #FF4500
 }
 
 .service-container {
-  gap: 5px;
+  gap: 15px;
   min-height: 100vh;
 }
 
@@ -361,6 +361,7 @@ Red Orange: #FF4500
 
 .service-description {
   white-space: pre-line;
+  margin-top: 15px;
 }
 
 .contacts-container {
