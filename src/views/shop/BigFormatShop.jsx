@@ -5,7 +5,7 @@ import ShopBack from '../../components/ShopBack'
 
 export default function BigFormatShop() {
 
-    const { t } = useTranslation()
+    // const { t } = useTranslation()
 
     return (
         <motion.div

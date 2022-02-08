@@ -5,7 +5,7 @@ import ShopBack from '../../components/ShopBack'
 
 export default function Mugs() {
 
-    const { t } = useTranslation()
+    // const { t } = useTranslation()
 
     return (
         <motion.div
