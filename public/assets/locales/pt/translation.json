@@ -5,11 +5,10 @@
   "ThankYou": "Obrigado! :)",
   "ThankYouBtn": "Voltar",
 
-  "CookieConsentText": "Ao continuar a navegar neste website, aceita a nossa utilização de cookies.",
+  "CookieConsentText": "Ao continuar a navegar neste website, aceita a nossa política de utilização de cookies.",
   "CookieConsentLearnMore": "Saber mais",
-  "CookieBtn1": "Essenciais apenas",
+  "CookieConsentLearnMorePage": "Cookies de sistema:\nSão estritamente necessários à utilização do website. Permitem funcionalidades mínimas como a utilização de traduções e apresentação do conteúdo.\n",
   "CookieBtn2": "Aceitar",
-  "CookieContactAlert": "Aceite todos os 'cookies' para visualizar o mapa",
 
   "SelectLangTitle": "Idioma",
 

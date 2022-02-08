@@ -19,11 +19,6 @@ import ThankYou from './views/ThankYou'
 const CookieConsent = () => {
   const { t } = useTranslation()
 
-  const setConsentStatusRequired = () => {
-    localStorage.setItem('CookieConsent', 'required')
-    window.location.reload()
-  }
-
   const setConsentStatusAccepted = () => {
     if (!localStorage.getItem('CookieConsent')) {
       localStorage.setItem('CookieConsent', 'accepted')
@@ -36,7 +31,6 @@ const CookieConsent = () => {
     <div className='cookie-container'>
       <p>{t('CookieConsentText')} <Link to='/cookie-consent' className='cookies-learn-more'>{t('CookieConsentLearnMore')}</Link></p>
       <div className='cookie-btns-container'>
-        <button className='cookie-preferences-btn' onClick={setConsentStatusRequired}>{t('CookieBtn1')}</button>
         <button className='cookie-accept-btn' onClick={setConsentStatusAccepted}>{t('CookieBtn2')}</button>
       </div>
     </div>

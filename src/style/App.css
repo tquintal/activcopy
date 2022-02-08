@@ -8,6 +8,10 @@ Red Orange: #FF4500
 
 */
 
+.white-space {
+  white-space: pre-line;
+}
+
 .cookie-container {
   position: fixed;
   bottom: 0;
@@ -52,11 +56,6 @@ Red Orange: #FF4500
   font-size: 14px;
   transition: 200ms;
   cursor: pointer;
-}
-
-.cookie-preferences-btn {
-  background-color: #eaeff2;
-  color: #1b1b1b;
 }
 
 .cookie-accept-btn {
@@ -546,7 +545,7 @@ textarea {
 .thank-you-view-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   gap: 15px;
 }
 
