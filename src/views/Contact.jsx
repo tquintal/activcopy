@@ -46,7 +46,7 @@ export default function Contact() {
                     <GMaps />
                 </div>
 
-                <form action='https://formsubmit.co/tomas.quintal@gmail.com' method='POST' className='contact-form-container'>
+                <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' className='contact-form-container'>
                     <h1>{t('Form.Title')}</h1>
                     <div className='contact-form-first-block'>
                         <div>
