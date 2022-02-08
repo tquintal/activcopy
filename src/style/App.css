@@ -389,6 +389,7 @@ Red Orange: #FF4500
   cursor: pointer;
   transition: 200ms;
   text-align: center;
+  padding: 15px;
 }
 
 @media (hover: hover) {
@@ -472,7 +473,7 @@ textarea {
   color: #ff4500;
   font-size: 12px;
   font-weight: 300;
-  cursor: text;
+  cursor: pointer;
 }
 
 .footer-container {

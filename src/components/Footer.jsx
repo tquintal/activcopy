@@ -7,10 +7,12 @@ export default function Footer() {
 
     const { t } = useTranslation()
 
+    const date = new Date().getFullYear()
+
     return (
         <div className='footer'>
             <div className='footer-container'>
-                <a className='footer-rights' href='https://github.com/tquintal/' target='_blank' rel='noopener noreferrer'>ACTIVCOPY © 2022 - {t('Footer.Rights')}</a>
+                <a className='footer-rights' href='https://github.com/tquintal/' target='_blank' rel='noopener noreferrer'>ACTIVCOPY © {date} - {t('Footer.Rights')}</a>
                 <div className='social-container'>
                     <ReactTooltip />
                     <a href='https://www.facebook.com/activcopy/' target='_blank' rel='noopener noreferrer' data-tip='Facebook'>

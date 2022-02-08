@@ -23,6 +23,7 @@ i18n
       loadPath: '/assets/locales/{{lng}}/translation.json',
     },
   })
+
 ReactDOM.render(
   <Suspense fallback={null}>
     <React.StrictMode>
