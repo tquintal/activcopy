@@ -5,6 +5,7 @@ import i18next from 'i18next'
 import cookies from 'js-cookie'
 import { scrollTop, backToTop, enableScroll, disableScroll } from '../utils'
 import { AiOutlineMenu, AiFillCloseSquare } from 'react-icons/ai'
+import { MdHome, MdOutlineDesignServices, MdShoppingBasket, MdMessage } from 'react-icons/md'
 import PT from '../assets/pt.png'
 import GB from '../assets/gb.png'
 import { GrLanguage } from 'react-icons/gr'
@@ -30,9 +31,10 @@ function DesktopHeader() {
             <div className='header-container'>
                 <Link to='/'><h1 className='title' onClick={() => { scrollTop(); enableScroll() }}>activcopy</h1></Link>
                 <div className='header-actions'>
-                    <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll() }} to='/'>{t('Navigation.Home')}</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll() }} to='/services'>{t('Navigation.Services')}</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll() }} to='/contact' >{t('Navigation.Contact')}</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll() }} to='/'><MdHome />{t('Navigation.Home')}</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll() }} to='/services'><MdOutlineDesignServices />{t('Navigation.Services')}</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll() }} to='/shop'><MdShoppingBasket />{t('Navigation.Shop')}</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll() }} to='/contact' ><MdMessage />{t('Navigation.Contact')}</NavLink>
 
                     <div className='dropdown'>
                         <button className='dropbtn'>{t('SelectLangTitle')}<GrLanguage size='1.5em' /></button>
@@ -75,9 +77,10 @@ export function MobileHeader() {
             </div>
             <div className={mobileMenu ? 'mobile-menu enabled' : 'mobile-menu'}>
                 <AiFillCloseSquare size='2.2em' onClick={() => { showMobileMenu(); enableScroll() }} className='mobile-menu-close-btn' />
-                <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/'>{t('Navigation.Home')}</NavLink>
-                <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/services'>{t('Navigation.Services')}</NavLink>
-                <NavLink className={({ isActive }) => isActive ? 'header-actions-active' : ''} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/contact'>{t('Navigation.Contact')}</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/'><MdHome />{t('Navigation.Home')}</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/services'><MdOutlineDesignServices />{t('Navigation.Services')}</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/shop'><MdShoppingBasket />{t('Navigation.Shop')}</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/contact'><MdMessage />{t('Navigation.Contact')}</NavLink>
                 <div className='lang-div-mobile'>
                     <p>{t('ChangeLanguage')}</p>
                     <div className='lang-options'>

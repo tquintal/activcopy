@@ -14,6 +14,7 @@
   "Navigation": {
     "Home": "Home",
     "Services": "Services",
+    "Shop": "Online Shop",
     "Contact": "Contact"
   },
 
@@ -35,6 +36,15 @@
 
   "Service": {
     "Back": "Back"
+  },
+
+  "Shop": {
+    "Title": "Shop",
+    "VisitCards": "Visit Cards",
+    "T-Shirts": "T-Shirts",
+    "Flyers": "Flyers",
+    "BigFormat": "Big format",
+    "Mugs": "Mugs"
   },
 
   "Contact": {

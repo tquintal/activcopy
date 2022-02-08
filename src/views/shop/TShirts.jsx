@@ -1,9 +1,9 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
-import ServiceBack from '../../components/ServiceBack'
+import ShopBack from '../../components/ShopBack'
 
-export default function Scanning() {
+export default function Mugs() {
 
     const { t } = useTranslation()
 
@@ -16,11 +16,8 @@ export default function Scanning() {
         >
             <div className='service'>
                 <div className='service-container'>
-                    <ServiceBack />
-                    <div>
-                        <h1 className='service-title'>{t('Scanning.SCTitle')}</h1>
-                        <p className='service-description'>{t('Scanning.SCDesc')}</p>
-                    </div>
+                    <ShopBack />
+                    <h1>T-Shirts</h1>
                 </div>
             </div>
         </motion.div>

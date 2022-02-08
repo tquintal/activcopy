@@ -158,6 +158,12 @@ Red Orange: #FF4500
   justify-content: space-between;
 }
 
+.header-navs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .header-actions {
   display: flex;
   flex-direction: row;

@@ -15,6 +15,7 @@
   "Navigation": {
     "Home": "Início",
     "Services": "Serviços",
+    "Shop": "Comprar Online",
     "Contact": "Contactos"
   },
 
@@ -36,6 +37,15 @@
 
   "Service": {
     "Back": "Voltar"
+  },
+
+  "Shop": {
+    "Title": "Shop",
+    "VisitCards": "Cartões de visita",
+    "T-Shirts": "T-Shirts",
+    "Flyers": "Flyers",
+    "BigFormat": "Grandes formatos",
+    "Mugs": "Canecas"
   },
 
   "DigitalPrinting": {
