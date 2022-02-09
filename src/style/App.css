@@ -369,6 +369,13 @@ Red Orange: #FF4500
   margin-top: 15px;
 }
 
+.shop-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 248px;
+}
+
 .contacts-container {
   display: flex;
   justify-content: space-between;
