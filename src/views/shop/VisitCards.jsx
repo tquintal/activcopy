@@ -68,6 +68,7 @@ export default function VisitCards() {
                         </label>
                         <p>Total: X€</p>
                         <button type='submit'>Comprar</button>
+                        <input type='hidden' name='_next' value='https://activcopy.vercel.app/thank-you' />
                     </form>
                 </div>
             </div>
