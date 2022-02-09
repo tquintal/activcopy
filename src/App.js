@@ -14,7 +14,7 @@ import { Sublimation } from './views/services/Sublimation'
 import Bookbinding from './views/services/Bookbinding'
 import Scanning from './views/services/Scanning'
 import Shop from './views/Shop'
-import VisitCards from './views/shop/VisitCards'
+import BusinessCardss from './views/shop/BusinessCards'
 import TShirts from './views/shop/TShirts'
 import Flyers from './views/shop/Flyers'
 import BigFormatShop from './views/shop/BigFormatShop'
@@ -68,7 +68,7 @@ export default function App() {
               <Route path='/services/bookbinding' element={<Bookbinding />} />
               <Route path='/services/scanning' element={<Scanning />} />
               <Route path='/shop' element={<Shop />} />
-              <Route path='/shop/visit-cards' element={<VisitCards />} />
+              <Route path='/shop/visit-cards' element={<BusinessCardss />} />
               <Route path='/shop/t-shirts' element={<TShirts />} />
               <Route path='/shop/flyers' element={<Flyers />} />
               <Route path='/shop/big-format' element={<BigFormatShop />} />
