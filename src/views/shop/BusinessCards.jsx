@@ -73,7 +73,7 @@ export default function BusinessCardss() {
                                     <input type='file' name='Attachment' accept='image/png, image/jpeg' required></input>
                                 </label>
                                 <p>Total: X€</p>
-                                <button type='submit' className='shop-button'>Comprar</button>
+                                <button type='submit' className='shop-button'>Encomendar</button>
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/thank-you' />
                             </form>
                         </div>
