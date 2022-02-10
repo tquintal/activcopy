@@ -48,6 +48,16 @@
     "Mugs": "Canecas"
   },
 
+  "OrderCompleted": {
+    "ThankYou": "Obrigado pela preferência!",
+    "Complete": "Para concluir a sua encomenda deverá efetuar uma transferência para:",
+    "IBAN": "IBAN:",
+    "Cenas": "Cenas:",
+    "Total": "Valor:",
+    "OrderDetails": "Detalhes da encomenda:",
+    "ContactDetails": "Detalhes de contacto:"
+  },
+
   "ShopBusinessCards": {
     "Title": "Cartões de visita",
     "Format": "Formato",

@@ -47,12 +47,22 @@
     "Mugs": "Mugs"
   },
 
+  "OrderCompleted": {
+    "ThankYou": "Thank you for your preference!",
+    "Complete": "To complete your order...",
+    "IBAN": "IBAN:",
+    "Cenas": "Things:",
+    "Total": "Price:",
+    "OrderDetails": "Order details:",
+    "ContactDetails": "Contact details:"
+  },
+
   "ShopBusinessCards": {
     "Title": "Business Cards",
     "Format": "Format",
     "Material": "Material",
 
-    "Printing": "Impressão",
+    "Printing": "Printing",
     "PrintingColor": "Printing color",
 
     "Amount": "Amount",

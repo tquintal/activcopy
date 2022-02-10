@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
@@ -6,21 +6,30 @@ import BCards from '../../assets/b-cards.jpg'
 
 export default function BusinessCardss() {
 
+    const [order, setOrder] = useState({
+        Format: 'Retangular (65mm x 55mm)',
+        Material: 'Cartolina CLA 350G',
+        Printing: 'Frente',
+        PrintingColor: 'Cores',
+        Amount: '100',
+        File: 'Nome do ficheiro',
+        EMail: '',
+        Contact: '',
+        Address: '',
+        Total: 'X€'
+    })
+
+    const ShowOrder = () => {
+        console.log(order)
+    }
+
     const { t } = useTranslation()
 
     const setOrderDetails = () => {
-        localStorage['Order'] = JSON.stringify({
-            'Format': 'Retangular (65mm x 55mm)',
-            'Material': 'Cartolina CLA 350G',
-            'Printing': 'Frente e verso',
-            'PrintingColor': 'Cores',
-            'Amount': '1000',
-            'File': 'Nome do ficheiro',
-            'EMail': 'teste@teste.com',
-            'Contact': '910 000 000',
-            'Address': 'Rua dos Testes N12 1234-321 Cidade Fixe',
-            'Total': 'X€'
-        })
+        localStorage.removeItem(['Order'])
+        console.log(`Local storage cleared`)
+        localStorage['Order'] = JSON.stringify(order)
+        console.log(`Order placed`)
     }
 
     return (
@@ -41,35 +50,35 @@ export default function BusinessCardss() {
                             <h1>{t('ShopBusinessCards.Title')}</h1>
                             <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
                                 <p>{t('ShopBusinessCards.Format')}</p>
-                                <select type='select' name='Formato' required>
+                                <select type='select' name='Formato' onChange={(e) => { setOrder({ ...order, Format: e.target.value }) }} required>
                                     <option value='Retangular'>{t('ShopBusinessCards.FirstFormat')}</option>
                                     <option value='Quadrado'>{t('ShopBusinessCards.SecondFormat')}</option>
                                 </select>
 
                                 <p>{t('ShopBusinessCards.Material')}</p>
-                                <select type='select' name='Material' required>
+                                <select type='select' name='Material' onChange={(e) => { setOrder({ ...order, Material: e.target.value }) }} required>
                                     <option value='Cartolina'>{t('ShopBusinessCards.FirstMaterial')}</option>
                                     <option value='Couche'>{t('ShopBusinessCards.SecondMaterial')}</option>
-                                    <option value='PapelKraft'>{t('ShopBusinessCards.ThirdMaterial')}</option>
-                                    <option value='PapelDeAlgodao'>{t('ShopBusinessCards.FourthMaterial')}</option>
-                                    <option value='CartolinaOuro'>{t('ShopBusinessCards.FifthMaterial')}</option>
-                                    <option value='CartolinaPrata'>{t('ShopBusinessCards.SixthMaterial')}</option>
-                                    <option value='RivesDesign'>{t('ShopBusinessCards.SeventhMaterial')}</option>
-                                    <option value='RivesTradition'>{t('ShopBusinessCards.EighthMaterial')}</option>
+                                    <option value='Papel kraft'>{t('ShopBusinessCards.ThirdMaterial')}</option>
+                                    <option value='Papel de algodão'>{t('ShopBusinessCards.FourthMaterial')}</option>
+                                    <option value='Cartolina ouro'>{t('ShopBusinessCards.FifthMaterial')}</option>
+                                    <option value='Cartolina prata'>{t('ShopBusinessCards.SixthMaterial')}</option>
+                                    <option value='Rives design'>{t('ShopBusinessCards.SeventhMaterial')}</option>
+                                    <option value='Rives tradition'>{t('ShopBusinessCards.EighthMaterial')}</option>
                                 </select>
 
                                 <p>{t('ShopBusinessCards.Printing')}</p>
-                                <select type='select' name='Impressao' required>
+                                <select type='select' name='Impressao' onChange={(e) => { setOrder({ ...order, Printing: e.target.value }) }} required>
                                     <option value='Frente'>{t('ShopBusinessCards.FirstPrinting')}</option>
-                                    <option value='FrenteEVerso'>{t('ShopBusinessCards.SecondPrinting')}</option>
+                                    <option value='Frente e verso'>{t('ShopBusinessCards.SecondPrinting')}</option>
                                 </select>
-                                <select type='select' name='Impressao2' required>
+                                <select type='select' name='Impressao2' onChange={(e) => { setOrder({ ...order, PrintingColor: e.target.value }) }} required>
                                     <option value='Cores'>{t('ShopBusinessCards.FirstPrinting2')}</option>
-                                    <option value='PretoEBranco'>{t('ShopBusinessCards.SecondPrinting2')}</option>
+                                    <option value='Preto e branco'>{t('ShopBusinessCards.SecondPrinting2')}</option>
                                 </select>
 
                                 <p>{t('ShopBusinessCards.Amount')}</p>
-                                <select type='select' name='Quantidade' required>
+                                <select type='select' name='Quantidade' onChange={(e) => { setOrder({ ...order, Amount: e.target.value }) }} required>
                                     <option value='100'>100</option>
                                     <option value='200'>200</option>
                                     <option value='300'>300</option>
@@ -94,8 +103,9 @@ export default function BusinessCardss() {
                                 </label>
                                 <p>Total: X€</p>
                                 <button type='submit' onClick={setOrderDetails} className='shop-button'>{t('ShopBusinessCards.Order')}</button>
-                                <input type='hidden' name='_next' value='https://activcopy.vercel.app/thank-you' />
+                                <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
                             </form>
+                            <button onClick={ShowOrder}>Log order</button>
                         </div>
                     </div>
                 </div>
