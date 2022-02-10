@@ -11,6 +11,11 @@ import GB from '../assets/gb.png'
 import { GrLanguage } from 'react-icons/gr'
 import { motion } from 'framer-motion'
 
+let Order = localStorage['Order'] || false
+Order = JSON.parse(Order)
+
+console.log(Order)
+
 function DesktopHeader() {
 
     const currentLanguageCode = cookies.get('i18next') || cookies.set('i18next', 'pt')
@@ -43,6 +48,7 @@ function DesktopHeader() {
                     <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll() }} to='/contact' >
                         {t('Navigation.Contact')}
                     </NavLink>
+                    {Order ? <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll() }} to='/shop/order-completed'>Encomendas</NavLink> : <></>}
 
                     <div className='dropdown'>
                         <button className='dropbtn'>{t('SelectLangTitle')}<GrLanguage size='1.5em' /></button>
@@ -97,6 +103,8 @@ export function MobileHeader() {
                 <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/contact'>
                     <MdMessage />{t('Navigation.Contact')}
                 </NavLink>
+                {Order ? <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll() }} to='/shop/order-completed'>Encomendas</NavLink> : <></>}
+
                 <div className='lang-div-mobile'>
                     <p>{t('ChangeLanguage')}</p>
                     <div className='lang-options'>

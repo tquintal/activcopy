@@ -48,6 +48,35 @@
     "Mugs": "Canecas"
   },
 
+  "ShopBusinessCards": {
+    "Title": "Cartões de visita",
+    "Format": "Formato",
+    "FirstFormat": "Retangular (65mm x 55mm)",
+    "SecondFormat": "Quadrado (55mm x 55mm)",
+    "Material": "Material",
+    "FirstMaterial": "Cartolina CLA 350G",
+    "SecondMaterial": "Couché 350G",
+    "ThirdMaterial": "Papel Kraft 300G",
+    "FourthMaterial": "Papel de algodão c/ fragmentos de plantas 250G",
+    "FifthMaterial": "Cartolina ouro 330G",
+    "SixthMaterial": "Cartolina prata 330G",
+    "SeventhMaterial": "Rives design reciclado 250G",
+    "EighthMaterial": "Rives tradition reciclado 250G",
+    "Printing": "Impressão",
+    "PrintingColor": "Cor",
+    "FirstPrinting": "Frente",
+    "SecondPrinting": "Frente e verso",
+    "FirstPrinting2": "Cores",
+    "SecondPrinting2": "Preto e branco",
+    "Amount": "Quantidade",
+    "File": "Ficheiro",
+    "Contact": "Contacto",
+    "Address": "Morada",
+    "UploadFile": "Carregar ficheiro",
+    "Order": "Encomendar",
+    "Total": "Total"
+  },
+
   "DigitalPrinting": {
     "FirstDPTitle": "Pequenos formatos",
     "FirstDPDesc": "Tamanhos: A6, A5, A3, SRA3\nImpressão: Preto e a cores / Frente e verso\nGramagem: 80 a 350G\nTipo de papel: Diversos, papel reciclado e papel vegan",

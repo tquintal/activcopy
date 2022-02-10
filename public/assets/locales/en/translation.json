@@ -47,6 +47,23 @@
     "Mugs": "Mugs"
   },
 
+  "ShopBusinessCards": {
+    "Title": "Business Cards",
+    "Format": "Format",
+    "Material": "Material",
+
+    "Printing": "Impressão",
+    "PrintingColor": "Printing color",
+
+    "Amount": "Amount",
+    "File": "File",
+    "Contact": "Contact",
+    "Address": "Address",
+    "UploadFile": "Upload file",
+    "Order": "Place order",
+    "Total": "Price"
+  },
+
   "Contact": {
     "Title": "Contact",
     "Budgets": "Budgets:",

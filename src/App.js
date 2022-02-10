@@ -20,6 +20,7 @@ import Flyers from './views/shop/Flyers'
 import BigFormatShop from './views/shop/BigFormatShop'
 import Mugs from './views/shop/Mugs'
 import Contact from './views/Contact'
+import OrderCompleted from './views/OrderCompleted'
 import ThankYou from './views/ThankYou'
 
 const CookieConsent = () => {
@@ -73,6 +74,7 @@ export default function App() {
               <Route path='/shop/flyers' element={<Flyers />} />
               <Route path='/shop/big-format' element={<BigFormatShop />} />
               <Route path='/shop/mugs' element={<Mugs />} />
+              <Route path='/shop/order-completed' element={<OrderCompleted />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='/thank-you' element={<ThankYou />} />
               <Route path='/cookie-consent' element={<CookieConsentLM />} />

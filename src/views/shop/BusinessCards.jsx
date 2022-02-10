@@ -1,12 +1,27 @@
 import React from 'react'
-// import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
 import BCards from '../../assets/b-cards.jpg'
 
 export default function BusinessCardss() {
 
-    // const { t } = useTranslation()
+    const { t } = useTranslation()
+
+    const setOrderDetails = () => {
+        localStorage['Order'] = JSON.stringify({
+            'Format': 'Retangular (65mm x 55mm)',
+            'Material': 'Cartolina CLA 350G',
+            'Printing': 'Frente e verso',
+            'PrintingColor': 'Cores',
+            'Amount': '1000',
+            'File': 'Nome do ficheiro',
+            'EMail': 'teste@teste.com',
+            'Contact': '910 000 000',
+            'Address': 'Rua dos Testes N12 1234-321 Cidade Fixe',
+            'Total': 'X€'
+        })
+    }
 
     return (
         <motion.div
@@ -23,32 +38,37 @@ export default function BusinessCardss() {
                         </div>
                         <div>
                             <ShopBack />
-                            <h1>Business Cards</h1>
+                            <h1>{t('ShopBusinessCards.Title')}</h1>
                             <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
-                                <p>Formato</p>
+                                <p>{t('ShopBusinessCards.Format')}</p>
                                 <select type='select' name='Formato' required>
-                                    <option value='Retangular'>Retangular (65mm x 55mm)</option>
-                                    <option value='Quadrado'>Quadrado (55mm x 55mm)</option>
+                                    <option value='Retangular'>{t('ShopBusinessCards.FirstFormat')}</option>
+                                    <option value='Quadrado'>{t('ShopBusinessCards.SecondFormat')}</option>
                                 </select>
 
-                                <p>Material</p>
+                                <p>{t('ShopBusinessCards.Material')}</p>
                                 <select type='select' name='Material' required>
-                                    <option value='Cartolina'>Cartolina CLA 350G</option>
-                                    <option value='Couche'>Couché 350G</option>
-                                    <option value='PapelKraft'>Papel Kraft 300G</option>
+                                    <option value='Cartolina'>{t('ShopBusinessCards.FirstMaterial')}</option>
+                                    <option value='Couche'>{t('ShopBusinessCards.SecondMaterial')}</option>
+                                    <option value='PapelKraft'>{t('ShopBusinessCards.ThirdMaterial')}</option>
+                                    <option value='PapelDeAlgodao'>{t('ShopBusinessCards.FourthMaterial')}</option>
+                                    <option value='CartolinaOuro'>{t('ShopBusinessCards.FifthMaterial')}</option>
+                                    <option value='CartolinaPrata'>{t('ShopBusinessCards.SixthMaterial')}</option>
+                                    <option value='RivesDesign'>{t('ShopBusinessCards.SeventhMaterial')}</option>
+                                    <option value='RivesTradition'>{t('ShopBusinessCards.EighthMaterial')}</option>
                                 </select>
 
-                                <p>Impressão</p>
-                                <select type='select' name='Impressão' required>
-                                    <option value='Frente'>Frente</option>
-                                    <option value='FrenteEVerso'>Frente e verso</option>
+                                <p>{t('ShopBusinessCards.Printing')}</p>
+                                <select type='select' name='Impressao' required>
+                                    <option value='Frente'>{t('ShopBusinessCards.FirstPrinting')}</option>
+                                    <option value='FrenteEVerso'>{t('ShopBusinessCards.SecondPrinting')}</option>
                                 </select>
-                                <select type='select' name='Impressão2' required>
-                                    <option value='Cores'>Cores</option>
-                                    <option value='PretoEBranco'>Preto e branco</option>
+                                <select type='select' name='Impressao2' required>
+                                    <option value='Cores'>{t('ShopBusinessCards.FirstPrinting2')}</option>
+                                    <option value='PretoEBranco'>{t('ShopBusinessCards.SecondPrinting2')}</option>
                                 </select>
 
-                                <p>Quantidade</p>
+                                <p>{t('ShopBusinessCards.Amount')}</p>
                                 <select type='select' name='Quantidade' required>
                                     <option value='100'>100</option>
                                     <option value='200'>200</option>
@@ -66,14 +86,14 @@ export default function BusinessCardss() {
                                 </select>
 
                                 <input type='email' name='E-Mail' placeholder='E-mail' required></input>
-                                <input type='text' name='Contacto' placeholder='Contacto' required></input>
-                                <input type='text' name='Morada' placeholder='Morada' required></input>
+                                <input type='text' name='Contacto' placeholder={t('ShopBusinessCards.Contact')} required></input>
+                                <input type='text' name='Morada' placeholder={t('ShopBusinessCards.Address')} required></input>
                                 <label>
-                                    Carregar ficheiro
-                                    <input type='file' name='Attachment' accept='image/png, image/jpeg' required></input>
+                                    {t('ShopBusinessCards.UploadFile')}
+                                    <input type='file' name='Attachment' accept='image/png, image/jpeg' className='shop-attachment' required></input>
                                 </label>
                                 <p>Total: X€</p>
-                                <button type='submit' className='shop-button'>Encomendar</button>
+                                <button type='submit' onClick={setOrderDetails} className='shop-button'>{t('ShopBusinessCards.Order')}</button>
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/thank-you' />
                             </form>
                         </div>
