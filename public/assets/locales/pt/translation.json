@@ -40,6 +40,8 @@
   },
 
   "Shop": {
+    "LastOrder": "Última encomenda",
+    "Error": "Por favor preencha todos os campos",
     "Title": "Shop",
     "BusinessCardss": "Cartões de visita",
     "T-Shirts": "T-Shirts",
@@ -55,7 +57,8 @@
     "Cenas": "Cenas:",
     "Total": "Valor:",
     "OrderDetails": "Detalhes da encomenda:",
-    "ContactDetails": "Detalhes de contacto:"
+    "ContactDetails": "Detalhes de contacto:",
+    "SaveOrder": "Save"
   },
 
   "ShopBusinessCards": {

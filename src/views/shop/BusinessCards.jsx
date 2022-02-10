@@ -12,24 +12,30 @@ export default function BusinessCardss() {
         Printing: 'Frente',
         PrintingColor: 'Cores',
         Amount: '100',
-        File: 'Nome do ficheiro',
         EMail: '',
         Contact: '',
         Address: '',
-        Total: 'X€'
+        File: false,
+        Total: ''
     })
 
-    const ShowOrder = () => {
-        console.log(order)
+    const LogOrder = () => {
+        console.table(order)
     }
 
     const { t } = useTranslation()
 
     const setOrderDetails = () => {
-        localStorage.removeItem(['Order'])
-        console.log(`Local storage cleared`)
-        localStorage['Order'] = JSON.stringify(order)
-        console.log(`Order placed`)
+        LogOrder()
+
+        if (!order.EMail && !order.Contact && !order.Address && !order.File) {
+            alert(t('Shop.Error'))
+        } else {
+            localStorage.removeItem(['Order'])
+            console.log(`Local storage cleared`)
+            localStorage['Order'] = JSON.stringify(order)
+            console.log(`Order placed`)
+        }
     }
 
     return (
@@ -43,7 +49,7 @@ export default function BusinessCardss() {
                 <div className='service-container'>
                     <div className='shop-cat-container'>
                         <div className='shop-cat-img'>
-                            <img src={BCards} alt='b-cards' />
+                            <img src={BCards} alt='b-cards' onClick={LogOrder} />
                         </div>
                         <div>
                             <ShopBack />
@@ -94,18 +100,17 @@ export default function BusinessCardss() {
                                     <option value='3000'>3000</option>
                                 </select>
 
-                                <input type='email' name='E-Mail' placeholder='E-mail' required></input>
-                                <input type='text' name='Contacto' placeholder={t('ShopBusinessCards.Contact')} required></input>
-                                <input type='text' name='Morada' placeholder={t('ShopBusinessCards.Address')} required></input>
+                                <input type='email' name='E-Mail' placeholder='E-mail' onChange={(e) => { setOrder({ ...order, EMail: e.target.value }) }} required></input>
+                                <input type='text' name='Contacto' placeholder={t('ShopBusinessCards.Contact')} onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
+                                <input type='text' name='Morada' placeholder={t('ShopBusinessCards.Address')} onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
                                 <label>
                                     {t('ShopBusinessCards.UploadFile')}
-                                    <input type='file' name='Attachment' accept='image/png, image/jpeg' className='shop-attachment' required></input>
+                                    <input type='file' name='Attachment' accept='image/png, image/jpeg' onChange={() => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
                                 </label>
-                                <p>Total: X€</p>
+                                <p>Total: {order.Total}</p>
                                 <button type='submit' onClick={setOrderDetails} className='shop-button'>{t('ShopBusinessCards.Order')}</button>
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
                             </form>
-                            <button onClick={ShowOrder}>Log order</button>
                         </div>
                     </div>
                 </div>

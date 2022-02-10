@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
-import { MdShoppingBasket } from 'react-icons/md'
+import { MdOutlineShoppingCart } from 'react-icons/md'
 import { backToTop } from '../utils'
 import '../style/Services.css'
 
@@ -19,7 +19,7 @@ export default function Shop() {
             <div className='services-container'>
                 <div className='shop-title'>
                     <h1>{t('Shop.Title')}</h1>
-                    <MdShoppingBasket size='2em' />
+                    <MdOutlineShoppingCart size='2em' />
                 </div>
                 <div className='services-cards-container'>
                     <NavLink onClick={() => backToTop()} to='/shop/visit-cards'>

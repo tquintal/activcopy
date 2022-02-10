@@ -11,12 +11,11 @@ export default function OrderCompleted() {
 
     let Order = localStorage['Order'] || false
     Order = JSON.parse(Order)
-    console.log(Order)
 
-    const clearStorage = () => {
-        localStorage.removeItem(['Order'])
-        console.log(`Local storage cleared`)
-    }
+    // const clearStorage = () => {
+    //     localStorage.removeItem(['Order'])
+    //     console.log(`Local storage cleared`)
+    // }
 
     return (Order ?
         <div className='order-completed-view'>
@@ -42,19 +41,17 @@ export default function OrderCompleted() {
                     <p>{t('ShopBusinessCards.PrintingColor')}: {Order.PrintingColor}</p>
                     <p>{t('ShopBusinessCards.File')}: {Order.File}</p>
                     <p>{t('ShopBusinessCards.Amount')}: {Order.Amount}</p>
-
+                    <p>{t('ShopBusinessCards.Total')}: {Order.Total}</p>
                 </div>
                 <div className='contact-details'>
                     <p>{t('OrderCompleted.ContactDetails')}</p>
                     <p>E-mail: {Order.EMail}</p>
                     <p>{t('ShopBusinessCards.Contact')}: {Order.Contact}</p>
                     <p>{t('ShopBusinessCards.Address')}: {Order.Address}</p>
-                    <p>{t('ShopBusinessCards.File')}: {Order.File}</p>
-                    <p>{t('ShopBusinessCards.Total')}: {Order.Total}</p>
                 </div>
                 <div className='order-completed-bottom'>
-                    <Link to='/shop' className='thank-you-back' onClick={clearStorage}><BiArrowBack /><p>{t('Service.Back')}</p></Link>
-                    <button onClick={window.print} className='order-completed-btn'>Guardar detalhes</button>
+                    <Link to='/shop' className='thank-you-back'><BiArrowBack /><p>{t('Service.Back')}</p></Link>
+                    <button onClick={() => alert('Not available yet')} className='order-completed-btn'>{t('OrderCompleted.SaveOrder')}</button>
                 </div>
             </motion.div>
         </div>

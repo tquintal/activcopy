@@ -39,6 +39,8 @@
   },
 
   "Shop": {
+    "LastOrder": "Last order",
+    "Error": "Please fill in all the fields",
     "Title": "Shop",
     "BusinessCardss": "Business Cards",
     "T-Shirts": "T-Shirts",
@@ -54,7 +56,8 @@
     "Cenas": "Things:",
     "Total": "Price:",
     "OrderDetails": "Order details:",
-    "ContactDetails": "Contact details:"
+    "ContactDetails": "Contact details:",
+    "SaveOrder": "Save"
   },
 
   "ShopBusinessCards": {
