@@ -47,7 +47,9 @@
     "T-Shirts": "T-Shirts",
     "Flyers": "Flyers",
     "BigFormat": "Grandes formatos",
-    "Mugs": "Canecas"
+    "Mugs": "Canecas",
+    "Stickers": "Autocolantes",
+    "Name": "Nome"
   },
 
   "OrderCompleted": {
@@ -86,6 +88,7 @@
     "Contact": "Contacto",
     "Address": "Morada",
     "UploadFile": "Carregar ficheiro",
+    "Note": "Comentário",
     "Order": "Encomendar",
     "Total": "Total"
   },

@@ -46,7 +46,9 @@
     "T-Shirts": "T-Shirts",
     "Flyers": "Flyers",
     "BigFormat": "Big format",
-    "Mugs": "Mugs"
+    "Mugs": "Mugs",
+    "Stickers": "Stickers",
+    "Name": "Name"
   },
 
   "OrderCompleted": {
@@ -73,6 +75,7 @@
     "Contact": "Contact",
     "Address": "Address",
     "UploadFile": "Upload file",
+    "Note": "Note",
     "Order": "Place order",
     "Total": "Price"
   },

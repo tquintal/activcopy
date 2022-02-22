@@ -19,6 +19,7 @@ import TShirts from './views/shop/TShirts'
 import Flyers from './views/shop/Flyers'
 import BigFormatShop from './views/shop/BigFormatShop'
 import Mugs from './views/shop/Mugs'
+import Stickers from './views/shop/Stickers'
 import Contact from './views/Contact'
 import OrderCompleted from './views/OrderCompleted'
 import ThankYou from './views/ThankYou'
@@ -74,6 +75,7 @@ export default function App() {
               <Route path='/shop/flyers' element={<Flyers />} />
               <Route path='/shop/big-format' element={<BigFormatShop />} />
               <Route path='/shop/mugs' element={<Mugs />} />
+              <Route path='/shop/stickers' element={<Stickers />} />
               <Route path='/shop/order-completed' element={<OrderCompleted />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='/thank-you' element={<ThankYou />} />

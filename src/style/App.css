@@ -392,7 +392,19 @@ Red Orange: #FF4500
 }
 
 .shop-attachment {
+  width: 100%;
   cursor: pointer;
+}
+
+.shop-text-area {
+  resize: none;
+}
+
+.shop-required-fields {
+  font-size: 12px;
+  color: #999999;
+  align-self: flex-end;
+  text-align: end;
 }
 
 .shop-button {

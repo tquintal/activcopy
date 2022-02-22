@@ -63,6 +63,14 @@ export default function Shop() {
                                 <p>{t('Shop.Mugs')}</p>
                             </div>
                         </NavLink>
+                        <NavLink onClick={() => backToTop()} to='/shop/stickers'>
+                            <div className='service-card-container'>
+                                <div className='service-card'>
+                                    <h3>*Icon/Image*</h3>
+                                </div>
+                                <p>{t('Shop.Stickers')}</p>
+                            </div>
+                        </NavLink>
                     </div>
                 </div>
             </div>
