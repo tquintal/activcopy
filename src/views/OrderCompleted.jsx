@@ -12,11 +12,6 @@ export default function OrderCompleted() {
     let Order = localStorage['Order'] || false
     Order = JSON.parse(Order)
 
-    // const clearStorage = () => {
-    //     localStorage.removeItem(['Order'])
-    //     console.log(`Local storage cleared`)
-    // }
-
     return (Order ?
         <div className='order-completed-view'>
             <motion.div
@@ -27,7 +22,8 @@ export default function OrderCompleted() {
                 className='oder-completed-container'
             >
                 <h2>{t('OrderCompleted.ThankYou')}</h2>
-                <div className='order-confirm'>
+                <Link to='/shop' className='thank-you-back'><BiArrowBack /><p>{t('Service.Back')}</p></Link>
+                {/* <div className='order-confirm'>
                     <p>{t('OrderCompleted.Complete')}</p>
                     <p>{t('OrderCompleted.IBAN')} XXX XXX XXX XXX XXX</p>
                     <p>{t('OrderCompleted.Cenas')} XXX XXX XXX XXX XXX</p>
@@ -51,8 +47,8 @@ export default function OrderCompleted() {
                 </div>
                 <div className='order-completed-bottom'>
                     <Link to='/shop' className='thank-you-back'><BiArrowBack /><p>{t('Service.Back')}</p></Link>
-                    {/* <button onClick={() => alert('Not available yet')} className='order-completed-btn'>{t('OrderCompleted.SaveOrder')}</button> */}
-                </div>
+                    <button onClick={() => alert('Not available yet')} className='order-completed-btn'>{t('OrderCompleted.SaveOrder')}</button>
+                </div> */}
             </motion.div>
         </div>
         :

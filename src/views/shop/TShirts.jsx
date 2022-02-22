@@ -29,7 +29,6 @@ export default function TShirts() {
 
     const LogOrder = () => {
         console.table(order)
-        console.log(order.Printing.FrenteCentro)
     }
 
     const { t } = useTranslation()
@@ -42,7 +41,8 @@ export default function TShirts() {
             LogOrder()
             localStorage.removeItem(['Order'])
             console.log(`Local storage cleared`)
-            localStorage['Order'] = JSON.stringify(order)
+            // localStorage['Order'] = JSON.stringify(order)
+            localStorage['Order'] = true
             console.log(`Order placed`)
         }
     }
@@ -136,8 +136,8 @@ export default function TShirts() {
                                 <input type='hidden' name='_template' value='table'></input>
 
                                 <button type='submit' onClick={setOrderCompleted} className='shop-button'>{t('ShopBusinessCards.Order')}</button>
-                                <input type='hidden' name='_next' value='https://activcopy.vercel.app/' />
-                                {/* <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' /> */}
+                                {/* <input type='hidden' name='_next' value='https://activcopy.vercel.app/' /> */}
+                                <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
                                 {/* <input type='hidden' name='_next' value='http://localhost:3000/shop/order-completed' /> */}
                             </form>
                         </div>
