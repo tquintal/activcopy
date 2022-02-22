@@ -51,7 +51,7 @@ export default function OrderCompleted() {
                 </div>
                 <div className='order-completed-bottom'>
                     <Link to='/shop' className='thank-you-back'><BiArrowBack /><p>{t('Service.Back')}</p></Link>
-                    <button onClick={() => alert('Not available yet')} className='order-completed-btn'>{t('OrderCompleted.SaveOrder')}</button>
+                    {/* <button onClick={() => alert('Not available yet')} className='order-completed-btn'>{t('OrderCompleted.SaveOrder')}</button> */}
                 </div>
             </motion.div>
         </div>

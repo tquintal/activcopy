@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
 
-export default function Mugs() {
+export default function TShirts() {
 
     // const { t } = useTranslation()
 
