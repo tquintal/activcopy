@@ -391,6 +391,10 @@ Red Orange: #FF4500
   background-color: #f5f5f5;
 }
 
+.shop-cat-form-container {
+  width: 100%;
+}
+
 .shop-attachment {
   width: 100%;
   cursor: pointer;
@@ -428,6 +432,13 @@ Red Orange: #FF4500
 
 .shop-cat-container img {
   width: 100%;
+}
+
+.shop-tshirts-printing {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 13px;
 }
 
 .order-completed-view {
