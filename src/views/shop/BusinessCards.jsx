@@ -125,6 +125,7 @@ export default function BusinessCardss() {
                                 <input type='hidden' name='_template' value='table'></input>
 
                                 <button type='submit' onClick={setOrderCompleted} className='shop-button'>{t('ShopBusinessCards.Order')}</button>
+                                <input type='hidden' name='_next' value='https://activcopy.vercel.app/' />
                                 {/* <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' /> */}
                                 {/* <input type='hidden' name='_next' value='http://localhost:3000/shop/order-completed' /> */}
                             </form>
