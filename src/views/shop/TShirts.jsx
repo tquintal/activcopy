@@ -4,11 +4,12 @@ import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
 import BCards from '../../assets/b-cards.jpg'
 
-export default function TShirts() {
+export default function TShirtSize() {
+    const { t } = useTranslation()
 
     const [order, setOrder] = useState({
         TShirt: 'T-Shirt Adulto',
-        Size: 'XS',
+        Size: 'M',
         Color: 'Branco',
         Printing: {
             FrenteCentro: true,
@@ -31,7 +32,55 @@ export default function TShirts() {
         console.table(order)
     }
 
-    const { t } = useTranslation()
+    const TShirtSize = () => {
+        if (order.TShirt === 'T-Shirt Adulto') {
+            return <select type='select' name='Tamanho' onChange={(e) => { setOrder({ ...order, Size: e.target.value }) }} defaultValue={order.Size} required>
+                <option value='XS'>XS</option>
+                <option value='S'>S</option>
+                <option value='M'>M</option>
+                <option value='L'>L</option>
+                <option value='XL'>XL</option>
+                <option value='2XL'>2XL</option>
+                <option value='3XL'>3XL</option>
+                <option value='4XL'>4XL</option>
+            </select>
+        } else if (order.TShirt === 'T-Shirt Criança') {
+            return <select type='select' name='Tamanho' onChange={(e) => { setOrder({ ...order, Size: e.target.value }) }} defaultValue={order.Size} required>
+                <option value='1-2'>1-2</option>
+                <option value='3-4'>3-4</option>
+                <option value='5-6'>5-6</option>
+                <option value='7-8'>7-8</option>
+                <option value='9-11'>9-11</option>
+                <option value='12-14'>12-14</option>
+            </select>
+        } else {
+            return <select type='select' name='Tamanho' onChange={(e) => { setOrder({ ...order, Size: e.target.value }) }} defaultValue={order.Size} required>
+                <option value='S'>S</option>
+                <option value='M'>M</option>
+                <option value='L'>L</option>
+                <option value='XL'>XL</option>
+            </select>
+        }
+    }
+
+    const TShirtColor = () => {
+        if (order.TShirt === 'T-Shirt Adulto') {
+            return <select type='select' name='Cor' onChange={(e) => { setOrder({ ...order, Color: e.target.value }) }} defaultValue={order.Color} required>
+                <option value='Branco'>Branco</option>
+                <option value='Preto'>Preto</option>
+            </select>
+        } else if (order.TShirt === 'T-Shirt Criança') {
+            return <select type='select' name='Cor' onChange={(e) => { setOrder({ ...order, Color: e.target.value }) }} defaultValue={order.Color} required>
+                <option value='Branco'>Vermelho</option>
+                <option value='Preto'>Cinza</option>
+            </select>
+        } else {
+            return <select type='select' name='Cor' onChange={(e) => { setOrder({ ...order, Color: e.target.value }) }} defaultValue={order.Color} required>
+                <option value='Branco'>Azul</option>
+                <option value='Preto'>Verde</option>
+            </select>
+        }
+    }
 
     const setOrderCompleted = () => {
         if (order.Amount === '' || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
@@ -65,29 +114,16 @@ export default function TShirts() {
                             <h1>T-Shirts</h1>
                             <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
                                 <p>T-Shirt</p>
-                                <select type='select' name='TShirt' onChange={(e) => { setOrder({ ...order, TShirt: e.target.value }) }} required>
-                                    <option value='TShirtAdulto'>T-Shirt Adulto</option>
-                                    <option value='TShirtCrianca'>T-Shirt Criança</option>
-                                    <option value='TShirtOrganica'>T-Shirt Orgânica</option>
+                                {/* <select type='select' name='TShirt' onChange={(e) => { setOrder({ ...order, TShirt: e.target.value }) }, (el) => setSelectedTshirt(el.target.value)} required> */}
+                                <select type='select' name='TShirt' onChange={(e) => setOrder({ ...order, TShirt: e.target.value, Size: e.target.value === 'T-Shirt Adulto' ? 'M' : e.target.value === 'T-Shirt Criança' ? '1-2' : 'M', Color: e.target.value === 'T-Shirt Adulto' ? 'Branco' : e.target.value === 'T-Shirt Criança' ? 'Vermelho' : 'Azul' })} required>
+                                    <option value='T-Shirt Adulto'>T-Shirt Adulto</option>
+                                    <option value='T-Shirt Criança'>T-Shirt Criança</option>
+                                    <option value='T-Shirt Orgânica'>T-Shirt Orgânica</option>
                                 </select>
-
                                 <p>Tamanho</p>
-                                <select type='select' name='Tamanho' onChange={(e) => { setOrder({ ...order, Size: e.target.value }) }} required>
-                                    <option value='XS'>XS</option>
-                                    <option value='S'>S</option>
-                                    <option value='M'>M</option>
-                                    <option value='L'>L</option>
-                                    <option value='XL'>XL</option>
-                                    <option value='2XL'>2XL</option>
-                                    <option value='3XL'>3XL</option>
-                                    <option value='4XL'>4XL</option>
-                                </select>
-
+                                <TShirtSize />
                                 <p>Cor</p>
-                                <select type='select' name='Cor' onChange={(e) => { setOrder({ ...order, Color: e.target.value }) }} required>
-                                    <option value='Branco'>Branco</option>
-                                    <option value='Outra'>...</option>
-                                </select>
+                                <TShirtColor />
 
                                 <p>Zona de Impressão</p>
                                 <div className='shop-tshirts-printing'>
