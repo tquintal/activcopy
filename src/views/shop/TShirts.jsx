@@ -71,13 +71,13 @@ export default function TShirtSize() {
             </select>
         } else if (order.TShirt === 'T-Shirt Criança') {
             return <select type='select' name='Cor' onChange={(e) => { setOrder({ ...order, Color: e.target.value }) }} defaultValue={order.Color} required>
-                <option value='Branco'>Vermelho</option>
-                <option value='Preto'>Cinza</option>
+                <option value='Vermelho'>Vermelho</option>
+                <option value='Cinza'>Cinza</option>
             </select>
         } else {
             return <select type='select' name='Cor' onChange={(e) => { setOrder({ ...order, Color: e.target.value }) }} defaultValue={order.Color} required>
-                <option value='Branco'>Azul</option>
-                <option value='Preto'>Verde</option>
+                <option value='Azul'>Azul</option>
+                <option value='Verde'>Verde</option>
             </select>
         }
     }
