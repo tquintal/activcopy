@@ -106,15 +106,16 @@ export default function TShirtSize() {
             <div className='service'>
                 <div className='service-container'>
                     <div className='shop-cat-container'>
-                        <div className='shop-cat-img'>
-                            <img src={BCards} alt='b-cards' onClick={LogOrder} />
-                        </div>
-                        <div className='shop-cat-form-container'>
+                        <div className='shop-cat-left-side'>
                             <ShopBack />
                             <h1>T-Shirts</h1>
+                            <div className='shop-cat-img'>
+                                <img src={BCards} alt='b-cards' onClick={LogOrder} />
+                            </div>
+                        </div>
+                        <div className='shop-cat-form-container'>
                             <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
                                 <p>T-Shirt</p>
-                                {/* <select type='select' name='TShirt' onChange={(e) => { setOrder({ ...order, TShirt: e.target.value }) }, (el) => setSelectedTshirt(el.target.value)} required> */}
                                 <select type='select' name='TShirt' onChange={(e) => setOrder({ ...order, TShirt: e.target.value, Size: e.target.value === 'T-Shirt Adulto' ? 'M' : e.target.value === 'T-Shirt Criança' ? '1-2' : 'M', Color: e.target.value === 'T-Shirt Adulto' ? 'Branco' : e.target.value === 'T-Shirt Criança' ? 'Vermelho' : 'Azul' })} required>
                                     <option value='T-Shirt Adulto'>T-Shirt Adulto</option>
                                     <option value='T-Shirt Criança'>T-Shirt Criança</option>
@@ -172,9 +173,7 @@ export default function TShirtSize() {
                                 <input type='hidden' name='_template' value='table'></input>
 
                                 <button type='submit' onClick={setOrderCompleted} className='shop-button'>{t('ShopBusinessCards.Order')}</button>
-                                {/* <input type='hidden' name='_next' value='https://activcopy.vercel.app/' /> */}
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
-                                {/* <input type='hidden' name='_next' value='http://localhost:3000/shop/order-completed' /> */}
                             </form>
                         </div>
                     </div>

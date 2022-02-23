@@ -50,12 +50,14 @@ export default function BusinessCardss() {
             <div className='service'>
                 <div className='service-container'>
                     <div className='shop-cat-container'>
-                        <div className='shop-cat-img'>
-                            <img src={BCards} alt='b-cards' onClick={LogOrder} />
-                        </div>
-                        <div className='shop-cat-form-container'>
+                        <div className='shop-cat-left-side'>
                             <ShopBack />
                             <h1>{t('ShopBusinessCards.Title')}</h1>
+                            <div className='shop-cat-img'>
+                                <img src={BCards} alt='b-cards' onClick={LogOrder} />
+                            </div>
+                        </div>
+                        <div className='shop-cat-form-container'>
                             <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
                                 <p>{t('ShopBusinessCards.Format')}</p>
                                 <select type='select' name='Formato' onChange={(e) => { setOrder({ ...order, Format: e.target.value }) }} required>
