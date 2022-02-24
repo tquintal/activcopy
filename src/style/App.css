@@ -312,14 +312,20 @@ Red Orange: #FF4500
 }
 
 .service-card {
-  background-color: #1b1b1b;
+  /* background-color: #1b1b1b; */
   height: 420px;
   width: 320px;
   transition: 150ms;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   /* box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 rgb(0 0 0 / 30%); */
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  padding: 25px;
 }
 
 .service-card h3 {

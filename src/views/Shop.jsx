@@ -5,6 +5,12 @@ import { motion } from 'framer-motion'
 import { MdOutlineShoppingCart } from 'react-icons/md'
 import { backToTop } from '../utils'
 import '../style/Services.css'
+import BCards from '../assets/b-cards.jpg'
+import TShirts from '../assets/t-shirts.jpg'
+import Flyers from '../assets/flyers.jpg'
+import BFormat from '../assets/b-format.jpg'
+import Mugs from '../assets/mug.jpg'
+import Stickers from '../assets/stickers.jpg'
 
 export default function Shop() {
     const { t } = useTranslation()
@@ -24,51 +30,57 @@ export default function Shop() {
                 <div className='services-cards-container'>
                     <NavLink onClick={() => backToTop()} to='/shop/visit-cards'>
                         <div className='service-card-container'>
-                            <div className='service-card'>
-                                <h3>*Icon/Image*</h3>
+                            <div className='service-card' style={{
+                                backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + BCards + ')'
+                            }}>
+                                <h3>{t('Shop.BusinessCardss')}</h3>
                             </div>
-                            <p>{t('Shop.BusinessCardss')}</p>
                         </div>
                     </NavLink>
                     <NavLink onClick={() => backToTop()} to='/shop/t-shirts'>
                         <div className='service-card-container'>
-                            <div className='service-card'>
-                                <h3>*Icon/Image*</h3>
+                            <div className='service-card' style={{
+                                backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + TShirts + ')'
+                            }}>
+                                <h3>{t('Shop.T-Shirts')}</h3>
                             </div>
-                            <p>{t('Shop.T-Shirts')}</p>
                         </div>
                     </NavLink>
                     <NavLink onClick={() => backToTop()} to='/shop/flyers'>
                         <div className='service-card-container'>
-                            <div className='service-card'>
-                                <h3>*Icon/Image*</h3>
+                            <div className='service-card' style={{
+                                backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + Flyers + ')'
+                            }}>
+                                <h3>{t('Shop.Flyers')}</h3>
                             </div>
-                            <p>{t('Shop.Flyers')}</p>
                         </div>
                     </NavLink>
                     <div className='services-bottom-container'>
                         <NavLink onClick={() => backToTop()} to='/shop/big-format'>
                             <div className='service-card-container'>
-                                <div className='service-card'>
-                                    <h3>*Icon/Image*</h3>
+                                <div className='service-card' style={{
+                                    backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + BFormat + ')'
+                                }}>
+                                    <h3>{t('Shop.BigFormat')}</h3>
                                 </div>
-                                <p>{t('Shop.BigFormat')}</p>
                             </div>
                         </NavLink>
                         <NavLink onClick={() => backToTop()} to='/shop/mugs'>
                             <div className='service-card-container'>
-                                <div className='service-card'>
-                                    <h3>*Icon/Image*</h3>
+                                <div className='service-card' style={{
+                                    backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + Mugs + ')'
+                                }}>
+                                    <h3>{t('Shop.Mugs')}</h3>
                                 </div>
-                                <p>{t('Shop.Mugs')}</p>
                             </div>
                         </NavLink>
                         <NavLink onClick={() => backToTop()} to='/shop/stickers'>
                             <div className='service-card-container'>
-                                <div className='service-card'>
-                                    <h3>*Icon/Image*</h3>
+                                <div className='service-card' style={{
+                                    backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + Stickers + ')'
+                                }}>
+                                    <h3>{t('Shop.Stickers')}</h3>
                                 </div>
-                                <p>{t('Shop.Stickers')}</p>
                             </div>
                         </NavLink>
                     </div>
