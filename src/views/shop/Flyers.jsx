@@ -59,6 +59,9 @@ export default function Flyers() {
                         </div>
                         <div className='shop-cat-form-container'>
                             <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
+
+                                <input type='hidden' name='Tipo de encomenda' value='Flyers'></input>
+
                                 <p>{t('ShopBusinessCards.Format')}</p>
                                 <select type='select' name='Formato' onChange={(e) => { setOrder({ ...order, Format: e.target.value }) }} required>
                                     <option value='A4'>A4</option>
@@ -122,7 +125,6 @@ export default function Flyers() {
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>
                                 <input type='hidden' name='IBAN' value={'XXX XXX XXX XXX XXX'}></input>
-                                <input type='hidden' name='OUTRO(?)' value={'XXX XXX XXX XXX XXX'}></input>
                                 <input type='hidden' name='Valor' value={order.Total}></input>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
@@ -131,9 +133,7 @@ export default function Flyers() {
                                 <input type='hidden' name='_template' value='table'></input>
 
                                 <button type='submit' onClick={setOrderCompleted} className='shop-button'>{t('ShopBusinessCards.Order')}</button>
-                                {/* <input type='hidden' name='_next' value='https://activcopy.vercel.app/' /> */}
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
-                                {/* <input type='hidden' name='_next' value='http://localhost:3000/shop/order-completed' /> */}
                             </form>
                         </div>
                     </div>

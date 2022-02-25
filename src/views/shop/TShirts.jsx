@@ -90,8 +90,7 @@ export default function TShirtSize() {
             LogOrder()
             localStorage.removeItem(['Order'])
             console.log(`Local storage cleared`)
-            // localStorage['Order'] = JSON.stringify(order)
-            localStorage['Order'] = true
+            localStorage['Order'] = JSON.stringify(order)
             console.log(`Order placed`)
         }
     }
@@ -115,6 +114,9 @@ export default function TShirtSize() {
                         </div>
                         <div className='shop-cat-form-container'>
                             <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
+
+                                <input type='hidden' name='Tipo de encomenda' value='T-Shirts'></input>
+
                                 <p>T-Shirt</p>
                                 <select type='select' name='TShirt' onChange={(e) => setOrder({ ...order, TShirt: e.target.value, Size: e.target.value === 'T-Shirt Adulto' ? 'M' : e.target.value === 'T-Shirt Criança' ? '1-2' : 'M', Color: e.target.value === 'T-Shirt Adulto' ? 'Branco' : e.target.value === 'T-Shirt Criança' ? 'Vermelho' : 'Azul' })} required>
                                     <option value='T-Shirt Adulto'>T-Shirt Adulto</option>
@@ -149,7 +151,7 @@ export default function TShirtSize() {
                                 </div>
 
                                 <p>Quantidade *</p>
-                                <input type='text' name='Quantidade' placeholder='Quantidade *' defaultValue='1' onChange={(e) => { setOrder({ ...order, Amount: e.target.value }) }} required></input>
+                                <input type='number' name='Quantidade' placeholder='Quantidade *' defaultValue='1' onChange={(e) => { setOrder({ ...order, Amount: e.target.value }) }} required></input>
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
                                 <input type='email' name='E-Mail' placeholder='E-mail *' onChange={(e) => { setOrder({ ...order, EMail: e.target.value }) }} required></input>
                                 <input type='text' name='Contacto' placeholder={t('ShopBusinessCards.Contact') + ' *'} onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
@@ -164,7 +166,6 @@ export default function TShirtSize() {
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>
                                 <input type='hidden' name='IBAN' value={'XXX XXX XXX XXX XXX'}></input>
-                                <input type='hidden' name='OUTRO(?)' value={'XXX XXX XXX XXX XXX'}></input>
                                 <input type='hidden' name='Valor' value={order.Total}></input>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
