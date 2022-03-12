@@ -93,7 +93,7 @@ export default function BusinessCardss() {
                                             setTotal(total + 1.5)
                                             setOrder({ ...order, Material: e.target.value, Total: total + 1.5 })
                                             if (finalTotal.Calc === 2 || finalTotal.Calc === 1) {
-                                                setFinalTotal({ ...finalTotal, Total: (finalTotal.Total + 1.5) * finalTotal.Calc })
+                                                setFinalTotal({ ...finalTotal, Total: (total + 1.5) * finalTotal.Calc })
                                             } else {
                                                 setFinalTotal({ ...finalTotal, Total: roundUp((total + 1.5) + (total + 1.5) * finalTotal.Calc, 2) })
                                             }
@@ -137,7 +137,9 @@ export default function BusinessCardss() {
                                         setOrder({ ...order, Printing: e.target.value, Total: total + 1.5 })
                                         setTotal(total + 1.5)
                                         if (finalTotal.Calc === 2 || finalTotal.Calc === 1) {
-                                            setFinalTotal({ ...finalTotal, Total: (finalTotal.Total + 1.5) * finalTotal.Calc })
+                                            console.log('FinalTotal', finalTotal.Total, finalTotal.Calc)
+                                            console.log((finalTotal.Total + 1.5) * finalTotal.Calc)
+                                            setFinalTotal({ ...finalTotal, Total: (total + 1.5) * finalTotal.Calc })
                                         } else {
                                             setFinalTotal({ ...finalTotal, Total: roundUp((total + 1.5) + (total + 1.5) * finalTotal.Calc, 2) })
                                         }
