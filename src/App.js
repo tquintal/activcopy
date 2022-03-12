@@ -70,7 +70,7 @@ export default function App() {
               <Route path='/services/bookbinding' element={<Bookbinding />} />
               <Route path='/services/scanning' element={<Scanning />} />
               <Route path='/shop' element={<Shop />} />
-              <Route path='/shop/visit-cards' element={<BusinessCardss />} />
+              <Route path='/shop/business-cards' element={<BusinessCardss />} />
               <Route path='/shop/t-shirts' element={<TShirts />} />
               <Route path='/shop/flyers' element={<Flyers />} />
               <Route path='/shop/big-format' element={<BigFormatShop />} />

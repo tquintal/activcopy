@@ -22,6 +22,7 @@ export default function OrderCompleted() {
                 className='oder-completed-container'
             >
                 <h2>{t('OrderCompleted.ThankYou')}</h2>
+                <p>{t('OrderCompleted.Info')}</p>
                 <Link to='/shop' className='thank-you-back'><BiArrowBack /><p>{t('Service.Back')}</p></Link>
                 {/* <div className='order-confirm'>
                     <p>{t('OrderCompleted.Complete')}</p>

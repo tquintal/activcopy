@@ -53,6 +53,7 @@
 
   "OrderCompleted": {
     "ThankYou": "Thank you for your preference!",
+    "Info": "An e-mail was sent with the details to complete your order.",
     "Complete": "To complete your order...",
     "IBAN": "IBAN:",
     "Cenas": "Things:",

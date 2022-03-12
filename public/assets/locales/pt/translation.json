@@ -54,6 +54,7 @@
 
   "OrderCompleted": {
     "ThankYou": "Obrigado pela preferência!",
+    "Info": "Foi enviado um e-mail com todos os dados de forma a concluir a sua encomenda.",
     "Complete": "Para concluir a sua encomenda deverá efetuar uma transferência para:",
     "IBAN": "IBAN:",
     "Cenas": "Cenas:",
@@ -66,17 +67,16 @@
   "ShopBusinessCards": {
     "Title": "Cartões de visita",
     "Format": "Formato",
-    "FirstFormat": "Retangular (65mm x 55mm)",
+    "FirstFormat": "Retangular (85mm x 55mm)",
     "SecondFormat": "Quadrado (55mm x 55mm)",
     "Material": "Material",
-    "FirstMaterial": "Cartolina CLA 350G",
-    "SecondMaterial": "Couché 350G",
-    "ThirdMaterial": "Papel Kraft 300G",
-    "FourthMaterial": "Papel de algodão c/ fragmentos de plantas 250G",
-    "FifthMaterial": "Cartolina ouro 330G",
-    "SixthMaterial": "Cartolina prata 330G",
-    "SeventhMaterial": "Rives design reciclado 250G",
-    "EighthMaterial": "Rives tradition reciclado 250G",
+    "FirstMaterial": "Cartolina CLA 315g",
+    "SecondMaterial": "Couché 350g",
+    "ThirdMaterial": "Papel Kraft 300g",
+    "FifthMaterial": "Cartolina ouro 330g",
+    "SixthMaterial": "Cartolina prata 330g",
+    "SeventhMaterial": "Rives design reciclado 250g",
+    "EighthMaterial": "Rives tradition reciclado 250g",
     "Printing": "Impressão",
     "PrintingColor": "Cor",
     "FirstPrinting": "Frente",
@@ -95,22 +95,22 @@
 
   "DigitalPrinting": {
     "FirstDPTitle": "Pequenos formatos",
-    "FirstDPDesc": "Tamanhos: A6, A5, A3, SRA3\nImpressão: Preto e a cores / Frente e verso\nGramagem: 80 a 350G\nTipo de papel: Diversos, papel reciclado e papel vegan",
+    "FirstDPDesc": "Tamanhos: A6, A5, A3, SRA3\nImpressão: Preto e a cores / Frente e verso\ngramagem: 80 a 350g\nTipo de papel: Diversos, papel reciclado e papel vegan",
 
     "SecondDPTitle": "Impressão em branco",
-    "SecondDPDesc": "Tamanho: A4\nImpressão: Branco / Frente, frente e verso\nGramagem: 80 a 350G\nTipo de papel: Diversos, papel reciclado e papel vegan",
+    "SecondDPDesc": "Tamanho: A4\nImpressão: Branco / Frente, frente e verso\nGramagem: 80 a 350g\nTipo de papel: Diversos, papel reciclado e papel vegan",
 
     "ThirdDPTitle": "Impressão de teses",
-    "ThirdDPDesc": "Tamanho: A4\nImpressão: Preto e a cores / Frente e verso\nGramagem: 80 a 120G\nTipo de papel: Diversos, papel reciclado e papel vegan",
+    "ThirdDPDesc": "Tamanho: A4\nImpressão: Preto e a cores / Frente e verso\nGramagem: 80 a 120g\nTipo de papel: Diversos, papel reciclado e papel vegan",
 
     "FourthDPTitle": "Cartões de visita",
-    "FourthDPDesc": "Tamanho: Quadrado e Retangular\nImpressão: Preto e a cores / Frente, frente e verso\nTipo de papel: CLA 315G, Couché 350G, Diversos\nAcabamento: Laminação",
+    "FourthDPDesc": "Tamanho: Quadrado e Retangular\nImpressão: Preto e a cores / Frente, frente e verso\nTipo de papel: CLA 315g, Couché 350g, Diversos\nAcabamento: Laminação",
 
     "FifthDPTitle": "Revistas e Catálogos",
-    "FifthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto e a cores / Frente, frente e verso\nGramagem: 80 a 350G\nTipos de papel: Diversos, papel reciclado e papel vegan\nAcabamentos: Dobras, encadernação e agrafos",
+    "FifthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto e a cores / Frente, frente e verso\nGramagem: 80 a 350g\nTipos de papel: Diversos, papel reciclado e papel vegan\nAcabamentos: Dobras, encadernação e agrafos",
 
     "SixthDPTitle": "Flyers e Folhetos",
-    "SixthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto e a cores / Frente, frente e verso\nGramagem: 80 a 350G\nTipos de papel: Diversos, papel reciclado e papel vegan\nAcabamentos: Dobras e corte",
+    "SixthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto e a cores / Frente, frente e verso\nGramagem: 80 a 350g\nTipos de papel: Diversos, papel reciclado e papel vegan\nAcabamentos: Dobras e corte",
 
     "SeventhDPTitle": "Envelopes",
     "SeventhDPDesc": "Material: DL 007 Digital com ou sem janela\nTamanho: 11cm x 22cm\nGramagem: 90g\nCor: Branco\nImpressão: Preto e a cores / Frente, frente e verso",

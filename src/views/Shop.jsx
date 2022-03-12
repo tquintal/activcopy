@@ -28,7 +28,7 @@ export default function Shop() {
                     <MdOutlineShoppingCart size='2em' />
                 </div>
                 <div className='services-cards-container'>
-                    <NavLink onClick={() => backToTop()} to='/shop/visit-cards'>
+                    <NavLink onClick={() => backToTop()} to='/shop/business-cards'>
                         <div className='service-card-container'>
                             <div className='service-card' style={{
                                 backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + BCards + ')'
