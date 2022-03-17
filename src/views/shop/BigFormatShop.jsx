@@ -16,7 +16,6 @@ export default function BigFormatShop() {
         Width: '',
         Height: '',
         Material: 'Vinil branco mate',
-        IsRollup: false,
         Printing: 'Frente',
         PrintingColor: 'Cores',
         Amount: '1',
@@ -34,38 +33,43 @@ export default function BigFormatShop() {
     let cTotal = 0
 
     const calculate = (h, w, material, qt) => {
-        if (h !== '' && w !== '') {
-            h = parseFloat(h) / 100
-            w = parseFloat(w) / 100
-        }
+        if (material === 'Rollup branco mate 420g') {
+            console.log('tão???')
+            cTotal = 120 * qt
+        } else {
+            if (h !== '' && w !== '') {
+                h = parseFloat(h) / 100
+                w = parseFloat(w) / 100
+            }
 
-        switch (material) {
-            case 'Vinil branco mate':
-                cTotal = (h * w) * 40
-                break
-            case 'Vinil transparente':
-                cTotal = (h * w) * 40
-                break
-            case 'Vinil monomérico':
-                cTotal = (h * w) * 50
-                break
-            case 'Lona coated 440g branco mate':
-                cTotal = (h * w) * 35
-                break
-            case 'Tela / canvas':
-                cTotal = (h * w) * 45
-                break
-            case 'Papel de parede wallcover':
-                cTotal = (h * w) * 40
-                break
-            case 'Papel de parede spray e up (cola adesiva no verso)':
-                cTotal = (h * w) * 50
-                break
-            default:
-                cTotal = 120
-        }
+            switch (material) {
+                case 'Vinil branco mate':
+                    cTotal = (h * w) * 40
+                    break
+                case 'Vinil transparente':
+                    cTotal = (h * w) * 40
+                    break
+                case 'Vinil monomérico':
+                    cTotal = (h * w) * 50
+                    break
+                case 'Lona coated 440g branco mate':
+                    cTotal = (h * w) * 35
+                    break
+                case 'Tela / canvas':
+                    cTotal = (h * w) * 45
+                    break
+                case 'Papel de parede wallcover':
+                    cTotal = (h * w) * 40
+                    break
+                case 'Papel de parede spray e up (cola adesiva no verso)':
+                    cTotal = (h * w) * 50
+                    break
+                default:
+                    cTotal = 120
+            }
 
-        cTotal = cTotal * qt
+            cTotal = cTotal * qt
+        }
 
         return roundUp(cTotal, 2)
     }
@@ -75,12 +79,13 @@ export default function BigFormatShop() {
     }
 
     const setOrderCompleted = () => {
+        if (order.Material === 'Rollup branco mate 420g')
+            setOrder({ ...order, Width: '0', Height: '0' })
         if (order.Width > 160 || order.Width < 90 || order.Height < 50 || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
             localStorage.removeItem(['Order'])
             alert(t('Shop.Error'))
             LogOrder()
         } else {
-            if (order.Material === 'Rollup branco mate 420g') setOrder({ ...order, Width: '0', Height: '0' })
             LogOrder()
             localStorage.removeItem(['Order'])
             console.log(`Local storage cleared`)
@@ -113,7 +118,7 @@ export default function BigFormatShop() {
 
                                 <p>{t('ShopBusinessCards.Format')}</p>
                                 {
-                                    order.IsRollup === false ?
+                                    order.Material !== 'Rollup branco mate 420g' ?
                                         <div className='shop-form'>
                                             <input type='number' name='Altura' placeholder={t('ShopBusinessCards.Height') + ' (min 50cm)'} min={50} onChange={(e) => {
                                                 setOrder({ ...order, Height: e.target.value })
@@ -137,10 +142,8 @@ export default function BigFormatShop() {
                                     if (order.Height !== '' && order.Height !== '') {
                                         setTotal(calculate(order.Height, order.Width, e.target.value, order.Amount))
                                     } else if (e.target.value === 'Rollup branco mate 420g') {
-                                        setOrder({ ...order, IsRollup: true })
                                         setTotal(calculate(order.Height, order.Width, e.target.value, order.Amount))
                                     } else {
-                                        setOrder({ ...order, IsRollup: false })
                                         setTotal(0)
                                     }
                                 }} required>
@@ -167,7 +170,7 @@ export default function BigFormatShop() {
                                 <input type='number' min='1' name='Quantidade' defaultValue='1' placeholder={t('ShopBusinessCards.Amount') + ' *'} onChange={(e) => {
                                     setOrder({ ...order, Amount: e.target.value })
                                     if (order.Height !== '' && order.Width !== '') setTotal(calculate(order.Height, order.Width, order.Material, parseInt(e.target.value)))
-                                    else if (order.IsRollup) setTotal(calculate(order.Height, order.Width, order.Material, parseInt(e.target.value)))
+                                    else if (order.Material === 'Rollup branco mate 420g') setTotal(calculate(order.Height, order.Width, order.Material, parseInt(e.target.value)))
                                 }} required></input>
 
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
