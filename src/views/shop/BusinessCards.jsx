@@ -10,15 +10,7 @@ function roundUp(num, precision) {
 }
 
 export default function BusinessCardss() {
-
-    const [total, setTotal] = useState(8.5)
-
-    const [materialChanged, setMaterialChanged] = useState(false)
-
-    const [finalTotal, setFinalTotal] = useState({
-        Total: 8.5,
-        Calc: 1
-    })
+    const { t } = useTranslation()
 
     const [order, setOrder] = useState({
         Format: 'Retangular (65mm x 55mm)',
@@ -35,19 +27,62 @@ export default function BusinessCardss() {
         Total: 8.5
     })
 
-    const LogOrder = () => {
-        console.log('FinalT:', finalTotal)
-        console.table(order)
+    const [total, setTotal] = useState(8.5)
+
+    let cTotal = 0
+
+    const calculate = (material, printing, quantity) => {
+        cTotal = 8.5
+
+        if (material === 'Cartolina ouro' || material === 'Cartolina prata')
+            cTotal += 1.5
+
+        if (printing === 'Frente e verso')
+            cTotal += 1.5
+
+        switch (quantity) {
+            case '200':
+                cTotal = cTotal * 2
+                break
+            case '300':
+                cTotal = roundUp(cTotal + cTotal * 1.85, 2)
+                break
+            case '400':
+                cTotal = roundUp(cTotal + cTotal * 2.45, 2)
+                break
+            case '500':
+                cTotal = roundUp(cTotal + cTotal * 3.2, 2)
+                break
+            case '1000':
+                cTotal = roundUp(cTotal + cTotal * 4.5, 2)
+                break
+            case '1500':
+                cTotal = roundUp(cTotal + cTotal * 5.15, 2)
+                break
+            case '2000':
+                cTotal = roundUp(cTotal + cTotal * 6.4, 2)
+                break
+            case '3000':
+                cTotal = roundUp(cTotal + cTotal * 8.2, 2)
+                break
+            default:
+                cTotal = cTotal + 0
+        }
+
+        return cTotal
     }
 
-    const { t } = useTranslation()
+    const LogOrder = () => {
+        console.log('Total:', total)
+        console.table(order)
+    }
 
     const setOrderCompleted = () => {
         if (order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
             LogOrder()
             alert(t('Shop.Error'))
         } else {
-            setOrder({ ...order, Total: finalTotal.Total })
+            setOrder({ ...order, Total: total })
             LogOrder()
             localStorage.removeItem(['Order'])
             console.log(`Local storage cleared`)
@@ -86,33 +121,8 @@ export default function BusinessCardss() {
 
                                 <p>{t('ShopBusinessCards.Material')}</p>
                                 <select type='select' name='Material' onChange={(e) => {
-                                    if (e.target.value === 'Cartolina ouro' || e.target.value === 'Cartolina prata') {
-                                        if (materialChanged) {
-                                            setOrder({ ...order, Material: e.target.value, Total: total })
-                                        } else {
-                                            setTotal(total + 1.5)
-                                            setOrder({ ...order, Material: e.target.value, Total: total + 1.5 })
-                                            if (finalTotal.Calc === 2 || finalTotal.Calc === 1) {
-                                                setFinalTotal({ ...finalTotal, Total: (total + 1.5) * finalTotal.Calc })
-                                            } else {
-                                                setFinalTotal({ ...finalTotal, Total: roundUp((total + 1.5) + (total + 1.5) * finalTotal.Calc, 2) })
-                                            }
-                                        }
-                                        setMaterialChanged(true)
-                                    } else {
-                                        if (materialChanged) {
-                                            setOrder({ ...order, Material: e.target.value, Total: total - 1.5 })
-                                            setTotal(total - 1.5)
-                                            if (finalTotal.Calc === 2 || finalTotal.Calc === 1) {
-                                                setFinalTotal({ ...finalTotal, Total: (total - 1.5) * finalTotal.Calc })
-                                            } else {
-                                                setFinalTotal({ ...finalTotal, Total: roundUp((total - 1.5) + (total - 1.5) * finalTotal.Calc, 2) })
-                                            }
-                                            setMaterialChanged(false)
-                                        } else {
-                                            setOrder({ ...order, Material: e.target.value, Total: total })
-                                        }
-                                    }
+                                    setOrder({ ...order, Material: e.target.value })
+                                    setTotal(calculate(e.target.value, order.Printing, order.Amount))
                                 }} required>
                                     <option value='Cartolina'>{t('ShopBusinessCards.FirstMaterial')}</option>
                                     <option value='Couche'>{t('ShopBusinessCards.SecondMaterial')}</option>
@@ -125,27 +135,8 @@ export default function BusinessCardss() {
 
                                 <p>{t('ShopBusinessCards.Printing')}</p>
                                 <select type='select' name='Impressao' onChange={(e) => {
-                                    if (e.target.value === 'Frente') {
-                                        setOrder({ ...order, Printing: e.target.value, Total: total - 1.5 })
-                                        setTotal(total - 1.5)
-                                        if (finalTotal.Calc === 2 || finalTotal.Calc === 1) {
-                                            setFinalTotal({ ...finalTotal, Total: (total - 1.5) * finalTotal.Calc })
-                                        } else {
-                                            setFinalTotal({ ...finalTotal, Total: roundUp((total - 1.5) + (total - 1.5) * finalTotal.Calc, 2) })
-                                        }
-                                    } else if (e.target.value === 'Frente e verso') {
-                                        setOrder({ ...order, Printing: e.target.value, Total: total + 1.5 })
-                                        setTotal(total + 1.5)
-                                        if (finalTotal.Calc === 2 || finalTotal.Calc === 1) {
-                                            console.log('FinalTotal', finalTotal.Total, finalTotal.Calc)
-                                            console.log((finalTotal.Total + 1.5) * finalTotal.Calc)
-                                            setFinalTotal({ ...finalTotal, Total: (total + 1.5) * finalTotal.Calc })
-                                        } else {
-                                            setFinalTotal({ ...finalTotal, Total: roundUp((total + 1.5) + (total + 1.5) * finalTotal.Calc, 2) })
-                                        }
-                                    } else {
-                                        alert('Error')
-                                    }
+                                    setOrder({ ...order, Printing: e.target.value })
+                                    setTotal(calculate(order.Material, e.target.value, order.Amount))
                                 }} required>
                                     <option value='Frente'>{t('ShopBusinessCards.FirstPrinting')}</option>
                                     <option value='Frente e verso'>{t('ShopBusinessCards.SecondPrinting')}</option>
@@ -157,36 +148,8 @@ export default function BusinessCardss() {
 
                                 <p>{t('ShopBusinessCards.Amount')}</p>
                                 <select type='select' name='Quantidade' onChange={(e) => {
-                                    switch (e.target.value) {
-                                        case '200':
-                                            setFinalTotal({ ...finalTotal, Total: total * 2, Calc: 2 })
-                                            break
-                                        case '300':
-                                            setFinalTotal({ ...finalTotal, Total: roundUp(total + total * 1.85, 2), Calc: 1.85 })
-                                            break
-                                        case '400':
-                                            setFinalTotal({ ...finalTotal, Total: roundUp(total + total * 2.45, 2), Calc: 2.45 })
-                                            break
-                                        case '500':
-                                            setFinalTotal({ ...finalTotal, Total: roundUp(total + total * 3.2, 2), Calc: 3.2 })
-                                            break
-                                        case '1000':
-                                            setFinalTotal({ ...finalTotal, Total: roundUp(total + total * 4.5, 2), Calc: 4.5 })
-                                            break
-                                        case '1500':
-                                            setFinalTotal({ ...finalTotal, Total: roundUp(total + total * 5.15, 2), Calc: 5.15 })
-                                            break
-                                        case '2000':
-                                            setFinalTotal({ ...finalTotal, Total: roundUp(total + total * 6.4, 2), Calc: 6.4 })
-                                            break
-                                        case '3000':
-                                            setFinalTotal({ ...finalTotal, Total: roundUp(total + total * 8.2, 2), Calc: 8.2 })
-                                            break
-                                        default:
-                                            setFinalTotal({ ...finalTotal, Total: total, Calc: 1 })
-                                    }
                                     setOrder({ ...order, Amount: e.target.value })
-
+                                    setTotal(calculate(order.Material, order.Printing, e.target.value))
                                 }} required>
                                     <option value='100'>100</option>
                                     <option value='200'>200</option>
@@ -208,7 +171,7 @@ export default function BusinessCardss() {
                                     <input type='file' name='Attachment' accept='image/png, image/jpeg' onChange={() => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
                                 </label>
                                 <textarea name='Comentario' placeholder={t('ShopBusinessCards.Note')} onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
-                                <p>Total: {finalTotal.Total}€</p>
+                                <p>Total: {total}€</p>
 
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>

@@ -66,6 +66,8 @@
   "ShopBusinessCards": {
     "Title": "Business Cards",
     "Format": "Format",
+    "Width": "Width",
+    "Height": "Heigth",
     "Material": "Material",
 
     "Printing": "Printing",
