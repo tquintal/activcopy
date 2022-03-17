@@ -163,6 +163,7 @@ export default function BigFormatShop() {
                                 <input type='number' min='1' name='Quantidade' defaultValue='1' placeholder={t('ShopBusinessCards.Amount') + ' *'} onChange={(e) => {
                                     setOrder({ ...order, Amount: e.target.value })
                                     if (order.Height !== '' && order.Width !== '') setTotal(calculate(order.Height, order.Width, order.Material, parseInt(e.target.value)))
+                                    else if (order.Material === 'Rollup branco mate 420g') setTotal(calculate(order.Height, order.Width, order.Material, parseInt(e.target.value)))
                                 }} required></input>
 
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
