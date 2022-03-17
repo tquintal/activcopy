@@ -131,10 +131,10 @@ export default function BigFormatShop() {
                                 <p>{t('ShopBusinessCards.Material')}</p>
                                 <select type='select' name='Material' onChange={(e) => {
                                     setOrder({ ...order, Material: e.target.value })
-                                    // (h, w, material)
                                     if (order.Height !== '' && order.Height !== '') {
                                         setTotal(calculate(order.Height, order.Width, e.target.value, order.Amount))
                                     } else if (e.target.value === 'Rollup branco mate 420g') {
+                                        setOrder({ ...order, Height: '0', Width: '0' })
                                         setTotal(calculate(order.Height, order.Width, e.target.value, order.Amount))
                                     } else {
                                         setTotal(0)
