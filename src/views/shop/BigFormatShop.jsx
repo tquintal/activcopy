@@ -34,7 +34,6 @@ export default function BigFormatShop() {
 
     const calculate = (h, w, material, qt) => {
         if (material === 'Rollup branco mate 420g') {
-            console.log('tão???')
             cTotal = 120 * qt
         } else {
             if (h !== '' && w !== '') {

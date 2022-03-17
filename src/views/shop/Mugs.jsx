@@ -20,6 +20,26 @@ export default function Mugs() {
         Total: '0€'
     })
 
+    const [total, setTotal] = useState(9)
+
+    let cTotal = 0
+
+    const calculate = (material, qt) => {
+        cTotal = 0
+        switch (material) {
+            case 'Caneca branca':
+                cTotal = 9
+                break
+            case 'Caneca mágica preta':
+                cTotal = 13.5
+                break
+            default:
+                cTotal = 14
+        }
+        cTotal = cTotal * qt
+        return cTotal
+    }
+
     const LogOrder = () => {
         console.table(order)
     }
@@ -31,6 +51,7 @@ export default function Mugs() {
             LogOrder()
             alert(t('Shop.Error'))
         } else {
+            setOrder({ ...order, Total: total })
             LogOrder()
             localStorage.removeItem(['Order'])
             console.log(`Local storage cleared`)
@@ -67,7 +88,10 @@ export default function Mugs() {
                                 </select>
 
                                 <p>{t('ShopBusinessCards.Material')}</p>
-                                <select type='select' name='Material' onChange={(e) => { setOrder({ ...order, Material: e.target.value }) }} required>
+                                <select type='select' name='Material' onChange={(e) => {
+                                    setOrder({ ...order, Material: e.target.value })
+                                    setTotal(calculate(e.target.value, order.Amount))
+                                }} required>
                                     <option value='Caneca branca'>Caneca branca</option>
                                     <option value='Caneca mágica preta'>Caneca mágica preta</option>
                                     <option value='Caneca fluorescente amarela'>Caneca fluorescente amarela</option>
@@ -83,7 +107,10 @@ export default function Mugs() {
                                 </select>
 
                                 <p>{t('ShopBusinessCards.Amount')} *</p>
-                                <input type='text' name='Quantidade' placeholder='Quantidade *' onChange={(e) => { setOrder({ ...order, Amount: e.target.value }) }} required></input>
+                                <input type='number' name='Quantidade' placeholder='Quantidade *' defaultValue={1} min={1} onChange={(e) => {
+                                    setOrder({ ...order, Amount: e.target.value })
+                                    setTotal(calculate(order.Material, e.target.value))
+                                }} required></input>
 
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
                                 <input type='email' name='E-Mail' placeholder='E-mail *' onChange={(e) => { setOrder({ ...order, EMail: e.target.value }) }} required></input>
@@ -94,7 +121,7 @@ export default function Mugs() {
                                     <input type='file' name='Attachment' accept='image/png, image/jpeg' onChange={(e) => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
                                 </label>
                                 <textarea name='Comentario' placeholder={t('ShopBusinessCards.Note')} onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
-                                <p>Total: {order.Total}</p>
+                                <p>Total: {total}€</p>
 
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>
