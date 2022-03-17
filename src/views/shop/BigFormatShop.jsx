@@ -16,6 +16,7 @@ export default function BigFormatShop() {
         Width: '',
         Height: '',
         Material: 'Vinil branco mate',
+        IsRollup: false,
         Printing: 'Frente',
         PrintingColor: 'Cores',
         Amount: '1',
@@ -33,8 +34,10 @@ export default function BigFormatShop() {
     let cTotal = 0
 
     const calculate = (h, w, material, qt) => {
-        h = parseFloat(h) / 100
-        w = parseFloat(w) / 100
+        if (h !== '' && w !== '') {
+            h = parseFloat(h) / 100
+            w = parseFloat(w) / 100
+        }
 
         switch (material) {
             case 'Vinil branco mate':
@@ -110,7 +113,7 @@ export default function BigFormatShop() {
 
                                 <p>{t('ShopBusinessCards.Format')}</p>
                                 {
-                                    order.Material !== 'Rollup branco mate 420g' ?
+                                    order.IsRollup === false ?
                                         <div className='shop-form'>
                                             <input type='number' name='Altura' placeholder={t('ShopBusinessCards.Height') + ' (min 50cm)'} min={50} onChange={(e) => {
                                                 setOrder({ ...order, Height: e.target.value })
@@ -134,9 +137,10 @@ export default function BigFormatShop() {
                                     if (order.Height !== '' && order.Height !== '') {
                                         setTotal(calculate(order.Height, order.Width, e.target.value, order.Amount))
                                     } else if (e.target.value === 'Rollup branco mate 420g') {
-                                        setOrder({ ...order, Height: '0', Width: '0' })
+                                        setOrder({ ...order, IsRollup: true })
                                         setTotal(calculate(order.Height, order.Width, e.target.value, order.Amount))
                                     } else {
+                                        setOrder({ ...order, IsRollup: false })
                                         setTotal(0)
                                     }
                                 }} required>
@@ -163,7 +167,7 @@ export default function BigFormatShop() {
                                 <input type='number' min='1' name='Quantidade' defaultValue='1' placeholder={t('ShopBusinessCards.Amount') + ' *'} onChange={(e) => {
                                     setOrder({ ...order, Amount: e.target.value })
                                     if (order.Height !== '' && order.Width !== '') setTotal(calculate(order.Height, order.Width, order.Material, parseInt(e.target.value)))
-                                    else if (order.Material === 'Rollup branco mate 420g') setTotal(calculate(order.Height, order.Width, order.Material, parseInt(e.target.value)))
+                                    else if (order.IsRollup) setTotal(calculate(order.Height, order.Width, order.Material, parseInt(e.target.value)))
                                 }} required></input>
 
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
