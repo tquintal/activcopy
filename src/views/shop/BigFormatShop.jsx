@@ -73,21 +73,28 @@ export default function BigFormatShop() {
         return roundUp(cTotal, 2)
     }
 
-    const LogOrder = () => {
-        console.table(order)
-    }
-
     const setOrderCompleted = () => {
-        if (order.Material === 'Rollup branco mate 420g')
-            setOrder({ ...order, Width: '0', Height: '0' })
-        if (order.Width > 160 || order.Width < 90 || order.Height < 50 || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
-            localStorage.removeItem(['Order'])
-            alert(t('Shop.Error'))
-            LogOrder()
-        } else {
-            LogOrder()
+        setOrder({ ...order, Total: `${total}€` })
+
+        if (order.Material === 'Rollup branco mate 420g') {
+            console.log(`IF order.Material === 'Rollup branco mate 420g'`)
+
+            setOrder({ ...order, Width: 'Rollup', Height: 'Rollup' })
+        }
+
+        if (order.Width === '' || order.Height === '' || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
+            console.log(`IF order.Width === '' || order.Height === '' || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true`)
+
             localStorage.removeItem(['Order'])
             console.log(`Local storage cleared`)
+
+            alert(t('Shop.Error'))
+        } else {
+            console.log('ELSE')
+
+            localStorage.removeItem(['Order'])
+            console.log(`Local storage cleared`)
+
             localStorage['Order'] = JSON.stringify(order)
             console.log(`Order placed`)
         }
@@ -107,7 +114,7 @@ export default function BigFormatShop() {
                             <ShopBack />
                             <h1>{t('Shop.BigFormat')}</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={LogOrder} />
+                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>
