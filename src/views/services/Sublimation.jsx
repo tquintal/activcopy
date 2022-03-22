@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { backToTop } from '../../utils'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { GrPrevious, GrNext } from 'react-icons/gr'
@@ -13,6 +15,9 @@ import image4 from './assets/img4.jpg'
 import image5 from './assets/img5.jpg'
 import image6 from './assets/img6.jpg'
 import image7 from './assets/img7.jpg'
+
+import { CgEnter } from 'react-icons/cg'
+import { MdOutlineShoppingCart } from 'react-icons/md'
 
 const prevArrow = <GrPrevious size='1.6em' className='arrow prev-arrow'></GrPrevious>
 const nextArrow = <GrNext size='1.6em' className='arrow next-arrow'></GrNext>
@@ -87,6 +92,17 @@ function Content() {
         setID(value.id)
         setTitle(value.title)
         setdescription(value.description)
+    }
+
+    const LinkTo = () => {
+        switch (id) {
+            case 1:
+                return <NavLink className='service-contact-link' to='/shop/t-shirts' onClick={backToTop}><button className='service-button'>Comprar online<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
+            case 2:
+                return <NavLink className='service-contact-link' to='/shop/mugs' onClick={backToTop}><button className='service-button'>Comprar online<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
+            default:
+                return <NavLink className='service-contact-link' to='/contact' onClick={backToTop}><button className='service-button'>Pedir orçamento <CgEnter size='1.5em' /></button></NavLink>
+        }
     }
 
     return (
@@ -248,12 +264,11 @@ function Content() {
                                         <div className='tshirt-color' style={{ backgroundColor: '#65a283' }}></div>
                                     </div>
                                 </div>
-
                                 <p className='service-description'>{t('Sublimation.FithSMTShirt')}</p>
                             </div>
                         ) : (<></>)}
-
                     </div>
+                    <LinkTo />
                 </div>
             </div>
         </motion.div>

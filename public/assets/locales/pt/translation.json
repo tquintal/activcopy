@@ -48,7 +48,6 @@
     "Flyers": "Flyers",
     "BigFormat": "Grandes formatos",
     "Mugs": "Canecas",
-    "Stickers": "Autocolantes",
     "Name": "Nome"
   },
 
@@ -128,6 +127,8 @@
   },
 
   "BigFormat": {
+    "Info": "Todo o material utilizado em grandes formatos tem durabilidade mínima de 5 anos exposto ao exterior.",
+
     "FirstBFTitle": "Vinil",
     "FirstBFDesc": "Material: Branco/Brilho, Branco/Mate, Transparente/Brilho, Transparente/Mate\nMicroperfurado\nTamanho: Personalizado (largura máxima 1,60m)",
 
@@ -217,7 +218,7 @@
   },
 
   "Form": {
-    "Title": "Fale connosco!",
+    "Title": "Fale connosco.\nPeça um orçamento!",
     "Name": "Nome *",
     "Contact": "Número de telemóvel",
     "Subject": "Assunto *",

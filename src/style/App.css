@@ -374,6 +374,31 @@ Red Orange: #FF4500
   margin-top: 15px;
 }
 
+.service-contact-link {
+  text-decoration: none;
+  width: fit-content;
+}
+
+.service-button {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  outline: inherit;
+  height: fit-content;
+  padding: 15px;
+  font-size: 14px;
+  transition: 200ms;
+  cursor: pointer;
+  color: #101010;
+}
+
+.big-format-info {
+  color: #999999;
+  font-size: 14px;
+}
+
 .shop-title {
   display: flex;
   align-items: center;

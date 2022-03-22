@@ -236,7 +236,7 @@ export default function TShirtSize() {
                                 </div>
 
                                 <p>Quantidade *</p>
-                                <input type='number' name='Quantidade' placeholder='Quantidade *' defaultValue='1' onChange={(e) => {
+                                <input type='number' name='Quantidade' placeholder='Quantidade *' min={1} defaultValue='1' onChange={(e) => {
                                     setOrder({ ...order, Amount: e.target.value })
                                     setTotal(calculate(order.TShirt, order.Color, order.Printing, e.target.value))
 

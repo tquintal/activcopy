@@ -1,7 +1,10 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { backToTop } from '../../utils'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import ServiceBack from '../../components/ServiceBack'
+import { CgEnter } from 'react-icons/cg'
 
 export default function Scanning() {
 
@@ -21,6 +24,7 @@ export default function Scanning() {
                         <h1 className='service-title'>{t('Scanning.SCTitle')}</h1>
                         <p className='service-description'>{t('Scanning.SCDesc')}</p>
                     </div>
+                    <NavLink className='service-contact-link' to='/contact' onClick={backToTop}><button className='service-button'>Pedir orçamento <CgEnter size='1.5em' /></button></NavLink>
                 </div>
             </div>
         </motion.div>

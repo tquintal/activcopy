@@ -10,7 +10,6 @@ import TShirts from '../assets/t-shirts.jpg'
 import Flyers from '../assets/flyers.jpg'
 import BFormat from '../assets/b-format.jpg'
 import Mugs from '../assets/mug.jpg'
-import Stickers from '../assets/stickers.jpg'
 
 export default function Shop() {
     const { t } = useTranslation()
@@ -71,15 +70,6 @@ export default function Shop() {
                                     backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + Mugs + ')'
                                 }}>
                                     <h3>{t('Shop.Mugs')}</h3>
-                                </div>
-                            </div>
-                        </NavLink>
-                        <NavLink onClick={() => backToTop()} to='/shop/stickers'>
-                            <div className='service-card-container'>
-                                <div className='service-card' style={{
-                                    backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + Stickers + ')'
-                                }}>
-                                    <h3>{t('Shop.Stickers')}</h3>
                                 </div>
                             </div>
                         </NavLink>

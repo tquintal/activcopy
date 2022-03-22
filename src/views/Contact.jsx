@@ -46,7 +46,7 @@ export default function Contact() {
                     <GMaps />
                 </div>
 
-                <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' className='contact-form-container'>
+                <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='contact-form-container'>
                     <h1>{t('Form.Title')}</h1>
                     <div className='contact-form-first-block'>
                         <div>
@@ -58,9 +58,11 @@ export default function Contact() {
                             <input type='text' name='Assunto' placeholder={t('Form.Subject')} required></input>
                         </div>
                     </div>
-                    <div>
-                        <textarea name='Mensagem' placeholder={t('Form.TextArea')} className='message-textarea' required />
-                    </div>
+                    <textarea name='Mensagem' placeholder={t('Form.TextArea')} className='message-textarea' required />
+                    {/* <label>
+                        {t('ShopBusinessCards.UploadFile')}
+                    </label> */}
+                    <input type='file' name='Attachment' accept='.zip, .tar, .7z, audio/*, video/*, image/*'></input>
                     <p>{t('Form.Info')}</p>
                     <button type='submit'>{t('Form.Button')}</button>
                     <input type='hidden' name='_next' value='https://activcopy.vercel.app/thank-you' />

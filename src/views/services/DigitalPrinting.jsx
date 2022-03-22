@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { backToTop } from '../../utils'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { GrPrevious, GrNext } from 'react-icons/gr'
@@ -16,6 +18,9 @@ import image7 from './assets/img7.jpg'
 import image8 from './assets/img8.jpg'
 import image9 from './assets/img9.jpg'
 import image10 from './assets/img10.jpg'
+
+import { CgEnter } from 'react-icons/cg'
+import { MdOutlineShoppingCart } from 'react-icons/md'
 
 const prevArrow = <GrPrevious size='1.6em' className='arrow prev-arrow'></GrPrevious>
 const nextArrow = <GrNext size='1.6em' className='arrow next-arrow'></GrNext>
@@ -37,64 +42,86 @@ function Content() {
 
     const images = [
         {
+            'desc': 'smallFormat',
             'img': image1,
             'title': t('DigitalPrinting.FirstDPTitle'),
             'description': t('DigitalPrinting.FirstDPDesc')
         },
         {
+            'desc': 'whitePrinting',
             'img': image2,
             'title': t('DigitalPrinting.SecondDPTitle'),
             'description': t('DigitalPrinting.SecondDPDesc')
         },
         {
+            'desc': 'thesis',
             'img': image3,
             'title': t('DigitalPrinting.ThirdDPTitle'),
             'description': t('DigitalPrinting.ThirdDPDesc')
         },
         {
+            'desc': 'businessCards',
             'img': image4,
             'title': t('DigitalPrinting.FourthDPTitle'),
             'description': t('DigitalPrinting.FourthDPDesc')
         },
         {
+            'desc': 'mags',
             'img': image5,
             'title': t('DigitalPrinting.FifthDPTitle'),
             'description': t('DigitalPrinting.FifthDPDesc')
         },
         {
+            'desc': 'flyers',
             'img': image6,
             'title': t('DigitalPrinting.SixthDPTitle'),
             'description': t('DigitalPrinting.SixthDPDesc')
         },
         {
+            'desc': 'envelopes',
             'img': image7,
             'title': t('DigitalPrinting.SeventhDPTitle'),
             'description': t('DigitalPrinting.SeventhDPDesc')
         },
         {
+            'desc': 'tagsStickers',
             'img': image8,
             'title': t('DigitalPrinting.EighthDPTitle'),
             'description': t('DigitalPrinting.EighthDPDesc')
         },
         {
+            'desc': 'plastification',
             'img': image9,
             'title': t('DigitalPrinting.NinthDPTitle'),
             'description': t('DigitalPrinting.NinthDPDesc')
         },
         {
+            'desc': 'sheeting',
             'img': image10,
             'title': t('DigitalPrinting.TenthDPTitle'),
             'description': t('DigitalPrinting.TenthDPDesc')
         }
     ]
 
+    const [current, setCurrent] = useState(images[0].desc)
     const [title, setTitle] = useState(images[0].title)
     const [description, setdescription] = useState(images[0].description)
 
     const ClickedService = (value) => {
-        // console.table(value)
         setTitle(value.title)
         setdescription(value.description)
+        setCurrent(value.desc)
+    }
+
+    const LinkTo = () => {
+        switch (current) {
+            case 'businessCards':
+                return <NavLink className='service-contact-link' to='/shop/business-cards' onClick={backToTop}><button className='service-button'>Comprar online<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
+            case 'flyers':
+                return <NavLink className='service-contact-link' to='/shop/flyers' onClick={backToTop}><button className='service-button'>Comprar online<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
+            default:
+                return <NavLink className='service-contact-link' to='/contact' onClick={backToTop}><button className='service-button'>Pedir orçamento <CgEnter size='1.5em' /></button></NavLink>
+        }
     }
 
     return (
@@ -120,6 +147,7 @@ function Content() {
                         <h1 className='service-title'>{title}</h1>
                         <p className='service-description'>{description}</p>
                     </div>
+                    <LinkTo />
                 </div>
             </div>
         </motion.div>

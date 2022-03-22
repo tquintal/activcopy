@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { backToTop } from '../../utils'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { GrPrevious, GrNext } from 'react-icons/gr'
@@ -14,6 +16,8 @@ import image5 from './assets/img5.jpg'
 import image6 from './assets/img6.jpg'
 import image7 from './assets/img7.jpg'
 import image8 from './assets/img8.jpg'
+
+import { MdOutlineShoppingCart } from 'react-icons/md'
 
 const prevArrow = <GrPrevious size='1.6em' className='arrow prev-arrow'></GrPrevious>
 const nextArrow = <GrNext size='1.6em' className='arrow next-arrow'></GrNext>
@@ -108,6 +112,8 @@ function Content() {
                         <h1 className='service-title'>{title}</h1>
                         <p className='service-description'>{description}</p>
                     </div>
+                    <p className='big-format-info'>{t('BigFormat.Info')}</p>
+                    <NavLink className='service-contact-link' to='/shop/big-format' onClick={backToTop}><button className='service-button'>Comprar online<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
                 </div>
             </div>
         </motion.div>

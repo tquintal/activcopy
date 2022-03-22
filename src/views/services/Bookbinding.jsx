@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { backToTop } from '../../utils'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { GrPrevious, GrNext } from 'react-icons/gr'
@@ -9,6 +11,8 @@ import ServiceBack from '../../components/ServiceBack'
 import image1 from './assets/img1.jpg'
 import image2 from './assets/img2.jpg'
 import image3 from './assets/img3.jpg'
+
+import { CgEnter } from 'react-icons/cg'
 
 const prevArrow = <GrPrevious size='1.6em' className='arrow prev-arrow'></GrPrevious>
 const nextArrow = <GrNext size='1.6em' className='arrow next-arrow'></GrNext>
@@ -104,6 +108,7 @@ export default function Bookbinding() {
                         ) : (<></>)}
 
                     </div>
+                    <NavLink className='service-contact-link' to='/contact' onClick={backToTop}><button className='service-button'>Pedir orçamento <CgEnter size='1.5em' /></button></NavLink>
                 </div>
             </div>
         </motion.div>
