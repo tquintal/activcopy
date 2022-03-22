@@ -13,14 +13,17 @@ import Mugs from '../assets/mug.jpg'
 
 export default function Shop() {
     const { t } = useTranslation()
+
+    const motionProps = {
+        transition: { duration: 0.4 },
+        initial: { opacity: 0 },
+        animate: { opacity: 1 },
+        exit: { opacity: 0 },
+        className: 'services'
+    }
+
     return (
-        <motion.div
-            transition={{ duration: 0.4 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className='services'
-        >
+        <motion.div {...motionProps}>
             <div className='services-container'>
                 <div className='shop-title'>
                     <h1>{t('Shop.Title')}</h1>

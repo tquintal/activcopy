@@ -7,7 +7,7 @@ export default function CookieConsentLM() {
     const { t } = useTranslation()
     return (
         <div className='thank-you-view'>
-            <div className='thank-you-view-content' style={{ width: "80%" }}>
+            <div className='thank-you-view-content' style={{ width: '80%' }}>
                 <p className='white-space'>{t('CookieConsentLearnMorePage')}</p>
                 <Link to='/' className='thank-you-back'><BiArrowBack /><p>{t('Service.Back')}</p></Link>
             </div>

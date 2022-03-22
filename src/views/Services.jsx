@@ -12,14 +12,17 @@ import Stickers from '../assets/stickers.jpg'
 
 export default function Services() {
     const { t } = useTranslation()
+
+    const motionProps = {
+        transition: { duration: 0.4 },
+        initial: { opacity: 0 },
+        animate: { opacity: 1 },
+        exit: { opacity: 0 },
+        className: 'services'
+    }
+
     return (
-        <motion.div
-            transition={{ duration: 0.4 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className='services'
-        >
+        <motion.div {...motionProps}>
             <div className='services-container'>
                 <h1>{t('Services.Title')}</h1>
                 <div className='services-cards-container'>

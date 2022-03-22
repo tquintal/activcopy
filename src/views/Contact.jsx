@@ -12,14 +12,16 @@ export default function Contact() {
         )
     }
 
+    const motionProps = {
+        transition: { duration: 0.4 },
+        initial: { opacity: 0 },
+        animate: { opacity: 1 },
+        exit: { opacity: 0 },
+        className: 'contact'
+    }
+
     return (
-        <motion.div
-            transition={{ duration: 0.4 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className='contact'
-        >
+        <motion.div {...motionProps}>
             <div className='contact-container'>
 
                 <div className='contacts-container'>

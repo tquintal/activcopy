@@ -89,13 +89,15 @@ function Content() {
         setdescription(value.description)
     }
 
+    const motionProps = {
+        transition: { duration: 0.4 },
+        initial: { opacity: 0 },
+        animate: { opacity: 1 },
+        exit: { opacity: 0 }
+    }
+
     return (
-        <motion.div
-            transition={{ duration: 0.4 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-        >
+        <motion.div {...motionProps}>
             <div className='service'>
                 <div className='service-container'>
                     <ServiceBack />

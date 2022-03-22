@@ -25,13 +25,16 @@ function DesktopHeader() {
         document.body.dir = currentLanguageCode || 'pt'
     }, [currentLanguageCode])
 
+    const motionProps = {
+        transition: { duration: 0.4 },
+        initial: { opacity: 0 },
+        animate: { opacity: 1 },
+        exit: { opacity: 0 },
+        className: 'desktop-header'
+    }
+
     return (
-        <motion.div
-            transition={{ duration: 0.4 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className='desktop-header'>
+        <motion.div {...motionProps}>
             <div className='header-container'>
                 <Link to='/'><h1 className='title' onClick={() => { scrollTop(); enableScroll() }}>activcopy</h1></Link>
                 <div className='header-actions'>

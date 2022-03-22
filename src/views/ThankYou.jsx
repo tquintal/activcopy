@@ -5,6 +5,7 @@ import { BiArrowBack } from 'react-icons/bi'
 
 export default function ThankYou() {
     const { t } = useTranslation()
+
     return (
         <div className='thank-you-view'>
             <div className='thank-you-view-content'>
