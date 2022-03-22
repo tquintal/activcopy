@@ -47,7 +47,7 @@ export default function Contact() {
                 </div>
 
                 <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='contact-form-container'>
-                    <h1>{t('Form.Title')}</h1>
+                    <h1 style={{ lineHeight: '35px' }}>{t('Form.Title')}</h1>
                     <div className='contact-form-first-block'>
                         <div>
                             <input type='text' name='Nome' placeholder={t('Form.Name')} required></input>
