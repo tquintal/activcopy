@@ -124,7 +124,7 @@ export default function BigFormatShop() {
 
                                 <input type='hidden' name='Tipo de encomenda' value={t('Shop.BigFormat')}></input>
 
-                                <p>{t('ShopBusinessCards.Format')}</p>
+                                <p>{t('ShopBusinessCards.Format')} (cm)</p>
                                 {
                                     order.Material !== 'Rollup branco mate 420g' ?
                                         <div className='shop-form'>
