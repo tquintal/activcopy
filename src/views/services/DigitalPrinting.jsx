@@ -116,11 +116,11 @@ function Content() {
     const LinkTo = () => {
         switch (current) {
             case 'businessCards':
-                return <NavLink className='service-contact-link' to='/shop/business-cards' onClick={backToTop}><button className='service-button'>Comprar online<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
+                return <NavLink className='service-contact-link' to='/shop/business-cards' onClick={backToTop}><button className='service-button'>{t('ButtonShop')}<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
             case 'flyers':
-                return <NavLink className='service-contact-link' to='/shop/flyers' onClick={backToTop}><button className='service-button'>Comprar online<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
+                return <NavLink className='service-contact-link' to='/shop/flyers' onClick={backToTop}><button className='service-button'>{t('ButtonShop')}<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
             default:
-                return <NavLink className='service-contact-link' to='/contact' onClick={backToTop}><button className='service-button'>Pedir orçamento <CgEnter size='1.5em' /></button></NavLink>
+                return <NavLink className='service-contact-link' to='/contact' onClick={backToTop}><button className='service-button'>{t('ButtonBudget')}<CgEnter size='1.5em' /></button></NavLink>
         }
     }
 

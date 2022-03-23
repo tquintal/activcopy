@@ -114,7 +114,7 @@ function Content() {
                         <p className='service-description'>{description}</p>
                     </div>
                     <p className='big-format-info'>{t('BigFormat.Info')}</p>
-                    <NavLink className='service-contact-link' to='/shop/big-format' onClick={backToTop}><button className='service-button'>Comprar online<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
+                    <NavLink className='service-contact-link' to='/shop/big-format' onClick={backToTop}><button className='service-button'>{t('ButtonShop')}<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
                 </div>
             </div>
         </motion.div>
