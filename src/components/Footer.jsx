@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { AiFillFacebook, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
 import ReactTooltip from 'react-tooltip'
+import { AiFillFacebook, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
 
 export default function Footer() {
 

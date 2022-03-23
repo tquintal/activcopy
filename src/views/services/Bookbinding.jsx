@@ -60,8 +60,6 @@ export default function Bookbinding() {
     const [description, setdescription] = useState(images[0].description)
 
     const ClickedService = (value) => {
-        console.log('ID:', value.id)
-
         setID(value.id)
         setTitle(value.title)
         setdescription(value.description)

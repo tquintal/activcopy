@@ -73,7 +73,6 @@ export default function BusinessCardss() {
     }
 
     const LogOrder = () => {
-        console.log('Total:', total)
         console.table(order)
     }
 

@@ -84,7 +84,6 @@ function Content() {
     const [description, setdescription] = useState(images[0].description)
 
     const ClickedService = (value) => {
-        // console.table(value)
         setTitle(value.title)
         setdescription(value.description)
     }
