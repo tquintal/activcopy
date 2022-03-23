@@ -50,6 +50,8 @@
     "Name": "Name"
   },
 
+  "ShopFlyersFinish": "Finish",
+
   "OrderCompleted": {
     "ThankYou": "Thank you for your preference!",
     "Info": "An e-mail was sent with the details to complete your order.",

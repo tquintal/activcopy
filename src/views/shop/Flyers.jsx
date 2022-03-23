@@ -12,6 +12,7 @@ export default function Flyers() {
         Printing: 'Frente',
         PrintingColor: 'Cores',
         Amount: '100',
+        Finish: '',
         Name: '',
         EMail: '',
         Contact: '',
@@ -39,6 +40,8 @@ export default function Flyers() {
             console.log(`Order placed`)
         }
     }
+
+    const [finishSelected, setFinishSelected] = useState('')
 
     const motionProps = {
         transition: { duration: 0.4 },
@@ -74,16 +77,8 @@ export default function Flyers() {
                                 <p>{t('ShopBusinessCards.Material')}</p>
                                 <select type='select' name='Material' onChange={(e) => { setOrder({ ...order, Material: e.target.value }) }} required>
                                     <option value='Tecno Color 100g'>Tecno Color 100g</option>
-                                    <option value='Tecno Color 120g'>Tecno Color 120g</option>
-                                    <option value='Couché 90g'>Couché 90g</option>
-                                    <option value='Couché 125g'>Couché 125g</option>
                                     <option value='Couché 135g'>Couché 135g</option>
-                                    <option value='Papel vegan 150g'>Papel vegan 150g</option>
-                                    <option value='Papel reciclado 90g'>Papel reciclado 90g</option>
                                     <option value='Papel reciclado 100g'>Papel reciclado 100g</option>
-                                    <option value='Papel reciclado 120g'>Papel reciclado 120g</option>
-                                    <option value='Papel sementes 80g'>Papel sementes 80g</option>
-                                    <option value='Papel sementes 200g'>Papel sementes 200g</option>
                                 </select>
 
                                 <p>{t('ShopBusinessCards.Printing')}</p>
@@ -100,18 +95,27 @@ export default function Flyers() {
                                 <select type='select' name='Quantidade' onChange={(e) => { setOrder({ ...order, Amount: e.target.value }) }} required>
                                     <option value='100'>100</option>
                                     <option value='200'>200</option>
-                                    <option value='300'>300</option>
-                                    <option value='400'>400</option>
                                     <option value='500'>500</option>
-                                    <option value='600'>600</option>
-                                    <option value='700'>700</option>
-                                    <option value='800'>800</option>
-                                    <option value='900'>900</option>
                                     <option value='1000'>1000</option>
-                                    <option value='1500'>1500</option>
                                     <option value='2000'>2000</option>
                                     <option value='3000'>3000</option>
                                 </select>
+
+                                <p>{t('ShopFlyersFinish')}</p>
+                                <label className='shop-flyers-finish'>
+                                    <input type='radio' name='Acabamento' value='Dobra em U' onChange={() => {
+                                        setFinishSelected('Dobra em U')
+                                        setOrder({ ...order, Finish: 'Dobra em U' })
+                                    }} checked={finishSelected === 'Dobra em U'} />
+                                    Dobra em U
+                                </label>
+                                <label className='shop-flyers-finish'>
+                                    <input type='radio' name='Acabamento' value='Dobra em Z' onChange={() => {
+                                        setFinishSelected('Dobra em Z')
+                                        setOrder({ ...order, Finish: 'Dobra em Z' })
+                                    }} checked={finishSelected === 'Dobra em Z'} />
+                                    Dobra em Z
+                                </label>
 
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
                                 <input type='email' name='E-Mail' placeholder='E-mail *' onChange={(e) => { setOrder({ ...order, EMail: e.target.value }) }} required></input>

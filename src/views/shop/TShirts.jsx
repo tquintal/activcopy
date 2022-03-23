@@ -237,7 +237,7 @@ export default function TShirtSize() {
                                     <label htmlFor='MangaDireita'> Manga direita</label><br></br>
                                 </div>
 
-                                <p>Quantidade *</p>
+                                <p>{t('ShopBusinessCards.Amount')}</p>
                                 <input type='number' name='Quantidade' placeholder='Quantidade *' min={1} defaultValue='1' onChange={(e) => {
                                     setOrder({ ...order, Amount: e.target.value })
                                     setTotal(calculate(order.TShirt, order.Color, order.Printing, e.target.value))

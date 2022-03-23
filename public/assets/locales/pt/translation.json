@@ -51,6 +51,8 @@
     "Name": "Nome"
   },
 
+  "ShopFlyersFinish": "Acabamento",
+
   "OrderCompleted": {
     "ThankYou": "Obrigado pela preferência!",
     "Info": "Foi enviado um e-mail com todos os dados de forma a concluir a sua encomenda.",

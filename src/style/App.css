@@ -488,6 +488,13 @@ Red Orange: #FF4500
   font-size: 13px;
 }
 
+.shop-flyers-finish {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 13px;
+}
+
 .order-completed-view {
   position: absolute;
   min-height: 100%;

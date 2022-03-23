@@ -132,7 +132,7 @@ export default function BigFormatShop() {
                                                 setOrder({ ...order, Height: e.target.value })
                                                 if (order.Width !== '') setTotal(calculate(order.Width, e.target.value, order.Material, order.Amount))
                                             }} required></input>
-                                            <input type='number' name='Largura' placeholder={t('ShopBusinessCards.Width') + ' (max 160cm)'} max={160} onChange={(e) => {
+                                            <input type='number' name='Largura' placeholder={t('ShopBusinessCards.Width') + ' (max 160cm)'} min={1} max={160} onChange={(e) => {
                                                 setOrder({ ...order, Width: e.target.value })
                                                 if (order.Height !== '') setTotal(calculate(order.Height, e.target.value, order.Material, order.Amount))
                                             }} required></input>
