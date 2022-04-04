@@ -35,7 +35,7 @@ export default function Contact() {
                         <h1>{t('Schedule.Title')}</h1>
                         <p><span>{t('Schedule.Weekdays')}</span> 8H30 - 20H00</p>
                         <p><span>{t('Schedule.Saturday')}</span> 9H00 - 19H00</p>
-                        <p><span>{t('Schedule.Sunday')}</span> 9H00 - 19H00</p>
+                        <p><span>{t('Schedule.Sunday')}</span> {t('Schedule.Closed')}</p>
                     </div>
                     <div>
                         <h1>{t('Address.Title')}</h1>

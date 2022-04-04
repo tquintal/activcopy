@@ -23,6 +23,8 @@ export default function BigFormatShop() {
         EMail: '',
         Contact: '',
         Address: '',
+        NIF: '',
+        PromoCode: '',
         File: false,
         Note: '',
         Total: '0€'
@@ -69,6 +71,9 @@ export default function BigFormatShop() {
 
             cTotal = cTotal * qt
         }
+
+        if (order.PromoCode === 'activ10')
+            cTotal = cTotal * 0.9
 
         return roundUp(cTotal, 2)
     }
@@ -185,17 +190,28 @@ export default function BigFormatShop() {
                                 <input type='email' name='E-Mail' placeholder='E-mail *' onChange={(e) => { setOrder({ ...order, EMail: e.target.value }) }} required></input>
                                 <input type='text' name='Contacto' placeholder={t('ShopBusinessCards.Contact') + ' *'} onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
                                 <input type='text' name='Morada' placeholder={t('ShopBusinessCards.Address') + ' *'} onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
+                                <input type='text' name='NIF' placeholder='NIF' onChange={(e) => { setOrder({ ...order, NIF: e.target.value }) }}></input>
                                 <label>
                                     {t('ShopBusinessCards.UploadFile') + ' *'}
                                     <input type='file' name='Attachment' accept='image/png, image/jpeg' onChange={(e) => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
                                 </label>
                                 <textarea name='Comentario' placeholder={t('ShopBusinessCards.Note')} onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
+                                <div className='shop-promo-code'>
+                                    <input type='text' name='CodigoPromocional' placeholder={t('Shop.PromoCode')} onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <div onClick={() => {
+                                        order.PromoCode === 'activ10' ?
+                                            setTotal(calculate(order.Height, order.Width, order.Material, order.Amount))
+                                            : alert('Error')
+                                    }}>{t('Shop.PromoButton')}</div>
+                                </div>
                                 <p>Total: {total}€</p>
 
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>
                                 <input type='hidden' name='IBAN' value={'XXX XXX XXX XXX XXX'}></input>
                                 <input type='hidden' name='Total' value={order.Total}></input>
+
+                                <p className='shop-required-fields'>{t('Shop.IVAInc')}</p>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
                                 <p className='shop-required-fields'>{t('Form.Info')}</p>

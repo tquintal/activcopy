@@ -48,7 +48,10 @@
     "Flyers": "Flyers",
     "BigFormat": "Grandes formatos",
     "Mugs": "Canecas",
-    "Name": "Nome"
+    "Name": "Nome",
+    "PromoCode": "Código promocional",
+    "PromoButton": "Aplicar",
+    "IVAInc": "IVA incluído"
   },
 
   "ShopFlyersFinish": "Acabamento",
@@ -215,7 +218,8 @@
     "Title": "Horário",
     "Weekdays": "Semana:",
     "Saturday": "Sábado:",
-    "Sunday": "Domingo:"
+    "Sunday": "Domingo:",
+    "Closed": "Encerrado"
   },
 
   "Address": {

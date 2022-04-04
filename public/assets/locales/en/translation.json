@@ -47,7 +47,10 @@
     "Flyers": "Flyers",
     "BigFormat": "Big format",
     "Mugs": "Mugs",
-    "Name": "Name"
+    "Name": "Name",
+    "PromoCode": "Promo code",
+    "PromoButton": "Apply",
+    "IVAInc": "IVA included"
   },
 
   "ShopFlyersFinish": "Finish",
@@ -97,7 +100,8 @@
     "Title": "Schedule",
     "Weekdays": "Weekdays:",
     "Saturday": "Saturday:",
-    "Sunday": "Sunday:"
+    "Sunday": "Sunday:",
+    "Closed": "Closed"
   },
 
   "Address": {
