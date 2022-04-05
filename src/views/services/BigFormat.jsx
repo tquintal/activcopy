@@ -86,6 +86,7 @@ function Content() {
     const ClickedService = (value) => {
         setTitle(value.title)
         setdescription(value.description)
+        console.log(title)
     }
 
     const motionProps = {
@@ -113,7 +114,10 @@ function Content() {
                         <h1 className='service-title'>{title}</h1>
                         <p className='service-description'>{description}</p>
                     </div>
-                    <p className='big-format-info'>{t('BigFormat.Info')}</p>
+                    {
+                        title === 'Papel Parede' || title === 'Projetos Arquitetura' ? <></>
+                            : <p className='big-format-info'>{t('BigFormat.Info')}</p>
+                    }
                     <NavLink className='service-contact-link' to='/shop/big-format' onClick={backToTop}><button className='service-button'>{t('ButtonShop')}<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
                 </div>
             </div>
