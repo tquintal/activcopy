@@ -82,7 +82,7 @@ export default function Mugs() {
                     <div className='shop-cat-container'>
                         <div className='shop-cat-left-side'>
                             <ShopBack />
-                            <h1>{t('Shop.Mugs')}</h1>
+                            <h1>Canecas</h1>
                             <div className='shop-cat-img'>
                                 <img src={BCards} alt='b-cards' onClick={LogOrder} />
                             </div>
@@ -90,14 +90,15 @@ export default function Mugs() {
                         <div className='shop-cat-form-container'>
                             <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
 
-                                <input type='hidden' name='Tipo de encomenda' value={t('Shop.Mugs')}></input>
+                                <input type='hidden' name='_subject' value='Nova encomenda de canecas em activcopy.pt'></input>
+                                <input type='hidden' name='Encomenda' value='Canecas'></input>
 
-                                <p>{t('ShopBusinessCards.Format')}</p>
+                                <p>Formato</p>
                                 <select type='select' name='Formato' onChange={(e) => { setOrder({ ...order, Format: e.target.value }) }} required>
                                     <option value='90mm x 210mm'>90mm x 210mm</option>
                                 </select>
 
-                                <p>{t('ShopBusinessCards.Material')}</p>
+                                <p>Material</p>
                                 <select type='select' name='Material' onChange={(e) => {
                                     setOrder({ ...order, Material: e.target.value })
                                     setTotal(calculate(e.target.value, order.Amount))
@@ -110,13 +111,13 @@ export default function Mugs() {
                                     <option value='Caneca fluorescente vermelha'>Caneca fluorescente vermelha</option>
                                 </select>
 
-                                <p>{t('ShopBusinessCards.Printing')}</p>
-                                <select type='select' name='Impressao' onChange={(e) => { setOrder({ ...order, PrintingColor: e.target.value }) }} required>
-                                    <option value='Cores'>{t('ShopBusinessCards.FirstPrinting2')}</option>
-                                    <option value='Preto e branco'>{t('ShopBusinessCards.SecondPrinting2')}</option>
+                                <p>Impressão</p>
+                                <select type='select' name='Impressão' onChange={(e) => { setOrder({ ...order, PrintingColor: e.target.value }) }} required>
+                                    <option value='Cores'>Cores</option>
+                                    <option value='Preto e branco'>Preto e branco</option>
                                 </select>
 
-                                <p>{t('ShopBusinessCards.Amount')} *</p>
+                                <p>Quantidade *</p>
                                 <input type='number' name='Quantidade' placeholder='Quantidade *' defaultValue={1} min={1} onChange={(e) => {
                                     setOrder({ ...order, Amount: e.target.value })
                                     setTotal(calculate(order.Material, e.target.value))
@@ -124,21 +125,21 @@ export default function Mugs() {
 
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
                                 <input type='email' name='E-Mail' placeholder='E-mail *' onChange={(e) => { setOrder({ ...order, EMail: e.target.value }) }} required></input>
-                                <input type='text' name='Contacto' placeholder={t('ShopBusinessCards.Contact') + ' *'} onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
-                                <input type='text' name='Morada' placeholder={t('ShopBusinessCards.Address') + ' *'} onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
+                                <input type='text' name='Contacto' placeholder='Contacto *' onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
+                                <input type='text' name='Morada' placeholder='Morada *' onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
                                 <input type='text' name='NIF' placeholder='NIF' onChange={(e) => { setOrder({ ...order, NIF: e.target.value }) }}></input>
                                 <label>
-                                    {t('ShopBusinessCards.UploadFile') + ' *'}
-                                    <input type='file' name='Attachment' accept='image/png, image/jpeg' onChange={(e) => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
+                                    Carregar ficheiro * <span className='shop-attachment-img'>(imagem)</span>
+                                    <input type='file' name='Anexo' accept='image/png, image/jpeg' onChange={(e) => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
                                 </label>
-                                <textarea name='Comentario' placeholder={t('ShopBusinessCards.Note')} onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
+                                <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input type='text' name='CodigoPromocional' placeholder={t('Shop.PromoCode')} onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
                                         order.PromoCode === 'activ10' ?
                                             setTotal(calculate(order.Material, order.Amount))
                                             : alert('Error')
-                                    }}>{t('Shop.PromoButton')}</div>
+                                    }}>Aplicar</div>
                                 </div>
                                 <p>Total: {total}€</p>
 
@@ -147,14 +148,14 @@ export default function Mugs() {
                                 <input type='hidden' name='IBAN' value={'XXX XXX XXX XXX XXX'}></input>
                                 <input type='hidden' name='Valor' value={order.Total}></input>
 
-                                <p className='shop-required-fields'>{t('Shop.IVAInc')}</p>
+                                <p className='shop-required-fields'>Iva incluído</p>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
-                                <p className='shop-required-fields'>{t('Form.Info')}</p>
+                                <p className='shop-required-fields'>Campos obrigatórios *</p>
 
                                 <input type='hidden' name='_template' value='table'></input>
 
-                                <button type='submit' onClick={setOrderCompleted} className='shop-button'>{t('ShopBusinessCards.Order')}</button>
+                                <button type='submit' onClick={setOrderCompleted} className='shop-button'>Encomendar</button>
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
                             </form>
                         </div>

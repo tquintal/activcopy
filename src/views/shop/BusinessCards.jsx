@@ -109,7 +109,7 @@ export default function BusinessCardss() {
                     <div className='shop-cat-container'>
                         <div className='shop-cat-left-side'>
                             <ShopBack />
-                            <h1>{t('ShopBusinessCards.Title')}</h1>
+                            <h1>Cartões de visita</h1>
                             <div className='shop-cat-img'>
                                 <img src={BCards} alt='b-cards' onClick={() => LogOrder()} />
                             </div>
@@ -117,42 +117,43 @@ export default function BusinessCardss() {
                         <div className='shop-cat-form-container'>
                             <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
 
-                                <input type='hidden' name='Tipo de encomenda' value={t('ShopBusinessCards.Title')}></input>
+                                <input type='hidden' name='_subject' value='Nova encomenda de cartões de visita em activcopy.pt'></input>
+                                <input type='hidden' name='Encomenda' value='Cartões de visita'></input>
 
-                                <p>{t('ShopBusinessCards.Format')}</p>
+                                <p>Formato</p>
                                 <select type='select' name='Formato' onChange={(e) => { setOrder({ ...order, Format: e.target.value }) }} required>
-                                    <option value='Retangular'>{t('ShopBusinessCards.FirstFormat')}</option>
-                                    <option value='Quadrado'>{t('ShopBusinessCards.SecondFormat')}</option>
+                                    <option value='Retangular'>Retangular</option>
+                                    <option value='Quadrado'>Quadrado</option>
                                 </select>
 
-                                <p>{t('ShopBusinessCards.Material')}</p>
+                                <p>Material</p>
                                 <select type='select' name='Material' onChange={(e) => {
                                     setOrder({ ...order, Material: e.target.value })
                                     setTotal(calculate(e.target.value, order.Printing, order.Amount))
                                 }} required>
-                                    <option value='Cartolina'>{t('ShopBusinessCards.FirstMaterial')}</option>
-                                    <option value='Couche'>{t('ShopBusinessCards.SecondMaterial')}</option>
-                                    <option value='Papel kraft'>{t('ShopBusinessCards.ThirdMaterial')}</option>
-                                    <option value='Cartolina ouro'>{t('ShopBusinessCards.FifthMaterial')}</option>
-                                    <option value='Cartolina prata'>{t('ShopBusinessCards.SixthMaterial')}</option>
-                                    <option value='Rives design'>{t('ShopBusinessCards.SeventhMaterial')}</option>
-                                    <option value='Rives tradition'>{t('ShopBusinessCards.EighthMaterial')}</option>
+                                    <option value='Cartolina'>Cartolina CLA 315g</option>
+                                    <option value='Couché'>Couché 350g</option>
+                                    <option value='Papel kraft'>Papel Kraft 300g</option>
+                                    <option value='Cartolina ouro'>Cartolina ouro 330g</option>
+                                    <option value='Cartolina prata'>Cartolina prata 330g</option>
+                                    <option value='Rives design'>Rives design reciclado 250g</option>
+                                    <option value='Rives tradition'>Rives tradition reciclado 250g</option>
                                 </select>
 
-                                <p>{t('ShopBusinessCards.Printing')}</p>
-                                <select type='select' name='Impressao' onChange={(e) => {
+                                <p>Impressão</p>
+                                <select type='select' name='Impressão' onChange={(e) => {
                                     setOrder({ ...order, Printing: e.target.value })
                                     setTotal(calculate(order.Material, e.target.value, order.Amount))
                                 }} required>
-                                    <option value='Frente'>{t('ShopBusinessCards.FirstPrinting')}</option>
-                                    <option value='Frente e verso'>{t('ShopBusinessCards.SecondPrinting')}</option>
+                                    <option value='Frente'>Frente</option>
+                                    <option value='Frente e verso'>Frente e verso</option>
                                 </select>
-                                <select type='select' name='Impressao2' onChange={(e) => { setOrder({ ...order, PrintingColor: e.target.value }) }} required>
-                                    <option value='Cores'>{t('ShopBusinessCards.FirstPrinting2')}</option>
-                                    <option value='Preto e branco'>{t('ShopBusinessCards.SecondPrinting2')}</option>
+                                <select type='select' name='Cores' onChange={(e) => { setOrder({ ...order, PrintingColor: e.target.value }) }} required>
+                                    <option value='Cores'>Cores</option>
+                                    <option value='Preto e branco'>Preto e branco</option>
                                 </select>
 
-                                <p>{t('ShopBusinessCards.Amount')}</p>
+                                <p>Quantidade</p>
                                 <select type='select' name='Quantidade' onChange={(e) => {
                                     setOrder({ ...order, Amount: e.target.value })
                                     setTotal(calculate(order.Material, order.Printing, e.target.value))
@@ -170,21 +171,21 @@ export default function BusinessCardss() {
 
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
                                 <input type='email' name='E-Mail' placeholder='E-mail *' onChange={(e) => { setOrder({ ...order, EMail: e.target.value }) }} required></input>
-                                <input type='text' name='Contacto' placeholder={t('ShopBusinessCards.Contact') + ' *'} onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
-                                <input type='text' name='Morada' placeholder={t('ShopBusinessCards.Address') + ' *'} onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
+                                <input type='text' name='Contacto' placeholder='Contacto *' onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
+                                <input type='text' name='Morada' placeholder='Morada *' onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
                                 <input type='text' name='NIF' placeholder='NIF' onChange={(e) => { setOrder({ ...order, NIF: e.target.value }) }}></input>
                                 <label>
-                                    {t('ShopBusinessCards.UploadFile') + ' *'}
-                                    <input type='file' name='Attachment' accept='image/png, image/jpeg' onChange={() => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
+                                    Carregar ficheiro * <span className='shop-attachment-img'>(imagem)</span>
+                                    <input type='file' name='Anexo' accept='image/png, image/jpeg' onChange={() => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
                                 </label>
-                                <textarea name='Comentario' placeholder={t('ShopBusinessCards.Note')} onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
+                                <textarea name='Comentario' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input type='text' name='CodigoPromocional' placeholder={t('Shop.PromoCode')} onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
                                         order.PromoCode === 'activ10' ?
                                             setTotal(calculate(order.Material, order.Printing, order.Amount))
                                             : alert('Error')
-                                    }}>{t('Shop.PromoButton')}</div>
+                                    }}>Aplicar</div>
                                 </div>
                                 <p>Total: {total}€</p>
 
@@ -193,14 +194,14 @@ export default function BusinessCardss() {
                                 <input type='hidden' name='IBAN' value={'XXX XXX XXX XXX XXX'}></input>
                                 <input type='hidden' name='Valor' value={order.Total}></input>
 
-                                <p className='shop-required-fields'>{t('Shop.IVAInc')}</p>
+                                <p className='shop-required-fields'>IVA incluído</p>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
-                                <p className='shop-required-fields'>{t('Form.Info')}</p>
+                                <p className='shop-required-fields'>Campos obrigatórios *</p>
 
                                 <input type='hidden' name='_template' value='table'></input>
 
-                                <button type='submit' onClick={setOrderCompleted} className='shop-button'>{t('ShopBusinessCards.Order')}</button>
+                                <button type='submit' onClick={setOrderCompleted} className='shop-button'>Encomendar</button>
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
                             </form>
                         </div>

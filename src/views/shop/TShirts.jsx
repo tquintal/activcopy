@@ -184,7 +184,8 @@ export default function TShirtSize() {
                         <div className='shop-cat-form-container'>
                             <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
 
-                                <input type='hidden' name='Tipo de encomenda' value='T-Shirts'></input>
+                                <input type='hidden' name='_subject' value='Nova encomenda de t-shirts em activcopy.pt'></input>
+                                <input type='hidden' name='Encomenda' value='T-Shirts'></input>
 
                                 <p>T-Shirt</p>
                                 <select type='select' name='TShirt' onChange={(e) => {
@@ -202,47 +203,47 @@ export default function TShirtSize() {
 
                                 <p>Zona de Impressão</p>
                                 <div className='shop-tshirts-printing'>
-                                    <input type='checkbox' name='FrenteCentro' value='Frente Centro' defaultChecked={true} onChange={(e) => {
+                                    <input type='checkbox' name='Impressão' value='Frente Centro' defaultChecked={true} onChange={(e) => {
                                         order.Printing.FrenteCentro = !order.Printing.FrenteCentro
                                         console.table(order.Printing)
                                         setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                     }}></input>
-                                    <label htmlFor='FrenteCentro'> Frente centro</label><br></br>
+                                    <label htmlFor='Impressão'> Frente centro</label><br></br>
                                 </div>
                                 <div className='shop-tshirts-printing'>
-                                    <input type='checkbox' name='CostasCentro' value='Costas Centro' onChange={() => {
+                                    <input type='checkbox' name='Impressão' value='Costas Centro' onChange={() => {
                                         order.Printing.CostasCentro = !order.Printing.CostasCentro
                                         console.table(order.Printing)
                                         setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                     }}></input>
-                                    <label htmlFor='CostasCentro'> Costas centro</label><br></br>
+                                    <label htmlFor='Impressão'> Costas centro</label><br></br>
                                 </div>
                                 <div className='shop-tshirts-printing'>
-                                    <input type='checkbox' name='FrentePeitoEsquerdo' value='Frente peito esquerdo' onChange={() => {
+                                    <input type='checkbox' name='Impressão' value='Frente peito esquerdo' onChange={() => {
                                         order.Printing.FrentePeitoEsquerdo = !order.Printing.FrentePeitoEsquerdo
                                         console.table(order.Printing)
                                         setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                     }}></input>
-                                    <label htmlFor='FrentePeitoEsquerdo'> Frente peito esquerdo</label><br></br>
+                                    <label htmlFor='Impressão'> Frente peito esquerdo</label><br></br>
                                 </div>
                                 <div className='shop-tshirts-printing'>
-                                    <input type='checkbox' name='MangaEsquerda' value='Manga esquerda' onChange={() => {
+                                    <input type='checkbox' name='Impressão' value='Manga esquerda' onChange={() => {
                                         order.Printing.MangaEsquerda = !order.Printing.MangaEsquerda
                                         console.table(order.Printing)
                                         setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                     }}></input>
-                                    <label htmlFor='MangaEsquerda'> Manga esquerda</label><br></br>
+                                    <label htmlFor='Impressão'> Manga esquerda</label><br></br>
                                 </div>
                                 <div className='shop-tshirts-printing'>
-                                    <input type='checkbox' name='MangaDireita' value='Manga direita' onChange={() => {
+                                    <input type='checkbox' name='Impressão' value='Manga direita' onChange={() => {
                                         order.Printing.MangaDireita = !order.Printing.MangaDireita
                                         console.table(order.Printing)
                                         setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                     }}></input>
-                                    <label htmlFor='MangaDireita'> Manga direita</label><br></br>
+                                    <label htmlFor='Impressão'> Manga direita</label><br></br>
                                 </div>
 
-                                <p>{t('ShopBusinessCards.Amount')}</p>
+                                <p>Quantidade</p>
                                 <input type='number' name='Quantidade' placeholder='Quantidade *' min={1} defaultValue='1' onChange={(e) => {
                                     setOrder({ ...order, Amount: e.target.value })
                                     setTotal(calculate(order.TShirt, order.Color, order.Printing, e.target.value))
@@ -250,21 +251,21 @@ export default function TShirtSize() {
                                 }} required></input>
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
                                 <input type='email' name='E-Mail' placeholder='E-mail *' onChange={(e) => { setOrder({ ...order, EMail: e.target.value }) }} required></input>
-                                <input type='text' name='Contacto' placeholder={t('ShopBusinessCards.Contact') + ' *'} onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
-                                <input type='text' name='Morada' placeholder={t('ShopBusinessCards.Address') + ' *'} onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
+                                <input type='text' name='Contacto' placeholder='Contacto *' onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
+                                <input type='text' name='Morada' placeholder='Morada *' onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
                                 <input type='text' name='NIF' placeholder='NIF' onChange={(e) => { setOrder({ ...order, NIF: e.target.value }) }}></input>
                                 <label>
-                                    {t('ShopBusinessCards.UploadFile') + ' *'}
-                                    <input type='file' name='Attachment' accept='image/png, image/jpeg' onChange={(e) => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
+                                    Carregar ficheiro * <span className='shop-attachment-img'>(imagem)</span>
+                                    <input type='file' name='Anexo' accept='image/png, image/jpeg' onChange={(e) => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
                                 </label>
-                                <textarea name='Comentario' placeholder={t('ShopBusinessCards.Note')} onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
+                                <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input type='text' name='CodigoPromocional' placeholder={t('Shop.PromoCode')} onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
                                         order.PromoCode === 'activ10' ?
                                             setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                             : alert('Error')
-                                    }}>{t('Shop.PromoButton')}</div>
+                                    }}>Aplicar</div>
                                 </div>
                                 <p>Total: {total}€</p>
 
@@ -273,14 +274,14 @@ export default function TShirtSize() {
                                 <input type='hidden' name='IBAN' value={'XXX XXX XXX XXX XXX'}></input>
                                 <input type='hidden' name='Valor' value={total}></input>
 
-                                <p className='shop-required-fields'>{t('Shop.IVAInc')}</p>
+                                <p className='shop-required-fields'>IVA incluído</p>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
-                                <p className='shop-required-fields'>{t('Form.Info')}</p>
+                                <p className='shop-required-fields'>Campos obrigatórios *</p>
 
                                 <input type='hidden' name='_template' value='table'></input>
 
-                                <button type='submit' onClick={setOrderCompleted} className='shop-button'>{t('ShopBusinessCards.Order')}</button>
+                                <button type='submit' onClick={setOrderCompleted} className='shop-button'>Encomendar</button>
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
                             </form>
                         </div>

@@ -119,7 +119,7 @@ export default function BigFormatShop() {
                     <div className='shop-cat-container'>
                         <div className='shop-cat-left-side'>
                             <ShopBack />
-                            <h1>{t('Shop.BigFormat')}</h1>
+                            <h1>Grandes formatos</h1>
                             <div className='shop-cat-img'>
                                 <img src={BCards} alt='b-cards' onClick={() => console.table(order)} />
                             </div>
@@ -127,17 +127,18 @@ export default function BigFormatShop() {
                         <div className='shop-cat-form-container'>
                             <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
 
-                                <input type='hidden' name='Tipo de encomenda' value={t('Shop.BigFormat')}></input>
+                                <input type='hidden' name='_subject' value='Nova encomenda de grandes formatos em activcopy.pt'></input>
+                                <input type='hidden' name='Encomenda' value='Grandes formatos'></input>
 
-                                <p>{t('ShopBusinessCards.Format')} (cm)</p>
+                                <p>Formato (cm)</p>
                                 {
                                     order.Material !== 'Rollup branco mate 420g' ?
                                         <div className='shop-form'>
-                                            <input type='number' name='Altura' placeholder={t('ShopBusinessCards.Height') + ' (min 50cm)'} min={50} onChange={(e) => {
+                                            <input type='number' name='Altura' placeholder='Altura (min 50cm)' min={50} onChange={(e) => {
                                                 setOrder({ ...order, Height: e.target.value })
                                                 if (order.Width !== '') setTotal(calculate(order.Width, e.target.value, order.Material, order.Amount))
                                             }} required></input>
-                                            <input type='number' name='Largura' placeholder={t('ShopBusinessCards.Width') + ' (max 160cm)'} min={1} max={160} onChange={(e) => {
+                                            <input type='number' name='Largura' placeholder='Largura (max 160cm)' min={1} max={160} onChange={(e) => {
                                                 setOrder({ ...order, Width: e.target.value })
                                                 if (order.Height !== '') setTotal(calculate(order.Height, e.target.value, order.Material, order.Amount))
                                             }} required></input>
@@ -149,7 +150,7 @@ export default function BigFormatShop() {
                                         </div>
                                 }
 
-                                <p>{t('ShopBusinessCards.Material')}</p>
+                                <p>Material</p>
                                 <select type='select' name='Material' onChange={(e) => {
                                     setOrder({ ...order, Material: e.target.value })
                                     if (order.Height !== '' && order.Height !== '') {
@@ -170,17 +171,17 @@ export default function BigFormatShop() {
                                     <option value='Papel de parede spray e up (cola adesiva no verso)'>Papel de parede spray e up (cola adesiva no verso)</option>
                                 </select>
 
-                                <p>{t('ShopBusinessCards.Printing')}</p>
-                                <select type='select' name='Impressao' onChange={(e) => { setOrder({ ...order, Printing: e.target.value }) }} required>
-                                    <option value='Frente'>{t('ShopBusinessCards.FirstPrinting')}</option>
+                                <p>Impressão</p>
+                                <select type='select' name='Impressão' onChange={(e) => { setOrder({ ...order, Printing: e.target.value }) }} required>
+                                    <option value='Frente'>Frente</option>
                                 </select>
-                                <select type='select' name='Impressao' onChange={(e) => { setOrder({ ...order, PrintingColor: e.target.value }) }} required>
-                                    <option value='Cores'>{t('ShopBusinessCards.FirstPrinting2')}</option>
-                                    <option value='Preto e branco'>{t('ShopBusinessCards.SecondPrinting2')}</option>
+                                <select type='select' name='Cores' onChange={(e) => { setOrder({ ...order, PrintingColor: e.target.value }) }} required>
+                                    <option value='Cores'>Cores</option>
+                                    <option value='Preto e branco'>Preto e branco</option>
                                 </select>
 
-                                <p>{t('ShopBusinessCards.Amount')}</p>
-                                <input type='number' min='1' name='Quantidade' defaultValue='1' placeholder={t('ShopBusinessCards.Amount') + ' *'} onChange={(e) => {
+                                <p>Quantidade</p>
+                                <input type='number' min='1' name='Quantidade' defaultValue='1' placeholder='Quantidade *' onChange={(e) => {
                                     setOrder({ ...order, Amount: e.target.value })
                                     if (order.Height !== '' && order.Width !== '') setTotal(calculate(order.Height, order.Width, order.Material, parseInt(e.target.value)))
                                     else if (order.Material === 'Rollup branco mate 420g') setTotal(calculate(order.Height, order.Width, order.Material, parseInt(e.target.value)))
@@ -188,21 +189,21 @@ export default function BigFormatShop() {
 
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
                                 <input type='email' name='E-Mail' placeholder='E-mail *' onChange={(e) => { setOrder({ ...order, EMail: e.target.value }) }} required></input>
-                                <input type='text' name='Contacto' placeholder={t('ShopBusinessCards.Contact') + ' *'} onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
-                                <input type='text' name='Morada' placeholder={t('ShopBusinessCards.Address') + ' *'} onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
+                                <input type='text' name='Contacto' placeholder='Contacto *' onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
+                                <input type='text' name='Morada' placeholder='Morada *' onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
                                 <input type='text' name='NIF' placeholder='NIF' onChange={(e) => { setOrder({ ...order, NIF: e.target.value }) }}></input>
                                 <label>
-                                    {t('ShopBusinessCards.UploadFile') + ' *'}
-                                    <input type='file' name='Attachment' accept='image/png, image/jpeg' onChange={(e) => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
+                                    Carregar ficheiro * <span className='shop-attachment-img'>(imagem)</span>
+                                    <input type='file' name='Anexo' accept='image/png, image/jpeg' onChange={(e) => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
                                 </label>
-                                <textarea name='Comentario' placeholder={t('ShopBusinessCards.Note')} onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
+                                <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input type='text' name='CodigoPromocional' placeholder={t('Shop.PromoCode')} onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
                                         order.PromoCode === 'activ10' ?
                                             setTotal(calculate(order.Height, order.Width, order.Material, order.Amount))
                                             : alert('Error')
-                                    }}>{t('Shop.PromoButton')}</div>
+                                    }}>Aplicar</div>
                                 </div>
                                 <p>Total: {total}€</p>
 
@@ -211,14 +212,14 @@ export default function BigFormatShop() {
                                 <input type='hidden' name='IBAN' value={'XXX XXX XXX XXX XXX'}></input>
                                 <input type='hidden' name='Total' value={order.Total}></input>
 
-                                <p className='shop-required-fields'>{t('Shop.IVAInc')}</p>
+                                <p className='shop-required-fields'>IVA incluído</p>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
-                                <p className='shop-required-fields'>{t('Form.Info')}</p>
+                                <p className='shop-required-fields'>Campos obrigatórios *</p>
 
                                 <input type='hidden' name='_template' value='table'></input>
 
-                                <button type='submit' onClick={setOrderCompleted} className='shop-button'>{t('ShopBusinessCards.Order')}</button>
+                                <button type='submit' onClick={setOrderCompleted} className='shop-button'>Encomendar</button>
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
                             </form>
                         </div>
