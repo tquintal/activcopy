@@ -178,7 +178,7 @@ export default function BusinessCardss() {
                                     Carregar ficheiro * <span className='shop-attachment-img'>(imagem)</span>
                                     <input type='file' name='Anexo' accept='image/png, image/jpeg' onChange={() => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
                                 </label>
-                                <textarea name='Comentario' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
+                                <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
                                     <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
@@ -191,7 +191,7 @@ export default function BusinessCardss() {
 
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>
-                                <input type='hidden' name='IBAN' value={'XXX XXX XXX XXX XXX'}></input>
+                                <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
                                 <input type='hidden' name='Valor' value={order.Total}></input>
 
                                 <p className='shop-required-fields'>IVA incluído</p>

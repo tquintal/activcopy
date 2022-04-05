@@ -145,7 +145,7 @@ export default function Mugs() {
 
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>
-                                <input type='hidden' name='IBAN' value={'XXX XXX XXX XXX XXX'}></input>
+                                <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
                                 <input type='hidden' name='Valor' value={order.Total}></input>
 
                                 <p className='shop-required-fields'>Iva incluído</p>
