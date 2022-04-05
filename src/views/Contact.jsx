@@ -61,9 +61,6 @@ export default function Contact() {
                         </div>
                     </div>
                     <textarea name='Mensagem' placeholder={t('Form.TextArea')} className='message-textarea' required />
-                    {/* <label>
-                        {t('ShopBusinessCards.UploadFile')}
-                    </label> */}
                     <input type='file' name='Attachment' accept='.zip, .tar, .7z, audio/*, video/*, image/*'></input>
                     <p>{t('Form.Info')}</p>
                     <button type='submit'>{t('Form.Button')}</button>

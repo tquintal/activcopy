@@ -56,35 +56,8 @@
   "ShopFlyersFinish": "Finish",
 
   "OrderCompleted": {
-    "ThankYou": "Thank you for your preference!",
-    "Info": "An e-mail was sent with the details to complete your order.",
-    "Complete": "To complete your order...",
-    "IBAN": "IBAN:",
-    "Cenas": "Things:",
-    "Total": "Price:",
-    "OrderDetails": "Order details:",
-    "ContactDetails": "Contact details:",
-    "SaveOrder": "Save"
-  },
-
-  "ShopBusinessCards": {
-    "Title": "Business Cards",
-    "Format": "Format",
-    "Width": "Width",
-    "Height": "Heigth",
-    "Material": "Material",
-
-    "Printing": "Printing",
-    "PrintingColor": "Printing color",
-
-    "Amount": "Amount",
-    "File": "File",
-    "Contact": "Contact",
-    "Address": "Address",
-    "UploadFile": "Upload file",
-    "Note": "Note",
-    "Order": "Place order",
-    "Total": "Price"
+    "ThankYou": "Obrigado pela preferência, a sua encomenda irá ser processada.",
+    "Info": "Foi enviado um e-mail com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária."
   },
 
   "ButtonBudget": "Contact us",

@@ -57,46 +57,8 @@
   "ShopFlyersFinish": "Acabamento",
 
   "OrderCompleted": {
-    "ThankYou": "Obrigado pela preferência!",
-    "Info": "Foi enviado um e-mail com todos os dados de forma a concluir a sua encomenda.",
-    "Complete": "Para concluir a sua encomenda deverá efetuar uma transferência para:",
-    "IBAN": "IBAN:",
-    "Cenas": "Cenas:",
-    "Total": "Valor:",
-    "OrderDetails": "Detalhes da encomenda:",
-    "ContactDetails": "Detalhes de contacto:",
-    "SaveOrder": "Save"
-  },
-
-  "ShopBusinessCards": {
-    "Title": "Cartões de visita",
-    "Format": "Formato",
-    "Width": "Largura",
-    "Height": "Altura",
-    "FirstFormat": "Retangular (85mm x 55mm)",
-    "SecondFormat": "Quadrado (55mm x 55mm)",
-    "Material": "Material",
-    "FirstMaterial": "Cartolina CLA 315g",
-    "SecondMaterial": "Couché 350g",
-    "ThirdMaterial": "Papel Kraft 300g",
-    "FifthMaterial": "Cartolina ouro 330g",
-    "SixthMaterial": "Cartolina prata 330g",
-    "SeventhMaterial": "Rives design reciclado 250g",
-    "EighthMaterial": "Rives tradition reciclado 250g",
-    "Printing": "Impressão",
-    "PrintingColor": "Cor",
-    "FirstPrinting": "Frente",
-    "SecondPrinting": "Frente e verso",
-    "FirstPrinting2": "Cores",
-    "SecondPrinting2": "Preto e branco",
-    "Amount": "Quantidade",
-    "File": "Ficheiro",
-    "Contact": "Contacto",
-    "Address": "Morada",
-    "UploadFile": "Carregar ficheiro",
-    "Note": "Comentário",
-    "Order": "Encomendar",
-    "Total": "Total"
+    "ThankYou": "Obrigado pela preferência, a sua encomenda irá ser processada.",
+    "Info": "Foi enviado um e-mail com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária."
   },
 
   "ButtonBudget": "Pedir orçamento",
