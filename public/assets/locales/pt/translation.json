@@ -22,8 +22,27 @@
   "ChangeLanguage": "Alterar idioma",
 
   "Description": {
-    "Title": "Título",
-    "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt. Nulla pharetra diam sit amet nisl suscipit. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Enim nec dui nunc mattis enim ut tellus. Vulputate dignissim suspendisse in est ante in. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Facilisis gravida neque convallis a. Dignissim suspendisse in est ante in nibh mauris. Lobortis feugiat vivamus at augue eget arcu dictum. A scelerisque purus semper eget duis at tellus. Sed vulputate mi sit amet. Egestas sed sed risus pretium quam vulputate. Mi bibendum neque egestas congue quisque egestas diam in arcu. Aliquam vestibulum morbi blandit cursus risus at. Eleifend quam adipiscing vitae proin. Sollicitudin nibh sit amet commodo nulla facilisi nullam."
+    "Title": "Arte em reprodução",
+    "Content_1": "A ",
+    "Content_2": "Activcopy ",
+    "Content_3": "é uma empresa de serviços gráficos e de impressão, que está no marcado há mais de ",
+    "Content_4": "40 anos ",
+    "Content_5": "e conta com profissionais, equipamentos e materiais do mais alto nível, pois só desta forma é possível transpor a nossa qualidade e emprenho no serviço que prestamos.",
+
+    "Content_6": "Priorizamos um bom e cuidado atendimento para com os nossos clientes, de forma a proporcionar uma experiência de compra ",
+    "Content_7": "completa, justa, rápida, cuidadosa e transparente.",
+    "Content_8": "Somos também uma empresa preocupada com as ",
+    "Content_9": "questões ambientais ",
+    "Content_10": "pelo que temos disponível papel vegan, e papel com certificado FSC (gestão florestal). Nas impressões de grandes formatos utilizamos tintas à base de água, com certificação Green Guard Gold da WELL, que não possuem cheiros e podem por isso ser utilizadas em espaços interiores.",
+
+    "Content_11": "Dispomos de ",
+    "Content_12": "preços apelativos ",
+    "Content_13": "e competitivos. Possibilitamos ",
+    "Content_14": "descontos comerciais ",
+    "Content_15": "de quantidade, e também preços especiais para estudantes.",
+    "Content_16": "Neste momento a Activcopy pretende alargar os seus serviços de design digital e gráfico.",
+
+    "Content_17": "Não hesite em contactar-nos!"
   },
 
   "Services": {

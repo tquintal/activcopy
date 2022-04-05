@@ -19,7 +19,12 @@ export default function Main() {
                 <div className='description-container'>
                     <div>
                         <h1>{t('Description.Title')}</h1>
-                        <p>{t('Description.Content')}</p>
+                        <p>{t('Description.Content_1')}<span style={{ fontWeight: 'bold' }}>{t('Description.Content_2')}</span>{t('Description.Content_3')}<span style={{ fontWeight: 'bold' }}>{t('Description.Content_4')}</span>{t('Description.Content_5')}</p>
+                        <p>{t('Description.Content_6')}<span style={{ fontWeight: 'bold' }}>{t('Description.Content_7')}</span></p>
+                        <p>{t('Description.Content_8')}<span style={{ fontWeight: 'bold' }}>{t('Description.Content_9')}</span>{t('Description.Content_10')}</p>
+                        <p>{t('Description.Content_11')}<span style={{ fontWeight: 'bold' }}>{t('Description.Content_12')}</span>{t('Description.Content_13')}<span style={{ fontWeight: 'bold' }}>{t('Description.Content_14')}</span>{t('Description.Content_15')}</p>
+                        <p>{t('Description.Content_16')}</p>
+                        <p>{t('Description.Content_17')}</p>
                     </div>
                 </div>
             </div>
