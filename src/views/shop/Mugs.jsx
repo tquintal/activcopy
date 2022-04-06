@@ -49,23 +49,15 @@ export default function Mugs() {
         return roundUp(cTotal, 2)
     }
 
-    const LogOrder = () => {
-        console.table(order)
-    }
-
     const { t } = useTranslation()
 
     const setOrderCompleted = () => {
         if (order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
-            LogOrder()
             alert(t('Shop.Error'))
         } else {
-            setOrder({ ...order, Total: total })
-            LogOrder()
+            order.Total = `${total}€`
             localStorage.removeItem(['Order'])
-            console.log(`Local storage cleared`)
             localStorage['Order'] = JSON.stringify(order)
-            console.log(`Order placed`)
         }
     }
 
@@ -85,7 +77,7 @@ export default function Mugs() {
                             <ShopBack />
                             <h1>Canecas</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={LogOrder} />
+                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>
@@ -147,7 +139,7 @@ export default function Mugs() {
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>
                                 <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
-                                <input type='hidden' name='Valor' value={order.Total}></input>
+                                <input type='hidden' name='Valor' value={`${total}€`}></input>
 
                                 <p className='shop-required-fields'>Iva incluído</p>
 
