@@ -252,9 +252,12 @@ export default function TShirtSize() {
                                 <div className='shop-promo-code'>
                                     <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
-                                        order.PromoCode === 'activ10' ?
+                                        if (order.PromoCode === 'activ10') {
                                             setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
-                                            : alert('Error')
+                                            alert('Cupão aplicado com sucesso!')
+                                        } else {
+                                            alert('Error')
+                                        }
                                     }}>Aplicar</div>
                                 </div>
                                 <p>Total: {total}€</p>
