@@ -63,12 +63,6 @@ export default function TShirtSize() {
         return roundUp(cTotal, 2)
     }
 
-    const LogOrder = () => {
-        console.log('Order.Total', order.Total)
-        console.log('Total', total)
-        console.table(order)
-    }
-
     const TShirtSize = () => {
         if (order.TShirt === 'T-Shirt Adulto') {
             return (
@@ -145,18 +139,13 @@ export default function TShirtSize() {
 
     const setOrderCompleted = () => {
         if (order.Amount === '' || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
-            LogOrder()
             alert(t('Shop.Error'))
         } else if (order.Printing.FrenteCentro !== true && order.Printing.CostasCentro !== true && order.Printing.FrentePeitoEsquerdo !== true && order.Printing.MangaEsquerda !== true && order.Printing.MangaDireita !== true) {
-            LogOrder()
             alert(t('Shop.Error'))
         } else {
-            setOrder({ ...order, Total: total })
-            LogOrder()
+            order.Total = `${total}€`
             localStorage.removeItem(['Order'])
-            console.log(`Local storage cleared`)
             localStorage['Order'] = JSON.stringify(order)
-            console.log(`Order placed`)
         }
     }
 
@@ -178,7 +167,7 @@ export default function TShirtSize() {
                             <div className='shop-cat-img'>
                                 <img src={BCards} alt='b-cards' onClick={() => {
                                     setOrder({ ...order, Total: total })
-                                    LogOrder()
+                                    console.table(order)
                                 }} />
                             </div>
                         </div>
@@ -273,7 +262,7 @@ export default function TShirtSize() {
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>
                                 <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
-                                <input type='hidden' name='Valor' value={total}></input>
+                                <input type='hidden' name='Valor' value={`${total}€`}></input>
 
                                 <p className='shop-required-fields'>IVA incluído</p>
 
