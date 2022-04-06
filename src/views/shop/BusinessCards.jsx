@@ -172,7 +172,7 @@ export default function BusinessCardss() {
                                     <div onClick={() => {
                                         if (order.PromoCode === 'activ10') {
                                             setTotal(calculate(order.Material, order.Printing, order.Amount))
-                                            alert('Cupão aplicado com sucesso')
+                                            alert('Cupão aplicado com sucesso!')
                                         }
                                         else {
                                             alert('Error')
