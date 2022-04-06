@@ -75,17 +75,15 @@ export default function BigFormatShop() {
     }
 
     const setOrderCompleted = () => {
-        order.Total = `${total}€`
-
         if (order.Material === 'Rollup branco mate 420g') {
             order.Width = 'Rollup'
             order.Height = 'Rollup'
         }
-
         if (order.Width === '' || order.Height === '' || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
             localStorage.removeItem(['Order'])
             alert(t('Shop.Error'))
         } else {
+            order.Total = `${total}€`
             localStorage.removeItem(['Order'])
             localStorage['Order'] = JSON.stringify(order)
         }
@@ -196,7 +194,7 @@ export default function BigFormatShop() {
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>
                                 <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
-                                <input type='hidden' name='Total' value={order.Total}></input>
+                                <input type='hidden' name='Total' value={`${total}€`}></input>
 
                                 <p className='shop-required-fields'>IVA incluído</p>
 

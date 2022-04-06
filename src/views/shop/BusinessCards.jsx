@@ -22,7 +22,7 @@ export default function BusinessCardss() {
         PromoCode: '',
         File: false,
         Note: '',
-        Total: 8.5
+        Total: '8.5€'
     })
 
     const [total, setTotal] = useState(8.5)
@@ -73,21 +73,13 @@ export default function BusinessCardss() {
         return roundUp(cTotal, 2)
     }
 
-    const LogOrder = () => {
-        console.table(order)
-    }
-
     const setOrderCompleted = () => {
         if (order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
-            LogOrder()
             alert(t('Shop.Error'))
         } else {
-            setOrder({ ...order, Total: total })
-            LogOrder()
+            order.Total = `${total}€`
             localStorage.removeItem(['Order'])
-            console.log(`Local storage cleared`)
             localStorage['Order'] = JSON.stringify(order)
-            console.log(`Order placed`)
         }
     }
 
@@ -107,7 +99,7 @@ export default function BusinessCardss() {
                             <ShopBack />
                             <h1>Cartões de visita</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={() => LogOrder()} />
+                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>
@@ -188,7 +180,7 @@ export default function BusinessCardss() {
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>
                                 <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
-                                <input type='hidden' name='Valor' value={order.Total}></input>
+                                <input type='hidden' name='Valor' value={`${total}€`}></input>
 
                                 <p className='shop-required-fields'>IVA incluído</p>
 
