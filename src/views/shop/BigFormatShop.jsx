@@ -75,29 +75,19 @@ export default function BigFormatShop() {
     }
 
     const setOrderCompleted = () => {
-        setOrder({ ...order, Total: `${total}€` })
+        order.Total = `${total}€`
 
         if (order.Material === 'Rollup branco mate 420g') {
-            console.log(`IF order.Material === 'Rollup branco mate 420g'`)
-
-            setOrder({ ...order, Width: 'Rollup', Height: 'Rollup' })
+            order.Width = 'Rollup'
+            order.Height = 'Rollup'
         }
 
         if (order.Width === '' || order.Height === '' || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
-            console.log(`IF order.Width === '' || order.Height === '' || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true`)
-
             localStorage.removeItem(['Order'])
-            console.log(`Local storage cleared`)
-
             alert(t('Shop.Error'))
         } else {
-            console.log('ELSE')
-
             localStorage.removeItem(['Order'])
-            console.log(`Local storage cleared`)
-
             localStorage['Order'] = JSON.stringify(order)
-            console.log(`Order placed`)
         }
     }
 

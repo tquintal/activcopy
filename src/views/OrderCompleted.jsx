@@ -26,7 +26,7 @@ export default function OrderCompleted() {
                 <h2>{t('OrderCompleted.ThankYou')}</h2>
                 <p>{t('OrderCompleted.Info')}</p>
                 <div>
-                    <p><span style={{ fontWeight: 'bold' }}>Valor:</span> {Order.Total}€</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Valor:</span> {Order.Total}</p>
                     <p><span style={{ fontWeight: 'bold' }}>NIB:</span> PT50 0033 0000 4534 1788 5440 5</p>
                 </div>
                 <Link to='/shop' className='thank-you-back'><BiArrowBack /><p>{t('Service.Back')}</p></Link>
