@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
 import BCards from '../../assets/b-cards.jpg'
-
-function roundUp(num, precision) {
-    precision = Math.pow(10, precision)
-    return Math.ceil(num * precision) / precision
-}
 
 export default function BusinessCardss() {
     const { t } = useTranslation()
@@ -47,25 +43,25 @@ export default function BusinessCardss() {
                 cTotal = cTotal * 2
                 break
             case '300':
-                cTotal = roundUp(cTotal + cTotal * 1.85, 2)
+                cTotal = cTotal + cTotal * 1.85
                 break
             case '400':
-                cTotal = roundUp(cTotal + cTotal * 2.45, 2)
+                cTotal = cTotal + cTotal * 2.45
                 break
             case '500':
-                cTotal = roundUp(cTotal + cTotal * 3.2, 2)
+                cTotal = cTotal + cTotal * 3.2
                 break
             case '1000':
-                cTotal = roundUp(cTotal + cTotal * 4.5, 2)
+                cTotal = cTotal + cTotal * 4.5
                 break
             case '1500':
-                cTotal = roundUp(cTotal + cTotal * 5.15, 2)
+                cTotal = cTotal + cTotal * 5.15
                 break
             case '2000':
-                cTotal = roundUp(cTotal + cTotal * 6.4, 2)
+                cTotal = cTotal + cTotal * 6.4
                 break
             case '3000':
-                cTotal = roundUp(cTotal + cTotal * 8.2, 2)
+                cTotal = cTotal + cTotal * 8.2
                 break
             default:
                 cTotal = cTotal + 0
@@ -74,7 +70,7 @@ export default function BusinessCardss() {
         if (order.PromoCode === 'activ10')
             cTotal = cTotal * 0.9
 
-        return cTotal
+        return roundUp(cTotal, 2)
     }
 
     const LogOrder = () => {

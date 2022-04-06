@@ -11,6 +11,11 @@ export function scrollTop() {
 
 export const backToTop = () => window.scrollTo(0, 0)
 
+export function roundUp(num, precision) {
+    precision = Math.pow(10, precision)
+    return Math.ceil(num * precision) / precision
+}
+
 // ENABLE/DISABLE SCROLL
 // https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
 var keys = { 37: 1, 38: 1, 39: 1, 40: 1, 32: 1, 33: 1, 34: 1, 35: 1, 36: 1 }

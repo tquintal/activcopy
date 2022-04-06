@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
 import BCards from '../../assets/b-cards.jpg'
-
-function roundUp(num, precision) {
-    precision = Math.pow(10, precision)
-    return Math.ceil(num * precision) / precision
-}
 
 export default function BigFormatShop() {
     const { t } = useTranslation()

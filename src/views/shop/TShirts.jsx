@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
 import BCards from '../../assets/b-cards.jpg'
@@ -59,7 +60,7 @@ export default function TShirtSize() {
         if (order.PromoCode === 'activ10')
             cTotal = cTotal * 0.9
 
-        return cTotal
+        return roundUp(cTotal, 2)
     }
 
     const LogOrder = () => {
