@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
@@ -103,36 +104,86 @@ export default function TShirtSize() {
     const TShirtColor = () => {
         if (order.TShirt === 'T-Shirt Adulto') {
             return (
-                <select type='select' name='Cor' onChange={(e) => {
-                    setOrder({ ...order, Color: e.target.value })
-                    setTotal(calculate(order.TShirt, e.target.value, order.Printing, order.Amount))
-                }} defaultValue={order.Color} required>
-                    <option value='Branco'>Branco</option>
-                    <option value='Preto'>Preto</option>
-                    <option value='Cor'>... Cor</option>
-                </select>
+                <div className='shop-promo-code'>
+                    <select type='select' name='Cor' style={{ width: '100%' }} onChange={(e) => {
+                        setOrder({ ...order, Color: e.target.value })
+                        setTotal(calculate(order.TShirt, e.target.value, order.Printing, order.Amount))
+                    }} defaultValue={order.Color} required>
+                        <option value='Branco'>Branco</option>
+                        <option value='Preto'>Preto</option>
+                        <option value='Cinzento Escuro'>Cinzento Escuro</option>
+                        <option value='Cinzento Claro'>Cinzento Claro</option>
+                        <option value='Ash'>Ash</option>
+                        <option value='Castanho'>Castanho</option>
+                        <option value='Sand'>Sand</option>
+                        <option value='Bordô'>Bordô</option>
+                        <option value='Vermelho Escuro'>Vermelho Escuro</option>
+                        <option value='Vermelho'>Vermelho</option>
+                        <option value='Laranja'>Laranja</option>
+                        <option value='Gold'>Gold</option>
+                        <option value='Amarelo Solar'>Amarelo Solar</option>
+                        <option value='Urban Khaki'>Urban Khaki</option>
+                        <option value='Verde Garrafa'>Verde Garrafa</option>
+                        <option value='Verde Escuro'>Verde Escuro</option>
+                        <option value='Verde'>Verde</option>
+                        <option value='Pistachio'>Pistachio</option>
+                        <option value='Navy'>Navy</option>
+                        <option value='Urban Navy'>Urban Navy</option>
+                        <option value='Azul Cobalto'>Azul Cobalto</option>
+                        <option value='Royal Blue'>Royal Blue</option>
+                        <option value='Diva Blue'>Diva Blue</option>
+                        <option value='Azul Turquesa'>Azul Turquesa</option>
+                        <option value='Atol'>Atol</option>
+                        <option value='Roxo'>Roxo</option>
+                        <option value='Rosa'>Rosa</option>
+                    </select>
+                    <Link to='/services/sublimation' style={{ all: 'unset' }}><div style={{ width: '106px' }}>Lista de cores</div></Link>
+                </div>
             )
         } else if (order.TShirt === 'T-Shirt Criança') {
             return (
-                <select type='select' name='Cor' onChange={(e) => {
-                    setOrder({ ...order, Color: e.target.value })
-                    setTotal(calculate(order.TShirt, e.target.value, order.Printing, order.Amount))
-                }} defaultValue={order.Color} required>
-                    <option value='Branco'>Branco</option>
-                    <option value='Vermelho'>Vermelho</option>
-                    <option value='Cinza'>Cinza</option>
-                </select>
+                <div className='shop-promo-code'>
+                    <select type='select' name='Cor' style={{ width: '100%' }} onChange={(e) => {
+                        setOrder({ ...order, Color: e.target.value })
+                        setTotal(calculate(order.TShirt, e.target.value, order.Printing, order.Amount))
+                    }} defaultValue={order.Color} required>
+                        <option value='Branco'>Branco</option>
+                        <option value='Preto'>Preto</option>
+                        <option value='Cinzento Escuro'>Cinzento Escuro</option>
+                        <option value='Cinzento Claro'>Cinzento Claro</option>
+                        <option value='Bordô'>Bordô</option>
+                        <option value='Vermelho Escuro'>Vermelho Escuro</option>
+                        <option value='Laranja'>Laranja</option>
+                        <option value='Gold'>Gold</option>
+                        <option value='Verde Garrafa'>Verde Garrafa</option>
+                        <option value='Verde Escuro'>Verde Escuro</option>
+                        <option value='Real Green'>Real Green</option>
+                        <option value='Navy'>Navy</option>
+                        <option value='Royal Blue'>Royal Blue</option>
+                        <option value='Atol'>Atol</option>
+                        <option value='Azul Céu'>Azul Céu</option>
+                        <option value='Rosa'>Rosa</option>
+                    </select>
+                    <Link to='/services/sublimation' style={{ all: 'unset' }}><div style={{ width: '106px' }}>Lista de cores</div></Link>
+                </div>
             )
         } else {
             return (
-                <select type='select' name='Cor' onChange={(e) => {
-                    setOrder({ ...order, Color: e.target.value })
-                    setTotal(calculate(order.TShirt, e.target.value, order.Printing, order.Amount))
-                }} defaultValue={order.Color} required>
-                    <option value='Branco'>Branco</option>
-                    <option value='Azul'>Azul</option>
-                    <option value='Verde'>Verde</option>
-                </select>
+                <div className='shop-promo-code'>
+                    <select type='select' name='Cor' style={{ width: '100%' }} onChange={(e) => {
+                        setOrder({ ...order, Color: e.target.value })
+                        setTotal(calculate(order.TShirt, e.target.value, order.Printing, order.Amount))
+                    }} defaultValue={order.Color} required>
+                        <option value='Branco'>Branco</option>
+                        <option value='Preto'>Preto</option>
+                        <option value='Cinzento Escuro'>Cinzento Escuro</option>
+                        <option value='Moca'>Moca</option>
+                        <option value='Amarelo Solar'>Amarelo Solar</option>
+                        <option value='Navy'>Navy</option>
+                        <option value='Blue Fog'>Blue Fog</option>
+                    </select>
+                    <Link to='/services/sublimation' style={{ all: 'unset' }}><div style={{ width: '106px' }}>Lista de cores</div></Link>
+                </div>
             )
         }
     }
