@@ -16,7 +16,7 @@ export default function Main() {
         <motion.div {...motionProps}>
             <div className='media' />
             <div className='description'>
-                <div className='description-container'>
+                <div className='description-container white-space'>
                     <div>
                         <h1>{t('Description.Title')}</h1>
                         <p>{t('Description.Content_1')}<span style={{ fontWeight: 'bold' }}>{t('Description.Content_2')}</span>{t('Description.Content_3')}<span style={{ fontWeight: 'bold' }}>{t('Description.Content_4')}</span>{t('Description.Content_5')}</p>
