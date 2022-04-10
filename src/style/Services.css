@@ -58,10 +58,17 @@
 
 .colors-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  /* align-items: center; */
   gap: 5px;
   grid-gap: 5px;
   flex-wrap: wrap;
+}
+
+.color-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .tshirt-color {

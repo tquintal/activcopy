@@ -110,6 +110,13 @@ function Content() {
         exit: { opacity: 0 }
     }
 
+    const CGuiderAll = () => { return (<><span style={{ color: '#000000', fontWeight: 'bold' }}> * </span><span style={{ color: '#00E0D4', fontWeight: 'bold' }}>* </span><span style={{ color: '#FF4500', fontWeight: 'bold' }}>*</span></>) }
+    const CGuiderAdult = () => { return (<><span style={{ color: '#000000', fontWeight: 'bold' }}> * </span></>) }
+    const CGuiderOrganic = () => { return (<><span style={{ color: '#00E0D4', fontWeight: 'bold' }}> * </span></>) }
+    const CGuiderAdultChild = () => { return (<><span style={{ color: '#000000', fontWeight: 'bold' }}> * </span><span style={{ color: '#FF4500', fontWeight: 'bold' }}>*</span></>) }
+    const CGuiderChild = () => { return (<><span style={{ color: '#FF4500', fontWeight: 'bold' }}> * </span></>) }
+    const CGuiderChildOrganic = () => { return (<><span style={{ color: '#00E0D4', fontWeight: 'bold' }}>* </span><span style={{ color: '#FF4500', fontWeight: 'bold' }}>*</span></>) }
+
     return (
         <motion.div {...motionProps}>
             <div className='service'>
@@ -129,139 +136,47 @@ function Content() {
                         <p className='service-description'>{description}</p>
                         {id === 1 ? (
                             <div>
-                                <p className='service-description' style={{ marginTop: '15px' }}>{t('Sublimation.FirstSMTShirt')}</p>
-                                <div className='tshirt-container'>
-                                    <p className='service-description'>{t('Sublimation.FirstSMTShirtColorTitle')}</p>
-                                    <div className='colors-container'>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#292527' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#ededed' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#1f2532' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#b6142b' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#101144' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#0f3c83' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#d0bc9e' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#3d3331' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#ffe94e' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#fec32d' }}></div>
+                                <p className='service-description' style={{ marginTop: '15px' }}><span style={{ color: '#000000', fontWeight: 'bold' }}>* </span>{t('Sublimation.FirstSMTShirt')}</p>
 
-                                        <div className='tshirt-color' style={{ backgroundColor: '#f96414' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#e14a72' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#29094c' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#5d2a37' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#8cb2d7' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#b2002a' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#109ec9' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#07697d' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#164e8d' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#96af69' }}></div>
+                                <p className='service-description'><span style={{ color: '#00E0D4', fontWeight: 'bold' }}>* </span>{t('Sublimation.SecondSMTShirt')}</p>
 
-                                        <div className='tshirt-color' style={{ backgroundColor: '#9ac33e' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#0e8764' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#45483a' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#2d4733' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#f0f0ef' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#979797' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#4b4a50' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#1098a8' }}></div>
-                                    </div>
-                                </div>
-
-                                <p className='service-description'>{t('Sublimation.SecondSMTShirt')}</p>
-                                <div className='tshirt-container'>
-                                    <p className='service-description'>{t('Sublimation.FirstSMTShirtColorTitle')}</p>
-                                    <div className='colors-container'>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#1f2532' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#f5efe3' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#6c4f3f' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#ffdf5d' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#070508' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#a6b7c2' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#433f42' }}></div>
-                                    </div>
-                                </div>
-
-                                <p className='service-description'>{t('Sublimation.ThirdSMTShirt')}</p>
-                                <div className='tshirt-container'>
-                                    <p className='service-description'>{t('Sublimation.FirstSMTShirtColorTitle')}</p>
-                                    <div className='colors-container'>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#ffffff', border: '1px', borderColor: '#000000', borderStyle: 'solid' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#292527' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#1f2532' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#b6142b' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#fea722' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#fec32d' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#f96414' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#e14a72' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#5d2a37' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#8cb2d7' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#109ec9' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#164e8d' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#0e8764' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#2d4733' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#979797' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#569c54' }}></div>
-                                    </div>
-                                </div>
+                                <p className='service-description'><span style={{ color: '#FF4500', fontWeight: 'bold' }}>* </span>{t('Sublimation.ThirdSMTShirt')}</p>
 
                                 <p className='service-description'>{t('Sublimation.FourthSMTShirt')}</p>
                                 <div className='tshirt-container'>
-                                    <p className='service-description'>{t('Sublimation.FirstSMTShirtColorTitle')}</p>
+                                    <p className='service-description' style={{ fontWeight: 'bold' }}>{t('Sublimation.FirstSMTShirtColorTitle')}</p>
                                     <div className='colors-container'>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#ffffff', border: '1px', borderColor: '#000000', borderStyle: 'solid' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#9f97c6' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#005995' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#55722f' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#0069b8' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#be9e4e' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#131313' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#d2828f' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#002d69' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#63432c' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#cde400' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#b7b5a9' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#d6ca9a' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#bc708a' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#111926' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#2c1f16' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#22be36' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#dfd4ac' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#d1b79c' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#972547' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#8ab237' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#6e4e15' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#ff4c00' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#d4c96d' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#7a1233' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#89b136' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#714e14' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#fe4d00' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#d3ca6b' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#7a1233' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#5c9101' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#515352' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#ea1736' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#c9b400' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#45111e' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#054837' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#94958f' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#f3217c' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#0f1015' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#dda700' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#005e77' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#511881' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#980003' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#da8f02' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#013a55' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#ab9752' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#bc3b01' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#9db7ce' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#282c1e' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#98000c' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#5784ad' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#5784ad' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#74000f' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#384e76' }}></div>
-                                        <div className='tshirt-color' style={{ backgroundColor: '#65a283' }}></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#ffffff', border: '1px', borderColor: '#000000', borderStyle: 'solid' }}></div><p>Branco</p><CGuiderAll /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#000000' }}></div><p>Preto</p><CGuiderAll /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#4f4f4f' }}></div><p>Cinzento Escuro</p><CGuiderAll /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#1f2532' }}></div><p>Navy</p><CGuiderAll /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#a4a4a4' }}></div><p>Cinzento Claro</p><CGuiderAdultChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#572D2D' }}></div><p>Bordô</p><CGuiderAdultChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#b20000' }}></div><p>Vermelho Escuro</p><CGuiderAdultChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#f96414' }}></div><p>Laranja</p><CGuiderAdultChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#fec32d' }}></div><p>Gold</p><CGuiderAdultChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#2d4733' }}></div><p>Verde Garrafa</p><CGuiderAdultChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#0e8764' }}></div><p>Verde Escuro</p><CGuiderAdultChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#164e8d' }}></div><p>Royal Blue</p><CGuiderAdultChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#109ec9' }}></div><p>Atol</p><CGuiderAdultChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#aec9e2' }}></div><p>Azul Céu</p><CGuiderAdultChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#e14a72' }}></div><p>Rosa</p><CGuiderAdultChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#eeeeee' }}></div><p>Ash</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#3d3331' }}></div><p>Castanho</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#d0bc9e' }}></div><p>Sand</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#e40000' }}></div><p>Vermelho</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#45483a' }}></div><p>Urban Khaiki</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#9ac33e' }}></div><p>Verde</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#96af69' }}></div><p>Pistachio</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#101144' }}></div><p>Urban Navy</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#0f3c83' }}></div><p>Azul Cobalto</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#07697d' }}></div><p>Diva Blue</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#1098a8' }}></div><p>Azul Turquesa</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#29094c' }}></div><p>Roxo</p><CGuiderAdult /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#6c4f3f' }}></div><p>Moca</p><CGuiderOrganic /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#a6b7c2' }}></div><p>Blue Fog</p><CGuiderOrganic /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#569c54' }}></div><p>Real Green</p><CGuiderChild /></div>
+                                        <div className='color-content'><div className='tshirt-color' style={{ backgroundColor: '#ffe94e' }}></div><p>Amarelo Solar</p><CGuiderChildOrganic /></div>
                                     </div>
                                 </div>
                                 <p className='service-description'>{t('Sublimation.FithSMTShirt')}</p>
