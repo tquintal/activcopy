@@ -145,12 +145,13 @@
 
   "Sublimation": {
     "FirstSMTitle": "T-shirts",
-    "FirstSMDesc": "Impressão: Preto/Cores",
+    "FirstSMDesc": "Tamanho de Impressão: Até A3",
+    "FirstSMDesc2": "Zonas de Impressão: Frente Centro, Costas Centro, Peito Esquerdo, Mangas",
     "FirstSMTShirtColorTitle": "Cores:",
     "FirstSMTShirt": "T-shirt de adulto\nTamanho: XS / S / M / L / XL / 2XL / 3XL / 5XL",
     "SecondSMTShirt": "T-shirt orgânicas\nTamanho: S / M / L / XL / 2XL",
     "ThirdSMTShirt": "T-shirt criança\nTamanho: 1-2, 3-4, 5-6, 7-8, 9-11, 12-14",
-    "FourthSMTShirt": "Impressão em recorte",
+    "FourthSMTShirt": "Cores: Todas",
     "FithSMTShirt": "Estão disponíveis estampagens em qualquer outro tipo de tecido.",
 
     "SecondSMTitle": "Canecas",
