@@ -101,7 +101,7 @@ export default function Bookbinding() {
                                     <div className='tshirt-color' style={{ backgroundColor: '#4472c4' }}></div>
                                     <div className='tshirt-color' style={{ backgroundColor: '#203864' }}></div>
                                     <div className='tshirt-color' style={{ backgroundColor: '#fff004' }}></div>
-                                    <div className='tshirt-color' style={{ backgroundColor: '#ffffff' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#ffffff', border: '1px', borderColor: '#000000', borderStyle: 'solid' }}></div>
                                     <div className='tshirt-color' style={{ backgroundColor: '#c9c9c9' }}></div>
                                     <div className='tshirt-color' style={{ backgroundColor: '#fc4ac6' }}></div>
                                     <div className='tshirt-color' style={{ backgroundColor: '#65e345' }}></div>

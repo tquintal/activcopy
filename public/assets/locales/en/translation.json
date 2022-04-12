@@ -7,6 +7,7 @@
 
   "CookieConsentText": "By continuing to browse this site, you accept our use of cookies.",
   "CookieConsentLearnMore": "Learn more",
+  "CookieConsentLearnMorePage": "System cookies:\nThey are strictly necessary for the use of the website. They allow minimal functionality such as the use of translations and content presentation.\n",
   "CookieBtn2": "Accept",
 
   "SelectLangTitle": "Language",
@@ -14,24 +15,41 @@
   "Navigation": {
     "Home": "Home",
     "Services": "Services",
-    "Shop": "Online Shop",
+    "Shop": "Shop",
     "Contact": "Contact"
   },
 
-  "ChangeLanguage": "Change language",
+  "ChangeLanguage": "Language",
 
   "Description": {
-    "Title": "Title",
-    "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt. Nulla pharetra diam sit amet nisl suscipit. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Enim nec dui nunc mattis enim ut tellus. Vulputate dignissim suspendisse in est ante in. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Facilisis gravida neque convallis a. Dignissim suspendisse in est ante in nibh mauris. Lobortis feugiat vivamus at augue eget arcu dictum. A scelerisque purus semper eget duis at tellus. Sed vulputate mi sit amet. Egestas sed sed risus pretium quam vulputate. Mi bibendum neque egestas congue quisque egestas diam in arcu. Aliquam vestibulum morbi blandit cursus risus at. Eleifend quam adipiscing vitae proin. Sollicitudin nibh sit amet commodo nulla facilisi nullam."
+    "Title": "Printing Art",
+    "Content_1": "\nActivcopy is a graphic and printing services company operating in the market over the last 40 years. We have good professionals and high quality equipment and materials, because without them we cannot transpose our quality and commitment to the service we provide.",
+    "Content_2": "\nWe prioritize good and careful service to our customers, in order to provide a complete, ",
+    "Content_3": "fair, fast, careful ",
+    "Content_4": "and ",
+    "Content_5": "transparent ",
+    "Content_6": "shopping experience.",
+    "Content_7": "We are also concerned about ",
+    "Content_8": "environmental issues",
+    "Content_9": ", so we have vegan paper available, and also FSC (forest management) certified paper. In large format printing we use water-based inks that are certified by WELL Green Guard Gold, which means the ink does not have odors and therefore can be used indoors.",
+    "Content_10": "\nWe practice ",
+    "Content_11": "attractive ",
+    "Content_12": "and ",
+    "Content_13": "competitive prices",
+    "Content_14": ", and we provide ",
+    "Content_15": "commercial discounts",
+    "Content_16": ", and also special prices for students.",
+    "Content_17": "\nAt the moment Activcopy intends to expand its digital and graphic design services.",
+    "Content_18": "\nDo not hesitate to contact us!"
   },
 
   "Services": {
     "Title": "Services",
     "Service1": "Digital Printing",
-    "Service2": "Big Format",
+    "Service2": "Large Format",
     "Service3": "Sublimation",
-    "Service4": "Bookbinding",
-    "Service5": "Small and big format scanning"
+    "Service4": "Binding",
+    "Service5": "Scanning"
   },
 
   "Service": {
@@ -39,29 +57,133 @@
   },
 
   "Shop": {
-    "LastOrder": "Last order",
     "Error": "Error",
-    "Title": "Shop",
-    "BusinessCardss": "Business Cards",
+    "Title": "Shop (Portugal only)",
+    "BusinessCardss": "Cartões de visita",
     "T-Shirts": "T-Shirts",
     "Flyers": "Flyers",
-    "BigFormat": "Big format",
-    "Mugs": "Mugs",
-    "Name": "Name",
-    "PromoCode": "Promo code",
-    "PromoButton": "Apply",
-    "IVAInc": "IVA included"
+    "BigFormat": "Grandes formatos",
+    "Mugs": "Canecas",
+    "Name": "Nome",
+    "PromoCode": "Código promocional",
+    "PromoButton": "Aplicar",
+    "IVAInc": "IVA incluído"
   },
-
-  "ShopFlyersFinish": "Finish",
 
   "OrderCompleted": {
     "ThankYou": "Obrigado pela preferência, a sua encomenda irá ser processada.",
     "Info": "Foi enviado um e-mail com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária."
   },
 
-  "ButtonBudget": "Contact us",
+  "ButtonBudget": "Ask for a budget",
   "ButtonShop": "Shop",
+
+  "DigitalPrinting": {
+    "FirstDPTitle": "Small Formats",
+    "FirstDPDesc": "Size: A6, A5, A3, SRA3\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: Between 80g and 350g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper",
+
+    "SecondDPTitle": "White Ink Printing",
+    "SecondDPDesc": "Size: A4\nPrinting: White / 1 or 2 Sided\nGrammage: Between 80g and 350g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper",
+
+    "ThirdDPTitle": "Theses Printing",
+    "ThirdDPDesc": "Size: A4\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: Between 80g and 120g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper",
+
+    "FourthDPTitle": "Business Cards",
+    "FourthDPDesc": "Shape: Square, Rectangular\nPrinting: Black or Colors / 1 or 2 Sided\nPaper Type: Ordinary, CLA 315g, Couché 350g\nFinishing: Contact Paper",
+
+    "FifthDPTitle": "Magazines and Catalogs",
+    "FifthDPDesc": "Size: A6, A5, A4, A3, SRA3\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: Between 80g and 350g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper\nFinishing: Folding, Bindings, Staples",
+
+    "SixthDPTitle": "Flyers and Leaflets",
+    "SixthDPDesc": "Size: A6, A5, A4, A3, SRA3\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: Between 80g and 350g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper\nFinishing: Folding, Cutting",
+
+    "SeventhDPTitle": "Envelopes",
+    "SeventhDPDesc": "Material: DL 007 Digital (with or without window)\nEnvelope Color: White\nSize: 11cm x 22cm\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: 90g",
+
+    "EighthDPTitle": "Labels and Stickers",
+    "EighthDPDesc": "Size: Custom\nPrinting: Black or Colors / 1 Sided\nPaper Type: White Vinyl, Transparent",
+
+    "NinthDPTitle": "Lamination",
+    "NinthDPDesc": "Size: A6, A5, A4, A3",
+
+    "TenthDPTitle": "Contact Paper",
+    "TenthDPDesc": "Size: Custom (max width 30cm)\nFinishing: Gloss, Matte"
+  },
+
+  "BigFormat": {
+    "Info": "All the material used has a minimum durability age of 5 years.",
+
+    "FirstBFTitle": "Vinyl",
+    "FirstBFDesc": "Microperforated\nMaterial: White/glossy, White/Matte, Transparent/Glossy, Transparent/Matte\nSize: Custom (max width 160cm)",
+
+    "SecondBFTitle": "Tarpaulin",
+    "SecondBFDesc": "Material: Coated 440g\nPrinting: White Matte\nSize: Custom (max width 160cm)",
+
+    "ThirdBFTitle": "Canvas",
+    "ThirdBFDesc": "Material: Canvas\nSize: Custom (max width 137cm)",
+
+    "FourthBFTitle": "Roll-Up",
+    "FourthBFDesc": "Material: Tarpaulin 420g (grey back side)\nPrinting: White Matte\nSize: 80cm x 2000cm",
+
+    "FifthBFTitle": "Fabrics",
+    "FifthBFDesc": "Material: Polyester Basic 120g\nSize: Custom (max width: 160cm)",
+
+    "SixthBFTitle": "Wallpaper",
+    "SixthBFDesc": "Material: Wallcover, Spray and up (adhesive glue in the back)\nSize: Custom (max width: 135cm)",
+
+    "SeventhBFTitle": "Posters",
+    "SeventhBFDesc": "Size: Custom (max width 160cm)\nPrinting: Black or Colors\nPaper Type: Matte 180g, Photo Paper, Coated 200g",
+
+    "EighthBFTitle": "Architecture Projects",
+    "EighthBFDesc": "Size: Custom (max width: 90cm)\nPrinting: Black or Colors\nGrammage: 80g, 100g, 120g\nPaper Type: Tracing Paper, Polyester\nFinishing: Folding, Cutting\nFile Format: PDF, DWG, DWF, CAD"
+  },
+
+  "Sublimation": {
+    "FirstSMTitle": "T-shirts",
+    "FirstSMDesc": "Printing size: Up to A3",
+    "FirstSMDesc2": "Printing spots: Front, Back, Left chest, Sleeves",
+    "FirstSMTShirtColorTitle": "Printing Colors:",
+    "FirstSMTShirt": "Adult T-shirt\nSizes: XS, S, M, L, XL, 2XL, 3XL, 5XL",
+    "SecondSMTShirt": "Organic T-shirt\nSizes: S, M, L, XL, 2XL",
+    "ThirdSMTShirt": "Child T-shirt\nSizes: 1-2, 3-4, 5-6, 7-8, 9-11, 12-14",
+    "FourthSMTShirt": "Printing Colors: All",
+    "FithSMTShirt": "Prints on any other type of fabrics are available.",
+
+    "SecondSMTitle": "Mugs",
+    "SecondSMDesc": "Printing Size: 90mm x 210mm\nPriting: Black or Colors",
+
+    "ThirdSMTitle": "Self-Inking Stamps",
+    "ThirdSMDesc": "Material: BROTHER Self Inking\nSize: 100mm x 60mm or 18mm x 50mm\nPrinting: Black",
+
+    "FourthSMTitle": "Puzzles",
+    "FourthSMDesc": "Shape: Square, Rectangular, Heart\nSize: 27cm x 18cm or 18cm x 13\nPrinting: Black or Colors",
+
+    "FifthSMTitle": "Badges",
+    "FifthSMDesc": "Size: 40mm x 40mm\nPrinting: Black or Colors",
+
+    "SixthSMTitle": "Mouse Pads",
+    "SixthSMDesc": "Size: 19,4cm x 23,6cm\nPrinting: Black or Colors",
+
+    "SeventhSMTitle": "Stones",
+    "SeventhSMDesc": "Size: 20cm x 20cm or 15cm x 15cm\nPrinting: Black or Colors"
+  },
+
+  "Bookbinding": {
+    "FirstBBTitle": "Binding Spiral Ring Metal",
+    "FirstBBDesc": "Spiral Ring: 8mm up to 50mm\nSize: A6, A5, A4, A3",
+    "FirstBBTShirtColorTitle": "Polypropylene Covers colors:",
+
+    "SecondBBTitle": "Thermal Binding",
+    "SecondBBDesc": "Size: A4\nColor: White\nCovers Thickness: 1,5mm, 3mm, 6mm, 9mm, 12mm, 30mm",
+
+    "ThirdBBTitle": "Hot Glue Ginding",
+    "ThirdBBDesc": "Size: Up to A3\nCover: With/Without Printing. 1 or 2 Sided\nSpine: With/Without Printing\nPaper Type: CLA 315g, Couché 350g\nFinishing: Contact Paper"
+  },
+
+  "Scanning": {
+    "SCTitle": "Large and Small Formats Scanning",
+    "SCDesc": "Scanning: Black or Colors\nFile format: JPG, PDF, TIFF"
+  },
 
   "Contact": {
     "Title": "Contact",
@@ -82,7 +204,7 @@
   },
 
   "Form": {
-    "Title": "Contact us!",
+    "Title": "Contact us.\n Ask for a budget!",
     "Name": "Name *",
     "Contact": "Phone number",
     "Subject": "Subject *",

@@ -1,0 +1,98 @@
+{
+  "Error": "Error 404 :/",
+  "ErrorBtn": "Take me back",
+
+  "ThankYou": "Thank you! :)",
+  "ThankYouBtn": "Back",
+
+  "CookieConsentText": "By continuing to browse this site, you accept our use of cookies.",
+  "CookieConsentLearnMore": "Learn more",
+  "CookieConsentLearnMorePage": "System cookies:\nThey are strictly necessary for the use of the website. They allow minimal functionality such as the use of translations and content presentation.\n",
+  "CookieBtn2": "Accept",
+
+  "SelectLangTitle": "Language",
+
+  "Navigation": {
+    "Home": "Home",
+    "Services": "Services",
+    "Shop": "Online Shop",
+    "Contact": "Contact"
+  },
+
+  "ChangeLanguage": "Change language",
+
+  "Description": {
+    "Title": "Title",
+    "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Eros in cursus turpis massa tincidunt. Nulla pharetra diam sit amet nisl suscipit. Pellentesque elit eget gravida cum sociis natoque penatibus et magnis. Enim nec dui nunc mattis enim ut tellus. Vulputate dignissim suspendisse in est ante in. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Facilisis gravida neque convallis a. Dignissim suspendisse in est ante in nibh mauris. Lobortis feugiat vivamus at augue eget arcu dictum. A scelerisque purus semper eget duis at tellus. Sed vulputate mi sit amet. Egestas sed sed risus pretium quam vulputate. Mi bibendum neque egestas congue quisque egestas diam in arcu. Aliquam vestibulum morbi blandit cursus risus at. Eleifend quam adipiscing vitae proin. Sollicitudin nibh sit amet commodo nulla facilisi nullam."
+  },
+
+  "Services": {
+    "Title": "Services",
+    "Service1": "Digital Printing",
+    "Service2": "Big Format",
+    "Service3": "Sublimation",
+    "Service4": "Bookbinding",
+    "Service5": "Small and big format scanning"
+  },
+
+  "Service": {
+    "Back": "Back"
+  },
+
+  "Shop": {
+    "LastOrder": "Last order",
+    "Error": "Error",
+    "Title": "Shop",
+    "BusinessCardss": "Business Cards",
+    "T-Shirts": "T-Shirts",
+    "Flyers": "Flyers",
+    "BigFormat": "Big format",
+    "Mugs": "Mugs",
+    "Name": "Name",
+    "PromoCode": "Promo code",
+    "PromoButton": "Apply",
+    "IVAInc": "IVA included"
+  },
+
+  "ShopFlyersFinish": "Finish",
+
+  "OrderCompleted": {
+    "ThankYou": "Obrigado pela preferência, a sua encomenda irá ser processada.",
+    "Info": "Foi enviado um e-mail com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária."
+  },
+
+  "ButtonBudget": "Contact us",
+  "ButtonShop": "Shop",
+
+  "Contact": {
+    "Title": "Contact",
+    "Budgets": "Budgets:",
+    "Phone": "Phone:"
+  },
+
+  "Schedule": {
+    "Title": "Schedule",
+    "Weekdays": "Weekdays:",
+    "Saturday": "Saturday:",
+    "Sunday": "Sunday:",
+    "Closed": "Closed"
+  },
+
+  "Address": {
+    "Title": "Address"
+  },
+
+  "Form": {
+    "Title": "Contact us!",
+    "Name": "Name *",
+    "Contact": "Phone number",
+    "Subject": "Subject *",
+    "TextArea": "Write your message here *",
+    "Info": "Required fields *",
+    "Button": "Send"
+  },
+
+  "Footer": {
+    "Rights": "All rights reserved"
+  }
+}
