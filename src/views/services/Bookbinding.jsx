@@ -93,16 +93,18 @@ export default function Bookbinding() {
                             <div className='bbfirstservice'>
                                 <p>{t('Bookbinding.FirstBBTShirtColorTitle')}</p>
                                 <div className='bbfirstservice-colors'>
-                                    <div className='tshirt-color' style={{ backgroundColor: '#292527' }}></div>
-                                    <div className='tshirt-color' style={{ backgroundColor: '#ededed' }}></div>
-                                    <div className='tshirt-color' style={{ backgroundColor: '#1f2532' }}></div>
-                                    <div className='tshirt-color' style={{ backgroundColor: '#b6142b' }}></div>
-                                    <div className='tshirt-color' style={{ backgroundColor: '#101144' }}></div>
-                                    <div className='tshirt-color' style={{ backgroundColor: '#0f3c83' }}></div>
-                                    <div className='tshirt-color' style={{ backgroundColor: '#d0bc9e' }}></div>
-                                    <div className='tshirt-color' style={{ backgroundColor: '#3d3331' }}></div>
-                                    <div className='tshirt-color' style={{ backgroundColor: '#ffe94e' }}></div>
-                                    <div className='tshirt-color' style={{ backgroundColor: '#fec32d' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#000000' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#1c4306' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#7030a0' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#ffa100' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#c00000' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#4472c4' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#203864' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#fff004' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#ffffff' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#c9c9c9' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#fc4ac6' }}></div>
+                                    <div className='tshirt-color' style={{ backgroundColor: '#65e345' }}></div>
                                 </div>
                             </div>
                         ) : (<></>)}
