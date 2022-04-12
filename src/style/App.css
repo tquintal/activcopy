@@ -186,7 +186,8 @@ Red Orange: #FF4500
 }
 
 .header-actions-active {
-  color: #00e0d4 !important;
+  /* color: #00e0d4 !important; */
+  color: #ff4500 !important;
 }
 
 .desktop-lang-option {
@@ -235,7 +236,8 @@ Red Orange: #FF4500
   }
 
   .header-actions a:hover {
-    color: #00e0d4;
+    /* color: #00e0d4; */
+    color: #ff4500;
   }
 }
 
