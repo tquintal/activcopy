@@ -105,7 +105,11 @@ export default function Flyers() {
         }
 
         if (finish !== '') {
-            cTotal = cTotal + quantity * 0.05
+            if (parseInt(quantity) > 500) {
+                cTotal = cTotal + quantity * 0.02
+            } else {
+                cTotal = cTotal + quantity * 0.05
+            }
         }
 
         if (order.PromoCode === 'activ10') {
