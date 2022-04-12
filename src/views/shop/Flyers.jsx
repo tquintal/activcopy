@@ -89,16 +89,16 @@ export default function Flyers() {
                 cTotal = cTotal * 1.540
                 break
             case '500':
-                cTotal = cTotal + cTotal * 1.661
+                cTotal = cTotal * 1.661
                 break
             case '1000':
-                cTotal = cTotal + cTotal * 1.800
+                cTotal = cTotal * 1.800
                 break
             case '2000':
-                cTotal = cTotal + cTotal * 1.831
+                cTotal = cTotal * 1.831
                 break
             case '3000':
-                cTotal = cTotal + cTotal * 1.439
+                cTotal = cTotal * 1.439
                 break
             default:
                 cTotal = cTotal + 0
