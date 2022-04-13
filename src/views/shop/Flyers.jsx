@@ -104,7 +104,7 @@ export default function Flyers() {
                 cTotal = cTotal + 0
         }
 
-        if (finish !== '') {
+        if (finish !== 'Sem acabamento') {
             if (parseInt(quantity) > 500) {
                 cTotal = cTotal + quantity * 0.02
             } else {
@@ -132,8 +132,6 @@ export default function Flyers() {
             console.log(`Order placed`)
         }
     }
-
-    const [finishSelected, setFinishSelected] = useState('')
 
     const motionProps = {
         transition: { duration: 0.4 },
@@ -207,22 +205,14 @@ export default function Flyers() {
                                 </select>
 
                                 <p>Acabamento <span className='shop-attachment-img'>(opcional)</span></p>
-                                <label className='shop-flyers-finish'>
-                                    <input type='radio' name='Acabamento' value='Dobra em U' onChange={() => {
-                                        setFinishSelected('Dobra em U')
-                                        setOrder({ ...order, Finish: 'Dobra em U' })
-                                        setTotal(calculate(order.Format, order.Material, order.Printing, order.Amount, 'Dobra em U'))
-                                    }} checked={finishSelected === 'Dobra em U'} />
-                                    Dobra em U
-                                </label>
-                                <label className='shop-flyers-finish'>
-                                    <input type='radio' name='Acabamento' value='Dobra em Z' onChange={() => {
-                                        setFinishSelected('Dobra em Z')
-                                        setOrder({ ...order, Finish: 'Dobra em Z' })
-                                        setTotal(calculate(order.Format, order.Material, order.Printing, order.Amount, 'Dobra em Z'))
-                                    }} checked={finishSelected === 'Dobra em Z'} />
-                                    Dobra em Z
-                                </label>
+                                <select type='select' name='Acabamento' onChange={(e) => {
+                                    setOrder({ ...order, Finish: e.target.value })
+                                    setTotal(calculate(order.Format, order.Material, order.Printing, order.Amount, e.target.value))
+                                }} required>
+                                    <option value='Sem acabamento'>Sem acabamento</option>
+                                    <option value='Dobra em U'>Dobra em U</option>
+                                    <option value='Dobra em Z'>Dobra em Z</option>
+                                </select>
 
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
                                 <input type='email' name='E-Mail' placeholder='E-mail *' onChange={(e) => { setOrder({ ...order, EMail: e.target.value }) }} required></input>
