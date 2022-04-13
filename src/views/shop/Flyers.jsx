@@ -7,6 +7,8 @@ import BCards from '../../assets/b-cards.jpg'
 
 export default function Flyers() {
 
+    const { t } = useTranslation()
+
     const [order, setOrder] = useState({
         Format: 'A4',
         Material: 'Tecno Color 100g',
@@ -28,8 +30,6 @@ export default function Flyers() {
     const LogOrder = () => {
         console.table(order)
     }
-
-    const { t } = useTranslation()
 
     const [ok, setOk] = useState(false)
 
@@ -228,13 +228,13 @@ export default function Flyers() {
                                 <input type='text' name='Morada' placeholder='Morada *' onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
                                 <input type='text' name='NIF' placeholder='NIF' onChange={(e) => { setOrder({ ...order, NIF: e.target.value }) }}></input>
                                 <label>
-                                    Carregar imagem ou link *
+                                    Carregar imagem <span className='shop-attachment-img'>(1mb máx)</span> ou link *
                                     <input type='file' name='Anexo' accept='image/png, image/jpeg' onChange={(e) => {
                                         setOrder({ ...order, File: true })
                                         e.target.value !== '' ? setOk(true) : setOk(false)
                                     }} className='shop-attachment'></input>
                                 </label>
-                                <input type='url' name='Link ficheiro' placeholder='Link ficheiro' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
+                                <input type='url' name='Link' placeholder='Link' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
                                     <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
@@ -261,13 +261,14 @@ export default function Flyers() {
                                 <p className='shop-required-fields'>Campos obrigatórios *</p>
 
                                 <input type='hidden' name='_template' value='table'></input>
+
                                 {
                                     ok ?
                                         <button type='submit' onClick={setOrderCompleted} className='shop-button'>Encomendar</button>
                                         :
                                         <div className='shop-button' style={{ textAlign: 'center' }} onClick={() => alert(t('Shop.Error'))}>Encomendar</div>
                                 }
-                                {/* <button type={ok !== true ? alert('tou?') : ''} onClick={setOrderCompleted} className='shop-button'>Encomendar</button> */}
+
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
                             </form>
                         </div>

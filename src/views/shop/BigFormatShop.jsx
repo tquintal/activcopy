@@ -6,6 +6,7 @@ import ShopBack from '../../components/ShopBack'
 import BCards from '../../assets/b-cards.jpg'
 
 export default function BigFormatShop() {
+
     const { t } = useTranslation()
 
     const [order, setOrder] = useState({
@@ -25,6 +26,8 @@ export default function BigFormatShop() {
         Note: '',
         Total: '0€'
     })
+
+    const [ok, setOk] = useState(false)
 
     const [total, setTotal] = useState(0)
 
@@ -79,7 +82,7 @@ export default function BigFormatShop() {
             order.Width = 'Rollup'
             order.Height = 'Rollup'
         }
-        if (order.Width === '' || order.Height === '' || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
+        if (order.Width === '' || order.Height === '' || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || ok !== true) {
             localStorage.removeItem(['Order'])
             alert(t('Shop.Error'))
         } else {
@@ -177,9 +180,13 @@ export default function BigFormatShop() {
                                 <input type='text' name='Morada' placeholder='Morada *' onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
                                 <input type='text' name='NIF' placeholder='NIF' onChange={(e) => { setOrder({ ...order, NIF: e.target.value }) }}></input>
                                 <label>
-                                    Carregar ficheiro * <span className='shop-attachment-img'>(imagem)</span>
-                                    <input type='file' name='Anexo' accept='image/png, image/jpeg' onChange={(e) => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
+                                    Carregar imagem <span className='shop-attachment-img'>(1mb máx)</span> ou link *
+                                    <input type='file' name='Anexo' accept='image/png, image/jpeg' onChange={(e) => {
+                                        setOrder({ ...order, File: true })
+                                        e.target.value !== '' ? setOk(true) : setOk(false)
+                                    }} className='shop-attachment'></input>
                                 </label>
+                                <input type='url' name='Link' placeholder='Link' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
                                     <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
@@ -206,7 +213,13 @@ export default function BigFormatShop() {
 
                                 <input type='hidden' name='_template' value='table'></input>
 
-                                <button type='submit' onClick={setOrderCompleted} className='shop-button'>Encomendar</button>
+                                {
+                                    ok ?
+                                        <button type='submit' onClick={setOrderCompleted} className='shop-button'>Encomendar</button>
+                                        :
+                                        <div className='shop-button' style={{ textAlign: 'center' }} onClick={() => alert(t('Shop.Error'))}>Encomendar</div>
+                                }
+
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
                             </form>
                         </div>

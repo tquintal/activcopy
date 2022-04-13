@@ -538,6 +538,7 @@ Red Orange: #FF4500
   flex-direction: column;
   gap: 15px;
   white-space: pre-line;
+  width: 90%;
 }
 
 .order-confirm,
