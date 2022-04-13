@@ -6,7 +6,6 @@ import cookies from 'js-cookie'
 import { motion } from 'framer-motion'
 import { scrollTop, backToTop, enableScroll, disableScroll } from '../utils'
 import { AiOutlineMenu, AiFillCloseSquare } from 'react-icons/ai'
-import { MdHome, MdOutlineDesignServices, MdOutlineShoppingCart, MdMessage } from 'react-icons/md'
 import PT from '../assets/pt.png'
 import GB from '../assets/gb.png'
 import { GrLanguage } from 'react-icons/gr'
@@ -89,16 +88,16 @@ export function MobileHeader() {
             <div className={mobileMenu ? 'mobile-menu enabled' : 'mobile-menu'}>
                 <AiFillCloseSquare size='2.2em' onClick={() => { showMobileMenu(); enableScroll() }} className='mobile-menu-close-btn' />
                 <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/'>
-                    <MdHome />{t('Navigation.Home')}
+                    {t('Navigation.Home')}
                 </NavLink>
                 <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/services'>
-                    <MdOutlineDesignServices />{t('Navigation.Services')}
+                    {t('Navigation.Services')}
                 </NavLink>
                 <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/shop'>
-                    <MdOutlineShoppingCart />{t('Navigation.Shop')}
+                    {t('Navigation.Shop')}
                 </NavLink>
                 <NavLink className={({ isActive }) => isActive ? 'header-navs header-actions-active' : 'header-navs'} onClick={() => { backToTop(); enableScroll(); showMobileMenu() }} to='/contact'>
-                    <MdMessage />{t('Navigation.Contact')}
+                    {t('Navigation.Contact')}
                 </NavLink>
 
                 <div className='lang-div-mobile'>
