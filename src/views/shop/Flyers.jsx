@@ -204,7 +204,7 @@ export default function Flyers() {
                                     <option value='3000'>3000</option>
                                 </select>
 
-                                <p>Acabamento <span className='shop-attachment-img'>(opcional)</span></p>
+                                <p>Acabamento</p>
                                 <select type='select' name='Acabamento' onChange={(e) => {
                                     setOrder({ ...order, Finish: e.target.value })
                                     setTotal(calculate(order.Format, order.Material, order.Printing, order.Amount, e.target.value))
