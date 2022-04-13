@@ -31,6 +31,8 @@ export default function Flyers() {
 
     const { t } = useTranslation()
 
+    const [ok, setOk] = useState(false)
+
     const [total, setTotal] = useState(20)
 
     let cTotal = 20
@@ -89,16 +91,21 @@ export default function Flyers() {
                 cTotal = cTotal * 1.540
                 break
             case '500':
-                cTotal = cTotal * 1.661
+                cTotal = cTotal * 2.480
                 break
             case '1000':
-                cTotal = cTotal * 1.800
+                cTotal = cTotal * 4.333
                 break
             case '2000':
-                cTotal = cTotal * 1.831
+                cTotal = cTotal * 7.930
                 break
             case '3000':
-                cTotal = cTotal * 1.439
+                if (material === 'Papel reciclado 100g' && printing === 'Frente e verso')
+                    cTotal = 500
+                else if (material === 'Papel reciclado 100g' && printing === 'Frente')
+                    cTotal = 320
+                else
+                    cTotal = cTotal * 11.435
                 break
             default:
                 cTotal = cTotal + 0
@@ -120,7 +127,7 @@ export default function Flyers() {
     }
 
     const setOrderCompleted = () => {
-        if (order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || order.File !== true) {
+        if (order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || ok !== true) {
             LogOrder()
             alert(t('Shop.Error'))
         } else {
@@ -139,6 +146,7 @@ export default function Flyers() {
         animate: { opacity: 1 },
         exit: { opacity: 0 }
     }
+
 
     return (
         <motion.div {...motionProps}>
@@ -220,9 +228,13 @@ export default function Flyers() {
                                 <input type='text' name='Morada' placeholder='Morada *' onChange={(e) => { setOrder({ ...order, Address: e.target.value }) }} required></input>
                                 <input type='text' name='NIF' placeholder='NIF' onChange={(e) => { setOrder({ ...order, NIF: e.target.value }) }}></input>
                                 <label>
-                                    Carregar ficheiro * <span className='shop-attachment-img'>(imagem)</span>
-                                    <input type='file' name='Anexo' accept='image/png, image/jpeg' onChange={(e) => { setOrder({ ...order, File: true }) }} className='shop-attachment' required></input>
+                                    Carregar imagem ou link *
+                                    <input type='file' name='Anexo' accept='image/png, image/jpeg' onChange={(e) => {
+                                        setOrder({ ...order, File: true })
+                                        e.target.value !== '' ? setOk(true) : setOk(false)
+                                    }} className='shop-attachment'></input>
                                 </label>
+                                <input type='url' name='Link ficheiro' placeholder='Link ficheiro' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
                                     <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
@@ -249,8 +261,13 @@ export default function Flyers() {
                                 <p className='shop-required-fields'>Campos obrigatórios *</p>
 
                                 <input type='hidden' name='_template' value='table'></input>
-
-                                <button type='submit' onClick={setOrderCompleted} className='shop-button'>Encomendar</button>
+                                {
+                                    ok ?
+                                        <button type='submit' onClick={setOrderCompleted} className='shop-button'>Encomendar</button>
+                                        :
+                                        <div className='shop-button' style={{ textAlign: 'center' }} onClick={() => alert(t('Shop.Error'))}>Encomendar</div>
+                                }
+                                {/* <button type={ok !== true ? alert('tou?') : ''} onClick={setOrderCompleted} className='shop-button'>Encomendar</button> */}
                                 <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
                             </form>
                         </div>

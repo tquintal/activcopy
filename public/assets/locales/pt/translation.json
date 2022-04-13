@@ -60,7 +60,7 @@
 
   "Shop": {
     "LastOrder": "Última encomenda",
-    "Error": "Error",
+    "Error": "Erro, por favor preencha todos os campos obrigatórios",
     "Title": "Loja",
     "BusinessCardss": "Cartões de visita",
     "T-Shirts": "T-Shirts",
@@ -75,7 +75,7 @@
 
   "OrderCompleted": {
     "ThankYou": "Obrigado pela preferência, a sua encomenda irá ser processada.",
-    "Info": "Foi enviado um e-mail com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária."
+    "Info": "Foi enviado um e-mail (remetente: FormSubmit, submissions@formsubmit.co) com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária."
   },
 
   "ButtonBudget": "Pedir orçamento",
@@ -146,8 +146,8 @@
     "FirstSMDesc": "Tamanho de Impressão: Até A3",
     "FirstSMDesc2": "Zonas de Impressão: Frente Centro, Costas Centro, Peito Esquerdo, Mangas",
     "FirstSMTShirtColorTitle": "Cores:",
-    "FirstSMTShirt": "T-shirt de adulto\nTamanho: XS / S / M / L / XL / 2XL / 3XL / 5XL",
-    "SecondSMTShirt": "T-shirt orgânicas\nTamanho: S / M / L / XL / 2XL",
+    "FirstSMTShirt": "T-shirt de adulto\nTamanho: XS, S, M, L, XL, 2XL, 3XL, 5XL",
+    "SecondSMTShirt": "T-shirt orgânicas\nTamanho: S, M, L, XL, 2XL",
     "ThirdSMTShirt": "T-shirt criança\nTamanho: 1-2, 3-4, 5-6, 7-8, 9-11, 12-14",
     "FourthSMTShirt": "Cores de Impressão: Todas",
     "FithSMTShirt": "Estão disponíveis estampagens em qualquer outro tipo de tecido.",
