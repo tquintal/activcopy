@@ -104,7 +104,7 @@ export default function Flyers() {
                 cTotal = cTotal + 0
         }
 
-        if (finish !== 'Sem acabamento') {
+        if (finish === 'Dobra em U' || finish === 'Dobra em Z') {
             if (parseInt(quantity) > 500) {
                 cTotal = cTotal + quantity * 0.02
             } else {
