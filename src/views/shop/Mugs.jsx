@@ -22,12 +22,12 @@ export default function Mugs() {
         PromoCode: '',
         File: false,
         Note: '',
-        Total: '0€'
+        Total: '16€'
     })
 
     const [ok, setOk] = useState(false)
 
-    const [total, setTotal] = useState(9)
+    const [total, setTotal] = useState(16)
 
     let cTotal = 0
 
@@ -50,7 +50,7 @@ export default function Mugs() {
         if (order.PromoCode === 'activ10')
             cTotal = cTotal * 0.9
 
-        return roundUp(cTotal, 2)
+        return roundUp(cTotal, 2) + 7
     }
 
 
@@ -141,7 +141,7 @@ export default function Mugs() {
                                             setTotal(calculate(order.Material, order.Amount))
                                             alert('Cupão aplicado com sucesso!')
                                         } else {
-                                            alert('Error')
+                                            alert('Erro, cupão inválido.')
                                         }
                                     }}>Aplicar</div>
                                 </div>
@@ -152,7 +152,7 @@ export default function Mugs() {
                                 <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
                                 <input type='hidden' name='Valor' value={`${total}€`}></input>
 
-                                <p className='shop-required-fields'>Iva incluído</p>
+                                <p className='shop-required-fields'>IVA e valor de envio incluídos</p>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
                                 <p className='shop-required-fields'>Campos obrigatórios *</p>

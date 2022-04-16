@@ -30,12 +30,12 @@ export default function TShirtSize() {
         PromoCode: '',
         File: false,
         Note: '',
-        Total: 7.5
+        Total: 14.5
     })
 
     const [ok, setOk] = useState(false)
 
-    const [total, setTotal] = useState(7.5)
+    const [total, setTotal] = useState(14.5)
 
     let cTotal = 0
 
@@ -64,7 +64,7 @@ export default function TShirtSize() {
         if (order.PromoCode === 'activ10')
             cTotal = cTotal * 0.9
 
-        return roundUp(cTotal, 2)
+        return roundUp(cTotal, 2) + 7
     }
 
     const TShirtSize = () => {
@@ -314,7 +314,7 @@ export default function TShirtSize() {
                                             setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                             alert('Cupão aplicado com sucesso!')
                                         } else {
-                                            alert('Error')
+                                            alert('Erro, cupão inválido.')
                                         }
                                     }}>Aplicar</div>
                                 </div>
@@ -325,7 +325,7 @@ export default function TShirtSize() {
                                 <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
                                 <input type='hidden' name='Valor' value={`${total}€`}></input>
 
-                                <p className='shop-required-fields'>IVA incluído</p>
+                                <p className='shop-required-fields'>IVA e valor de envio incluídos</p>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
                                 <p className='shop-required-fields'>Campos obrigatórios *</p>

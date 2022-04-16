@@ -66,7 +66,7 @@
     "Name": "Nome",
     "PromoCode": "Código promocional",
     "PromoButton": "Aplicar",
-    "IVAInc": "IVA incluído"
+    "IVAInc": "IVA e valor de envio incluídos"
   },
 
   "OrderCompleted": {
@@ -110,7 +110,7 @@
   },
 
   "BigFormat": {
-    "Info": "All the material used has a minimum durability age of 5 years.",
+    "Info": "All the material used have a minimum durability age of 5 years.",
 
     "FirstBFTitle": "Vinyl",
     "FirstBFDesc": "Microperforated\nMaterial: White/glossy, White/Matte, Transparent/Glossy, Transparent/Matte\nSize: Custom (max width 160cm)",

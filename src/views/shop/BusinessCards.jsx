@@ -23,17 +23,17 @@ export default function BusinessCardss() {
         PromoCode: '',
         File: false,
         Note: '',
-        Total: '8.5€'
+        Total: '15.5€'
     })
 
     const [ok, setOk] = useState(false)
 
-    const [total, setTotal] = useState(8.5)
+    const [total, setTotal] = useState(15.5)
 
     let cTotal = 0
 
     const calculate = (material, printing, quantity) => {
-        cTotal = 8.5
+        cTotal = 15.5
 
         if (material === 'Cartolina ouro' || material === 'Cartolina prata')
             cTotal += 1.5
@@ -182,7 +182,7 @@ export default function BusinessCardss() {
                                             alert('Cupão aplicado com sucesso!')
                                         }
                                         else {
-                                            alert('Error')
+                                            alert('Erro, cupão inválido.')
                                         }
                                     }}>Aplicar</div>
                                 </div>
@@ -193,7 +193,7 @@ export default function BusinessCardss() {
                                 <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
                                 <input type='hidden' name='Valor' value={`${total}€`}></input>
 
-                                <p className='shop-required-fields'>IVA incluído</p>
+                                <p className='shop-required-fields'>IVA e valor de envio incluídos</p>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
                                 <p className='shop-required-fields'>Campos obrigatórios *</p>

@@ -24,7 +24,7 @@ export default function Flyers() {
         PromoCode: '',
         File: false,
         Note: '',
-        Total: '20€'
+        Total: '27€'
     })
 
     const LogOrder = () => {
@@ -33,9 +33,9 @@ export default function Flyers() {
 
     const [ok, setOk] = useState(false)
 
-    const [total, setTotal] = useState(20)
+    const [total, setTotal] = useState(27)
 
-    let cTotal = 20
+    let cTotal = 27
 
     const calculate = (format, material, printing, quantity, finish) => {
         if (format === 'A6') {
@@ -123,7 +123,7 @@ export default function Flyers() {
             cTotal = cTotal * 0.9
         }
 
-        return roundUp(cTotal, 2)
+        return roundUp(cTotal, 2) + 7
     }
 
     const setOrderCompleted = () => {
@@ -244,7 +244,7 @@ export default function Flyers() {
                                             alert('Cupão aplicado com sucesso!')
                                         }
                                         else {
-                                            alert('Error')
+                                            alert('Erro, cupão inválido.')
                                         }
                                     }}>Aplicar</div>
                                 </div>
@@ -255,7 +255,7 @@ export default function Flyers() {
                                 <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
                                 <input type='hidden' name='Valor' value={`${total}€`}></input>
 
-                                <p className='shop-required-fields'>IVA incluído</p>
+                                <p className='shop-required-fields'>IVA e valor de envio incluídos</p>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
                                 <p className='shop-required-fields'>Campos obrigatórios *</p>

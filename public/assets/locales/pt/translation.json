@@ -70,7 +70,7 @@
     "Name": "Nome",
     "PromoCode": "Código promocional",
     "PromoButton": "Aplicar",
-    "IVAInc": "IVA incluído"
+    "IVAInc": "IVA e valor de envio incluídos"
   },
 
   "OrderCompleted": {
