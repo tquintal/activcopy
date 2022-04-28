@@ -160,6 +160,7 @@ export default function BusinessCardss() {
                                     <option value='3000'>3000</option>
                                 </select>
 
+                                <p>Informação</p>
                                 <input type='text' name='Nome' placeholder='Nome *' onChange={(e) => { setOrder({ ...order, Name: e.target.value }) }} required></input>
                                 <input type='email' name='E-Mail' placeholder='E-mail *' onChange={(e) => { setOrder({ ...order, EMail: e.target.value }) }} required></input>
                                 <input type='text' name='Contacto' placeholder='Contacto *' onChange={(e) => { setOrder({ ...order, Contact: e.target.value }) }} required></input>
@@ -172,7 +173,7 @@ export default function BusinessCardss() {
                                         e.target.value !== '' ? setOk(true) : setOk(false)
                                     }} className='shop-attachment'></input>
                                 </label>
-                                <input type='url' name='Link' placeholder='Link' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
+                                <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
                                     <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
@@ -193,10 +194,10 @@ export default function BusinessCardss() {
                                 <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
                                 <input type='hidden' name='Valor' value={`${total}€`}></input>
 
-                                <p className='shop-required-fields'>IVA e valor de envio incluídos</p>
+                                <p className='shop-required-fields'>IVA e custo de envio incluídos</p>
+                                <p className='shop-required-fields'>Campos obrigatórios *</p>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
-                                <p className='shop-required-fields'>Campos obrigatórios *</p>
 
                                 <input type='hidden' name='_template' value='table'></input>
 

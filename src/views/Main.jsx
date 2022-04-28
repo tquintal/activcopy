@@ -49,26 +49,25 @@ export default function Main() {
                                 </>
                                 :
                                 <>
-                                    <p>{t('Description.Content_1')}</p>
-                                    <p>{t('Description.Content_2')}</p>
-                                    <span style={{ fontWeight: 'bold' }}>{t('Description.Content_3')}</span>
-                                    {t('Description.Content_4')}
-                                    <span style={{ fontWeight: 'bold' }}>{t('Description.Content_5')}</span>
-                                    {t('Description.Content_6')}
-                                    {t('Description.Content_7')}
-                                    <span style={{ fontWeight: 'bold' }}>{t('Description.Content_8')}</span>
-                                    {t('Description.Content_9')}
+                                    <p>
+                                        <span style={{ fontWeight: 'bold' }}>{t('Description.Content_1')}</span>
+                                        {t('Description.Content_2')}
+                                        <span style={{ fontWeight: 'bold' }}>{t('Description.Content_3')}</span>
+                                        {t('Description.Content_4')}
+                                    </p>
+                                    <p>
+                                        {t('Description.Content_5')}
+                                        <span style={{ fontWeight: 'bold' }}>{t('Description.Content_6')}</span>
+                                        {t('Description.Content_7')}
+                                        <span style={{ fontWeight: 'bold' }}>{t('Description.Content_8')}</span>
+                                        {t('Description.Content_9')}
+                                    </p>
                                     <p>
                                         {t('Description.Content_10')}
                                         <span style={{ fontWeight: 'bold' }}>{t('Description.Content_11')}</span>
                                         {t('Description.Content_12')}
-                                        <span style={{ fontWeight: 'bold' }}>{t('Description.Content_13')}</span>
-                                        {t('Description.Content_14')}
-                                        <span style={{ fontWeight: 'bold' }}>{t('Description.Content_15')}</span>
-                                        {t('Description.Content_16')}
-                                        {t('Description.Content_17')}
                                     </p>
-                                    <p>{t('Description.Content_18')}</p>
+                                    <p>{t('Description.Content_13')}</p>
                                 </>
                         }
                     </div>

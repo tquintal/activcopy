@@ -137,7 +137,7 @@ function Content() {
                 <div className='service-container'>
                     <ServiceBack />
                     <h1 className='service-title'>{t('Services.Service1')}</h1>
-                    <Slide {...properties}>
+                    <Slide className='slide-container' {...properties}>
                         {images.map((each) =>
                             <div key={each.img} className='slider-image slide' onClick={ClickedService.bind(this, each)}>
                                 <img src={each.img} alt={each.title} />
@@ -184,8 +184,8 @@ export class DigitalPrinting extends React.Component {
             properties.slidesToShow = 3
             properties.slidesToScroll = 3
         } else {
-            properties.slidesToShow = 6
-            properties.slidesToScroll = 6
+            properties.slidesToShow = 3
+            properties.slidesToScroll = 3
         }
 
         return (

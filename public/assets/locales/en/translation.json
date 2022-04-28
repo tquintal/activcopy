@@ -23,24 +23,19 @@
 
   "Description": {
     "Title": "Printing Art",
-    "Content_1": "\nActivcopy is a graphic and printing services company operating in the market over the last 40 years. We have good professionals and high quality equipment and materials, because without them we cannot transpose our quality and commitment to the service we provide.",
-    "Content_2": "\nWe prioritize good and careful service to our customers, in order to provide a complete, ",
-    "Content_3": "fair, fast, careful ",
-    "Content_4": "and ",
-    "Content_5": "transparent ",
-    "Content_6": "shopping experience.",
-    "Content_7": "We are also concerned about ",
-    "Content_8": "environmental issues",
-    "Content_9": ", so we have vegan paper available, and also FSC (forest management) certified paper. In large format printing we use water-based inks that are certified by WELL Green Guard Gold, which means the ink does not have odors and therefore can be used indoors.",
-    "Content_10": "\nWe practice ",
-    "Content_11": "attractive ",
-    "Content_12": "and ",
-    "Content_13": "competitive prices",
-    "Content_14": ", and we provide ",
-    "Content_15": "commercial discounts",
-    "Content_16": ", and also special prices for students.",
-    "Content_17": "\nAt the moment Activcopy intends to expand its digital and graphic design services.",
-    "Content_18": "\nDo not hesitate to contact us!"
+    "Content_1": "\nActivcopy",
+    "Content_2": " is a company with",
+    "Content_3": " 40 years",
+    "Content_4": " of experience in offering graphic and printing services. We have qualified professionals and use high-end equipment and materials, that allows us to provide the best quality and commitment to the service.",
+    "Content_5": "\nWe prioritize giving thoroughly crafted work to our customers, in order to provide a complete, ",
+    "Content_6": "fair, fast, careful and transparent",
+    "Content_7": " shopping experience.",
+    "Content_8": " Environmental issues ",
+    "Content_9": "aren't unbeknownst to us, so we have vegan paper available, and also FSC (forest management) certified paper. In large format printing we use water-based inks that are certified by WELL Green Guard Gold, which means the ink does not possess any lingering odors, allowing for safe indoor uses.",
+    "Content_10": "\nWe like to believe that our prices are attractive, considering the industry standards, and we have various",
+    "Content_11": " commercial discounts",
+    "Content_12": ", including discounts for students. Our goal is to expand our digital presence and offer a better variety of digital services.",
+    "Content_13": "\n If you have any inquiry about our services and methods, contact us!"
   },
 
   "Services": {
@@ -110,7 +105,7 @@
   },
 
   "BigFormat": {
-    "Info": "All the material used have a minimum durability age of 5 years.",
+    "Info": "All the printing used has a minimum durability age of 5 years.\nIn large format printing we use water-based inks that are certified by WELL Green Guard Gold, which means the ink does not possess any lingering odors, allowing for safe indoor uses.",
 
     "FirstBFTitle": "Vinyl",
     "FirstBFDesc": "Microperforated\nMaterial: White/glossy, White/Matte, Transparent/Glossy, Transparent/Matte\nSize: Custom (max width 160cm)",

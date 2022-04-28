@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 import { backToTop } from '../../utils'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
-import { GrPrevious, GrNext } from 'react-icons/gr'
 import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image'
 import ServiceBack from '../../components/ServiceBack'
@@ -14,9 +13,6 @@ import image3 from './assets/img3.jpg'
 
 import { CgEnter } from 'react-icons/cg'
 
-const prevArrow = <GrPrevious size='1.6em' className='arrow prev-arrow'></GrPrevious>
-const nextArrow = <GrNext size='1.6em' className='arrow next-arrow'></GrNext>
-
 const properties = {
     cssClass: 'slider-container',
     transitionDuration: 250,
@@ -24,8 +20,7 @@ const properties = {
     indicators: false,
     autoplay: false,
     canSwipe: true,
-    prevArrow: prevArrow,
-    nextArrow: nextArrow,
+    arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3
 }
@@ -78,7 +73,7 @@ export default function Bookbinding() {
                 <div className='service-container'>
                     <ServiceBack />
                     <h1 className='service-title'>{t('Services.Service4')}</h1>
-                    <Slide {...properties}>
+                    <Slide className='slide-container' {...properties}>
                         {images.map((each) =>
                             <div key={each.img} className='slider-image slide' onClick={ClickedService.bind(this, each)}>
                                 <img src={each.img} alt={each.title} />

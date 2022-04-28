@@ -1,11 +1,13 @@
 .slider-container {
   max-width: 100%;
+  gap: 5px;
+  height: 320px;
 }
 
 .slider-image {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 5px;
   cursor: pointer;
   transition: 200ms;

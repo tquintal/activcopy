@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { MdOutlineDesignServices } from 'react-icons/md'
 import { backToTop } from '../utils'
 import '../style/Services.css'
 import BCards from '../assets/b-cards.jpg'
@@ -24,7 +25,10 @@ export default function Services() {
     return (
         <motion.div {...motionProps}>
             <div className='services-container'>
-                <h1>{t('Services.Title')}</h1>
+                <div className='shop-title'>
+                    <h1>{t('Services.Title')}</h1>
+                    <MdOutlineDesignServices size='2em' />
+                </div>
                 <div className='services-cards-container'>
                     <NavLink onClick={() => backToTop()} to='/services/digital-printing'>
                         <div className='service-card-container'>
@@ -32,7 +36,7 @@ export default function Services() {
                                 backgroundImage: 'url(' + Stickers + ')'
                             }}>
                             </div>
-                            <p>{t('Services.Service1')}</p>
+                            <p className='service-card-text'>{t('Services.Service1')}</p>
                         </div>
                     </NavLink>
                     <NavLink onClick={() => backToTop()} to='/services/big-format'>
@@ -41,7 +45,7 @@ export default function Services() {
                                 backgroundImage: 'url(' + BFormat + ')'
                             }}>
                             </div>
-                            <p>{t('Services.Service2')}</p>
+                            <p className='service-card-text'>{t('Services.Service2')}</p>
                         </div>
                     </NavLink>
                     <NavLink onClick={() => backToTop()} to='/services/sublimation'>
@@ -50,7 +54,7 @@ export default function Services() {
                                 backgroundImage: 'url(' + TShirts + ')'
                             }}>
                             </div>
-                            <p>{t('Services.Service3')}</p>
+                            <p className='service-card-text'>{t('Services.Service3')}</p>
                         </div>
                     </NavLink>
                     <div className='services-bottom-container'>
@@ -60,7 +64,7 @@ export default function Services() {
                                     backgroundImage: 'url(' + Flyers + ')'
                                 }}>
                                 </div>
-                                <p>{t('Services.Service4')}</p>
+                                <p className='service-card-text'>{t('Services.Service4')}</p>
                             </div>
                         </NavLink>
                         <NavLink onClick={() => backToTop()} to='/services/scanning'>
@@ -69,7 +73,7 @@ export default function Services() {
                                     backgroundImage: 'url(' + BCards + ')'
                                 }}>
                                 </div>
-                                <p>{t('Services.Service5')}</p>
+                                <p className='service-card-text'>{t('Services.Service5')}</p>
                             </div>
                         </NavLink>
                     </div>

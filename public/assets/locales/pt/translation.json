@@ -22,18 +22,18 @@
   "ChangeLanguage": "Alterar idioma",
 
   "Description": {
-    "Title": "Arte em reprodução",
+    "Title": "Arte em Reprodução",
     "Content_1": "\nA ",
     "Content_2": "Activcopy ",
     "Content_3": "é uma empresa de serviços gráficos e de impressão, que está no marcado há mais de ",
     "Content_4": "40 anos ",
     "Content_5": "e conta com profissionais, equipamentos e materiais do mais alto nível, pois só desta forma é possível transpor a nossa qualidade e emprenho no serviço que prestamos.",
 
-    "Content_6": "\nPriorizamos um bom e cuidado atendimento para com os nossos clientes, de forma a proporcionar uma experiência de compra ",
+    "Content_6": "\nPriorizamos um bom e cuidadoso atendimento para com os nossos clientes, de forma a proporcionar uma experiência de compra ",
     "Content_7": "completa, justa, rápida, cuidadosa e transparente.",
-    "Content_8": "Somos também uma empresa preocupada com as ",
-    "Content_9": "questões ambientais ",
-    "Content_10": "pelo que temos disponível papel vegan, e papel com certificado FSC (gestão florestal). Nas impressões de grandes formatos utilizamos tintas à base de água, com certificação Green Guard Gold da WELL, que não possuem cheiros e podem por isso ser utilizadas em espaços interiores.",
+    "Content_8": "Somos também uma empresa preocupada com ",
+    "Content_9": "questões ambientais, ",
+    "Content_10": "temos disponível papel vegan e papel com certificado FSC (gestão florestal).\nNas impressões de grandes formatos utilizamos tintas à base de água, com certificação Green Guard Gold da WELL, que não possuem cheiros e podem por isso ser utilizadas em espaços interiores.",
 
     "Content_11": "\nDispomos de ",
     "Content_12": "preços apelativos ",
@@ -42,7 +42,7 @@
     "Content_15": "de quantidade, e também preços especiais para estudantes.",
     "Content_16": "Neste momento a Activcopy pretende alargar os seus serviços de design digital e gráfico.",
 
-    "Content_17": "Não hesite em contactar-nos!"
+    "Content_17": "\nNão hesite em contactar-nos!"
   },
 
   "Services": {
@@ -114,7 +114,7 @@
   },
 
   "BigFormat": {
-    "Info": "Todo o material utilizado em grandes formatos tem durabilidade mínima de 5 anos exposto ao exterior.",
+    "Info": "A impressão utilizada em grandes formatos tem durabilidade mínima de 5 anos exposto ao exterior.\nNas impressões de grandes formatos utilizamos tintas à base de água, com certificação Green Guard Gold da WELL, que não possuem cheiros e podem por isso ser utilizadas em espaços interiores.",
 
     "FirstBFTitle": "Vinil",
     "FirstBFDesc": "Microperfurado\nMaterial: Branco/Brilho, Branco/Mate, Transparente/Brilho, Transparente/Mate\nTamanho: Personalizado (largura máxima 160cm)",

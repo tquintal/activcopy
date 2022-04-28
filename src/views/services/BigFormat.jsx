@@ -116,7 +116,7 @@ function Content() {
                     </div>
                     {
                         title === 'Papel Parede' || title === 'Projetos Arquitetura' ? <></>
-                            : <p className='big-format-info'>{t('BigFormat.Info')}</p>
+                            : <p className='big-format-info white-space'>{t('BigFormat.Info')}</p>
                     }
                     <NavLink className='service-contact-link' to='/shop/big-format' onClick={backToTop}><button className='service-button'>{t('ButtonShop')}<MdOutlineShoppingCart size='1.5em' /></button></NavLink>
                 </div>
