@@ -249,7 +249,7 @@ export default function Flyers() {
                                         }
                                     }}>Aplicar</div>
                                 </div>
-                                <p>Total: {total}€</p>
+                                <p style={{ fontWeight: '500' }}>Total: {total}€</p>
 
                                 {/* USER INFO */}
                                 <input type='hidden' name='_cc' value={order.EMail}></input>
