@@ -81,7 +81,7 @@ export default function Mugs() {
                             <ShopBack />
                             <h1>Canecas</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} />
+                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} style={{ height: '124%' }} />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>

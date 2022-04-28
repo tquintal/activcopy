@@ -157,7 +157,7 @@ export default function Flyers() {
                             <ShopBack />
                             <h1>Flyers</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={LogOrder} />
+                                <img src={BCards} alt='b-cards' onClick={LogOrder} style={{ height: '141%' }} />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>

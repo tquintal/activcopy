@@ -222,7 +222,9 @@ export default function TShirtSize() {
                                 <img src={BCards} alt='b-cards' onClick={() => {
                                     setOrder({ ...order, Total: total })
                                     console.table(order)
-                                }} />
+                                }}
+                                    style={{ height: '149%' }}
+                                />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>

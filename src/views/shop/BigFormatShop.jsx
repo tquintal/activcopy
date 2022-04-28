@@ -108,7 +108,7 @@ export default function BigFormatShop() {
                             <ShopBack />
                             <h1>Grandes formatos</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} />
+                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} style={{ height: '148%' }} />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>

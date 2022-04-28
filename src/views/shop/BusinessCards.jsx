@@ -102,7 +102,7 @@ export default function BusinessCardss() {
                             <ShopBack />
                             <h1>Cartões de visita</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} />
+                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} style={{ height: '130%' }} />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>
