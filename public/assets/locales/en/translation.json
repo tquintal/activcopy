@@ -79,9 +79,6 @@
     "SecondDPTitle": "White Ink Printing",
     "SecondDPDesc": "Size: A4\nPrinting: White / 1 or 2 Sided\nGrammage: Between 80g and 350g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper",
 
-    "ThirdDPTitle": "Theses Printing",
-    "ThirdDPDesc": "Size: A4\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: Between 80g and 120g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper",
-
     "FourthDPTitle": "Business Cards",
     "FourthDPDesc": "Shape: Square, Rectangular\nPrinting: Black or Colors / 1 or 2 Sided\nPaper Type: Ordinary, CLA 315g, Couché 350g\nFinishing: Contact Paper",
 
@@ -181,7 +178,6 @@
 
   "Contact": {
     "Title": "Contact",
-    "Budgets": "Budgets:",
     "Phone": "Phone:"
   },
 

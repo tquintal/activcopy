@@ -88,9 +88,6 @@
     "SecondDPTitle": "Impressão em branco",
     "SecondDPDesc": "Tamanho: A4\nImpressão: Branco / frente ou frente e verso\nGramagem: 80 a 350g\nTipo de papel: Diversos, papel reciclado e papel vegan",
 
-    "ThirdDPTitle": "Impressão de teses",
-    "ThirdDPDesc": "Tamanho: A4\nImpressão: Preto ou cores / Frente ou frente e verso\nGramagem: 80 a 120g\nTipo de papel: Diversos, papel reciclado e papel vegan",
-
     "FourthDPTitle": "Cartões de visita",
     "FourthDPDesc": "Tamanho: Quadrado e retangular\nImpressão: Preto ou cores / Frente ou frente e verso\nTipo de papel: CLA 315g, Couché 350g, diversos\nAcabamento: Laminação",
 
@@ -190,7 +187,6 @@
 
   "Contact": {
     "Title": "Contactos",
-    "Budgets": "Orçamentos:",
     "Phone": "Telefone:"
   },
 

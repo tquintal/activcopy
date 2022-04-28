@@ -339,6 +339,28 @@ Red Orange: #FF4500
 
 .service-card-text {
   padding: 5px;
+  transition: 200ms;
+}
+
+.scanning-image-container {
+  height: 320px;
+  transition: 150ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (hover: hover) {
+  .service-card-container:hover {
+    color: #ff4500;
+  }
+
+  .shop-card:hover {
+    font-size: 18px;
+  }
 }
 
 .service-card h3 {

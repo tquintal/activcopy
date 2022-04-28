@@ -28,7 +28,6 @@ export default function Contact() {
                     <div>
                         <h1>{t('Contact.Title')}</h1>
                         <p><span>E-mail:</span> geral@activcopy.pt</p>
-                        <p><span>{t('Contact.Budgets')}</span> activcopy.orcamentos@gmail.com</p>
                         <p><span>{t('Contact.Phone')}</span> 234 383 210</p>
                     </div>
                     <div>

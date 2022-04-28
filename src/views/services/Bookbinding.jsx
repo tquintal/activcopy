@@ -81,7 +81,7 @@ export default function Bookbinding() {
                             </div>
                         )}
                     </Slide>
-                    <div>
+                    <div className='service-desc-container'>
                         <h1 className='service-title'>{title}</h1>
                         <p className='service-description'>{description}</p>
                         {id === 1 ? (

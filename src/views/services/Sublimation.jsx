@@ -29,6 +29,8 @@ const properties = {
     indicators: false,
     autoplay: false,
     canSwipe: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     prevArrow: prevArrow,
     nextArrow: nextArrow
 }
@@ -131,7 +133,7 @@ function Content() {
                             </div>
                         )}
                     </Slide>
-                    <div>
+                    <div className='service-desc-container'>
                         <h1 className='service-title'>{title}</h1>
                         <p className='service-description'>{description}</p>
                         {id === 1 ? (
@@ -213,16 +215,6 @@ export class Sublimation extends React.Component {
     }
 
     render() {
-
-        const { width } = this.state
-        if (width <= 1100) {
-            properties.slidesToShow = 3
-            properties.slidesToScroll = 3
-        } else {
-            properties.slidesToShow = 6
-            properties.slidesToScroll = 6
-        }
-
         return (
             <Content />
         )

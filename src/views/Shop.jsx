@@ -31,7 +31,7 @@ export default function Shop() {
                 </div>
                 <div className='services-cards-container'>
                     <NavLink onClick={() => backToTop()} to='/shop/business-cards'>
-                        <div className='service-card-container'>
+                        <div className='service-card-container shop-card'>
                             <div className='service-card' style={{
                                 backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + BCards + ')'
                             }}>
@@ -40,7 +40,7 @@ export default function Shop() {
                         </div>
                     </NavLink>
                     <NavLink onClick={() => backToTop()} to='/shop/t-shirts'>
-                        <div className='service-card-container'>
+                        <div className='service-card-container shop-card'>
                             <div className='service-card' style={{
                                 backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + TShirts + ')'
                             }}>
@@ -49,7 +49,7 @@ export default function Shop() {
                         </div>
                     </NavLink>
                     <NavLink onClick={() => backToTop()} to='/shop/flyers'>
-                        <div className='service-card-container'>
+                        <div className='service-card-container shop-card'>
                             <div className='service-card' style={{
                                 backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + Flyers + ')'
                             }}>
@@ -59,7 +59,7 @@ export default function Shop() {
                     </NavLink>
                     <div className='services-bottom-container'>
                         <NavLink onClick={() => backToTop()} to='/shop/big-format'>
-                            <div className='service-card-container'>
+                            <div className='service-card-container shop-card'>
                                 <div className='service-card' style={{
                                     backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + BFormat + ')'
                                 }}>
@@ -68,7 +68,7 @@ export default function Shop() {
                             </div>
                         </NavLink>
                         <NavLink onClick={() => backToTop()} to='/shop/mugs'>
-                            <div className='service-card-container'>
+                            <div className='service-card-container shop-card'>
                                 <div className='service-card' style={{
                                     backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + Mugs + ')'
                                 }}>

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { backToTop } from '../../utils'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import BCards from '../../assets/b-cards.jpg'
 import ServiceBack from '../../components/ServiceBack'
 import { CgEnter } from 'react-icons/cg'
 
@@ -22,6 +23,10 @@ export default function Scanning() {
             <div className='service'>
                 <div className='service-container'>
                     <ServiceBack />
+                    <div className='scanning-image-container' style={{
+                        backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + BCards + ')'
+                    }}>
+                    </div>
                     <div>
                         <h1 className='service-title'>{t('Scanning.SCTitle')}</h1>
                         <p className='service-description'>{t('Scanning.SCDesc')}</p>

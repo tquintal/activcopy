@@ -32,6 +32,8 @@ const properties = {
     indicators: false,
     autoplay: false,
     canSwipe: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     prevArrow: prevArrow,
     nextArrow: nextArrow
 }
@@ -52,12 +54,6 @@ function Content() {
             'img': image2,
             'title': t('DigitalPrinting.SecondDPTitle'),
             'description': t('DigitalPrinting.SecondDPDesc')
-        },
-        {
-            'desc': 'thesis',
-            'img': image3,
-            'title': t('DigitalPrinting.ThirdDPTitle'),
-            'description': t('DigitalPrinting.ThirdDPDesc')
         },
         {
             'desc': 'businessCards',
@@ -145,7 +141,7 @@ function Content() {
                             </div>
                         )}
                     </Slide>
-                    <div>
+                    <div className='service-desc-container'>
                         <h1 className='service-title'>{title}</h1>
                         <p className='service-description'>{description}</p>
                     </div>
@@ -178,16 +174,6 @@ export class DigitalPrinting extends React.Component {
     }
 
     render() {
-
-        const { width } = this.state
-        if (width <= 1100) {
-            properties.slidesToShow = 3
-            properties.slidesToScroll = 3
-        } else {
-            properties.slidesToShow = 3
-            properties.slidesToScroll = 3
-        }
-
         return (
             <Content />
         )

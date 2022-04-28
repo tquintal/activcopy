@@ -18,7 +18,7 @@
 }
 
 .slider-image:hover {
-  color: #929292;
+  color: #ff4500;
 }
 
 .react-slideshow-container + ul.indicators {
@@ -26,26 +26,34 @@
 }
 
 .arrow {
-  padding: 5px;
-  background-color: #ffffff;
+  padding: 3px;
+  background-color: #eaeff2;
   cursor: default;
   border: solid;
   border-width: thin;
 }
 
 .prev-arrow {
-  margin-top: -32px;
-  margin-right: -30px;
+  cursor: pointer;
+  margin-top: -90px;
+  margin-right: -31px;
 }
 
 .next-arrow {
-  margin-top: -32px;
+  cursor: pointer;
+  margin-top: -90px;
   margin-left: -30px;
 }
 
 .slide {
   text-align: center;
-  height: 200px;
+  height: 320px;
+}
+
+@media only screen and (min-width: 1100px) {
+  .service-desc-container {
+    margin-top: -70px;
+  }
 }
 
 .tshirt-title {
@@ -96,6 +104,10 @@
     height: 150px;
   }
 
+  .slide p {
+    font-size: 14px;
+  }
+
   .digital-printing-container {
     flex-direction: column;
   }
@@ -111,5 +123,17 @@
   .bbfirstservice {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .prev-arrow {
+    cursor: pointer;
+    margin-top: -38px;
+    margin-right: -31px;
+  }
+
+  .next-arrow {
+    cursor: pointer;
+    margin-top: -38px;
+    margin-left: -31px;
   }
 }
