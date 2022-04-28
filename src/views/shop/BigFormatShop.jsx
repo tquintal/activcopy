@@ -208,7 +208,7 @@ export default function BigFormatShop() {
                                 <input type='hidden' name='Total' value={`${total}€`}></input>
 
                                 <div>
-                                    <p className='shop-required-fields'>IVA e valor de envio incluídos</p>
+                                    <p className='shop-required-fields'>IVA e custo de envio incluídos</p>
                                     <p className='shop-required-fields'>Campos obrigatórios *</p>
                                 </div>
 

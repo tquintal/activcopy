@@ -256,7 +256,7 @@ export default function Flyers() {
                                 <input type='hidden' name='NIB' value='PT50 0033 0000 4534 1788 5440 5'></input>
                                 <input type='hidden' name='Valor' value={`${total}€`}></input>
 
-                                <p className='shop-required-fields'>IVA e valor de envio incluídos</p>
+                                <p className='shop-required-fields'>IVA e custo de envio incluídos</p>
 
                                 <input type='hidden' name='_captcha' value='false'></input>
                                 <p className='shop-required-fields'>Campos obrigatórios *</p>

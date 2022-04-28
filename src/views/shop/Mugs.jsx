@@ -154,7 +154,7 @@ export default function Mugs() {
                                 <input type='hidden' name='Valor' value={`${total}€`}></input>
 
                                 <div>
-                                    <p className='shop-required-fields'>IVA e valor de envio incluídos</p>
+                                    <p className='shop-required-fields'>IVA e custo de envio incluídos</p>
                                     <p className='shop-required-fields'>Campos obrigatórios *</p>
                                 </div>
 
