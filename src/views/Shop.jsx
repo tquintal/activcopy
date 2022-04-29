@@ -5,11 +5,11 @@ import { motion } from 'framer-motion'
 import { MdOutlineShoppingCart } from 'react-icons/md'
 import { backToTop } from '../utils'
 import '../style/Services.css'
-import BCards from '../assets/b-cards.jpg'
-import TShirts from '../assets/t-shirts.jpg'
-import Flyers from '../assets/flyers.jpg'
-import BFormat from '../assets/b-format.jpg'
-import Mugs from '../assets/mug.jpg'
+import BCards from '../assets/shop-business_cards.jpg'
+import TShirts from '../assets/shop-t_shirts.jpg'
+import Flyers from '../assets/shop-flyers.jpg'
+import BFormat from '../assets/shop-big_format.jpg'
+import Mugs from '../assets/shop-mugs.jpg'
 
 export default function Shop() {
     const { t } = useTranslation()
