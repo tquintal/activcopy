@@ -92,13 +92,13 @@
     "FourthDPDesc": "Formato: Quadrado, Retangular\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nTipo de Papel: Diversos, CLA 315g, Couché 350g\nAcabamento: Laminação",
 
     "FifthDPTitle": "Revistas e Catálogos",
-    "FifthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 80g a 400g\nTipo de Papel: Diversos, Papel Reciclado, Papel Vegan\nAcabamento: Dobras, Encadernações, Agrafos",
+    "FifthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 80g a 350g\nTipo de Papel: Diversos, Papel Reciclado, Papel Vegan\nAcabamento: Dobras, Encadernações, Agrafos",
 
     "SixthDPTitle": "Flyers e Folhetos",
-    "SixthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 80g a 400g\nTipo de Papel: Diversos, Papel Reciclado, Papel Vegan\nAcabamento: Dobras, Cortes",
+    "SixthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 80g a 350g\nTipo de Papel: Diversos, Papel Reciclado, Papel Vegan\nAcabamento: Dobras, Cortes",
 
     "SeventhDPTitle": "Envelopes",
-    "SeventhDPDesc": "Material: DL 007 Digital (com ou sem janela)\nCor do Envelope: Todas\nTamanho do Envelope: Personalizado\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 90g a 400g",
+    "SeventhDPDesc": "Material: DL 007 Digital (com ou sem janela)\nColor do Envelope: Branco\nTamanho: 11cm x 22cm\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 90g",
 
     "EighthDPTitle": "Etiquetas e Autocolantes",
     "EighthDPDesc": "Tamanho: Personalizado\nImpressão: Preto ou Cores / Apenas Frente\nTipo de Papel: Vinil Branco, Transparente",
@@ -114,7 +114,7 @@
     "Info": "A impressão utilizada em grandes formatos tem durabilidade mínima de 5 anos exposto ao exterior.\nNas impressões de grandes formatos utilizamos tintas à base de água, com certificação Green Guard Gold da WELL, que não possuem cheiros e podem por isso ser utilizadas em espaços interiores.",
 
     "FirstBFTitle": "Vinil",
-    "FirstBFDesc": "Microperfurado\nMaterial: Branco/Brilho, Branco/Mate, Transparente/Brilho, Transparente/Mate\nTamanho: Personalizado (largura máxima 160cm)",
+    "FirstBFDesc": "Microperfurado\nMaterial: Branco/Brilho, Branco /Mate, Transparente/ Brilho, Transparente/Mate\nTamanho: Personalizado (largura máxima 160cm)",
 
     "SecondBFTitle": "Lona",
     "SecondBFDesc": "Material: Coated 440g\nImpressão: Branco Mate\nTamanho: Personalizado (largura máxima 160cm)",
