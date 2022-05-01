@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
-import BCards from '../../assets/b-cards.jpg'
+import BCards from '../../assets/b-cards_old.jpg'
 
 export default function TShirtSize() {
 

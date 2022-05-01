@@ -83,13 +83,13 @@
 
   "DigitalPrinting": {
     "FirstDPTitle": "Pequenos Formatos",
-    "FirstDPDesc": "Tamanho: A6, A5, A3, SRA3\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 80g a 400g\nTipo de Papel: Diversos, Papel Reciclado, Papel Vegan",
+    "FirstDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 80g a 400g\nTipo de Papel: Diversos, Papel Reciclado, Papel Vegan",
 
     "SecondDPTitle": "Impressão em Branco",
     "SecondDPDesc": "Tamanho: A4\nImpressão: Branco / Frente ou Frente e Verso\nGramagem: 80g a 350g\nTipo de Papel: Diversos, Papel Reciclado, Papel Vegan",
 
     "FourthDPTitle": "Cartões de Visita",
-    "FourthDPDesc": "Formato: Quadrado, Retangular\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nTipo de Papel: Diversos, CLA 315g, Couché 350g\nAcabamento: Laminação",
+    "FourthDPDesc": "Formato: Quadrado, Retangular\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nTipo de Papel: Diversos, CLA 315g, Couché 350g, Papel Reciclado, Papel Vegan\nAcabamento: Laminação",
 
     "FifthDPTitle": "Revistas e Catálogos",
     "FifthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 80g a 400g\nTipo de Papel: Diversos, Papel Reciclado, Papel Vegan\nAcabamento: Dobras, Encadernações, Agrafos",
@@ -98,7 +98,7 @@
     "SixthDPDesc": "Tamanho: A6, A5, A4, A3, SRA3\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 80g a 400g\nTipo de Papel: Diversos, Papel Reciclado, Papel Vegan\nAcabamento: Dobras, Cortes",
 
     "SeventhDPTitle": "Envelopes",
-    "SeventhDPDesc": "Material: DL 007 Digital (com ou sem janela)\nCor do Envelope: Todas\nTamanho do Envelope: Personalizado\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 90g a 400g",
+    "SeventhDPDesc": "Material: Diversos (com ou sem janela)\nCor do Envelope: Todas\nTamanho do Envelope: Personalizado\nImpressão: Preto ou Cores / Frente ou Frente e Verso\nGramagem: 90g a 400g",
 
     "EighthDPTitle": "Etiquetas e Autocolantes",
     "EighthDPDesc": "Tamanho: Personalizado\nImpressão: Preto ou Cores / Apenas Frente\nTipo de Papel: Vinil Branco, Transparente",
@@ -114,7 +114,7 @@
     "Info": "A impressão utilizada em grandes formatos tem durabilidade mínima de 5 anos exposto ao exterior.\nNas impressões de grandes formatos utilizamos tintas à base de água, com certificação Green Guard Gold da WELL, que não possuem cheiros e podem por isso ser utilizadas em espaços interiores.",
 
     "FirstBFTitle": "Vinil",
-    "FirstBFDesc": "Microperfurado\nMaterial: Branco/Brilho, Branco/Mate, Transparente/Brilho, Transparente/Mate\nTamanho: Personalizado (largura máxima 160cm)",
+    "FirstBFDesc": "Material: Microperfurado, Branco/Brilho, Branco/Mate, Transparente/Brilho, Transparente/Mate\nTamanho: Personalizado (largura máxima 160cm)",
 
     "SecondBFTitle": "Lona",
     "SecondBFDesc": "Material: Coated 440g\nImpressão: Branco Mate\nTamanho: Personalizado (largura máxima 160cm)",
@@ -123,12 +123,12 @@
     "ThirdBFDesc": "Material: Canvas\nTamanho: Personalizado (largura máxima 137cm)",
 
     "FourthBFTitle": "Roll-Up",
-    "FourthBFDesc": "Material: Lona 420g (com costa cinza)\nImpressão: Branco Mate\nTamanho: 80cm x 2000cm",
+    "FourthBFDesc": "Material: Lona 420g (com costa cinza)\nImpressão: Branco Mate\nTamanho: 85cm x 200cm",
 
     "FifthBFTitle": "Tecidos",
     "FifthBFDesc": "Material: Polyester Basic 120g\nTamanho: Personalizado (largura máxima 160cm)",
 
-    "SixthBFTitle": "Wallpaper",
+    "SixthBFTitle": "Papel de Parede",
     "SixthBFDesc": "Material: Wallcover, Spray e Up (cola adesiva no verso)\nTamanho: Personalizado (largura máxima 135cm)",
 
     "SeventhBFTitle": "Cartazes",
@@ -143,26 +143,26 @@
     "FirstSMDesc": "Tamanho de Impressão: Até A3",
     "FirstSMDesc2": "Zonas de Impressão: Frente Centro, Costas Centro, Peito Esquerdo, Mangas",
     "FirstSMTShirtColorTitle": "Cores:",
-    "FirstSMTShirt": "T-shirt de adulto\nTamanho: XS, S, M, L, XL, 2XL, 3XL, 5XL",
-    "SecondSMTShirt": "T-shirt orgânicas\nTamanho: S, M, L, XL, 2XL",
-    "ThirdSMTShirt": "T-shirt criança\nTamanho: 1-2, 3-4, 5-6, 7-8, 9-11, 12-14",
+    "FirstSMTShirt": "T-shirt de Adulto\nTamanho: XS, S, M, L, XL, 2XL, 3XL, 5XL",
+    "SecondSMTShirt": "T-shirt Orgânicas\nTamanho: S, M, L, XL, 2XL",
+    "ThirdSMTShirt": "T-shirt de Criança\nTamanho: 1-2, 3-4, 5-6, 7-8, 9-11, 12-14",
     "FourthSMTShirt": "Cores de Impressão: Todas",
     "FithSMTShirt": "Estão disponíveis estampagens em qualquer outro tipo de tecido.",
 
     "SecondSMTitle": "Canecas",
-    "SecondSMDesc": "Tamanho da Impressão: 90mm x 210mm\nImpressão: Preto ou Cores",
+    "SecondSMDesc": "Tamanho da Impressão: 9cm x 21cm\nImpressão: Preto ou Cores",
 
     "ThirdSMTitle": "Carimbos",
-    "ThirdSMDesc": "Material: BROTHER Auto Tintados\nTamanho: 100mm x 60mm ou 18mm x 50mm\nImpressão: Preto",
+    "ThirdSMDesc": "Material: BROTHER Auto Tintados\nTamanho: 1cm x 6cm ou 1.8cm x 5cm\nImpressão: Preto",
 
     "FourthSMTitle": "Puzzles",
     "FourthSMDesc": "Formato: Quadrado, Retangular, Coração\nTamanho: 27cm x 18cm ou 18cm x 13cm\nImpressão: Preto ou Cores",
 
     "FifthSMTitle": "Pins",
-    "FifthSMDesc": "Tamanho: 40mm x 40mm\nImpressão: Preto ou Cores",
+    "FifthSMDesc": "Tamanho: 45mm x 45mm\nImpressão: Preto ou Cores",
 
     "SixthSMTitle": "Tapetes de rato",
-    "SixthSMDesc": "Tamanho: 19,4cm x 23,6cm\nImpressão: Preto ou Cores",
+    "SixthSMDesc": "Formato: Retangular\nTamanho: 19.4cm x 23.6cm\nImpressão: Preto ou Cores",
 
     "SeventhSMTitle": "Pedras",
     "SeventhSMDesc": "Tamanho: 20cm x 20cm ou 15cm x 15cm\nImpressão: Preto ou Cores"
@@ -170,11 +170,11 @@
 
   "Bookbinding": {
     "FirstBBTitle": "Argolas metálicas",
-    "FirstBBDesc": "Argolas: 8mm até 50mm\nTamanho: A6, A5, A4 e A3",
-    "FirstBBTShirtColorTitle": "Cores das Capas em Polipropileno:",
+    "FirstBBDesc": "Argolas: 8mm a 50mm\nTamanho: A6, A5, A4 e A3",
+    "FirstBBTShirtColorTitle": "Cores de Capa Polipropileno:",
 
     "SecondBBTitle": "Encadernações Térmicas",
-    "SecondBBDesc": "Tamanho: A4\nCor: Branco\nEspessura da Encadernação: 1,5mm, 3mm, 6mm, 9mm, 12mm, 30mm",
+    "SecondBBDesc": "Tamanho: A4\nCor: Branco\nEspessura da Encadernação: 1.5mm, 3mm, 6mm, 9mm, 12mm, 30mm",
 
     "ThirdBBTitle": "Encadernações Cola Quente",
     "ThirdBBDesc": "Tamanho: Até A3\nCapa: Com ou Sem Impressão / Frente ou Frente e Verso\nLombada: Com ou Sem Impressão\nTipo de Papel: CLA 315g, Couché 350g\nAcabamento: Laminação"

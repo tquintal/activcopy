@@ -43,7 +43,7 @@
     "Service1": "Digital Printing",
     "Service2": "Large Format",
     "Service3": "Sublimation",
-    "Service4": "Binding",
+    "Service4": "Bindings",
     "Service5": "Scanning"
   },
 
@@ -74,13 +74,13 @@
 
   "DigitalPrinting": {
     "FirstDPTitle": "Small Formats",
-    "FirstDPDesc": "Size: A6, A5, A3, SRA3\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: Between 80g and 400g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper",
+    "FirstDPDesc": "Size: A6, A5, A4, A3, SRA3\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: Between 80g and 400g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper",
 
     "SecondDPTitle": "White Ink Printing",
     "SecondDPDesc": "Size: A4\nPrinting: White / 1 or 2 Sided\nGrammage: Between 80g and 350g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper",
 
     "FourthDPTitle": "Business Cards",
-    "FourthDPDesc": "Shape: Square, Rectangular\nPrinting: Black or Colors / 1 or 2 Sided\nPaper Type: Ordinary, CLA 315g, Couché 350g\nFinishing: Contact Paper",
+    "FourthDPDesc": "Shape: Square, Rectangular\nPrinting: Black or Colors / 1 or 2 Sided\nPaper Type: Ordinary, CLA 315g, Couché 350g, Recycled Paper, Vegan Paper\nFinishing: Contact Paper",
 
     "FifthDPTitle": "Magazines and Catalogs",
     "FifthDPDesc": "Size: A6, A5, A4, A3, SRA3\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: Between 80g and 400g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper\nFinishing: Folding, Bindings, Staples",
@@ -89,7 +89,7 @@
     "SixthDPDesc": "Size: A6, A5, A4, A3, SRA3\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: Between 80g and 400g\nPaper Type: Ordinary, Recycled Paper, Vegan Paper\nFinishing: Folding, Cutting",
 
     "SeventhDPTitle": "Envelopes",
-    "SeventhDPDesc": "Material: DL 007 Digital (with or without window)\nEnvelope Color: All\nEnvelope Size: Custom\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: Between 90g and 400g",
+    "SeventhDPDesc": "Material: Ordinary (with or without window)\nEnvelope Color: All\nEnvelope Size: Custom\nPrinting: Black or Colors / 1 or 2 Sided\nGrammage: Between 90g and 400g",
 
     "EighthDPTitle": "Labels and Stickers",
     "EighthDPDesc": "Size: Custom\nPrinting: Black or Colors / 1 Sided\nPaper Type: White Vinyl, Transparent",
@@ -105,7 +105,7 @@
     "Info": "All the printing used has a minimum durability age of 5 years.\nIn large format printing we use water-based inks that are certified by WELL Green Guard Gold, which means the ink does not possess any lingering odors, allowing for safe indoor uses.",
 
     "FirstBFTitle": "Vinyl",
-    "FirstBFDesc": "Microperforated\nMaterial: White/glossy, White/Matte, Transparent/Glossy, Transparent/Matte\nSize: Custom (max width 160cm)",
+    "FirstBFDesc": "Material: Microperforated, White/Glossy, White/Matte, Transparent/Glossy, Transparent/Matte\nSize: Custom (max width 160cm)",
 
     "SecondBFTitle": "Tarpaulin",
     "SecondBFDesc": "Material: Coated 440g\nPrinting: White Matte\nSize: Custom (max width 160cm)",
@@ -114,25 +114,25 @@
     "ThirdBFDesc": "Material: Canvas\nSize: Custom (max width 137cm)",
 
     "FourthBFTitle": "Roll-Up",
-    "FourthBFDesc": "Material: Tarpaulin 420g (grey back side)\nPrinting: White Matte\nSize: 80cm x 2000cm",
+    "FourthBFDesc": "Material: Tarpaulin 420g (grey back side)\nPrinting: White Matte\nSize: 85cm x 200cm",
 
     "FifthBFTitle": "Fabrics",
-    "FifthBFDesc": "Material: Polyester Basic 120g\nSize: Custom (max width: 160cm)",
+    "FifthBFDesc": "Material: Polyester Basic 120g\nSize: Custom (max width 160cm)",
 
     "SixthBFTitle": "Wallpaper",
-    "SixthBFDesc": "Material: Wallcover, Spray and up (adhesive glue in the back)\nSize: Custom (max width: 135cm)",
+    "SixthBFDesc": "Material: Wallcover, Spray and Up (adhesive glue in the back)\nSize: Custom (max width 135cm)",
 
     "SeventhBFTitle": "Posters",
     "SeventhBFDesc": "Size: Custom (max width 160cm)\nPrinting: Black or Colors\nPaper Type: Matte 180g, Photo Paper, Coated 200g",
 
     "EighthBFTitle": "Architecture Projects",
-    "EighthBFDesc": "Size: Custom (max width: 90cm)\nPrinting: Black or Colors\nGrammage: 80g, 100g, 120g\nPaper Type: Tracing Paper, Polyester\nFinishing: Folding, Cutting\nFile Format: PDF, DWG, DWF, CAD"
+    "EighthBFDesc": "Size: Custom (max width 90cm)\nPrinting: Black or Colors\nGrammage: 80g, 100g, 120g\nPaper Type: Tracing Paper, Polyester\nFinishing: Folding, Cutting\nFile Format: PDF, DWG, DWF, CAD"
   },
 
   "Sublimation": {
     "FirstSMTitle": "T-shirts",
-    "FirstSMDesc": "Printing size: Up to A3",
-    "FirstSMDesc2": "Printing spots: Front, Back, Left chest, Sleeves",
+    "FirstSMDesc": "Printing Size: Up to A3",
+    "FirstSMDesc2": "Printing Spots: Front, Back, Left chest, Sleeves",
     "FirstSMTShirtColorTitle": "Printing Colors:",
     "FirstSMTShirt": "Adult T-shirt\nSizes: XS, S, M, L, XL, 2XL, 3XL, 5XL",
     "SecondSMTShirt": "Organic T-shirt\nSizes: S, M, L, XL, 2XL",
@@ -141,19 +141,19 @@
     "FithSMTShirt": "Prints on any other type of fabrics are available.",
 
     "SecondSMTitle": "Mugs",
-    "SecondSMDesc": "Printing Size: 90mm x 210mm\nPriting: Black or Colors",
+    "SecondSMDesc": "Printing Size: 9cm x 21cm\nPrinting: Black or Colors",
 
     "ThirdSMTitle": "Self-Inking Stamps",
-    "ThirdSMDesc": "Material: BROTHER Self Inking\nSize: 100mm x 60mm or 18mm x 50mm\nPrinting: Black",
+    "ThirdSMDesc": "Material: BROTHER Self Inking\nSize: 1cm x 6cm or 1.8cm x 5cm\nPrinting: Black",
 
     "FourthSMTitle": "Puzzles",
-    "FourthSMDesc": "Shape: Square, Rectangular, Heart\nSize: 27cm x 18cm or 18cm x 13\nPrinting: Black or Colors",
+    "FourthSMDesc": "Shape: Square, Rectangular, Heart\nSize: 27cm x 18cm or 18cm x 13cm\nPrinting: Black or Colors",
 
     "FifthSMTitle": "Badges",
-    "FifthSMDesc": "Size: 40mm x 40mm\nPrinting: Black or Colors",
+    "FifthSMDesc": "Size: 45mm x 45mm\nPrinting: Black or Colors",
 
     "SixthSMTitle": "Mouse Pads",
-    "SixthSMDesc": "Size: 19,4cm x 23,6cm\nPrinting: Black or Colors",
+    "SixthSMDesc": "Shape: Rectangular\nSize: 19.4cm x 23.6cm\nPrinting: Black or Colors",
 
     "SeventhSMTitle": "Stones",
     "SeventhSMDesc": "Size: 20cm x 20cm or 15cm x 15cm\nPrinting: Black or Colors"
@@ -161,19 +161,19 @@
 
   "Bookbinding": {
     "FirstBBTitle": "Binding Spiral Ring Metal",
-    "FirstBBDesc": "Spiral Ring: 8mm up to 50mm\nSize: A6, A5, A4, A3",
-    "FirstBBTShirtColorTitle": "Polypropylene Covers colors:",
+    "FirstBBDesc": "Spiral Ring: Between 8mm and 50mm\nSize: A6, A5, A4, A3",
+    "FirstBBTShirtColorTitle": "Polypropylene Cover Colors:",
 
     "SecondBBTitle": "Thermal Binding",
-    "SecondBBDesc": "Size: A4\nColor: White\nCovers Thickness: 1,5mm, 3mm, 6mm, 9mm, 12mm, 30mm",
+    "SecondBBDesc": "Size: A4\nColor: White\nCovers Thickness: 1.5mm, 3mm, 6mm, 9mm, 12mm, 30mm",
 
     "ThirdBBTitle": "Hot Glue Ginding",
-    "ThirdBBDesc": "Size: Up to A3\nCover: With/Without Printing. 1 or 2 Sided\nSpine: With/Without Printing\nPaper Type: CLA 315g, Couché 350g\nFinishing: Contact Paper"
+    "ThirdBBDesc": "Size: Up to A3\nCover: With or Without Printing / 1 or 2 Sided\nSpine: With or Without Printing\nPaper Type: CLA 315g, Couché 350g\nFinishing: Contact Paper"
   },
 
   "Scanning": {
     "SCTitle": "Large and Small Formats Scanning",
-    "SCDesc": "Scanning: Black or Colors\nFile format: JPG, PDF, TIFF"
+    "SCDesc": "Scanning: Black or Colors\nFile Format: JPG, PDF, TIFF"
   },
 
   "Contact": {

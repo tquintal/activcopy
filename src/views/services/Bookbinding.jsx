@@ -7,9 +7,9 @@ import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image'
 import ServiceBack from '../../components/ServiceBack'
 
-import image1 from './assets/img1.jpg'
-import image2 from './assets/img2.jpg'
-import image3 from './assets/img3.jpg'
+import image1 from './assets/4.1.jpg'
+import image2 from './assets/4.2.jpg'
+import image3 from './assets/4.3.jpg'
 
 import { CgEnter } from 'react-icons/cg'
 

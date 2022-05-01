@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { backToTop } from '../../utils'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
-import BCards from '../../assets/b-cards.jpg'
+import BCards from './assets/5.1.jpg'
 import ServiceBack from '../../components/ServiceBack'
 import { CgEnter } from 'react-icons/cg'
 
