@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
-import BCards from '../../assets/b-cards_old.jpg'
+import MugsIMG from '../../assets/in-shop-mugs.jpg'
 
 export default function Mugs() {
 
@@ -81,7 +81,7 @@ export default function Mugs() {
                             <ShopBack />
                             <h1>Canecas</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} style={{ height: '124%' }} />
+                                <img src={MugsIMG} alt='b-cards' onClick={() => console.table(order)} />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>

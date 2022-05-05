@@ -7,7 +7,7 @@ import { backToTop } from '../utils'
 import '../style/Services.css'
 import BCards from '../assets/b-cards.jpg'
 import TShirts from '../assets/t-shirts.jpg'
-import Flyers from '../assets/flyers.jpg'
+import BookBinding from '../assets/bookbinding.jpg'
 import BFormat from '../assets/b-format.jpg'
 import Stickers from '../assets/stickers.jpg'
 
@@ -61,7 +61,7 @@ export default function Services() {
                         <NavLink onClick={() => backToTop()} to='/services/bookbinding'>
                             <div className='service-card-container'>
                                 <div className='service-card' style={{
-                                    backgroundImage: 'url(' + Flyers + ')'
+                                    backgroundImage: 'url(' + BookBinding + ')'
                                 }}>
                                 </div>
                                 <p className='service-card-text'>{t('Services.Service4')}</p>

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
-import BCards from '../../assets/b-cards_old.jpg'
+import FlyersIMG from '../../assets/in-shop-flyers.jpg'
 
 export default function Flyers() {
 
@@ -157,7 +157,7 @@ export default function Flyers() {
                             <ShopBack />
                             <h1>Flyers</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={LogOrder} style={{ height: '141%' }} />
+                                <img src={FlyersIMG} alt='b-cards' onClick={LogOrder} />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>

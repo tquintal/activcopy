@@ -374,7 +374,7 @@ Red Orange: #FF4500
 .contact-container,
 .services-container,
 .service-container {
-  padding-top: 50px;
+  padding-top: 36px;
 }
 
 .services-bottom-container {
@@ -530,10 +530,6 @@ Red Orange: #FF4500
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-
-.shop-cat-container img {
-  width: 100%;
 }
 
 .shop-tshirts-printing {

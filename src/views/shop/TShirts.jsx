@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
-import BCards from '../../assets/b-cards_old.jpg'
+import TShirtsIMG from '../../assets/in-shop-t_shirts.jpg'
 
 export default function TShirtSize() {
 
@@ -219,11 +219,10 @@ export default function TShirtSize() {
                             <ShopBack />
                             <h1>T-Shirts</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={() => {
+                                <img src={TShirtsIMG} alt='b-cards' onClick={() => {
                                     setOrder({ ...order, Total: total })
                                     console.table(order)
                                 }}
-                                    style={{ height: '148%' }}
                                 />
                             </div>
                         </div>

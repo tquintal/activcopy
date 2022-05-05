@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
-import BCards from '../../assets/b-cards_old.jpg'
+import BigFormatIMG from '../../assets/in-shop-big-format.jpg'
 
 export default function BigFormatShop() {
 
@@ -108,7 +108,7 @@ export default function BigFormatShop() {
                             <ShopBack />
                             <h1>Grandes formatos</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} style={{ height: '147%' }} />
+                                <img src={BigFormatIMG} alt='b-cards' onClick={() => console.table(order)} />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>

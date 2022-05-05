@@ -23,8 +23,6 @@ export default function Main() {
                             document.cookie === 'i18next=pt' ?
                                 <>
                                     <p>
-                                        {t('Description.Content_1')}
-                                        <span style={{ fontWeight: 'bold' }}>{t('Description.Content_2')}</span>
                                         {t('Description.Content_3')}
                                         <span style={{ fontWeight: 'bold' }}>{t('Description.Content_4')}</span>
                                         {t('Description.Content_5')}

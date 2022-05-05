@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
-import BCards from '../../assets/b-cards_old.jpg'
+import BusinessCardsIMG from '../../assets/in-shop-business_cards.jpg'
 
 export default function BusinessCardss() {
 
@@ -102,7 +102,7 @@ export default function BusinessCardss() {
                             <ShopBack />
                             <h1>Cartões de visita</h1>
                             <div className='shop-cat-img'>
-                                <img src={BCards} alt='b-cards' onClick={() => console.table(order)} style={{ height: '130%' }} />
+                                <img src={BusinessCardsIMG} alt='b-cards' onClick={() => console.table(order)} />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>
