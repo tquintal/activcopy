@@ -26,7 +26,7 @@ const properties = {
     cssClass: 'slider-container',
     transitionDuration: 250,
     infinite: false,
-    indicators: false,
+    indicators: true,
     autoplay: false,
     canSwipe: true,
     slidesToShow: 3,
@@ -108,11 +108,11 @@ function Content() {
                         {images.map((each) =>
                             <div key={each.img} className='slider-image slide' onClick={ClickedService.bind(this, each)}>
                                 <img src={each.img} alt={each.title} />
-                                <p>{each.title}</p>
+                                <p className={each.title === title ? 'service-title-active' : ''}>{each.title}</p>
                             </div>
                         )}
                     </Slide>
-                    <div className='service-desc-container'>
+                    <div>
                         <h1 className='service-title'>{title}</h1>
                         <p className='service-description'>{description}</p>
                     </div>

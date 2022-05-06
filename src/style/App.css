@@ -377,6 +377,14 @@ Red Orange: #FF4500
   padding-top: 36px;
 }
 
+@media only screen and (max-width: 1100px) {
+  .contact-container,
+  .services-container,
+  .service-container {
+    padding-top: 50px;
+  }
+}
+
 .services-bottom-container {
   display: flex;
   flex-wrap: wrap;

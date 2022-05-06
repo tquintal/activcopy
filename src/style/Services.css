@@ -7,7 +7,7 @@
 .slider-image {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  gap: 5px;
   padding: 5px;
   cursor: pointer;
   transition: 200ms;
@@ -17,20 +17,35 @@
   height: 70%;
 }
 
-.slider-image:hover {
+/* .service-title {
+  color: #000000;
+} */
+
+.service-title-active {
   color: #ff4500;
 }
 
-.react-slideshow-container + ul.indicators {
-  margin-top: 10px !important;
+@media (hover: hover) {
+  .slider-image:hover,
+  .service-title-active:hover {
+    color: #ff4500 !important;
+  }
 }
 
 .arrow {
   padding: 3px;
-  background-color: #eaeff2;
-  cursor: default;
+  background-color: #ffffffcc;
+  color: #000000cc;
   border: solid;
   border-width: thin;
+  border-color: #000000cc;
+  transition: 200ms;
+}
+
+@media (hover: hover) {
+  .arrow:hover {
+    background-color: #ff4500;
+  }
 }
 
 .prev-arrow {
@@ -50,7 +65,33 @@
   height: 320px;
 }
 
+.react-slideshow-container + ul.indicators {
+  margin-top: 5px !important;
+}
+
 @media only screen and (min-width: 1100px) {
+  .arrow {
+    padding: 8px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .prev-arrow {
+    cursor: pointer;
+    margin-top: -95px;
+    margin-right: -55px;
+  }
+
+  .next-arrow {
+    cursor: pointer;
+    margin-top: -95px;
+    margin-left: -55px;
+  }
+
+  .react-slideshow-container + ul.indicators {
+    margin-top: -50px !important;
+  }
+
   .service-desc-container {
     margin-top: -70px;
   }

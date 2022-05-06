@@ -73,11 +73,11 @@ export default function Bookbinding() {
                 <div className='service-container'>
                     <ServiceBack />
                     <h1 className='service-title'>{t('Services.Service4')}</h1>
-                    <Slide className='slide-container' {...properties}>
+                    <Slide {...properties}>
                         {images.map((each) =>
                             <div key={each.img} className='slider-image slide' onClick={ClickedService.bind(this, each)}>
                                 <img src={each.img} alt={each.title} />
-                                <p>{each.title}</p>
+                                <p className={each.title === title ? 'service-title-active' : ''}>{each.title}</p>
                             </div>
                         )}
                     </Slide>
