@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
@@ -140,7 +139,6 @@ export default function TShirtSize() {
                         <option value='Roxo'>Roxo</option>
                         <option value='Rosa'>Rosa</option>
                     </select>
-                    <Link to='/services/sublimation' style={{ all: 'unset' }}><div style={{ width: '106px' }}>Lista de cores</div></Link>
                 </div>
             )
         } else if (order.TShirt === 'T-Shirt Criança') {
@@ -167,7 +165,6 @@ export default function TShirtSize() {
                         <option value='Azul Céu'>Azul Céu</option>
                         <option value='Rosa'>Rosa</option>
                     </select>
-                    <Link to='/services/sublimation' style={{ all: 'unset' }}><div style={{ width: '106px' }}>Lista de cores</div></Link>
                 </div>
             )
         } else {
@@ -185,7 +182,6 @@ export default function TShirtSize() {
                         <option value='Navy'>Navy</option>
                         <option value='Blue Fog'>Blue Fog</option>
                     </select>
-                    <Link to='/services/sublimation' style={{ all: 'unset' }}><div style={{ width: '106px' }}>Lista de cores</div></Link>
                 </div>
             )
         }
