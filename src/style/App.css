@@ -250,6 +250,7 @@ Red Orange: #FF4500
 
 .media {
   margin-top: 65px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #1b1b1b;
