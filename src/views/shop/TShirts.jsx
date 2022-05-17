@@ -223,9 +223,9 @@ export default function TShirtSize() {
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>
-                            <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
+                            <form method='POST' action='https://formsubmit.co/seractivcopy@hotmail.com' encType='multipart/form-data' className='shop-form'>
 
-                                <input type='hidden' name='_subject' value='Nova encomenda de t-shirts em activcopy.pt'></input>
+                                <input type='hidden' name='_subject' value='ACTIVCOPY.PT - Detalhes da sua encomenda. Obrigado pela preferência.'></input>
                                 <input type='hidden' name='Encomenda' value='T-Shirts'></input>
 
                                 <p>T-Shirt</p>
@@ -339,7 +339,7 @@ export default function TShirtSize() {
                                         <div className='shop-button' style={{ textAlign: 'center' }} onClick={() => alert(t('Shop.Error'))}>Encomendar</div>
                                 }
 
-                                <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
+                                <input type='hidden' name='_next' value={`${window.location.origin}/shop/order-completed`} />
                             </form>
                         </div>
                     </div>

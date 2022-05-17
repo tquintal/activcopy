@@ -112,9 +112,9 @@ export default function BigFormatShop() {
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>
-                            <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='shop-form'>
+                            <form method='POST' action='https://formsubmit.co/seractivcopy@hotmail.com' encType='multipart/form-data' className='shop-form'>
 
-                                <input type='hidden' name='_subject' value='Nova encomenda de grandes formatos em activcopy.pt'></input>
+                                <input type='hidden' name='_subject' value='ACTIVCOPY.PT - Detalhes da sua encomenda. Obrigado pela preferência.'></input>
                                 <input type='hidden' name='Encomenda' value='Grandes formatos'></input>
 
                                 <p>Formato (cm)</p>
@@ -132,8 +132,8 @@ export default function BigFormatShop() {
                                         </div>
                                         :
                                         <div className='shop-form'>
-                                            <input type='number' name='Altura' placeholder='Rollup branco mate 420g' disabled></input>
-                                            <input type='number' name='Largura' placeholder='Rollup branco mate 420g' disabled></input>
+                                            <input type='number' name='Altura' placeholder='2000cm' disabled></input>
+                                            <input type='number' name='Largura' placeholder='85cm' disabled></input>
                                         </div>
                                 }
 
@@ -223,7 +223,7 @@ export default function BigFormatShop() {
                                         <div className='shop-button' style={{ textAlign: 'center' }} onClick={() => alert(t('Shop.Error'))}>Encomendar</div>
                                 }
 
-                                <input type='hidden' name='_next' value='https://activcopy.vercel.app/shop/order-completed' />
+                                <input type='hidden' name='_next' value={`${window.location.origin}/shop/order-completed`} />
                             </form>
                         </div>
                     </div>

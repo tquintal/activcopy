@@ -66,7 +66,7 @@
 
   "OrderCompleted": {
     "ThankYou": "Obrigado pela preferência, a sua encomenda irá ser processada.",
-    "Info": "Foi enviado um e-mail (remetente: FormSubmit, submissions@formsubmit.co) com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária."
+    "Info": "Foi enviado um e-mail (remetente: FormSubmit, submissions@formsubmit.co) com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária.\nNa ausência deste e-mail, verifique por favor a pasta spam/lixo ou contacte activcopy@netcabo.pt"
   },
 
   "ButtonBudget": "Ask for a budget",
@@ -167,7 +167,7 @@
     "SecondBBTitle": "Thermal Binding",
     "SecondBBDesc": "Size: A4\nColor: White\nCovers Thickness: 1.5mm, 3mm, 6mm, 9mm, 12mm, 30mm",
 
-    "ThirdBBTitle": "Hot Glue Ginding",
+    "ThirdBBTitle": "Hot Glue Binding",
     "ThirdBBDesc": "Size: Up to A3\nCover: With or Without Printing / 1 or 2 Sided\nSpine: With or Without Printing\nPaper Type: CLA 315g, Couché 350g\nFinishing: Contact Paper"
   },
 

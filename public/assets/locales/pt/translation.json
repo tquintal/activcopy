@@ -73,7 +73,7 @@
 
   "OrderCompleted": {
     "ThankYou": "Obrigado pela preferência, a sua encomenda irá ser processada.",
-    "Info": "Foi enviado um e-mail (remetente: FormSubmit, submissions@formsubmit.co) com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária."
+    "Info": "Foi enviado um e-mail (remetente: FormSubmit, submissions@formsubmit.co) com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária.\nNa ausência deste e-mail, verifique por favor a pasta spam/lixo ou contacte activcopy@netcabo.pt"
   },
 
   "ButtonBudget": "Pedir orçamento",
@@ -168,7 +168,7 @@
 
   "Bookbinding": {
     "FirstBBTitle": "Argolas metálicas",
-    "FirstBBDesc": "Argolas: 8mm a 50mm\nTamanho: A6, A5, A4 e A3",
+    "FirstBBDesc": "Argolas: 8mm a 50mm\nTamanho: A6, A5, A4, A3",
     "FirstBBTShirtColorTitle": "Cores de Capa Polipropileno:",
 
     "SecondBBTitle": "Encadernações Térmicas",

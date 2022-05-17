@@ -27,7 +27,7 @@ export default function Contact() {
                 <div className='contacts-container'>
                     <div>
                         <h1>{t('Contact.Title')}</h1>
-                        <p><span>E-mail:</span> geral@activcopy.pt</p>
+                        <p><span>E-mail:</span> activcopy@netcabo.pt</p>
                         <p><span>{t('Contact.Phone')}</span> 234 383 210</p>
                     </div>
                     <div>
@@ -47,7 +47,8 @@ export default function Contact() {
                     <GMaps />
                 </div>
 
-                <form method='POST' action='https://formsubmit.co/tomas.quintal@gmail.com' encType='multipart/form-data' className='contact-form-container'>
+                <form method='POST' action='https://formsubmit.co/seractivcopy@hotmail.com' encType='multipart/form-data' className='contact-form-container'>
+                    <input type='hidden' name='_subject' value='Nova mensagem em ACTIVCOPY.PT'></input>
                     <h1 style={{ lineHeight: '35px' }}>{t('Form.Title')}</h1>
                     <div className='contact-form-first-block'>
                         <div>
@@ -63,7 +64,7 @@ export default function Contact() {
                     <input type='file' name='Attachment' accept='.zip, .tar, .7z, audio/*, video/*, image/*'></input>
                     <p>{t('Form.Info')}</p>
                     <button type='submit'>{t('Form.Button')}</button>
-                    <input type='hidden' name='_next' value='https://activcopy.vercel.app/thank-you' />
+                    <input type='hidden' name='_next' value='http://activcopy.pt/thank-you' />
                 </form>
             </div>
         </motion.div>
