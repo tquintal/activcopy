@@ -870,16 +870,17 @@ textarea {
   }
 
   .shop-cat-container {
-    display: block;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .shop-cat-img img {
+    width: 100%;
   }
 
   .shop-cat-left-side {
     height: fit-content;
     gap: 0px;
-  }
-
-  .shop-cat-img {
-    display: none;
   }
 
   .contacts-container {

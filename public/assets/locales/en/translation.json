@@ -15,7 +15,7 @@
   "Navigation": {
     "Home": "Home",
     "Services": "Services",
-    "Shop": "Shop",
+    "Shop": "Order",
     "Contact": "Contact"
   },
 
@@ -52,7 +52,7 @@
   },
 
   "Shop": {
-    "Title": "Shop",
+    "Title": "Order",
     "BusinessCardss": "Cartões de visita",
     "T-Shirts": "T-Shirts",
     "Flyers": "Flyers",
@@ -66,11 +66,11 @@
 
   "OrderCompleted": {
     "ThankYou": "Obrigado pela preferência, a sua encomenda irá ser processada.",
-    "Info": "Foi enviado um e-mail (remetente: FormSubmit, submissions@formsubmit.co) com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária.\nNa ausência deste e-mail, verifique por favor a pasta spam/lixo ou contacte activcopy@netcabo.pt"
+    "Info": "Foi enviado um e-mail (remetente: FormSubmit, submissions@formsubmit.co) com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária.\nNa ausência deste e-mail, verifique por favor a pasta spam/lixo ou contacte seractivcopy@hotmail.com"
   },
 
   "ButtonBudget": "Ask for a budget",
-  "ButtonShop": "Shop",
+  "ButtonShop": "Order",
 
   "DigitalPrinting": {
     "FirstDPTitle": "Small Formats",
