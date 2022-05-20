@@ -66,7 +66,9 @@
 
   "OrderCompleted": {
     "ThankYou": "Obrigado pela preferência, a sua encomenda irá ser processada.",
-    "Info": "Foi enviado um e-mail (remetente: FormSubmit, submissions@formsubmit.co) com todas as informações relativas à compra, assim como todos os dados necessários para efetuar o pagamento.\nO pagamento deverá ser efetuado num prazo de 48h via transferência bancária.\nNa ausência deste e-mail, verifique por favor a pasta spam/lixo ou contacte seractivcopy@hotmail.com"
+    "Info": "Foi enviado um e-mail (remetente: FormSubmit, submissions@formsubmit.co) com todas as informações relativas à compra.",
+    "Info2": "O pagamento deverá ser efetuado num prazo de 48h via transferência bancária com os dados:",
+    "Info3": "\nNa ausência deste e-mail, verifique por favor a pasta spam/lixo ou contacte seractivcopy@hotmail.com"
   },
 
   "ButtonBudget": "Ask for a budget",

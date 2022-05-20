@@ -24,8 +24,9 @@ export default function OrderCompleted() {
         <div className='order-completed-view'>
             <motion.div {...motionProps}>
                 <h2>{t('OrderCompleted.ThankYou')}</h2>
-                <p>{t('OrderCompleted.Info')}</p>
+                <p>{t('OrderCompleted.Info')}{t('OrderCompleted.Info3')}</p>
                 <div>
+                    <p style={{ fontWeight: 'bold' }}>{t('OrderCompleted.Info2')}</p>
                     <p><span style={{ fontWeight: 'bold' }}>Valor:</span> {Order.Total}</p>
                     <p><span style={{ fontWeight: 'bold' }}>NIB:</span> PT50 0033 0000 4534 1788 5440 5</p>
                 </div>
