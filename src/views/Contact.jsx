@@ -6,12 +6,6 @@ export default function Contact() {
 
     const { t } = useTranslation()
 
-    const GMaps = () => {
-        return (
-            <iframe title='gmaps' loading='lazy' frameBorder='0' scrolling='no' marginHeight='0' marginWidth='0' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.8706336730497!2d-8.650415584282392!3d40.63273485039732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23a2a7cfadcd45%3A0xefd5c61c56e936b0!2sActivcopy!5e0!3m2!1spt-PT!2spt!4v1639739940482!5m2!1spt-PT!2spt'></iframe>
-        )
-    }
-
     const motionProps = {
         transition: { duration: 0.4 },
         initial: { opacity: 0 },
@@ -36,16 +30,18 @@ export default function Contact() {
                         <p><span>{t('Schedule.Saturday')}</span> 9H00 - 19H00</p>
                         <p><span>{t('Schedule.Sunday')}</span> {t('Schedule.Closed')}</p>
                     </div>
-                    <div>
-                        <h1>{t('Address.Title')}</h1>
-                        <p>Rua Dr. Mário Sacramento</p>
-                        <p>Nº49, 3810-106 Aveiro</p>
-                    </div>
+                    <a href='https://goo.gl/maps/fHBZvZBNSNqaLuic8' target='_blank' rel='noopener noreferrer'>
+                        <div>
+                            <h1>{t('Address.Title')}</h1>
+                            <p>Rua Dr. Mário Sacramento</p>
+                            <p>Nº49, 3810-106 Aveiro</p>
+                        </div>
+                    </a>
                 </div>
 
-                <div className='maps'>
-                    <GMaps />
-                </div>
+                <a href='https://goo.gl/maps/fHBZvZBNSNqaLuic8' target='_blank' rel='noopener noreferrer'>
+                    <div className='maps' />
+                </a>
 
                 <form method='POST' action='https://formsubmit.co/seractivcopy@hotmail.com' encType='multipart/form-data' className='contact-form-container'>
                     <input type='hidden' name='_subject' value='Nova mensagem em ACTIVCOPY.PT'></input>
