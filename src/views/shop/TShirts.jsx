@@ -60,10 +60,10 @@ export default function TShirtSize() {
 
         cTotal *= parseInt(quantity)
 
-        if (order.PromoCode === 'activ10')
-            cTotal = cTotal * 0.9
+        if (order.PromoCode === 'activ15' && order.TShirt === 'T-Shirt Criança')
+            cTotal = cTotal * 0.85
 
-        return roundUp(cTotal, 2) + 7
+        return roundUp(cTotal, 1) + 7
     }
 
     const TShirtSize = () => {
@@ -308,11 +308,15 @@ export default function TShirtSize() {
                                 <div className='shop-promo-code'>
                                     <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
-                                        if (order.PromoCode === 'activ10') {
+                                        if (order.PromoCode === 'activ15' && order.TShirt === 'T-Shirt Criança') {
                                             setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                             alert('Cupão aplicado com sucesso!')
                                         } else {
-                                            alert('Erro, cupão inválido.')
+                                            if (order.PromoCode === 'activ15' && order.TShirt !== 'T-Shirt Criança') {
+                                                alert('Este cupão é válido apenas para T-Shirts de criança.')
+                                            } else {
+                                                alert('Erro, cupão inválido.')
+                                            }
                                         }
                                     }}>Aplicar</div>
                                 </div>
@@ -334,9 +338,9 @@ export default function TShirtSize() {
 
                                 {
                                     ok ?
-                                        <button type='submit' onClick={setOrderCompleted} className='shop-button'>Encomendar</button>
+                                        <button type='submit' onClick={setOrderCompleted} className='shop-button'>Comprar Online</button>
                                         :
-                                        <div className='shop-button' style={{ textAlign: 'center' }} onClick={() => alert(t('Shop.Error'))}>Encomendar</div>
+                                        <div className='shop-button' style={{ textAlign: 'center' }} onClick={() => alert(t('Shop.Error'))}>Comprar Online</div>
                                 }
 
                                 <input type='hidden' name='_next' value={`${window.location.origin}/shop/order-completed`} />

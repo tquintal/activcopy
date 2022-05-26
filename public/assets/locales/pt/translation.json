@@ -15,7 +15,7 @@
   "Navigation": {
     "Home": "Início",
     "Services": "Serviços",
-    "Shop": "Encomendar",
+    "Shop": "Comprar Online",
     "Contact": "Contactos"
   },
 
@@ -59,7 +59,7 @@
   "Shop": {
     "LastOrder": "Última encomenda",
     "Error": "Erro, por favor preencha todos os campos obrigatórios",
-    "Title": "Encomendar",
+    "Title": "Comprar Online",
     "BusinessCardss": "Cartões de visita",
     "T-Shirts": "T-Shirts",
     "Flyers": "Flyers",
@@ -79,7 +79,7 @@
   },
 
   "ButtonBudget": "Pedir orçamento",
-  "ButtonShop": "Encomendar",
+  "ButtonShop": "Comprar Online",
 
   "DigitalPrinting": {
     "FirstDPTitle": "Pequenos Formatos",

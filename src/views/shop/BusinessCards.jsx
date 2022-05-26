@@ -205,9 +205,9 @@ export default function BusinessCardss() {
 
                                 {
                                     ok ?
-                                        <button type='submit' onClick={setOrderCompleted} className='shop-button'>Encomendar</button>
+                                        <button type='submit' onClick={setOrderCompleted} className='shop-button'>Comprar Online</button>
                                         :
-                                        <div className='shop-button' style={{ textAlign: 'center' }} onClick={() => alert(t('Shop.Error'))}>Encomendar</div>
+                                        <div className='shop-button' style={{ textAlign: 'center' }} onClick={() => alert(t('Shop.Error'))}>Comprar Online</div>
                                 }
 
                                 <input type='hidden' name='_next' value={`${window.location.origin}/shop/order-completed`} />
