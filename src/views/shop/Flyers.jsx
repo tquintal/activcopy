@@ -123,7 +123,7 @@ export default function Flyers() {
             cTotal = cTotal * 0.9
         }
 
-        return roundUp(cTotal, 2) + 7
+        return roundUp(cTotal, 1) + 4
     }
 
     const setOrderCompleted = () => {

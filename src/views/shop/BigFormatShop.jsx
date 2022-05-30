@@ -12,7 +12,7 @@ export default function BigFormatShop() {
     const [order, setOrder] = useState({
         Width: '',
         Height: '',
-        Material: 'Vinil branco mate',
+        Material: 'Vinil branco mate green',
         Printing: 'Frente',
         PrintingColor: 'Cores',
         Amount: '1',
@@ -35,7 +35,7 @@ export default function BigFormatShop() {
 
     const calculate = (h, w, material, qt) => {
         if (material === 'Rollup branco mate 420g') {
-            cTotal = 120 * qt
+            cTotal = 100 * qt
         } else {
             if (h !== '' && w !== '') {
                 h = parseFloat(h) / 100
@@ -43,26 +43,29 @@ export default function BigFormatShop() {
             }
 
             switch (material) {
-                case 'Vinil branco mate':
+                case 'Vinil branco mate green':
+                    cTotal = (h * w) * 33
+                    break
+                case 'Vinil transparente green':
+                    cTotal = (h * w) * 33
+                    break
+                case 'Vinil monométrico green':
                     cTotal = (h * w) * 40
                     break
-                case 'Vinil transparente':
-                    cTotal = (h * w) * 40
+                case 'Lona coated blackback 450g green':
+                    cTotal = (h * w) * 28
                     break
-                case 'Vinil monomérico':
-                    cTotal = (h * w) * 50
-                    break
-                case 'Lona coated 440g branco mate':
-                    cTotal = (h * w) * 35
-                    break
-                case 'Tela / canvas':
+                case 'Tela / canvas green':
                     cTotal = (h * w) * 45
                     break
-                case 'Papel de parede wallcover':
+                case 'Papel de parede wallcover PVC free':
                     cTotal = (h * w) * 40
                     break
-                case 'Papel de parede spray e up (cola adesiva no verso)':
-                    cTotal = (h * w) * 50
+                case 'Papel de parede spray e up (cola adesiva no verso) PVC free':
+                    cTotal = (h * w) * 45
+                    break
+                case 'Papel 200g green':
+                    cTotal = (h * w) * 15
                     break
                 default:
                     cTotal = 120
@@ -74,7 +77,7 @@ export default function BigFormatShop() {
         if (order.PromoCode === 'activ10')
             cTotal = cTotal * 0.9
 
-        return roundUp(cTotal, 2) + 7
+        return roundUp(cTotal, 1) + 7
     }
 
     const setOrderCompleted = () => {
@@ -148,14 +151,15 @@ export default function BigFormatShop() {
                                         setTotal(0)
                                     }
                                 }} required>
-                                    <option value='Vinil branco mate'>Vinil branco mate</option>
-                                    <option value='Vinil transparente'>Vinil transparente</option>
-                                    <option value='Vinil monomérico'>Vinil monomérico</option>
-                                    <option value='Lona coated 440g branco mate'>Lona coated 440g branco mate</option>
-                                    <option value='Tela / canvas'>Tela / canvas</option>
+                                    <option value='Vinil branco mate green'>Vinil branco mate green</option>
+                                    <option value='Vinil transparente green'>Vinil transparente green</option>
+                                    <option value='Vinil monométrico green'>Vinil monométrico green</option>
+                                    <option value='Lona coated blackback 450g green'>Lona coated blackback 450g green</option>
+                                    <option value='Tela / canvas green'>Tela / canvas green</option>
                                     <option value='Rollup branco mate 420g'>Rollup branco mate 420g</option>
-                                    <option value='Papel de parede wallcover'>Papel de parede wallcover</option>
-                                    <option value='Papel de parede spray e up (cola adesiva no verso)'>Papel de parede spray e up (cola adesiva no verso)</option>
+                                    <option value='Papel de parede wallcover PVC free'>Papel de parede wallcover PVC free</option>
+                                    <option value='Papel de parede spray e up (cola adesiva no verso) PVC free'>Papel de parede spray e up (cola adesiva no verso) PVC free</option>
+                                    <option value='Papel 200g green'>Papel 200g green</option>
                                 </select>
 
                                 <p>Impressão</p>
@@ -190,7 +194,7 @@ export default function BigFormatShop() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={true} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
                                         if (order.PromoCode === 'activ10') {
                                             setTotal(calculate(order.Height, order.Width, order.Material, order.Amount))

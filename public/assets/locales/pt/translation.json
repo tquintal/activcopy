@@ -5,7 +5,7 @@
   "ThankYou": "Obrigado! :)",
   "ThankYouBtn": "Voltar",
 
-  "CookieConsentText": "Ao continuar a navegar neste website, aceita a nossa política de utilização de cookies.",
+  "CookieConsentText": "Ao continuar a navegar neste website, aceita a nossa política de privacidade, termos e condições de venda, e política de utilização de cookies.",
   "CookieConsentLearnMore": "Saber mais",
   "CookieConsentLearnMorePage": "Cookies de sistema:\nSão estritamente necessários à utilização do website. Permitem funcionalidades mínimas como a utilização de traduções e apresentação do conteúdo.\n",
   "CookieBtn2": "Aceitar",
@@ -213,6 +213,8 @@
   },
 
   "Footer": {
-    "Rights": "Todos os direitos reservados"
+    "Rights": "Todos os direitos reservados",
+    "Info": "Política de privacidade",
+    "Info2": "Termos e condições de venda"
   }
 }

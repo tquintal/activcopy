@@ -469,11 +469,8 @@ Red Orange: #FF4500
 @media only screen and (min-width: 1100px) {
   .shop-cat-form-container {
     margin-top: 95px;
+    width: 325px;
   }
-}
-
-.shop-cat-form-container {
-  width: 100%;
 }
 
 .shop-attachment-img {
@@ -694,6 +691,12 @@ textarea {
   box-shadow: 0 1px #eaeff2 inset;
 }
 
+.footer-rights-container {
+  display: flex;
+  grid-gap: 40px;
+  gap: 40px;
+}
+
 .footer-rights {
   text-decoration: none;
   color: #ff4500;
@@ -794,7 +797,7 @@ textarea {
 
 @media only screen and (max-width: 1100px) {
   .cookie-container {
-    height: 135px;
+    height: 150px;
     flex-direction: column;
     padding: 0px;
     gap: 5px;
@@ -863,6 +866,10 @@ textarea {
     gap: 0px;
   }
 
+  .shop-cat-form-container {
+    width: 100%;
+  }
+
   .shop-cat-img img {
     width: 100%;
   }
@@ -881,13 +888,21 @@ textarea {
   }
 
   .footer {
-    height: 100px;
+    height: 150px;
   }
 
   .footer-container {
     flex-direction: column-reverse;
     justify-content: center;
     width: 100vh;
+  }
+
+  .footer-rights-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    grid-gap: 8px;
   }
 
   .social-container {

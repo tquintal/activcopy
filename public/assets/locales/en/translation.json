@@ -5,7 +5,7 @@
   "ThankYou": "Thank you! :)",
   "ThankYouBtn": "Back",
 
-  "CookieConsentText": "By continuing to browse this site, you accept our use of cookies.",
+  "CookieConsentText": "By continuing to browse this site, you accept our use of cookies, online selling terms and conditions, and privacy policy.",
   "CookieConsentLearnMore": "Learn more",
   "CookieConsentLearnMorePage": "System cookies:\nThey are strictly necessary for the use of the website. They allow minimal functionality such as the use of translations and content presentation.\n",
   "CookieBtn2": "Accept",
@@ -15,7 +15,7 @@
   "Navigation": {
     "Home": "Home",
     "Services": "Services",
-    "Shop": "Order",
+    "Shop": "Shop",
     "Contact": "Contact"
   },
 
@@ -52,7 +52,7 @@
   },
 
   "Shop": {
-    "Title": "Order",
+    "Title": "Shop",
     "BusinessCardss": "Cartões de visita",
     "T-Shirts": "T-Shirts",
     "Flyers": "Flyers",
@@ -72,7 +72,7 @@
   },
 
   "ButtonBudget": "Ask for a budget",
-  "ButtonShop": "Order",
+  "ButtonShop": "Shop",
 
   "DigitalPrinting": {
     "FirstDPTitle": "Small Formats",
@@ -206,6 +206,8 @@
   },
 
   "Footer": {
-    "Rights": "All rights reserved"
+    "Rights": "All rights reserved",
+    "Info": "Privacy Policy",
+    "Info2": "Online selling terms and conditions"
   }
 }

@@ -23,12 +23,12 @@ export default function BusinessCardss() {
         PromoCode: '',
         File: false,
         Note: '',
-        Total: '15.5€'
+        Total: '19.5€'
     })
 
     const [ok, setOk] = useState(false)
 
-    const [total, setTotal] = useState(15.5)
+    const [total, setTotal] = useState(19.5)
 
     let cTotal = 0
 
@@ -73,7 +73,7 @@ export default function BusinessCardss() {
         if (order.PromoCode === 'activ10')
             cTotal = cTotal * 0.9
 
-        return roundUp(cTotal, 2)
+        return roundUp(cTotal, 1) + 4
     }
 
     const setOrderCompleted = () => {
@@ -176,7 +176,7 @@ export default function BusinessCardss() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={true} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
                                         if (order.PromoCode === 'activ10') {
                                             setTotal(calculate(order.Material, order.Printing, order.Amount))

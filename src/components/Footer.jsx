@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import ReactTooltip from 'react-tooltip'
 import { AiFillFacebook, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
@@ -12,7 +13,11 @@ export default function Footer() {
     return (
         <div className='footer'>
             <div className='footer-container'>
-                <a className='footer-rights' href='https://github.com/tquintal/' target='_blank' rel='noopener noreferrer'>ACTIVCOPY © {date} - {t('Footer.Rights')}</a>
+                <div className='footer-rights-container'>
+                    <a className='footer-rights' href='https://github.com/tquintal/' target='_blank' rel='noopener noreferrer'>ACTIVCOPY © {date} - {t('Footer.Rights')}</a>
+                    <Link to='/policies' className='footer-rights'>{t('Footer.Info2')}</Link>
+                    <Link to='/policies' className='footer-rights'>{t('Footer.Info')}</Link>
+                </div>
                 <div className='social-container'>
                     <ReactTooltip />
                     <a href='https://www.facebook.com/activcopy/' target='_blank' rel='noopener noreferrer' data-tip='Facebook'>

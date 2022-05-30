@@ -10,7 +10,7 @@ export default function TShirtSize() {
     const { t } = useTranslation()
 
     const [order, setOrder] = useState({
-        TShirt: 'T-Shirt Adulto',
+        TShirt: 'T-Shirt Adulto 100% algodão',
         Size: 'M',
         Color: 'Branco',
         Printing: {
@@ -41,7 +41,7 @@ export default function TShirtSize() {
     const calculate = (material, color, printing, quantity) => {
         cTotal = 4
 
-        if (material === 'T-Shirt Orgânica')
+        if (material === 'T-Shirt Orgânica 100% algodão')
             cTotal += 1
 
         console.log('COLOR:', color)
@@ -60,14 +60,14 @@ export default function TShirtSize() {
 
         cTotal *= parseInt(quantity)
 
-        if (order.PromoCode === 'activ15' && order.TShirt === 'T-Shirt Criança')
+        if (order.PromoCode === 'activ15' && order.TShirt === 'T-Shirt Criança 100% algodão')
             cTotal = cTotal * 0.85
 
-        return roundUp(cTotal, 1) + 7
+        return roundUp(cTotal, 1) + 4
     }
 
     const TShirtSize = () => {
-        if (order.TShirt === 'T-Shirt Adulto') {
+        if (order.TShirt === 'T-Shirt Adulto 100% algodão') {
             return (
                 <select type='select' name='Tamanho' onChange={(e) => { setOrder({ ...order, Size: e.target.value }) }} defaultValue={order.Size} required>
                     <option value='XS'>XS</option>
@@ -80,7 +80,7 @@ export default function TShirtSize() {
                     <option value='4XL'>4XL</option>
                 </select>
             )
-        } else if (order.TShirt === 'T-Shirt Criança') {
+        } else if (order.TShirt === 'T-Shirt Criança 100% algodão') {
             return (
                 <select type='select' name='Tamanho' onChange={(e) => { setOrder({ ...order, Size: e.target.value }) }} defaultValue={order.Size} required>
                     <option value='1-2'>1-2</option>
@@ -104,7 +104,7 @@ export default function TShirtSize() {
     }
 
     const TShirtColor = () => {
-        if (order.TShirt === 'T-Shirt Adulto') {
+        if (order.TShirt === 'T-Shirt Adulto 100% algodão') {
             return (
                 <div className='shop-promo-code'>
                     <select type='select' name='Cor' style={{ width: '100%' }} onChange={(e) => {
@@ -141,7 +141,7 @@ export default function TShirtSize() {
                     </select>
                 </div>
             )
-        } else if (order.TShirt === 'T-Shirt Criança') {
+        } else if (order.TShirt === 'T-Shirt Criança 100% algodão') {
             return (
                 <div className='shop-promo-code'>
                     <select type='select' name='Cor' style={{ width: '100%' }} onChange={(e) => {
@@ -230,12 +230,12 @@ export default function TShirtSize() {
 
                                 <p>T-Shirt</p>
                                 <select type='select' name='TShirt' onChange={(e) => {
-                                    setOrder({ ...order, TShirt: e.target.value, Size: e.target.value === 'T-Shirt Adulto' ? 'M' : e.target.value === 'T-Shirt Criança' ? '1-2' : 'M' })
+                                    setOrder({ ...order, TShirt: e.target.value, Size: e.target.value === 'T-Shirt Adulto 100% algodão' ? 'M' : e.target.value === 'T-Shirt Criança 100% algodão' ? '1-2' : 'M' })
                                     setTotal(calculate(e.target.value, order.Color, order.Printing, order.Amount))
                                 }} required>
-                                    <option value='T-Shirt Adulto'>T-Shirt Adulto</option>
-                                    <option value='T-Shirt Criança'>T-Shirt Criança</option>
-                                    <option value='T-Shirt Orgânica'>T-Shirt Orgânica</option>
+                                    <option value='T-Shirt Adulto 100% algodão'>T-Shirt Adulto 100% algodão</option>
+                                    <option value='T-Shirt Criança 100% algodão'>T-Shirt Criança 100% algodão</option>
+                                    <option value='T-Shirt Orgânica 100% algodão'>T-Shirt Orgânica 100% algodão</option>
                                 </select>
                                 <p>Tamanho</p>
                                 <TShirtSize />
@@ -308,11 +308,11 @@ export default function TShirtSize() {
                                 <div className='shop-promo-code'>
                                     <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
-                                        if (order.PromoCode === 'activ15' && order.TShirt === 'T-Shirt Criança') {
+                                        if (order.PromoCode === 'activ15' && order.TShirt === 'T-Shirt Criança 100% algodão') {
                                             setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                             alert('Cupão aplicado com sucesso!')
                                         } else {
-                                            if (order.PromoCode === 'activ15' && order.TShirt !== 'T-Shirt Criança') {
+                                            if (order.PromoCode === 'activ15' && order.TShirt !== 'T-Shirt Criança 100% algodão') {
                                                 alert('Este cupão é válido apenas para T-Shirts de criança.')
                                             } else {
                                                 alert('Erro, cupão inválido.')

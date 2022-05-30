@@ -50,7 +50,7 @@ export default function Mugs() {
         if (order.PromoCode === 'activ10')
             cTotal = cTotal * 0.9
 
-        return roundUp(cTotal, 2) + 7
+        return roundUp(cTotal, 1) + 4
     }
 
 
@@ -136,7 +136,7 @@ export default function Mugs() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={true} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
                                         if (order.PromoCode === 'activ10') {
                                             setTotal(calculate(order.Material, order.Amount))
