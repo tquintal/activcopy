@@ -33,7 +33,7 @@ export default function Shop() {
                     <NavLink onClick={() => backToTop()} to='/shop/business-cards'>
                         <div className='service-card-container shop-card'>
                             <div className='service-card' style={{
-                                backgroundImage: 'linear-gradient(45deg, rgb(24 24 24 / 90%), rgb(0 0 0 / 50%)), url(' + BCards + ')'
+                                backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + BCards + ')'
                             }}>
                                 <h3>{t('Shop.BusinessCardss')}</h3>
                             </div>
@@ -42,7 +42,7 @@ export default function Shop() {
                     <NavLink onClick={() => backToTop()} to='/shop/t-shirts'>
                         <div className='service-card-container shop-card'>
                             <div className='service-card' style={{
-                                backgroundImage: 'linear-gradient(45deg, rgb(24 24 24 / 90%), rgb(0 0 0 / 50%)), url(' + TShirts + ')'
+                                backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + TShirts + ')'
                             }}>
                                 <h3>{t('Shop.T-Shirts')}</h3>
                             </div>
@@ -51,7 +51,7 @@ export default function Shop() {
                     <NavLink onClick={() => backToTop()} to='/shop/flyers'>
                         <div className='service-card-container shop-card'>
                             <div className='service-card' style={{
-                                backgroundImage: 'linear-gradient(45deg, rgb(24 24 24 / 90%), rgb(0 0 0 / 50%)), url(' + Flyers + ')'
+                                backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + Flyers + ')'
                             }}>
                                 <h3>{t('Shop.Flyers')}</h3>
                             </div>
@@ -61,7 +61,7 @@ export default function Shop() {
                         <NavLink onClick={() => backToTop()} to='/shop/big-format'>
                             <div className='service-card-container shop-card'>
                                 <div className='service-card' style={{
-                                    backgroundImage: 'linear-gradient(45deg, rgb(24 24 24 / 90%), rgb(0 0 0 / 50%)), url(' + BFormat + ')'
+                                    backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + BFormat + ')'
                                 }}>
                                     <h3>{t('Shop.BigFormat')}</h3>
                                 </div>
@@ -70,7 +70,7 @@ export default function Shop() {
                         <NavLink onClick={() => backToTop()} to='/shop/mugs'>
                             <div className='service-card-container shop-card'>
                                 <div className='service-card' style={{
-                                    backgroundImage: 'linear-gradient(45deg, rgb(24 24 24 / 90%), rgb(0 0 0 / 50%)), url(' + Mugs + ')'
+                                    backgroundImage: 'linear-gradient(45deg, #181818a8, #0000005c), url(' + Mugs + ')'
                                 }}>
                                     <h3>{t('Shop.Mugs')}</h3>
                                 </div>
