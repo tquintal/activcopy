@@ -172,10 +172,12 @@
     "FirstBBDesc": "Argolas: 8mm a 50mm\nTamanho: A6, A5, A4, A3",
     "FirstBBTShirtColorTitle": "Cores de Capa Polipropileno:",
 
-    "SecondBBTitle": "Encadernações Térmicas",
+    "SecondBBTitle": "Enc. Térmicas",
+    "SecondBBTitleFull": "Encadernações Térmicas",
     "SecondBBDesc": "Tamanho: A4\nCor: Branco\nEspessura da Encadernação: 1.5mm, 3mm, 6mm, 9mm, 12mm, 30mm",
 
-    "ThirdBBTitle": "Encadernações Cola Quente",
+    "ThirdBBTitle": "Enc. Cola Quente",
+    "ThirdBBTitleFull": "Encadernações Cola Quente",
     "ThirdBBDesc": "Tamanho: Até A3\nCapa: Com ou Sem Impressão / Frente ou Frente e Verso\nLombada: Com ou Sem Impressão\nTipo de Papel: CLA 315g, Couché 350g\nAcabamento: Laminação"
   },
 

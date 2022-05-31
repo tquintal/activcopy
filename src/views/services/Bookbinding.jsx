@@ -19,10 +19,10 @@ const properties = {
     infinite: false,
     indicators: false,
     autoplay: false,
-    canSwipe: true,
+    canSwipe: false,
+    slidesToScroll: 0,
     arrows: false,
-    slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToShow: 3
 }
 
 export default function Bookbinding() {
@@ -34,29 +34,34 @@ export default function Bookbinding() {
             'id': 1,
             'img': image1,
             'title': t('Bookbinding.FirstBBTitle'),
+            'fullTitle': t('Bookbinding.FirstBBTitle'),
             'description': t('Bookbinding.FirstBBDesc')
         },
         {
             'id': 2,
             'img': image2,
             'title': t('Bookbinding.SecondBBTitle'),
+            'fullTitle': t('Bookbinding.SecondBBTitleFull'),
             'description': t('Bookbinding.SecondBBDesc')
         },
         {
             'id': 3,
             'img': image3,
             'title': t('Bookbinding.ThirdBBTitle'),
+            'fullTitle': t('Bookbinding.ThirdBBTitleFull'),
             'description': t('Bookbinding.ThirdBBDesc')
         }
     ]
 
     const [id, setID] = useState(images[0].id)
     const [title, setTitle] = useState(images[0].title)
+    const [fullTitle, setFullTitle] = useState(images[0].fullTitle)
     const [description, setdescription] = useState(images[0].description)
 
     const ClickedService = (value) => {
         setID(value.id)
         setTitle(value.title)
+        setFullTitle(value.fullTitle)
         setdescription(value.description)
     }
 
@@ -82,7 +87,7 @@ export default function Bookbinding() {
                         )}
                     </Slide>
                     <div className='service-desc-container'>
-                        <h1 className='service-title'>{title}</h1>
+                        <h1 className='service-title'>{fullTitle}</h1>
                         <p className='service-description'>{description}</p>
                         {id === 1 ? (
                             <div className='bbfirstservice'>
