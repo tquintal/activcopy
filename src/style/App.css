@@ -12,6 +12,10 @@ Red Orange: #FF4500
   white-space: pre-line;
 }
 
+ul {
+  margin-left: 8%;
+}
+
 .cookie-container {
   position: fixed;
   bottom: 0;
@@ -693,8 +697,8 @@ textarea {
 
 .footer-rights-container {
   display: flex;
-  grid-gap: 40px;
-  gap: 40px;
+  grid-gap: 20px;
+  gap: 20px;
 }
 
 .footer-rights {
@@ -888,13 +892,15 @@ textarea {
   }
 
   .footer {
-    height: 150px;
+    height: 200px;
   }
 
   .footer-container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     width: 100vh;
+    gap: 8px;
+    grid-gap: 8px;
   }
 
   .footer-rights-container {

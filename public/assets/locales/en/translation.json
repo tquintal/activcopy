@@ -7,7 +7,6 @@
 
   "CookieConsentText": "By continuing to browse this site, you accept our use of cookies, online selling terms and conditions, and privacy policy.",
   "CookieConsentLearnMore": "Learn more",
-  "CookieConsentLearnMorePage": "System cookies:\nThey are strictly necessary for the use of the website. They allow minimal functionality such as the use of translations and content presentation.\n",
   "CookieBtn2": "Accept",
 
   "SelectLangTitle": "Language",
@@ -208,6 +207,7 @@
   "Footer": {
     "Rights": "All rights reserved",
     "Info": "Privacy Policy",
-    "Info2": "Online selling terms and conditions"
+    "Info2": "Online selling terms and conditions",
+    "Info3": "Cookie Policy"
   }
 }

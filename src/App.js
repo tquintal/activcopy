@@ -7,7 +7,8 @@ import { Header } from './components/Header'
 import Footer from './components/Footer'
 import Main from './views/Main'
 import CookieConsentLM from './views/CookieConsentLM'
-import Policies from './views/Policies'
+import PrivacyPolicies from './views/PrivacyPolicies'
+import TermsAndConditions from './views/TermsAndConditions'
 import Services from './views/Services'
 import { DigitalPrinting } from './views/services/DigitalPrinting'
 import { BigFormat } from './views/services/BigFormat'
@@ -79,7 +80,8 @@ export default function App() {
               <Route path='/contact' element={<Contact />} />
               <Route path='/thank-you' element={<ThankYou />} />
               <Route path='/cookie-consent' element={<CookieConsentLM />} />
-              <Route path='/policies' element={<Policies />} />
+              <Route path='/privacy-policies' element={<PrivacyPolicies />} />
+              <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
               <Route path='*' element={<Error />} />
             </Routes>
           </AnimatePresence>
