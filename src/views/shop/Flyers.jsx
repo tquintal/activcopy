@@ -24,7 +24,7 @@ export default function Flyers() {
         PromoCode: '',
         File: false,
         Note: '',
-        Total: '27€'
+        Total: '24€'
     })
 
     const LogOrder = () => {
@@ -33,9 +33,9 @@ export default function Flyers() {
 
     const [ok, setOk] = useState(false)
 
-    const [total, setTotal] = useState(27)
+    const [total, setTotal] = useState(24)
 
-    let cTotal = 27
+    let cTotal = 24
 
     const calculate = (format, material, printing, quantity, finish) => {
         if (format === 'A6') {
@@ -108,7 +108,7 @@ export default function Flyers() {
                     cTotal = cTotal * 11.435
                 break
             default:
-                cTotal = cTotal + 0
+                break
         }
 
         if (finish === 'Dobra em U' || finish === 'Dobra em Z') {

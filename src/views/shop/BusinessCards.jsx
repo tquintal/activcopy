@@ -23,17 +23,17 @@ export default function BusinessCardss() {
         PromoCode: '',
         File: false,
         Note: '',
-        Total: '19.5€'
+        Total: '12.5€'
     })
 
     const [ok, setOk] = useState(false)
 
-    const [total, setTotal] = useState(19.5)
+    const [total, setTotal] = useState(12.5)
 
     let cTotal = 0
 
     const calculate = (material, printing, quantity) => {
-        cTotal = 15.5
+        cTotal = 8.5
 
         if (material === 'Cartolina ouro' || material === 'Cartolina prata')
             cTotal += 1.5
@@ -67,7 +67,7 @@ export default function BusinessCardss() {
                 cTotal = cTotal + cTotal * 8.2
                 break
             default:
-                cTotal = cTotal + 0
+                break
         }
 
         if (order.PromoCode === 'activ10')
