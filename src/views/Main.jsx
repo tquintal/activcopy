@@ -71,6 +71,9 @@ export default function Main() {
                     </div>
                 </div>
             </div>
+            <div className='eco-home-image-container'>
+                <div className='eco-home-image' />
+            </div>
         </motion.div>
     )
 }

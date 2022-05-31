@@ -263,6 +263,28 @@ ul {
   min-height: 93.3vh;
 }
 
+.eco-home-image-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.eco-home-image {
+  display: flex;
+  height: 80px;
+  width: 1000px;
+  background-image: url(/static/media/eco.e437d29a.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1100px) {
+  .eco-home-image-container {
+    padding: 10%;
+    padding-top: 0%;
+  }
+}
+
 .description,
 .contact,
 .services,
