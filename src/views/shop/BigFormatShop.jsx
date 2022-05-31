@@ -85,7 +85,7 @@ export default function BigFormatShop() {
             order.Width = 'Rollup'
             order.Height = 'Rollup'
         }
-        if (order.Width === '' || order.Height === '' || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || ok !== true) {
+        if (order.Width === '' || order.Height === '' || order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || ok !== true || order.Width < 1 || order.Width > 160 || order.Height < 50) {
             localStorage.removeItem(['Order'])
             alert(t('Shop.Error'))
         } else {
@@ -124,11 +124,11 @@ export default function BigFormatShop() {
                                 {
                                     order.Material !== 'Rollup branco mate 420g' ?
                                         <div className='shop-form'>
-                                            <input type='number' name='Altura' placeholder='Altura (min 50cm)' min={50} onChange={(e) => {
+                                            <input type='number' step={'0.01'} name='Altura' placeholder='Altura (min 50cm)' min={50} onChange={(e) => {
                                                 setOrder({ ...order, Height: e.target.value })
                                                 if (order.Width !== '') setTotal(calculate(order.Width, e.target.value, order.Material, order.Amount))
                                             }} required></input>
-                                            <input type='number' name='Largura' placeholder='Largura (max 160cm)' min={1} max={160} onChange={(e) => {
+                                            <input type='number' step={'0.01'} name='Largura' placeholder='Largura (max 160cm)' min={1} max={160} onChange={(e) => {
                                                 setOrder({ ...order, Width: e.target.value })
                                                 if (order.Height !== '') setTotal(calculate(order.Height, e.target.value, order.Material, order.Amount))
                                             }} required></input>

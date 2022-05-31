@@ -29,12 +29,12 @@ export default function TShirtSize() {
         PromoCode: '',
         File: false,
         Note: '',
-        Total: 14.5
+        Total: 11.5
     })
 
     const [ok, setOk] = useState(false)
 
-    const [total, setTotal] = useState(14.5)
+    const [total, setTotal] = useState(11.5)
 
     let cTotal = 0
 
@@ -136,6 +136,7 @@ export default function TShirtSize() {
                         <option value='Diva Blue'>Diva Blue</option>
                         <option value='Azul Turquesa'>Azul Turquesa</option>
                         <option value='Atol'>Atol</option>
+                        <option value='Azul Céu'>Azul Céu</option>
                         <option value='Roxo'>Roxo</option>
                         <option value='Rosa'>Rosa</option>
                     </select>
@@ -286,8 +287,8 @@ export default function TShirtSize() {
 
                                 <p>Quantidade</p>
                                 <input type='number' name='Quantidade' placeholder='Quantidade *' min={1} defaultValue='1' onChange={(e) => {
-                                    setOrder({ ...order, Amount: e.target.value })
-                                    setTotal(calculate(order.TShirt, order.Color, order.Printing, e.target.value))
+                                    setOrder({ ...order, Amount: e.target.value === '' ? 1 : e.target.value })
+                                    setTotal(calculate(order.TShirt, order.Color, order.Printing, e.target.value === '' ? 1 : e.target.value))
                                 }} required></input>
 
                                 <p>Informação</p>

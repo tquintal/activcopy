@@ -22,12 +22,12 @@ export default function Mugs() {
         PromoCode: '',
         File: false,
         Note: '',
-        Total: '16€'
+        Total: '13€'
     })
 
     const [ok, setOk] = useState(false)
 
-    const [total, setTotal] = useState(16)
+    const [total, setTotal] = useState(13)
 
     let cTotal = 0
 
