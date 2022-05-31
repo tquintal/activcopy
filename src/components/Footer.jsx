@@ -16,9 +16,9 @@ export default function Footer() {
             <div className='footer-container'>
                 <div className='footer-rights-container'>
                     <a className='footer-rights' href='https://github.com/tquintal/' target='_blank' rel='noopener noreferrer'>ACTIVCOPY © {date} - {t('Footer.Rights')}</a>
-                    <Link to='/terms-and-conditions' className='footer-rights' onClick={scrollTopNoAnimation}>{t('Footer.Info2')}</Link>
-                    <Link to='/privacy-policies' className='footer-rights' onClick={scrollTopNoAnimation}>{t('Footer.Info')}</Link>
-                    <Link to='/cookie-consent' className='footer-rights' onClick={scrollTopNoAnimation}>{t('Footer.Info3')}</Link>
+                    <Link to='/terms-and-conditions' className='footer-rights' onClick={scrollTopNoAnimation()}>{t('Footer.Info2')}</Link>
+                    <Link to='/privacy-policies' className='footer-rights' onClick={scrollTopNoAnimation()}>{t('Footer.Info')}</Link>
+                    <Link to='/cookie-consent' className='footer-rights' onClick={scrollTopNoAnimation()}>{t('Footer.Info3')}</Link>
                 </div>
                 <div className='social-container'>
                     <ReactTooltip />
