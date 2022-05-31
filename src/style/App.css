@@ -273,7 +273,7 @@ ul {
   display: flex;
   height: 80px;
   width: 1000px;
-  background-image: url(/static/media/eco.e437d29a.jpg);
+  background-image: url(../assets/eco.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }
