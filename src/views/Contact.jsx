@@ -56,8 +56,14 @@ export default function Contact() {
                             <input type='text' name='Assunto' placeholder={t('Form.Subject')} required></input>
                         </div>
                     </div>
+                    <label className='contact-form-attachment'>
+                        <div>
+                            Carregar imagem <span className='shop-attachment-img'>(1mb máx)</span> ou link <span className='shop-attachment-img'>(opcional)</span>
+                        </div>
+                        <input type='file' name='Anexo' accept='.zip, .tar, .7z, audio/*, video/*, image/*'></input>
+                        <input type='url' name='Link' placeholder='Link (ex: wetransfer)'></input>
+                    </label>
                     <textarea name='Mensagem' placeholder={t('Form.TextArea')} className='message-textarea' required />
-                    <input type='file' name='Attachment' accept='.zip, .tar, .7z, audio/*, video/*, image/*'></input>
                     <p>{t('Form.Info')}</p>
                     <button type='submit'>{t('Form.Button')}</button>
                     <input type='hidden' name='_next' value='http://activcopy.pt/thank-you' />

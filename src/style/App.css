@@ -715,6 +715,13 @@ textarea {
   }
 }
 
+.contact-form-attachment {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  gap: 10px;
+}
+
 .footer {
   height: 65px;
   background-color: #eaeff2;
