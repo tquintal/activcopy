@@ -9,15 +9,6 @@ export function scrollTop() {
     )
 }
 
-export function scrollTopNoAnimation() {
-    $('html, body').animate(
-        {
-            scrollTopNoAnimation: $('title').offset().top
-        },
-        0
-    )
-}
-
 export const backToTop = () => window.scrollTo(0, 0)
 
 export function roundUp(num, precision) {
