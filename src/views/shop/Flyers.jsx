@@ -27,10 +27,6 @@ export default function Flyers() {
         Total: '24€'
     })
 
-    const LogOrder = () => {
-        console.table(order)
-    }
-
     const [ok, setOk] = useState(false)
 
     const [total, setTotal] = useState(24)
@@ -128,15 +124,11 @@ export default function Flyers() {
 
     const setOrderCompleted = () => {
         if (order.Name === '' || order.EMail === '' || order.Contact === '' || order.Address === '' || ok !== true) {
-            LogOrder()
             alert(t('Shop.Error'))
         } else {
             order.Total = `${total}€`
-            LogOrder()
             localStorage.removeItem(['Order'])
-            console.log(`Local storage cleared`)
             localStorage['Order'] = JSON.stringify(order)
-            console.log(`Order placed`)
         }
     }
 
@@ -157,7 +149,7 @@ export default function Flyers() {
                             <ShopBack />
                             <h1>Flyers</h1>
                             <div className='shop-cat-img'>
-                                <img src={FlyersIMG} alt='b-cards' onClick={LogOrder} />
+                                <img src={FlyersIMG} alt='b-cards' />
                             </div>
                         </div>
                         <div className='shop-cat-form-container'>

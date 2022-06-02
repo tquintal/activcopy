@@ -88,7 +88,6 @@ function Content() {
     const ClickedService = (value) => {
         setTitle(value.title)
         setdescription(value.description)
-        console.log(title)
     }
 
     const motionProps = {

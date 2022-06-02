@@ -44,7 +44,6 @@ export default function TShirtSize() {
         if (material === 'T-Shirt Orgânica 100% algodão')
             cTotal += 1
 
-        console.log('COLOR:', color)
         if (color !== 'Branco')
             cTotal += 1
 
@@ -55,8 +54,6 @@ export default function TShirtSize() {
                 else
                     cTotal += 3
         }
-
-        console.log('QUANTITY', quantity)
 
         cTotal *= parseInt(quantity)
 
@@ -218,7 +215,6 @@ export default function TShirtSize() {
                             <div className='shop-cat-img'>
                                 <img src={TShirtsIMG} alt='b-cards' onClick={() => {
                                     setOrder({ ...order, Total: total })
-                                    console.table(order)
                                 }}
                                 />
                             </div>
@@ -247,7 +243,6 @@ export default function TShirtSize() {
                                 <div className='shop-tshirts-printing'>
                                     <input type='checkbox' name='Impressão' value='Frente Centro' defaultChecked={true} onChange={(e) => {
                                         order.Printing.FrenteCentro = !order.Printing.FrenteCentro
-                                        console.table(order.Printing)
                                         setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                     }}></input>
                                     <label htmlFor='Impressão'> Frente centro</label><br></br>
@@ -255,7 +250,6 @@ export default function TShirtSize() {
                                 <div className='shop-tshirts-printing'>
                                     <input type='checkbox' name='Impressão' value='Costas Centro' onChange={() => {
                                         order.Printing.CostasCentro = !order.Printing.CostasCentro
-                                        console.table(order.Printing)
                                         setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                     }}></input>
                                     <label htmlFor='Impressão'> Costas centro</label><br></br>
@@ -263,7 +257,6 @@ export default function TShirtSize() {
                                 <div className='shop-tshirts-printing'>
                                     <input type='checkbox' name='Impressão' value='Frente peito esquerdo' onChange={() => {
                                         order.Printing.FrentePeitoEsquerdo = !order.Printing.FrentePeitoEsquerdo
-                                        console.table(order.Printing)
                                         setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                     }}></input>
                                     <label htmlFor='Impressão'> Frente peito esquerdo</label><br></br>
@@ -271,7 +264,6 @@ export default function TShirtSize() {
                                 <div className='shop-tshirts-printing'>
                                     <input type='checkbox' name='Impressão' value='Manga esquerda' onChange={() => {
                                         order.Printing.MangaEsquerda = !order.Printing.MangaEsquerda
-                                        console.table(order.Printing)
                                         setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                     }}></input>
                                     <label htmlFor='Impressão'> Manga esquerda</label><br></br>
@@ -279,7 +271,6 @@ export default function TShirtSize() {
                                 <div className='shop-tshirts-printing'>
                                     <input type='checkbox' name='Impressão' value='Manga direita' onChange={() => {
                                         order.Printing.MangaDireita = !order.Printing.MangaDireita
-                                        console.table(order.Printing)
                                         setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                     }}></input>
                                     <label htmlFor='Impressão'> Manga direita</label><br></br>
