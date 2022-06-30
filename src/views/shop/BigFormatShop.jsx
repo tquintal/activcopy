@@ -200,7 +200,7 @@ export default function BigFormatShop() {
                                             setTotal(calculate(order.Height, order.Width, order.Material, order.Amount))
                                             alert('Cupão aplicado com sucesso!')
                                         } else {
-                                            alert('Erro, cupão inválido.')
+                                            alert('Indisponível de momento')
                                         }
                                     }}>Aplicar</div>
                                 </div>

@@ -142,7 +142,7 @@ export default function Mugs() {
                                             setTotal(calculate(order.Material, order.Amount))
                                             alert('Cupão aplicado com sucesso!')
                                         } else {
-                                            alert('Erro, cupão inválido.')
+                                            alert('Indisponível de momento')
                                         }
                                     }}>Aplicar</div>
                                 </div>

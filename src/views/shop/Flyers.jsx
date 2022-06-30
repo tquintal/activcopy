@@ -230,14 +230,14 @@ export default function Flyers() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={true} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
                                         if (order.PromoCode === 'activ10') {
                                             setTotal(calculate(order.Format, order.Material, order.Printing, order.Amount, order.Finish))
                                             alert('Cupão aplicado com sucesso!')
                                         }
                                         else {
-                                            alert('Erro, cupão inválido.')
+                                            alert('Indisponível de momento')
                                         }
                                     }}>Aplicar</div>
                                 </div>
