@@ -57,9 +57,8 @@ export default function Main() {
                                         {t('Description.Content_5')}
                                         <span style={{ fontWeight: 'bold' }}>{t('Description.Content_6')}</span>
                                         {t('Description.Content_7')}
-                                        <span style={{ fontWeight: 'bold' }}>{t('Description.Content_8')}</span>
-                                        {t('Description.Content_9')}
                                     </p>
+                                    <p>{t('Description.Content_9')}</p>
                                     <p>
                                         {t('Description.Content_10')}
                                         <span style={{ fontWeight: 'bold' }}>{t('Description.Content_11')}</span>
