@@ -48,7 +48,6 @@ export default function Main() {
                                 :
                                 <>
                                     <p>
-                                        <span style={{ fontWeight: 'bold' }}>{t('Description.Content_1')}</span>
                                         {t('Description.Content_2')}
                                         <span style={{ fontWeight: 'bold' }}>{t('Description.Content_3')}</span>
                                         {t('Description.Content_4')}
