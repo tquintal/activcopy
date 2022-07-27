@@ -34,6 +34,8 @@ export default function BigFormatShop() {
     let cTotal = 0
 
     const calculate = (h, w, material, qt) => {
+        let test = order.PromoCode.split('').slice(-6).join('').toUpperCase()
+
         if (material === 'Rollup branco mate 420g') {
             cTotal = 100 * qt
         } else {
@@ -74,8 +76,8 @@ export default function BigFormatShop() {
             cTotal = cTotal * qt
         }
 
-        if (order.PromoCode === 'activ10')
-            cTotal = cTotal * 0.9
+        if (test === '_AEGIA')
+            cTotal = cTotal * 0.8
 
         return roundUp(cTotal, 1) + 7
     }
@@ -194,13 +196,16 @@ export default function BigFormatShop() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input disabled={true} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={false} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
-                                        if (order.PromoCode === 'activ10') {
+                                        let test = order.PromoCode.split('').slice(-6).join('').toUpperCase()
+                                        console.log(`Check: ${test}`)
+                                        if (test === '_AEGIA') {
                                             setTotal(calculate(order.Height, order.Width, order.Material, order.Amount))
                                             alert('Cupão aplicado com sucesso!')
-                                        } else {
-                                            alert('Indisponível de momento')
+                                        }
+                                        else {
+                                            alert('Cupão inválido.')
                                         }
                                     }}>Aplicar</div>
                                 </div>

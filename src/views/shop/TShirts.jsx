@@ -39,6 +39,8 @@ export default function TShirtSize() {
     let cTotal = 0
 
     const calculate = (material, color, printing, quantity) => {
+        let test = order.PromoCode.split('').slice(-6).join('').toUpperCase()
+
         cTotal = 4
 
         if (material === 'T-Shirt Orgânica 100% algodão')
@@ -57,8 +59,8 @@ export default function TShirtSize() {
 
         cTotal *= parseInt(quantity)
 
-        if (order.PromoCode === 'activ15' && order.TShirt === 'T-Shirt Criança 100% algodão')
-            cTotal = cTotal * 0.85
+        if (test === '_AEGIA')
+            cTotal = cTotal * 0.8
 
         return roundUp(cTotal, 1) + 4
     }
@@ -298,17 +300,20 @@ export default function TShirtSize() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input disabled={true} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={false} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
-                                        if (order.PromoCode === 'activ15' && order.TShirt === 'T-Shirt Criança 100% algodão') {
-                                            setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
-                                            alert('Cupão aplicado com sucesso!')
-                                        } else {
-                                            if (order.PromoCode === 'activ15' && order.TShirt !== 'T-Shirt Criança 100% algodão') {
-                                                alert('Este cupão é válido apenas para T-Shirts de criança.')
+                                        let test = order.PromoCode.split('').slice(-6).join('').toUpperCase()
+                                        console.log(`T-Shirt: ${order.TShirt}\nCheck: ${test}`)
+                                        if (test === '_AEGIA') {
+                                            if (order.TShirt === 'T-Shirt Orgânica 100% algodão') {
+                                                setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
+                                                alert('Cupão aplicado com sucesso!')
                                             } else {
-                                                alert('Indisponível de momento')
+                                                alert(`Erro, este cupão é apenas válido para as t-shirts orgânicas.`)
                                             }
+                                        }
+                                        else {
+                                            alert('Cupão inválido.')
                                         }
                                     }}>Aplicar</div>
                                 </div>

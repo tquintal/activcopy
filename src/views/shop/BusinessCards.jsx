@@ -33,6 +33,8 @@ export default function BusinessCardss() {
     let cTotal = 0
 
     const calculate = (material, printing, quantity) => {
+        let test = order.PromoCode.split('').slice(-6).join('').toUpperCase()
+
         cTotal = 8.5
 
         if (material === 'Cartolina ouro' || material === 'Cartolina prata')
@@ -70,8 +72,8 @@ export default function BusinessCardss() {
                 break
         }
 
-        if (order.PromoCode === 'activ10')
-            cTotal = cTotal * 0.9
+        if (test === '_AEGIA')
+            cTotal = cTotal * 0.8
 
         return roundUp(cTotal, 1) + 4
     }
@@ -176,14 +178,20 @@ export default function BusinessCardss() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={false} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
-                                        if (order.PromoCode === 'activ10') {
-                                            setTotal(calculate(order.Material, order.Printing, order.Amount))
-                                            alert('Cupão aplicado com sucesso!')
+                                        let test = order.PromoCode.split('').slice(-6).join('').toUpperCase()
+                                        console.log(`Material: ${order.Material}\nCheck: ${test}`)
+                                        if (test === '_AEGIA') {
+                                            if (order.Material === 'Rives design' || order.Material === 'Rives tradition') {
+                                                setTotal(calculate(order.Material, order.Printing, order.Amount))
+                                                alert('Cupão aplicado com sucesso!')
+                                            } else {
+                                                alert(`Erro, este cupão é válido apenas para os materiais reciclados: 'rives design' e 'rives tradition'.`)
+                                            }
                                         }
                                         else {
-                                            alert('Erro, cupão inválido.')
+                                            alert('Cupão inválido.')
                                         }
                                     }}>Aplicar</div>
                                 </div>

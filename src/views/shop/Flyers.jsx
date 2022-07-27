@@ -34,6 +34,8 @@ export default function Flyers() {
     let cTotal = 24
 
     const calculate = (format, material, printing, quantity, finish) => {
+        let test = order.PromoCode.split('').slice(-6).join('').toUpperCase()
+
         if (format === 'A6') {
             if (material === 'Tecno Color 100g' || material === 'Couché 135g') {
                 if (printing === 'Frente') {
@@ -115,9 +117,8 @@ export default function Flyers() {
             }
         }
 
-        if (order.PromoCode === 'activ10') {
-            cTotal = cTotal * 0.9
-        }
+        if (test === '_AEGIA')
+            cTotal = cTotal * 0.8
 
         return roundUp(cTotal, 1) + 4
     }
@@ -230,14 +231,20 @@ export default function Flyers() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input disabled={true} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={false} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
-                                        if (order.PromoCode === 'activ10') {
-                                            setTotal(calculate(order.Format, order.Material, order.Printing, order.Amount, order.Finish))
-                                            alert('Cupão aplicado com sucesso!')
+                                        let test = order.PromoCode.split('').slice(-6).join('').toUpperCase()
+                                        console.log(`Material: ${order.Material}\nCheck: ${test}`)
+                                        if (test === '_AEGIA') {
+                                            if (order.Material === 'Papel reciclado 100g') {
+                                                setTotal(calculate(order.Format, order.Material, order.Printing, order.Amount, order.Finish))
+                                                alert('Cupão aplicado com sucesso!')
+                                            } else {
+                                                alert(`Erro, este cupão é apenas válido para papel reciclado 100g.`)
+                                            }
                                         }
                                         else {
-                                            alert('Indisponível de momento')
+                                            alert('Cupão inválido.')
                                         }
                                     }}>Aplicar</div>
                                 </div>
