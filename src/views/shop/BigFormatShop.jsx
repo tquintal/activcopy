@@ -4,6 +4,7 @@ import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
 import BigFormatIMG from '../../assets/in-shop-big-format.jpg'
+import ShopWarning from '../../components/ShopWarning'
 
 export default function BigFormatShop() {
 
@@ -79,6 +80,9 @@ export default function BigFormatShop() {
         if (test === '_AEGIA')
             cTotal = cTotal * 0.8
 
+        if (order.PromoCode.toLowerCase() === 'activ10' && material === 'Tela / canvas green')
+            cTotal = cTotal * 0.9
+
         return roundUp(cTotal, 1) + 7
     }
 
@@ -144,7 +148,7 @@ export default function BigFormatShop() {
 
                                 <p>Material</p>
                                 <select type='select' name='Material' onChange={(e) => {
-                                    setOrder({ ...order, Material: e.target.value })
+                                    setOrder({ ...order, Material: e.target.value, PromoCode: '' })
                                     if (order.Height !== '' && order.Height !== '') {
                                         setTotal(calculate(order.Height, order.Width, e.target.value, order.Amount))
                                     } else if (e.target.value === 'Rollup branco mate 420g') {
@@ -196,16 +200,19 @@ export default function BigFormatShop() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input disabled={false} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={false} value={order.PromoCode} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value }) }}></input>
                                     <div onClick={() => {
                                         let test = order.PromoCode.split('').slice(-6).join('').toUpperCase()
                                         console.log(`Check: ${test}`)
                                         if (test === '_AEGIA') {
                                             setTotal(calculate(order.Height, order.Width, order.Material, order.Amount))
                                             alert('Cupão aplicado com sucesso!')
-                                        }
-                                        else {
+                                        } else if (order.PromoCode.toLowerCase() === 'activ10' && order.Material === 'Tela / canvas green') {
+                                            setTotal(calculate(order.Height, order.Width, order.Material, order.Amount))
+                                            alert('Cupão aplicado com sucesso!')
+                                        } else {
                                             alert('Cupão inválido.')
+                                            setOrder({ ...order, PromoCode: '' })
                                         }
                                     }}>Aplicar</div>
                                 </div>
@@ -232,10 +239,12 @@ export default function BigFormatShop() {
                                         <div className='shop-button' style={{ textAlign: 'center' }} onClick={() => alert(t('Shop.Error'))}>Comprar Online</div>
                                 }
 
+
                                 <input type='hidden' name='_next' value={`${window.location.origin}/shop/order-completed`} />
                             </form>
                         </div>
                     </div>
+                    <ShopWarning />
                 </div>
             </div>
         </motion.div>

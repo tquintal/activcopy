@@ -4,6 +4,7 @@ import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
 import FlyersIMG from '../../assets/in-shop-flyers.jpg'
+import ShopWarning from '../../components/ShopWarning'
 
 export default function Flyers() {
 
@@ -117,8 +118,10 @@ export default function Flyers() {
             }
         }
 
-        if (test === '_AEGIA')
-            cTotal = cTotal * 0.8
+        if (test === '_AEGIA') {
+            if (material === 'Papel reciclado 100g')
+                cTotal = cTotal * 0.8
+        }
 
         return roundUp(cTotal, 1) + 4
     }
@@ -171,7 +174,7 @@ export default function Flyers() {
 
                                 <p>Material</p>
                                 <select type='select' name='Material' onChange={(e) => {
-                                    setOrder({ ...order, Material: e.target.value })
+                                    setOrder({ ...order, Material: e.target.value, PromoCode: '' })
                                     setTotal(calculate(order.Format, e.target.value, order.Printing, order.Amount, order.Finish))
                                 }} required>
                                     <option value='Tecno Color 100g'>Tecno Color 100g</option>
@@ -231,7 +234,7 @@ export default function Flyers() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input disabled={false} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={false} value={order.PromoCode} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
                                     <div onClick={() => {
                                         let test = order.PromoCode.split('').slice(-6).join('').toUpperCase()
                                         console.log(`Material: ${order.Material}\nCheck: ${test}`)
@@ -241,10 +244,14 @@ export default function Flyers() {
                                                 alert('Cupão aplicado com sucesso!')
                                             } else {
                                                 alert(`Erro, este cupão é apenas válido para papel reciclado 100g.`)
+                                                setOrder({ ...order, PromoCode: '' })
+                                                setTotal(calculate(order.Format, order.Material, order.Printing, order.Amount, order.Finish))
                                             }
                                         }
                                         else {
                                             alert('Cupão inválido.')
+                                            setOrder({ ...order, PromoCode: '' })
+                                            setTotal(calculate(order.Format, order.Material, order.Printing, order.Amount, order.Finish))
                                         }
                                     }}>Aplicar</div>
                                 </div>
@@ -273,6 +280,7 @@ export default function Flyers() {
                             </form>
                         </div>
                     </div>
+                    <ShopWarning />
                 </div>
             </div>
         </motion.div>

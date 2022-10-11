@@ -26,8 +26,8 @@ export default function Contact() {
                     </div>
                     <div>
                         <h1>{t('Schedule.Title')}</h1>
-                        <p><span>{t('Schedule.Weekdays')}</span> 9h - 13h | 14h - 19h</p>
-                        <p><span>{t('Schedule.Saturday')}</span> 9h - 13h | 14h - 18h</p>
+                        <p><span>{t('Schedule.Weekdays')}</span> 8h30 - 20h</p>
+                        <p><span>{t('Schedule.Saturday')}</span> 9h - 19h</p>
                         <p><span>{t('Schedule.Sunday')}</span> {t('Schedule.Closed')}</p>
                     </div>
                     <a href='https://goo.gl/maps/fHBZvZBNSNqaLuic8' target='_blank' rel='noopener noreferrer'>

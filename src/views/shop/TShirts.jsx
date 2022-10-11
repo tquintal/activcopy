@@ -4,6 +4,7 @@ import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
 import TShirtsIMG from '../../assets/in-shop-t_shirts.jpg'
+import ShopWarning from '../../components/ShopWarning'
 
 export default function TShirtSize() {
 
@@ -59,7 +60,7 @@ export default function TShirtSize() {
 
         cTotal *= parseInt(quantity)
 
-        if (test === '_AEGIA')
+        if (test === '_AEGIA' && material === 'T-Shirt Orgânica 100% algodão')
             cTotal = cTotal * 0.8
 
         return roundUp(cTotal, 1) + 4
@@ -229,7 +230,7 @@ export default function TShirtSize() {
 
                                 <p>T-Shirt</p>
                                 <select type='select' name='TShirt' onChange={(e) => {
-                                    setOrder({ ...order, TShirt: e.target.value, Size: e.target.value === 'T-Shirt Adulto 100% algodão' ? 'M' : e.target.value === 'T-Shirt Criança 100% algodão' ? '1-2' : 'M' })
+                                    setOrder({ ...order, TShirt: e.target.value, Size: e.target.value === 'T-Shirt Adulto 100% algodão' ? 'M' : e.target.value === 'T-Shirt Criança 100% algodão' ? '1-2' : 'M', PromoCode: '' })
                                     setTotal(calculate(e.target.value, order.Color, order.Printing, order.Amount))
                                 }} required>
                                     <option value='T-Shirt Adulto 100% algodão'>T-Shirt Adulto 100% algodão</option>
@@ -300,7 +301,7 @@ export default function TShirtSize() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input disabled={false} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={false} value={order.PromoCode} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value }) }}></input>
                                     <div onClick={() => {
                                         let test = order.PromoCode.split('').slice(-6).join('').toUpperCase()
                                         console.log(`T-Shirt: ${order.TShirt}\nCheck: ${test}`)
@@ -310,10 +311,14 @@ export default function TShirtSize() {
                                                 alert('Cupão aplicado com sucesso!')
                                             } else {
                                                 alert(`Erro, este cupão é apenas válido para as t-shirts orgânicas.`)
+                                                setOrder({ ...order, PromoCode: '' })
+                                                setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                             }
                                         }
                                         else {
                                             alert('Cupão inválido.')
+                                            setOrder({ ...order, PromoCode: '' })
+                                            setTotal(calculate(order.TShirt, order.Color, order.Printing, order.Amount))
                                         }
                                     }}>Aplicar</div>
                                 </div>
@@ -344,6 +349,7 @@ export default function TShirtSize() {
                             </form>
                         </div>
                     </div>
+                    <ShopWarning />
                 </div>
             </div>
         </motion.div>

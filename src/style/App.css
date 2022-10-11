@@ -556,6 +556,10 @@ ul {
   background-color: #ff4500;
 }
 
+.shop-warning {
+  font-size: 14px;
+}
+
 .shop-cat-container {
   display: flex;
   align-items: center;

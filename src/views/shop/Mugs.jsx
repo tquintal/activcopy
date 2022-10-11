@@ -4,6 +4,7 @@ import { roundUp } from '../../utils'
 import { motion } from 'framer-motion'
 import ShopBack from '../../components/ShopBack'
 import MugsIMG from '../../assets/in-shop-mugs.jpg'
+import ShopWarning from '../../components/ShopWarning'
 
 export default function Mugs() {
 
@@ -47,7 +48,7 @@ export default function Mugs() {
 
         cTotal = cTotal * qt
 
-        if (order.PromoCode === 'activ10')
+        if (order.PromoCode.toLowerCase() === 'activ10')
             cTotal = cTotal * 0.9
 
         return roundUp(cTotal, 1) + 4
@@ -136,14 +137,9 @@ export default function Mugs() {
                                 <input type='url' name='Link' placeholder='Link (ex: wetransfer)' onChange={(e) => e.target.value !== '' ? setOk(true) : setOk(false)}></input>
                                 <textarea name='Comentário' placeholder='Comentário' onChange={(e) => { setOrder({ ...order, Note: e.target.value }) }} className='shop-text-area' />
                                 <div className='shop-promo-code'>
-                                    <input disabled={false} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value.toLowerCase() }) }}></input>
+                                    <input disabled={true} value={order.PromoCode} type='text' name='Promoção' placeholder='Código promocional' onChange={(e) => { setOrder({ ...order, PromoCode: e.target.value }) }}></input>
                                     <div onClick={() => {
-                                        if (order.PromoCode === 'activ10') {
-                                            setTotal(calculate(order.Material, order.Amount))
-                                            alert('Cupão aplicado com sucesso!')
-                                        } else {
-                                            alert('Cupão inválido.')
-                                        }
+                                        alert('Indisponível de momento')
                                     }}>Aplicar</div>
                                 </div>
                                 <p style={{ fontWeight: '500' }}>Total: {total}€</p>
@@ -173,6 +169,7 @@ export default function Mugs() {
                             </form>
                         </div>
                     </div>
+                    <ShopWarning />
                 </div>
             </div>
         </motion.div>
